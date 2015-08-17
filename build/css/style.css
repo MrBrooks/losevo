@@ -11358,11 +11358,75 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     background-color: #79d35e;
 }
+.lsv-nav__menu-btn:hover .line
+{
+    top: -7px;
+}
+.lsv-nav__menu-btn:hover .line01
+{
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+
+    opacity: 0;
+}
+.lsv-nav__menu-btn:hover .line02
+{
+    -webkit-transition-delay: 70ms;
+            transition-delay: 70ms;
+}
+.lsv-nav__menu-btn:hover .line03
+{
+    -webkit-transition-delay: 140ms;
+            transition-delay: 140ms;
+}
+.lsv-nav__menu-btn:hover .line04
+{
+    -webkit-transition-delay: 210ms;
+            transition-delay: 210ms;
+
+    opacity: 1;
+}
 .lsv-nav__menu-btn i
 {
     font-size: 24px;
 
     color: white;
+}
+.lsv-nav__menu-btn--active
+{
+    background-color: #79d35e;
+}
+.lsv-nav__menu-btn--active:hover .line
+{
+    top: -7px;
+}
+.lsv-nav__menu-btn--active .line
+{
+    top: -7px;
+}
+.lsv-nav__menu-btn--active .line01
+{
+    opacity: 0;
+}
+.lsv-nav__menu-btn--active .line02
+{
+    -webkit-transform: rorate(-45deg);
+        -ms-transform: rorate(-45deg);
+            transform: rorate(-45deg);
+
+    opacity: 1;
+}
+.lsv-nav__menu-btn--active .line03
+{
+    opacity: 0;
+}
+.lsv-nav__menu-btn--active .line04
+{
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    opacity: 1;
 }
 .bars-container
 {
@@ -11384,45 +11448,30 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     -webkit-transition: all 300ms cubic-bezier(.215, .61, .355, 1);
             transition: all 300ms cubic-bezier(.215, .61, .355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
 
     background-color: #fff;
 }
 .line01
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
-}
-.line.active
-{
-    -webkit-transform: translate3d(0, -7px, 0);
-            transform: translate3d(0, -7px, 0);
-}
-.line01.active
-{
-    opacity: 0;
+    -webkit-transition-delay: 210ms;
+            transition-delay: 210ms;
 }
 .line02
-{
-    -webkit-transition-delay: 70ms;
-            transition-delay: 70ms;
-}
-.line03
 {
     -webkit-transition-delay: 140ms;
             transition-delay: 140ms;
 }
+.line03
+{
+    -webkit-transition-delay: 70ms;
+            transition-delay: 70ms;
+}
 .line04
 {
-    -webkit-transition-delay: 210ms;
-            transition-delay: 210ms;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
 
     opacity: 0;
-}
-.line04.active
-{
-    opacity: 1;
 }
 .lsv-nav__links
 {
@@ -11452,12 +11501,20 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .lsv-menu
 {
-    top: 62px;
+    z-index: 1020;
+    top: -168px;
 
     width: 100%;
 
+    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+
     color: white;
     background-color: #61bb46;
+}
+.lsv-menu--active
+{
+    top: 62px;
 }
 .lsv-menu__list,
 .lsv-menu__sublist
