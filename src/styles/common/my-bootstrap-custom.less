@@ -54,6 +54,7 @@
 
 .bars-container {
     position: relative;
+    backface-visibility: hidden;
 }
 
 .line {
@@ -69,35 +70,26 @@
 }
 
 .line01{
-  transition-delay: 210ms;
+  transition-delay: 0ms;
 }
 .line.active{
-  top: -4px;
+  transform: translate3d(0,-7px,0);
 }
 .line01.active{
   opacity: 0;
-  // transition-delay: 210ms;
 }
 
 .line02{
-  transition-delay: 140ms;
-  
-}
-.line02.active{
-  // transition-delay: 140ms;
-}
-.line03{
   transition-delay: 70ms;
 }
-.line03.active{
-  // transition-delay: 70ms;
+.line03{
+  transition-delay: 140ms;
 }
 .line04{
   opacity: 0;
-  transition-delay: 0ms;
+  transition-delay: 210ms;
 }
 .line04.active{
-  // transition-delay: 0ms;
   opacity: 1;
 }
 

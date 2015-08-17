@@ -11367,6 +11367,9 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 .bars-container
 {
     position: relative;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 .line
 {
@@ -11388,12 +11391,13 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .line01
 {
-    -webkit-transition-delay: 210ms;
-            transition-delay: 210ms;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
 }
 .line.active
 {
-    top: -4px;
+    -webkit-transform: translate3d(0, -7px, 0);
+            transform: translate3d(0, -7px, 0);
 }
 .line01.active
 {
@@ -11401,18 +11405,18 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .line02
 {
-    -webkit-transition-delay: 140ms;
-            transition-delay: 140ms;
-}
-.line03
-{
     -webkit-transition-delay: 70ms;
             transition-delay: 70ms;
 }
+.line03
+{
+    -webkit-transition-delay: 140ms;
+            transition-delay: 140ms;
+}
 .line04
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
+    -webkit-transition-delay: 210ms;
+            transition-delay: 210ms;
 
     opacity: 0;
 }
