@@ -45,7 +45,23 @@
   &:hover{
     background-color: @lsv_green_active;
   }
-
+  &:hover .line{
+    transform: translate3d(0,-7px,0);
+  }
+  &:hover .line01{
+    opacity: 0;
+    transition-delay: 0ms;
+  }
+  &:hover .line02{
+    transition-delay: @lsv_menu_btn_delay;
+  }
+  &:hover .line03{
+    transition-delay: @lsv_menu_btn_delay*2;
+  }
+  &:hover .line04{
+    opacity: 1;
+    transition-delay: @lsv_menu_btn_delay*3;
+  }
   i{
     color: white;
     font-size: 24px;
@@ -66,39 +82,22 @@
     background-color: #fff;
     transition: all 300ms cubic-bezier(.215,.61,.355,1);
     transform: translate3d(0,0,0);
+    
 }
 
 .line01{
-  transition-delay: 210ms;
+  transition-delay: @lsv_menu_btn_delay*3;
 }
-.line.active{
-  top: -4px;
-}
-.line01.active{
-  opacity: 0;
-  // transition-delay: 210ms;
-}
-
 .line02{
-  transition-delay: 140ms;
+  transition-delay: @lsv_menu_btn_delay*2;
   
 }
-.line02.active{
-  // transition-delay: 140ms;
-}
 .line03{
-  transition-delay: 70ms;
-}
-.line03.active{
-  // transition-delay: 70ms;
+  transition-delay: @lsv_menu_btn_delay;
 }
 .line04{
   opacity: 0;
   transition-delay: 0ms;
-}
-.line04.active{
-  // transition-delay: 0ms;
-  opacity: 1;
 }
 
 .lsv-nav__links{

@@ -11,9 +11,9 @@ $(document).ready(function() {
  $( "#lsv-menu-btn" ).click(function() {
   $( "#lsv-menu" ).slideToggle("1000");
 });
- $( "#lsv-menu-btn" ).hover(function() {
-  $(".line").toggleClass("active");
-});
+ // $( "#lsv-menu-btn" ).hover(function() {
+ //  $(".line").toggleClass("active");
+// });
  
 
 });

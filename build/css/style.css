@@ -11358,6 +11358,35 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     background-color: #79d35e;
 }
+.lsv-nav__menu-btn:hover .line
+{
+    -webkit-transform: translate3d(0, -7px, 0);
+            transform: translate3d(0, -7px, 0);
+}
+.lsv-nav__menu-btn:hover .line01
+{
+    -webkit-transition-delay: 210ms;
+            transition-delay: 210ms;
+
+    opacity: 0;
+}
+.lsv-nav__menu-btn:hover .line02
+{
+    -webkit-transition-delay: 140ms;
+            transition-delay: 140ms;
+}
+.lsv-nav__menu-btn:hover .line03
+{
+    -webkit-transition-delay: 70ms;
+            transition-delay: 70ms;
+}
+.lsv-nav__menu-btn:hover .line04
+{
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+
+    opacity: 1;
+}
 .lsv-nav__menu-btn i
 {
     font-size: 24px;
@@ -11388,37 +11417,25 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .line01
 {
-    -webkit-transition-delay: 210ms;
-            transition-delay: 210ms;
-}
-.line.active
-{
-    top: -4px;
-}
-.line01.active
-{
-    opacity: 0;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
 }
 .line02
-{
-    -webkit-transition-delay: 140ms;
-            transition-delay: 140ms;
-}
-.line03
 {
     -webkit-transition-delay: 70ms;
             transition-delay: 70ms;
 }
+.line03
+{
+    -webkit-transition-delay: 140ms;
+            transition-delay: 140ms;
+}
 .line04
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
+    -webkit-transition-delay: 210ms;
+            transition-delay: 210ms;
 
     opacity: 0;
-}
-.line04.active
-{
-    opacity: 1;
 }
 .lsv-nav__links
 {
