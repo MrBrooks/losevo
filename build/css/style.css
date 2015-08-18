@@ -11310,6 +11310,10 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     position: relative;
 }
+main
+{
+    z-index: 1020;
+}
 /* 
 1024
  */
@@ -11394,6 +11398,9 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .lsv-nav__menu-btn--active
 {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+
     background-color: #79d35e;
 }
 .lsv-nav__menu-btn--active:hover .line
@@ -11410,9 +11417,11 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .lsv-nav__menu-btn--active .line02
 {
-    -webkit-transform: rorate(-45deg);
-        -ms-transform: rorate(-45deg);
-            transform: rorate(-45deg);
+    -webkit-transform: translate3d(0, 7px, 0) rotate(-45deg);
+            transform: translate3d(0, 7px, 0) rotate(-45deg);
+    -webkit-transform-origin: center center 0;
+        -ms-transform-origin: center center 0;
+            transform-origin: center center 0;
 
     opacity: 1;
 }
@@ -11422,9 +11431,11 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 }
 .lsv-nav__menu-btn--active .line04
 {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -webkit-transform: translate3d(0, -7px, 0) rotate(45deg);
+            transform: translate3d(0, -7px, 0) rotate(45deg);
+    -webkit-transform-origin: center center 0;
+        -ms-transform-origin: center center 0;
+            transform-origin: center center 0;
 
     opacity: 1;
 }

@@ -3,6 +3,9 @@
 .resetter{
   position: relative;
 }
+main{
+ z-index: 1020; 
+}
 
 /* 
 1024
@@ -71,6 +74,7 @@
 
 .lsv-nav__menu-btn--active{
   background-color: @lsv_green_active;
+  transition-delay: 0ms;
   &:hover .line {
     top: -7px;
   }
@@ -82,14 +86,16 @@
   }
   & .line02{
     opacity: 1;
-    transform: rorate(-45deg);
+    transform: translate3d(0,7px,0) rotate(-45deg);
+    transform-origin: center center 0px;
   }
   & .line03{
     opacity: 0;
   }
   & .line04{
     opacity: 1;
-    transform: rotate(45deg);
+    transform: translate3d(0,-7px,0) rotate(45deg);
+    transform-origin: center center 0px;
   }
 }
 
@@ -144,6 +150,9 @@
   }
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
 }
+.lsv-btn--circle{
+
+}
 
 .lsv-menu{
 //  position: absolute;
@@ -188,3 +197,4 @@
   
   color: white;
 }
+
