@@ -6,8 +6,6 @@ $(document).ready(function() {
 
     /* Custom */
 
- /*    //= ./common/material-init.js */
- /*    //= ./common/google-analytics.js */
 //  $( "#lsv-menu-btn" ).click(function() {
 //   $( "#lsv-menu" ).slideToggle("1000");
 // });
@@ -19,11 +17,13 @@ $(document).ready(function() {
 });
 
   $('#lsv-slides').fullpage({
-        
-    });
- // $( "#lsv-menu-btn" ).hover(function() {
- //  $(".line").toggleClass("active");
-// });
- 
+    css3: true,
+    easing: 'easeOutElastic',
+    fitToSection: false,
+    fixedElements: '.lsv-nav , .lsv-menu'
+  });
+
+ $('#lsv-main__video').tubular({
+ });
 
 });

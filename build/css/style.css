@@ -11559,3 +11559,26 @@ main
 {
     color: white;
 }
+#lsv-main__video iframe
+{
+    position: fixed;
+    z-index: 1019;
+    top: -15%;
+    bottom: -10%;
+    left: -10%;
+
+    width: 120%;
+    height: 120%;
+}
+#lsv-main__video h1
+{
+    font-size: 40px;
+
+    position: relative;
+    z-index: 1020;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: white;
+}

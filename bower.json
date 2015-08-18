@@ -22,6 +22,8 @@
     "fullpage.js": "~2.6.7",
     "bootstrap-material-design": "~0.3.0",
     "modernizr": "~2.8.3",
-    "social-likes": "~3.0.14"
+    "social-likes": "~3.0.14",
+    "jquery-tubular": "*",
+    "jquery": "~2.1.4"
   }
 }
