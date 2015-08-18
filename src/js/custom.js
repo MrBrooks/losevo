@@ -21,9 +21,7 @@ $(document).ready(function() {
     easing: 'easeOutElastic',
     fitToSection: false,
     fixedElements: '.lsv-nav , .lsv-menu'
+    
   });
-
- $('#lsv-main__video').tubular({
- });
 
 });

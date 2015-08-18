@@ -24,6 +24,8 @@
     "modernizr": "~2.8.3",
     "social-likes": "~3.0.14",
     "jquery-tubular": "*",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "full-screen-vertical-scroll": "~1.2.2",
+    "jquery-mobile": "~1.4.5"
   }
 }

@@ -11314,6 +11314,10 @@ main
 {
     z-index: 1020;
 }
+.nomargin
+{
+    margin: 0;
+}
 /* 
 1024
  */
@@ -11581,4 +11585,13 @@ main
     text-transform: uppercase;
 
     color: white;
+}
+.lsv-menu__sublist--footer
+{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.lsv-menu__sublist-item--footer a
+{
+    color: #666;
 }

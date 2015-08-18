@@ -9,5 +9,4 @@
 //= ../../bower_components/fullpage.js/jquery.fullPage.js
 //= ../../bower_components/fullpage.js/vendors/jquery.slimscroll.min.js
 //= ../../bower_components/fullpage.js/vendors/jquery.easings.min.js
-//= ../../bower_components/jquery-tubular/dist/js/jquery-tubular.min.js
 
