@@ -11358,6 +11358,10 @@ main
     border: 0;
     background-color: #61bb46;
 }
+.lsv-nav__menu-btn:focus
+{
+    outline: none;
+}
 .lsv-nav__menu-btn:hover
 {
     background-color: #79d35e;

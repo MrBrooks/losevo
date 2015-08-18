@@ -17,6 +17,10 @@ $(document).ready(function() {
  $( "#lsv-menu-btn" ).click(function() {
   $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
 });
+
+  $('#lsv-slides').fullpage({
+        
+    });
  // $( "#lsv-menu-btn" ).hover(function() {
  //  $(".line").toggleClass("active");
 // });
