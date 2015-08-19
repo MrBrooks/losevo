@@ -156,9 +156,6 @@ main{
   }
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
 }
-.lsv-btn--circle{
-
-}
 
 .lsv-menu{
 //  position: absolute;
@@ -231,4 +228,48 @@ main{
 .lsv-menu__sublist-item--footer{
   a{color: #666;}
 }
+.lsv-copyright{
+  padding: 25px 20px;
+}
+.lsv-footer{
+  background-color: @lsv_grey_light
+}
+.lsv-email{
+  padding-top: 15px;
+  text-decoration: underline;
+}
+.mrbrooks-copyright{
+  background-color: @lsv_grey;
+  
+  p{
+    padding: 32px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+  }
+}
+.lsv-social{
+  display: block;
+  font-size: 16px;
+  .fa-stack-1x{
+    font-size: 16px;
+  }
+  a {
+    color: @lsv_grey;
+    transition: all 500ms cubic-bezier(.215,.61,.355,1);
 
+  }
+  a:hover .fa-stack-2x{
+    color: @lsv_green;
+  }
+}
+
+.lsv-social--footer{
+  font-size: 30px;
+  padding: 60px 0px 40px;
+
+  .fa-stack-1x{
+    font-size: 27px;
+  }
+}
