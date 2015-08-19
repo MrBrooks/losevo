@@ -11578,7 +11578,7 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 /*!
- * fullPage 2.6.7
+ * fullPage 2.6.9
  * https://github.com/alvarotrigo/fullPage.js
  * @license MIT licensed
  *
@@ -11626,6 +11626,7 @@ if (typeof jQuery === 'undefined') {
     var SECTION_LAST_SEL =      SECTION_SEL + ':last';
     var TABLE_CELL =            'fp-tableCell';
     var TABLE_CELL_SEL =        '.' + TABLE_CELL;
+    var AUTO_HEIGHT =       'fp-auto-height';
 
     // section nav
     var SECTION_NAV =           'fp-nav';
@@ -11662,6 +11663,9 @@ if (typeof jQuery === 'undefined') {
     var $window = $(window);
     var $document = $(document);
 
+    var afterSectionLoadsId;
+    var afterSlideLoadsId;
+
     $.fn.fullpage = function(options) {
 
         // common jQuery objects
@@ -11688,6 +11692,7 @@ if (typeof jQuery === 'undefined') {
             scrollingSpeed: 700,
             autoScrolling: true,
             fitToSection: true,
+            fitToSectionDelay: 1000,
             easing: 'easeInOutCubic',
             easingcss3: 'ease',
             loopBottom: false,
@@ -12055,6 +12060,10 @@ if (typeof jQuery === 'undefined') {
         var keydownId;
 
         if($(this).length){
+            init();
+        }
+
+        function init(){
             container.css({
                 'height': '100%',
                 'position': 'relative'
@@ -12063,111 +12072,43 @@ if (typeof jQuery === 'undefined') {
             //adding a class to recognize the container internally in the code
             container.addClass(WRAPPER);
             $('html').addClass(ENABLED);
-        }
 
-        //if css3 is not supported, it will use jQuery animations
-        if(options.css3){
-            options.css3 = support3d();
-        }
-
-        FP.setAllowScrolling(true);
-        container.removeClass(DESTROYED); //in case it was destroyed before initilizing it again
-
-
-        //adding internal class names to void problem with common ones
-        $(options.sectionSelector).each(function(){
-            $(this).addClass(SECTION);
-        });
-        $(options.slideSelector).each(function(){
-            $(this).addClass(SLIDE);
-        });
-
-        //creating the navigation dots
-        if (options.navigation) {
-            addVerticalNavigation();
-        }
-
-        //styling the sections
-        $(SECTION_SEL).each(function(index){
-            var that = $(this);
-            var slides = $(this).find(SLIDE_SEL);
-            var numSlides = slides.length;
-
-            //if no active section is defined, the 1st one will be the default one
-            if(!index && $(SECTION_ACTIVE_SEL).length === 0) {
-                $(this).addClass(ACTIVE);
+            //if css3 is not supported, it will use jQuery animations
+            if(options.css3){
+                options.css3 = support3d();
             }
 
-            $(this).css('height', windowsHeight + 'px');
-
-            if(options.paddingTop){
-                $(this).css('padding-top', options.paddingTop);
+            //no anchors option? Checking for them in the DOM attributes
+            if(!options.anchors.length){
+                options.anchors = $('[data-anchor]').map(function(){
+                    return $(this).data('anchor').toString();
+                }).get();
             }
 
-            if(options.paddingBottom){
-                $(this).css('padding-bottom', options.paddingBottom);
-            }
+            FP.setAllowScrolling(true);
+            container.removeClass(DESTROYED); //in case it was destroyed before initilizing it again
 
-            if (typeof options.sectionsColor[index] !==  'undefined') {
-                $(this).css('background-color', options.sectionsColor[index]);
-            }
+            addInternalSelectors();
 
-            if (typeof options.anchors[index] !== 'undefined') {
-                $(this).attr('data-anchor', options.anchors[index]);
+            //styling the sections / slides / menu
+            $(SECTION_SEL).each(function(index){
+                var section = $(this);
+                var slides = section.find(SLIDE_SEL);
+                var numSlides = slides.length;
 
-                //activating the menu / nav element on load
-                if($(this).hasClass(ACTIVE)){
-                    activateMenuAndNav(options.anchors[index], index);
-                }
-            }
+                styleSection(section, index);
+                styleMenu(section, index);
 
-            // if there's any slide
-            if (numSlides > 0) {
-                var sliderWidth = numSlides * 100;
-                var slideWidth = 100 / numSlides;
-
-                slides.wrapAll('<div class="' + SLIDES_CONTAINER + '" />');
-                slides.parent().wrap('<div class="' + SLIDES_WRAPPER + '" />');
-
-                $(this).find(SLIDES_CONTAINER_SEL).css('width', sliderWidth + '%');
-
-                if(numSlides > 1){
-                    if(options.controlArrows){
-                        createSlideArrows($(this));
-                    }
-
-                    if(options.slidesNavigation){
-                        addSlidesNavigation($(this), numSlides);
-                    }
-                }
-
-                slides.each(function(index) {
-                    $(this).css('width', slideWidth + '%');
-
+                // if there's any slide
+                if (numSlides > 0) {
+                    styleSlides(section, slides, numSlides);
+                }else{
                     if(options.verticalCentered){
-                        addTableClass($(this));
+                        addTableClass(section);
                     }
-                });
-
-                var startingSlide = that.find(SLIDE_ACTIVE_SEL);
-
-                //if the slide won't be an starting point, the default will be the first one
-                if(!startingSlide.length){
-                    slides.eq(0).addClass(ACTIVE);
                 }
+            });
 
-                //is there a starting point for a non-starting section?
-                else{
-                    silentLandscapeScroll(startingSlide);
-                }
-
-            }else{
-                if(options.verticalCentered){
-                    addTableClass($(this));
-                }
-            }
-
-        }).promise().done(function(){
             FP.setAutoScrolling(options.autoScrolling, 'internal');
 
             //the starting point is a slide?
@@ -12183,15 +12124,9 @@ if (typeof jQuery === 'undefined') {
                 $(options.fixedElements).appendTo($body);
             }
 
-            //vertical centered of the navigation + first bullet active
+            //vertical centered of the navigation + active bullet
             if(options.navigation){
-                nav.css('margin-top', '-' + (nav.height()/2) + 'px');
-                nav.find('li').eq($(SECTION_ACTIVE_SEL).index(SECTION_SEL)).find('a').addClass(ACTIVE);
-            }
-
-            //moving the menu outside the main container if it is inside (avoid problems with fixed positions when using CSS3 tranforms)
-            if(options.menu && options.css3 && $(options.menu).closest(WRAPPER_SEL).length){
-                $(options.menu).appendTo($body);
+                addVerticalNavigation();
             }
 
             if(options.scrollOverflow){
@@ -12241,9 +12176,107 @@ if (typeof jQuery === 'undefined') {
             $window.on('load', function() {
                 scrollToAnchor();
             });
+        }
 
-        });
+        /**
+        * Styles the horizontal slides for a section.
+        */
+        function styleSlides(section, slides, numSlides){
+            var sliderWidth = numSlides * 100;
+            var slideWidth = 100 / numSlides;
 
+            slides.wrapAll('<div class="' + SLIDES_CONTAINER + '" />');
+            slides.parent().wrap('<div class="' + SLIDES_WRAPPER + '" />');
+
+            section.find(SLIDES_CONTAINER_SEL).css('width', sliderWidth + '%');
+
+            if(numSlides > 1){
+                if(options.controlArrows){
+                    createSlideArrows(section);
+                }
+
+                if(options.slidesNavigation){
+                    addSlidesNavigation(section, numSlides);
+                }
+            }
+
+            slides.each(function(index) {
+                $(this).css('width', slideWidth + '%');
+
+                if(options.verticalCentered){
+                    addTableClass($(this));
+                }
+            });
+
+            var startingSlide = section.find(SLIDE_ACTIVE_SEL);
+
+            //if the slide won't be an starting point, the default will be the first one
+            if(!startingSlide.length){
+                slides.eq(0).addClass(ACTIVE);
+            }
+
+            //is there a starting point for a non-starting section?
+            else{
+                silentLandscapeScroll(startingSlide);
+            }
+        }
+
+        /**
+        * Styling vertical sections
+        */
+        function styleSection(section, index){
+            //if no active section is defined, the 1st one will be the default one
+            if(!index && $(SECTION_ACTIVE_SEL).length === 0) {
+                section.addClass(ACTIVE);
+            }
+
+            section.css('height', windowsHeight + 'px');
+
+            if(options.paddingTop){
+                section.css('padding-top', options.paddingTop);
+            }
+
+            if(options.paddingBottom){
+                section.css('padding-bottom', options.paddingBottom);
+            }
+
+            if (typeof options.sectionsColor[index] !==  'undefined') {
+                section.css('background-color', options.sectionsColor[index]);
+            }
+        }
+
+        /**
+        * Sets the data-anchor attributes to the menu elements and activates the current one.
+        */
+        function styleMenu(section, index){
+            if (typeof options.anchors[index] !== 'undefined') {
+                section.attr('data-anchor', options.anchors[index]);
+
+                //activating the menu / nav element on load
+                if(section.hasClass(ACTIVE)){
+                    activateMenuAndNav(options.anchors[index], index);
+                }
+            }
+
+            //moving the menu outside the main container if it is inside (avoid problems with fixed positions when using CSS3 tranforms)
+            if(options.menu && options.css3 && $(options.menu).closest(WRAPPER_SEL).length){
+                $(options.menu).appendTo($body);
+            }
+        }
+
+        /**
+        * Adds internal classes to be able to provide customizable selectors
+        * keeping the link with the style sheet.
+        */
+        function addInternalSelectors(){
+            //adding internal class names to void problem with common ones
+            $(options.sectionSelector).each(function(){
+                $(this).addClass(SECTION);
+            });
+            $(options.slideSelector).each(function(){
+                $(this).addClass(SLIDE);
+            });
+        }
 
         /**
         * Creates the control arrows for the given section
@@ -12266,7 +12299,7 @@ if (typeof jQuery === 'undefined') {
         */
         function addVerticalNavigation(){
             $body.append('<div id="' + SECTION_NAV + '"><ul></ul></div>');
-            nav = $(SECTION_NAV_SEL);
+            var nav = $(SECTION_NAV_SEL);
 
             nav.addClass(function() {
                 return options.showActiveTooltip ? SHOW_ACTIVE_TOOLTIP + ' ' + options.navigationPosition : options.navigationPosition;
@@ -12291,6 +12324,12 @@ if (typeof jQuery === 'undefined') {
 
                 nav.find('ul').append(li);
             }
+
+            //centering it vertically
+            $(SECTION_NAV_SEL).css('margin-top', '-' + ($(SECTION_NAV_SEL).height()/2) + 'px');
+
+            //activating the current active section
+            $(SECTION_NAV_SEL).find('li').eq($(SECTION_ACTIVE_SEL).index(SECTION_SEL)).find('a').addClass(ACTIVE);
         }
 
         /**
@@ -12427,7 +12466,7 @@ if (typeof jQuery === 'undefined') {
                             scrollPage(currentSection);
                             isResizing = false;
                         }
-                    }, 1000);
+                    }, options.fitToSectionDelay);
                 }
             }
         }
@@ -12727,72 +12766,83 @@ if (typeof jQuery === 'undefined') {
             });
         }
 
+        //IE < 10 pollify for requestAnimationFrame
+        window.requestAnimFrame = function(){
+            return window.requestAnimationFrame || function(callback){ callback() }
+        }();
+
         /**
         * Scrolls the site to the given element and scrolls to the slide if a callback is given.
         */
         function scrollPage(element, callback, isMovementUp){
-            var dest = element.position();
-            if(typeof dest === 'undefined'){ return; } //there's no element to scroll, leaving the function
+            //requestAnimFrame is used in order to prevent a Chrome 44 bug (http://stackoverflow.com/a/31961816/1081396)
+            requestAnimFrame(function(){
+                var dest = element.position();
+                if(typeof dest === 'undefined'){ return; } //there's no element to scroll, leaving the function
 
-            //local variables
-            var v = {
-                element: element,
-                callback: callback,
-                isMovementUp: isMovementUp,
-                dest: dest,
-                dtop: dest.top,
-                yMovement: getYmovement(element),
-                anchorLink: element.data('anchor'),
-                sectionIndex: element.index(SECTION_SEL),
-                activeSlide: element.find(SLIDE_ACTIVE_SEL),
-                activeSection: $(SECTION_ACTIVE_SEL),
-                leavingSection: $(SECTION_ACTIVE_SEL).index(SECTION_SEL) + 1,
+                //auto height? Scrolling only a bit, the next element's height. Otherwise the whole viewport.
+                var dtop = element.hasClass(AUTO_HEIGHT) ? (dest.top - windowsHeight + element.height()) : dest.top;
 
-                //caching the value of isResizing at the momment the function is called
-                //because it will be checked later inside a setTimeout and the value might change
-                localIsResizing: isResizing
-            };
+                //local variables
+                var v = {
+                    element: element,
+                    callback: callback,
+                    isMovementUp: isMovementUp,
+                    dest: dest,
+                    dtop: dtop,
+                    yMovement: getYmovement(element),
+                    anchorLink: element.data('anchor'),
+                    sectionIndex: element.index(SECTION_SEL),
+                    activeSlide: element.find(SLIDE_ACTIVE_SEL),
+                    activeSection: $(SECTION_ACTIVE_SEL),
+                    leavingSection: $(SECTION_ACTIVE_SEL).index(SECTION_SEL) + 1,
 
-            //quiting when destination scroll is the same as the current one
-            if((v.activeSection.is(element) && !isResizing) || (options.scrollBar && $window.scrollTop() === v.dtop)){ return; }
+                    //caching the value of isResizing at the momment the function is called
+                    //because it will be checked later inside a setTimeout and the value might change
+                    localIsResizing: isResizing
+                };
 
-            if(v.activeSlide.length){
-                var slideAnchorLink = v.activeSlide.data('anchor');
-                var slideIndex = v.activeSlide.index();
-            }
+                //quiting when destination scroll is the same as the current one
+                if((v.activeSection.is(element) && !isResizing) || (options.scrollBar && $window.scrollTop() === v.dtop)){ return; }
 
-            // If continuousVertical && we need to wrap around
-            if (options.autoScrolling && options.continuousVertical && typeof (v.isMovementUp) !== "undefined" &&
-                ((!v.isMovementUp && v.yMovement == 'up') || // Intending to scroll down but about to go up or
-                (v.isMovementUp && v.yMovement == 'down'))) { // intending to scroll up but about to go down
-
-                v = createInfiniteSections(v);
-            }
-
-            //callback (onLeave) if the site is not just resizing and readjusting the slides
-            if($.isFunction(options.onLeave) && !v.localIsResizing){
-                if(options.onLeave.call(v.activeSection, v.leavingSection, (v.sectionIndex + 1), v.yMovement) === false){
-                    return;
-                }else{
-                    stopMedia(v.activeSection);
+                if(v.activeSlide.length){
+                    var slideAnchorLink = v.activeSlide.data('anchor');
+                    var slideIndex = v.activeSlide.index();
                 }
-            }
 
-            element.addClass(ACTIVE).siblings().removeClass(ACTIVE);
+                // If continuousVertical && we need to wrap around
+                if (options.autoScrolling && options.continuousVertical && typeof (v.isMovementUp) !== "undefined" &&
+                    ((!v.isMovementUp && v.yMovement == 'up') || // Intending to scroll down but about to go up or
+                    (v.isMovementUp && v.yMovement == 'down'))) { // intending to scroll up but about to go down
 
-            //preventing from activating the MouseWheelHandler event
-            //more than once if the page is scrolling
-            canScroll = false;
+                    v = createInfiniteSections(v);
+                }
 
-            setState(slideIndex, slideAnchorLink, v.anchorLink, v.sectionIndex);
+                //callback (onLeave) if the site is not just resizing and readjusting the slides
+                if($.isFunction(options.onLeave) && !v.localIsResizing){
+                    if(options.onLeave.call(v.activeSection, v.leavingSection, (v.sectionIndex + 1), v.yMovement) === false){
+                        return;
+                    }else{
+                        stopMedia(v.activeSection);
+                    }
+                }
 
-            performMovement(v);
+                element.addClass(ACTIVE).siblings().removeClass(ACTIVE);
 
-            //flag to avoid callingn `scrollPage()` twice in case of using anchor links
-            lastScrolledDestiny = v.anchorLink;
+                //preventing from activating the MouseWheelHandler event
+                //more than once if the page is scrolling
+                canScroll = false;
 
-            //avoid firing it twice (as it does also on scroll)
-            activateMenuAndNav(v.anchorLink, v.sectionIndex);
+                setState(slideIndex, slideAnchorLink, v.anchorLink, v.sectionIndex);
+
+                performMovement(v);
+
+                //flag to avoid callingn `scrollPage()` twice in case of using anchor links
+                lastScrolledDestiny = v.anchorLink;
+
+                //avoid firing it twice (as it does also on scroll)
+                activateMenuAndNav(v.anchorLink, v.sectionIndex);
+            });
         }
 
         /**
@@ -12928,9 +12978,14 @@ if (typeof jQuery === 'undefined') {
             if( slide.length ) {
                 destiny = $(slide);
             }
-            destiny.find('img[data-src], video[data-src], audio[data-src]').each(function(){
+
+            destiny.find('img[data-src], source[data-src], audio[data-src]').each(function(){
                 $(this).attr('src', $(this).data('src'));
                 $(this).removeAttr('data-src');
+
+                if($(this).is('source')){
+                    $(this).closest('video').get(0).load();
+                }
             });
         }
 
@@ -13939,6 +13994,9 @@ if (typeof jQuery === 'undefined') {
             $(SECTION_SEL)
                 .off('click', SLIDES_ARROW_SEL);
 
+            clearTimeout(afterSlideLoadsId);
+            clearTimeout(afterSectionLoadsId);
+
             //lets make a mess!
             if(all){
                 destroyStructure();
@@ -13970,6 +14028,21 @@ if (typeof jQuery === 'undefined') {
                 'position': '',
                 '-ms-touch-action': '',
                 'touch-action': ''
+            });
+
+            $htmlBody.css({
+                'overflow': '',
+                'height': ''
+            });
+
+            // remove .fp-enabled class
+            $('html').removeClass(ENABLED);
+
+            // remove all of the .fp-viewing- classes
+            $.each($body.get(0).className.split(/\s+/), function (index, className) {
+                if (className.indexOf(VIEWING_PREFIX) === 0) {
+                    $body.removeClass(className);
+                }
             });
 
             //removing added classes
@@ -14061,7 +14134,6 @@ b){a.originalEvent.touches.length&&(A=a.originalEvent.touches[0].pageY)});b.bind
 * Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
 
 jQuery.effects||function(e,t){var i=e.uiBackCompat!==!1,a="ui-effects-";e.effects={effect:{}},function(t,i){function a(e,t,i){var a=c[t.type]||{};return null==e?i||!t.def?null:t.def:(e=a.floor?~~e:parseFloat(e),isNaN(e)?t.def:a.mod?(e+a.mod)%a.mod:0>e?0:e>a.max?a.max:e)}function s(e){var a=u(),s=a._rgba=[];return e=e.toLowerCase(),m(l,function(t,n){var r,o=n.re.exec(e),h=o&&n.parse(o),l=n.space||"rgba";return h?(r=a[l](h),a[d[l].cache]=r[d[l].cache],s=a._rgba=r._rgba,!1):i}),s.length?("0,0,0,0"===s.join()&&t.extend(s,r.transparent),a):r[e]}function n(e,t,i){return i=(i+1)%1,1>6*i?e+6*(t-e)*i:1>2*i?t:2>3*i?e+6*(t-e)*(2/3-i):e}var r,o="backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor".split(" "),h=/^([\-+])=\s*(\d+\.?\d*)/,l=[{re:/rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,parse:function(e){return[e[1],e[2],e[3],e[4]]}},{re:/rgba?\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,parse:function(e){return[2.55*e[1],2.55*e[2],2.55*e[3],e[4]]}},{re:/#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})/,parse:function(e){return[parseInt(e[1],16),parseInt(e[2],16),parseInt(e[3],16)]}},{re:/#([a-f0-9])([a-f0-9])([a-f0-9])/,parse:function(e){return[parseInt(e[1]+e[1],16),parseInt(e[2]+e[2],16),parseInt(e[3]+e[3],16)]}},{re:/hsla?\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,space:"hsla",parse:function(e){return[e[1],e[2]/100,e[3]/100,e[4]]}}],u=t.Color=function(e,i,a,s){return new t.Color.fn.parse(e,i,a,s)},d={rgba:{props:{red:{idx:0,type:"byte"},green:{idx:1,type:"byte"},blue:{idx:2,type:"byte"}}},hsla:{props:{hue:{idx:0,type:"degrees"},saturation:{idx:1,type:"percent"},lightness:{idx:2,type:"percent"}}}},c={"byte":{floor:!0,max:255},percent:{max:1},degrees:{mod:360,floor:!0}},p=u.support={},f=t("<p>")[0],m=t.each;f.style.cssText="background-color:rgba(1,1,1,.5)",p.rgba=f.style.backgroundColor.indexOf("rgba")>-1,m(d,function(e,t){t.cache="_"+e,t.props.alpha={idx:3,type:"percent",def:1}}),u.fn=t.extend(u.prototype,{parse:function(n,o,h,l){if(n===i)return this._rgba=[null,null,null,null],this;(n.jquery||n.nodeType)&&(n=t(n).css(o),o=i);var c=this,p=t.type(n),f=this._rgba=[];return o!==i&&(n=[n,o,h,l],p="array"),"string"===p?this.parse(s(n)||r._default):"array"===p?(m(d.rgba.props,function(e,t){f[t.idx]=a(n[t.idx],t)}),this):"object"===p?(n instanceof u?m(d,function(e,t){n[t.cache]&&(c[t.cache]=n[t.cache].slice())}):m(d,function(t,i){var s=i.cache;m(i.props,function(e,t){if(!c[s]&&i.to){if("alpha"===e||null==n[e])return;c[s]=i.to(c._rgba)}c[s][t.idx]=a(n[e],t,!0)}),c[s]&&0>e.inArray(null,c[s].slice(0,3))&&(c[s][3]=1,i.from&&(c._rgba=i.from(c[s])))}),this):i},is:function(e){var t=u(e),a=!0,s=this;return m(d,function(e,n){var r,o=t[n.cache];return o&&(r=s[n.cache]||n.to&&n.to(s._rgba)||[],m(n.props,function(e,t){return null!=o[t.idx]?a=o[t.idx]===r[t.idx]:i})),a}),a},_space:function(){var e=[],t=this;return m(d,function(i,a){t[a.cache]&&e.push(i)}),e.pop()},transition:function(e,t){var i=u(e),s=i._space(),n=d[s],r=0===this.alpha()?u("transparent"):this,o=r[n.cache]||n.to(r._rgba),h=o.slice();return i=i[n.cache],m(n.props,function(e,s){var n=s.idx,r=o[n],l=i[n],u=c[s.type]||{};null!==l&&(null===r?h[n]=l:(u.mod&&(l-r>u.mod/2?r+=u.mod:r-l>u.mod/2&&(r-=u.mod)),h[n]=a((l-r)*t+r,s)))}),this[s](h)},blend:function(e){if(1===this._rgba[3])return this;var i=this._rgba.slice(),a=i.pop(),s=u(e)._rgba;return u(t.map(i,function(e,t){return(1-a)*s[t]+a*e}))},toRgbaString:function(){var e="rgba(",i=t.map(this._rgba,function(e,t){return null==e?t>2?1:0:e});return 1===i[3]&&(i.pop(),e="rgb("),e+i.join()+")"},toHslaString:function(){var e="hsla(",i=t.map(this.hsla(),function(e,t){return null==e&&(e=t>2?1:0),t&&3>t&&(e=Math.round(100*e)+"%"),e});return 1===i[3]&&(i.pop(),e="hsl("),e+i.join()+")"},toHexString:function(e){var i=this._rgba.slice(),a=i.pop();return e&&i.push(~~(255*a)),"#"+t.map(i,function(e){return e=(e||0).toString(16),1===e.length?"0"+e:e}).join("")},toString:function(){return 0===this._rgba[3]?"transparent":this.toRgbaString()}}),u.fn.parse.prototype=u.fn,d.hsla.to=function(e){if(null==e[0]||null==e[1]||null==e[2])return[null,null,null,e[3]];var t,i,a=e[0]/255,s=e[1]/255,n=e[2]/255,r=e[3],o=Math.max(a,s,n),h=Math.min(a,s,n),l=o-h,u=o+h,d=.5*u;return t=h===o?0:a===o?60*(s-n)/l+360:s===o?60*(n-a)/l+120:60*(a-s)/l+240,i=0===d||1===d?d:.5>=d?l/u:l/(2-u),[Math.round(t)%360,i,d,null==r?1:r]},d.hsla.from=function(e){if(null==e[0]||null==e[1]||null==e[2])return[null,null,null,e[3]];var t=e[0]/360,i=e[1],a=e[2],s=e[3],r=.5>=a?a*(1+i):a+i-a*i,o=2*a-r;return[Math.round(255*n(o,r,t+1/3)),Math.round(255*n(o,r,t)),Math.round(255*n(o,r,t-1/3)),s]},m(d,function(e,s){var n=s.props,r=s.cache,o=s.to,l=s.from;u.fn[e]=function(e){if(o&&!this[r]&&(this[r]=o(this._rgba)),e===i)return this[r].slice();var s,h=t.type(e),d="array"===h||"object"===h?e:arguments,c=this[r].slice();return m(n,function(e,t){var i=d["object"===h?e:t.idx];null==i&&(i=c[t.idx]),c[t.idx]=a(i,t)}),l?(s=u(l(c)),s[r]=c,s):u(c)},m(n,function(i,a){u.fn[i]||(u.fn[i]=function(s){var n,r=t.type(s),o="alpha"===i?this._hsla?"hsla":"rgba":e,l=this[o](),u=l[a.idx];return"undefined"===r?u:("function"===r&&(s=s.call(this,u),r=t.type(s)),null==s&&a.empty?this:("string"===r&&(n=h.exec(s),n&&(s=u+parseFloat(n[2])*("+"===n[1]?1:-1))),l[a.idx]=s,this[o](l)))})})}),m(o,function(e,i){t.cssHooks[i]={set:function(e,a){var n,r,o="";if("string"!==t.type(a)||(n=s(a))){if(a=u(n||a),!p.rgba&&1!==a._rgba[3]){for(r="backgroundColor"===i?e.parentNode:e;(""===o||"transparent"===o)&&r&&r.style;)try{o=t.css(r,"backgroundColor"),r=r.parentNode}catch(h){}a=a.blend(o&&"transparent"!==o?o:"_default")}a=a.toRgbaString()}try{e.style[i]=a}catch(l){}}},t.fx.step[i]=function(e){e.colorInit||(e.start=u(e.elem,i),e.end=u(e.end),e.colorInit=!0),t.cssHooks[i].set(e.elem,e.start.transition(e.end,e.pos))}}),t.cssHooks.borderColor={expand:function(e){var t={};return m(["Top","Right","Bottom","Left"],function(i,a){t["border"+a+"Color"]=e}),t}},r=t.Color.names={aqua:"#00ffff",black:"#000000",blue:"#0000ff",fuchsia:"#ff00ff",gray:"#808080",green:"#008000",lime:"#00ff00",maroon:"#800000",navy:"#000080",olive:"#808000",purple:"#800080",red:"#ff0000",silver:"#c0c0c0",teal:"#008080",white:"#ffffff",yellow:"#ffff00",transparent:[null,null,null,0],_default:"#ffffff"}}(jQuery),function(){function i(){var t,i,a=this.ownerDocument.defaultView?this.ownerDocument.defaultView.getComputedStyle(this,null):this.currentStyle,s={};if(a&&a.length&&a[0]&&a[a[0]])for(i=a.length;i--;)t=a[i],"string"==typeof a[t]&&(s[e.camelCase(t)]=a[t]);else for(t in a)"string"==typeof a[t]&&(s[t]=a[t]);return s}function a(t,i){var a,s,r={};for(a in i)s=i[a],t[a]!==s&&(n[a]||(e.fx.step[a]||!isNaN(parseFloat(s)))&&(r[a]=s));return r}var s=["add","remove","toggle"],n={border:1,borderBottom:1,borderColor:1,borderLeft:1,borderRight:1,borderTop:1,borderWidth:1,margin:1,padding:1};e.each(["borderLeftStyle","borderRightStyle","borderBottomStyle","borderTopStyle"],function(t,i){e.fx.step[i]=function(e){("none"!==e.end&&!e.setAttr||1===e.pos&&!e.setAttr)&&(jQuery.style(e.elem,i,e.end),e.setAttr=!0)}}),e.effects.animateClass=function(t,n,r,o){var h=e.speed(n,r,o);return this.queue(function(){var n,r=e(this),o=r.attr("class")||"",l=h.children?r.find("*").andSelf():r;l=l.map(function(){var t=e(this);return{el:t,start:i.call(this)}}),n=function(){e.each(s,function(e,i){t[i]&&r[i+"Class"](t[i])})},n(),l=l.map(function(){return this.end=i.call(this.el[0]),this.diff=a(this.start,this.end),this}),r.attr("class",o),l=l.map(function(){var t=this,i=e.Deferred(),a=jQuery.extend({},h,{queue:!1,complete:function(){i.resolve(t)}});return this.el.animate(this.diff,a),i.promise()}),e.when.apply(e,l.get()).done(function(){n(),e.each(arguments,function(){var t=this.el;e.each(this.diff,function(e){t.css(e,"")})}),h.complete.call(r[0])})})},e.fn.extend({_addClass:e.fn.addClass,addClass:function(t,i,a,s){return i?e.effects.animateClass.call(this,{add:t},i,a,s):this._addClass(t)},_removeClass:e.fn.removeClass,removeClass:function(t,i,a,s){return i?e.effects.animateClass.call(this,{remove:t},i,a,s):this._removeClass(t)},_toggleClass:e.fn.toggleClass,toggleClass:function(i,a,s,n,r){return"boolean"==typeof a||a===t?s?e.effects.animateClass.call(this,a?{add:i}:{remove:i},s,n,r):this._toggleClass(i,a):e.effects.animateClass.call(this,{toggle:i},a,s,n)},switchClass:function(t,i,a,s,n){return e.effects.animateClass.call(this,{add:i,remove:t},a,s,n)}})}(),function(){function s(t,i,a,s){return e.isPlainObject(t)&&(i=t,t=t.effect),t={effect:t},null==i&&(i={}),e.isFunction(i)&&(s=i,a=null,i={}),("number"==typeof i||e.fx.speeds[i])&&(s=a,a=i,i={}),e.isFunction(a)&&(s=a,a=null),i&&e.extend(t,i),a=a||i.duration,t.duration=e.fx.off?0:"number"==typeof a?a:a in e.fx.speeds?e.fx.speeds[a]:e.fx.speeds._default,t.complete=s||i.complete,t}function n(t){return!t||"number"==typeof t||e.fx.speeds[t]?!0:"string"!=typeof t||e.effects.effect[t]?!1:i&&e.effects[t]?!1:!0}e.extend(e.effects,{version:"1.9.2",save:function(e,t){for(var i=0;t.length>i;i++)null!==t[i]&&e.data(a+t[i],e[0].style[t[i]])},restore:function(e,i){var s,n;for(n=0;i.length>n;n++)null!==i[n]&&(s=e.data(a+i[n]),s===t&&(s=""),e.css(i[n],s))},setMode:function(e,t){return"toggle"===t&&(t=e.is(":hidden")?"show":"hide"),t},getBaseline:function(e,t){var i,a;switch(e[0]){case"top":i=0;break;case"middle":i=.5;break;case"bottom":i=1;break;default:i=e[0]/t.height}switch(e[1]){case"left":a=0;break;case"center":a=.5;break;case"right":a=1;break;default:a=e[1]/t.width}return{x:a,y:i}},createWrapper:function(t){if(t.parent().is(".ui-effects-wrapper"))return t.parent();var i={width:t.outerWidth(!0),height:t.outerHeight(!0),"float":t.css("float")},a=e("<div></div>").addClass("ui-effects-wrapper").css({fontSize:"100%",background:"transparent",border:"none",margin:0,padding:0}),s={width:t.width(),height:t.height()},n=document.activeElement;try{n.id}catch(r){n=document.body}return t.wrap(a),(t[0]===n||e.contains(t[0],n))&&e(n).focus(),a=t.parent(),"static"===t.css("position")?(a.css({position:"relative"}),t.css({position:"relative"})):(e.extend(i,{position:t.css("position"),zIndex:t.css("z-index")}),e.each(["top","left","bottom","right"],function(e,a){i[a]=t.css(a),isNaN(parseInt(i[a],10))&&(i[a]="auto")}),t.css({position:"relative",top:0,left:0,right:"auto",bottom:"auto"})),t.css(s),a.css(i).show()},removeWrapper:function(t){var i=document.activeElement;return t.parent().is(".ui-effects-wrapper")&&(t.parent().replaceWith(t),(t[0]===i||e.contains(t[0],i))&&e(i).focus()),t},setTransition:function(t,i,a,s){return s=s||{},e.each(i,function(e,i){var n=t.cssUnit(i);n[0]>0&&(s[i]=n[0]*a+n[1])}),s}}),e.fn.extend({effect:function(){function t(t){function i(){e.isFunction(n)&&n.call(s[0]),e.isFunction(t)&&t()}var s=e(this),n=a.complete,r=a.mode;(s.is(":hidden")?"hide"===r:"show"===r)?i():o.call(s[0],a,i)}var a=s.apply(this,arguments),n=a.mode,r=a.queue,o=e.effects.effect[a.effect],h=!o&&i&&e.effects[a.effect];return e.fx.off||!o&&!h?n?this[n](a.duration,a.complete):this.each(function(){a.complete&&a.complete.call(this)}):o?r===!1?this.each(t):this.queue(r||"fx",t):h.call(this,{options:a,duration:a.duration,callback:a.complete,mode:a.mode})},_show:e.fn.show,show:function(e){if(n(e))return this._show.apply(this,arguments);var t=s.apply(this,arguments);return t.mode="show",this.effect.call(this,t)},_hide:e.fn.hide,hide:function(e){if(n(e))return this._hide.apply(this,arguments);var t=s.apply(this,arguments);return t.mode="hide",this.effect.call(this,t)},__toggle:e.fn.toggle,toggle:function(t){if(n(t)||"boolean"==typeof t||e.isFunction(t))return this.__toggle.apply(this,arguments);var i=s.apply(this,arguments);return i.mode="toggle",this.effect.call(this,i)},cssUnit:function(t){var i=this.css(t),a=[];return e.each(["em","px","%","pt"],function(e,t){i.indexOf(t)>0&&(a=[parseFloat(i),t])}),a}})}(),function(){var t={};e.each(["Quad","Cubic","Quart","Quint","Expo"],function(e,i){t[i]=function(t){return Math.pow(t,e+2)}}),e.extend(t,{Sine:function(e){return 1-Math.cos(e*Math.PI/2)},Circ:function(e){return 1-Math.sqrt(1-e*e)},Elastic:function(e){return 0===e||1===e?e:-Math.pow(2,8*(e-1))*Math.sin((80*(e-1)-7.5)*Math.PI/15)},Back:function(e){return e*e*(3*e-2)},Bounce:function(e){for(var t,i=4;((t=Math.pow(2,--i))-1)/11>e;);return 1/Math.pow(4,3-i)-7.5625*Math.pow((3*t-2)/22-e,2)}}),e.each(t,function(t,i){e.easing["easeIn"+t]=i,e.easing["easeOut"+t]=function(e){return 1-i(1-e)},e.easing["easeInOut"+t]=function(e){return.5>e?i(2*e)/2:1-i(-2*e+2)/2}})}()}(jQuery);
-/* jquery-tubular - v0.0.1 - 2013-11-19* by Stéphan Zych (http://monkeymonk.be)* forked from Sean McCambridge (http://www.seanmccambridge.com/tubular)* licensed under the MIT License */!function(a){"use strict";var b=function(b,c){this.options=c,this.$element=a(b)};b.DEFAULTS={ratio:16/9,videoId:"ZCAnLxRvNNc",mute:!0,repeat:!0,width:a(window).width(),wrapperZIndex:99,playButtonClass:"tubular-play",pauseButtonClass:"tubular-pause",muteButtonClass:"tubular-mute",volumeUpClass:"tubular-volume-up",volumeDownClass:"tubular-volume-down",increaseVolumeBy:10,start:0,callback:null},b.prototype={};var c=a.fn.tubular;a.fn.tubular=function(c){return this.each(function(){var d=a(this),e=d.data(".tubular"),f=a.extend({},b.DEFAULTS,d.data(),"object"==typeof c&&c);e||d.data(".tubular",e=new b(this,f)),"string"==typeof c&&e[c]()})},a.fn.tubular.Constructor=b,a.fn.tubular.noConflict=function(){return a.fn.tubular=c,this},a(document).on("","",function(){})}(window.jQuery);
 /**************************************/
 /* Custom JavaScript files supervisor */
 /**************************************/
@@ -14085,9 +14157,7 @@ $(document).ready(function() {
     easing: 'easeOutElastic',
     fitToSection: false,
     fixedElements: '.lsv-nav , .lsv-menu'
+    
   });
-
- $('#lsv-main__video').tubular({
- });
 
 });
