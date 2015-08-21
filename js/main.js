@@ -14156,8 +14156,8 @@ $(document).ready(function() {
     css3: true,
     easing: 'easeOutElastic',
     fitToSection: false,
-    fixedElements: '.lsv-nav , .lsv-menu'
-    
+    fixedElements: '.lsv-nav , .lsv-menu',
+    scrollOverflow: true
   });
 
 });
