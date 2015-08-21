@@ -1,4 +1,24 @@
 <head>
+
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('img/svg/logo.svg') no-repeat 50% 50%;
+    margin: -16px 0 0 -16px;
+}
     <title>Лосево</title>
 
     <!-- Meta Information -->
@@ -65,4 +85,12 @@
     <!-- Set external libraries -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.min.css" />
+    <script type="text/javascript">
+    $(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
+    </script>
 </head>
