@@ -12,10 +12,21 @@ main{
 .nopadding{
   padding: 0;
 }
+.padding-40pmh{
+  padding: 40px + @lsv_menu_height 40px 40px 40px;
+}
+.padding-40{
+  padding: 40px;
+}
+.padding-0-40{
+  padding: 0 40px;
+  div{
+    padding: 0;
+  }
+}
 .head-displace{
   top: @lsv_menu_height;
 }
-
 /* 
 1024
  */
@@ -162,6 +173,16 @@ main{
   }
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
 }
+.lsv-btn--green{
+  background-color: @lsv_green;
+  &:hover{
+    background-color: @lsv_green_active;
+  }
+}
+.lsv-form__btn-submit{
+  margin: 38px 0 73px;
+  padding: 15px 30px;
+}
 
 .lsv-menu{
 //  position: absolute;
@@ -283,6 +304,8 @@ main{
 }
 .lsv-select{
   -webkit-appearance: none;
+   position: relative;
+   overflow: hidden;
    display: inline-block;
    width: 140px;
    padding: 5px;
@@ -290,7 +313,20 @@ main{
    line-height: 1;
    border: 0;
    height: 45px;
-    background-color: #fff;
+   background-color: #fff;
+   // background-color: transparent;
+   background: url(/img/svg/arrow.svg) right no-repeat;
+   // &:after{
+   //  content: "";
+   //  position: absolute;
+   //  background: url(/img/svg/arrow.svg) right top no-repeat;
+   //  display: block;
+   //  width: 30px;
+   //  height: 10px;
+   //  float: right;
+   //  margin: 0 0 0 30px;
+   // }
+   
   }
 .lsv-news__header{
   padding: 40px + @lsv_menu_height 40px 40px;
@@ -311,7 +347,7 @@ main{
   padding: 0 40px 40px 40px;
   
 }
-.lsv-news{
+.lsv-news, .lsv-contacts{
   background-color: @lsv_slide_bg;
 }
 .product-card-mini{
@@ -340,12 +376,21 @@ main{
   // }
 }
 .arrow{
-  display: inline-block;
-  position: relative;
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  background-image: url(img/svg/arrow.svg);
+  background-image: url('img/svg/arrow.svg');
+  background-repeat: none;
+  background-position: right;
+}
+.lsv-top-displace{
+  padding-top: @lsv_menu_height;
+}
+.lsv-contacts__main-contacts{
+  padding: 40px;
+}
+.lsv-h1--dark-grey{
+  color: @lsv_grey_very_dark;
+}
+.lsv-h2{
+  color: @lsv_green;
+  font-size: 18px;
+  text-transform: uppercase;
 }
