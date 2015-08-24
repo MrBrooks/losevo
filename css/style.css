@@ -11322,6 +11322,46 @@ main
 {
     padding: 0;
 }
+.padding-40pmh
+{
+    padding: 102px 40px 40px 40px;
+}
+.padding-40-40-40-0pmh
+{
+    padding: 102px 40px 40px 0;
+}
+.padding-40
+{
+    padding: 40px;
+}
+.padding-40-0
+{
+    padding: 40px 0;
+}
+.padding-0-40
+{
+    padding: 0 40px;
+}
+.padding-0-40 div
+{
+    padding: 0;
+}
+.margin-40-0
+{
+    margin: 40px 0;
+}
+.margint-20
+{
+    margin-top: 20px;
+}
+.margint-80
+{
+    margin-top: 80px;
+}
+.margint-150
+{
+    margin-top: 150px;
+}
 .head-displace
 {
     top: 62px;
@@ -11526,6 +11566,19 @@ main
 
     color: white;
 }
+.lsv-btn--green
+{
+    background-color: #61bb46;
+}
+.lsv-btn--green:hover
+{
+    background-color: #79d35e;
+}
+.lsv-form__btn-submit
+{
+    margin: 38px 0 73px;
+    padding: 15px 30px;
+}
 .lsv-menu
 {
     z-index: 1020;
@@ -11671,16 +11724,25 @@ main
     font-size: 16px;
     line-height: 1;
 
+    position: relative;
+
     display: inline-block;
+    overflow: hidden;
 
     width: 140px;
     height: 45px;
     padding: 5px;
 
     border: 0;
+    background: url(/img/svg/arrow.svg) right no-repeat;
     background-color: #fff;
 
     -webkit-appearance: none;
+}
+.lsv-select:focus
+{
+    border: 0;
+    box-shadow: 0 0 15px #61bb46;
 }
 .lsv-news__header
 {
@@ -11707,7 +11769,8 @@ main
 {
     padding: 0 40px 40px 40px;
 }
-.lsv-news
+.lsv-news,
+.lsv-contacts
 {
     background-color: #efefef;
 }
@@ -11740,18 +11803,52 @@ main
 }
 .arrow
 {
-    position: relative;
+    background-image: url('img/svg/arrow.svg');
+    background-repeat: none;
+    background-position: right;
+}
+.lsv-top-displace
+{
+    padding-top: 62px;
+}
+.lsv-contacts__main-contacts
+{
+    padding: 40px;
+}
+.lsv-h1,
+.lsv-h2,
+.lsv-h3
+{
+    font-weight: 900;
 
-    display: inline-block;
+    text-transform: uppercase;
+}
+.lsv-h1--dark-grey
+{
+    color: #515151;
+}
+.lsv-h2
+{
+    font-size: 18px;
 
-    width: 10px;
-    height: 10px;
+    color: #61bb46;
+}
+.lsv-h3
+{
+    font-size: 15px;
 
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    background-image: url(img/svg/arrow.svg);
+    color: #515151;
+}
+.form-control
+{
+    border: 0;
+    border-radius: 0;
+}
+.form-control:focus
+{
+    box-shadow: 0 0 15px #61bb46;
+}
+.lsv-faq
+{
+    background-color: #efefef;
 }

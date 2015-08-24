@@ -72,7 +72,6 @@
 </head>
 
     <body>
-
         <!--[if lt IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -93,7 +92,7 @@
         </div>
         <div class="lsv-nav__links  lsv-social">
           <a class="btn btn-default lsv-btn" href="#" role="button">
-            <span >Интернет-магазин</span>
+            <span class="">Интернет-магазин</span>
             <i class="fa fa-cart-arrow-down"></i>
           </a>
           <a href='#' class="fa-stack fa-lg">
@@ -118,19 +117,19 @@
             <span>О компании</span>
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="history.html">История</a>
+                <a class="lsv-menu__sublink" href="#">История</a>
               </li>
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="about.html">О нас</a>
+                <a class="lsv-menu__sublink" href="#">О нас</a>
               </li>
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="team.html">Наши сотрудники</a>
+                <a class="lsv-menu__sublink" href="#">Наши сотрудники</a>
               </li>
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="#">Наши вакансии</a>
               </li>
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="faq.html">F.A.Q.</a>
+                <a class="lsv-menu__sublink" href="#">F.A.Q.</a>
               </li>
             </ul>
           </li>
@@ -138,13 +137,13 @@
             <a class="lsv-menu__link" href="#">Производство</a>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <a class="lsv-menu__link" href="products.html">Продукция</a>
+            <a class="lsv-menu__link" href="#">Продукция</a>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
           <span>Где купить</span>
           <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="shops.html">Магазины</a>
+                <a class="lsv-menu__sublink" href="#">Магазины</a>
               </li>
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="#">Интернет-магазин</a>
@@ -155,7 +154,7 @@
             <a class="lsv-menu__link" href="news.html">Новости</a>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <a class="lsv-menu__link" href="contacts.html">Контакты</a>
+            <a class="lsv-menu__link" href="#">Контакты</a>
           </li>
         </ul>
       </div>
@@ -163,38 +162,100 @@
 </header>
 
         <main id='lsv-slides'>
-          <div class="section">
-            <div id='lsv-main__video'>
-  <iframe  src="https://www.youtube.com/embed/Scxs7L0vhZ4?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1" frameborder="0" allowfullscreen></iframe>
-  <h1>Настоящими нас делают различия</h1>
-</div>
-          </div>
-          <div class="section">
-            <div class="row nomargin">
-  <h1 style="text-align: center;">ТУТ БУДЕТ ХИТРАЯ АНИМАЦИЯ!!!</h1>
 
-  <!-- <div class="col-md-6">
-    <h2 class="lsv-h2">Повлияйте на молоко "Лосево" сами</h2>
-    <form action="" class="lsv-main__anim-form" id="lsv-anim-form">
-      <fieldset>
-        <legend>Время года</legend>
-        <input type="radio" id='lsv-form__summer' name='season' checked>
-        <input type="radio" id='lsv-form__autumn' name='season'>
-        <input type="radio" id='lsv-form__winter' name='season'>
-        <input type="radio" id='lsv-form__spring' name='season'>
-      </fieldset>
-      <fieldset>
-        <legend>Корм, которым питались наши коровы</legend>
-        <input type="radio" id='lsv-form__fodder1' name='fodder' checked>
-        <input type="radio" id='lsv-form__fodder2' name='fodder'>
-        <input type="radio" id='lsv-form__fodder3' name='fodder'>
-        <input type="radio" id='lsv-form__fodder4' name='fodder'>
-      </fieldset>
-    </form>
-  </div>
-  <div class="col-md-6"></div> -->
+          <div class="section lsv-news">
+            <div class="row nomargin lsv-news__header">
+  <h1 class="lsv-h1 nomargin text-left ">Новости</h1>
+  <form class="form-inline lsv-form lsv-form--date-filter">
+    <div class="form-group">
+      <label>Архив новостей</label>
+      <select name="month" id="" class="lsv-select">
+        <option value="january" class="lsv-option">Январь</option>
+        <option value="february" class="lsv-option">Февраль</option>
+        <option value="march" class="lsv-option">Март</option>
+        <option value="april" class="lsv-option">Апрель</option>
+        <option value="may" class="lsv-option">Май</option>
+        <option value="june" class="lsv-option">Июнь</option>
+        <option value="july" class="lsv-option">Июль</option>
+        <option value="august" class="lsv-option">Август</option>
+        <option value="september" class="lsv-option">Сентябрь</option>
+        <option value="october" class="lsv-option">Октябрь</option>
+        <option value="november" class="lsv-option">Ноябрь</option>
+        <option value="december" class="lsv-option">Декабрь</option>
+      </select>
+      <select name="year" id="" class="lsv-select">
+        <option value="" class="lsv-option">2012</option>
+        <option value="" class="lsv-option">2013</option>
+        <option value="" class="lsv-option">2014</option>
+        <option value="" class="lsv-option">2015</option>
+      </select>
+    </div>
+  </form>
+</div>
+<div class="row nomargin lsv-news__content">
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+</div>
+<div class="row nomargin lsv-news__content">
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+</div>
+<div class="row nomargin lsv-news__content">
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
+    <div class="col-md-4 nopadding product-card-mini">
+  <img src="https://placehold.it/600x600" alt="">
+  <span>13 июля 2015 года</span>
+  <h2>«СХП Лосево» получило статус племенного завода</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum ut libero, ea nam. Nostrum dolores saepe ipsa magni placeat.</p>
+</div>
 </div>
           </div>
+
+            <!-- FOOTER -->
+
           <div class="section lsv-footer fp-auto-height">
             <div class="row nomargin">
   <ul class="col-md-3 lsv-menu__sublist lsv-menu__sublist--footer">
