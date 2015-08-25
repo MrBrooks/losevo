@@ -11852,3 +11852,7 @@ main
 {
     background-color: #efefef;
 }
+.navbar-fixed-top
+{
+    border: 0;
+}
