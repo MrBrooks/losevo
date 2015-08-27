@@ -11334,6 +11334,10 @@ main
 {
     padding: 40px;
 }
+.padding-mh
+{
+    padding-top: 62px;
+}
 .padding-40-0
 {
     padding: 40px 0;
@@ -11709,7 +11713,7 @@ main
 }
 .lsv-social--footer
 {
-    padding: 70px 100px 0 0;
+    padding: 70px 30px 0 0;
 }
 .lsv-h1
 {
@@ -11833,6 +11837,14 @@ main
 
     color: #61bb46;
 }
+.lsv-h2--grey-underline
+{
+    font-size: 18px;
+
+    text-decoration: underline;
+
+    color: #515151;
+}
 .lsv-h3
 {
     font-size: 15px;
@@ -11851,4 +11863,27 @@ main
 .lsv-faq
 {
     background-color: #efefef;
+}
+.navbar-fixed-top
+{
+    border: 0;
+}
+.lsv-article__img
+{
+    width: 100%;
+}
+.lsv-article__link-back
+{
+    margin-top: 21px;
+    margin-bottom: 24px;
+}
+.lsv-article__link-back a
+{
+    text-decoration: underline;
+
+    color: #515151;
+}
+.lsv-article__text
+{
+    margin-bottom: 70px;
 }
