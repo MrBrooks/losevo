@@ -11774,7 +11774,8 @@ main
     padding: 0 40px 40px 40px;
 }
 .lsv-news,
-.lsv-contacts
+.lsv-contacts,
+.lsv-press-releases
 {
     background-color: #efefef;
 }
@@ -11886,4 +11887,74 @@ main
 .lsv-article__text
 {
     margin-bottom: 70px;
+}
+.lsv-release
+{
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 0 63px 0 0;
+}
+.lsv-press_about
+{
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 0 63px 0 0;
+}
+.lsv-press_about h2
+{
+    margin: 15px 0;
+}
+.lsv-release__header
+{
+    display: block;
+
+    margin-bottom: 7px;
+}
+.lsv-release__header:before
+{
+    display: inline-block;
+
+    width: 20px;
+    height: 15px;
+}
+.lsv-release__header--press
+{
+    color: #ff6c00;
+    border-color: #ff6c00;
+}
+.lsv-release__header--post
+{
+    color: #01b1d1;
+    border-color: #01b1d1;
+}
+.lsv-release__header--comment
+{
+    color: #79d35e;
+    border-color: #79d35e;
+}
+.lsv-release__header-icon
+{
+    font-size: 12px;
+
+    position: relative;
+    top: -1px;
+
+    margin-right: 5px;
+    padding: 3px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+}
+.lsv-release__source a
+{
+    text-decoration: underline;
+
+    color: #61bb46;
+}
+.lsv-release__source a:hover
+{
+    text-decoration: none;
+
+    color: #79d35e;
 }
