@@ -1,5 +1,7 @@
 // Extra
-
+p,span,h1,h2,h3,h4,h5,h6,a,li,label,input{
+  font-family: 'Roboto', sans-serif;
+}
 .resetter{
   position: relative;
 }
@@ -388,6 +390,7 @@ main{
     text-transform: uppercase;
     text-decoration: underline;
     font-size: 18px;
+    font-weight: 900;
   }
   p{
     font-size: 15px;
@@ -514,4 +517,71 @@ main{
       text-decoration: none;
     }
   }
+}
+.lsv-products{
+  padding: 60px;
+  margin: 0;
+}
+.lsv-products__category-cadr{
+
+}
+.lsv-category-milk{
+  color: #87d3e0;
+}
+.lsv-category-cheese{
+  color: #f9b316;
+}
+.lsv-category-beef{
+  color: #b92727;
+}
+.lsv-category-poultry{
+  color: #F19A67;
+}
+.lsv-category-honey{
+  color: #FFCA59;
+}
+.lsv-category-cooking{
+  color: #ED145B;
+}
+.lsv-category-plant-food{
+  color: #EB2046;
+}
+.lsv-category-approved{
+  color: @lsv_green;
+}
+.category-card__name{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.lsv-product-logo{
+  height: 150px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  clear: both;
+}
+.lsv-products__category-cadr{
+  min-height: 200px;
+  margin: 50px 0;
+}
+
+.lsv-ferm{
+  background-color: #65A566;
+  width: 100%;
+  height: 100%;
+}
+.lsv-ferm-svg{
+  top: @lsv_menu_height;
+  height: 90%;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
 }

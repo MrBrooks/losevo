@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+    <!-- build:include html-blocks/common/head.html -->
+    This will be replaced by the content of html-blocks/common/head.html
+    <!-- /build -->
+    <style type="text/css">
+      @-webkit-keyframes grow{
+        0% {
+          -webkit-transform: scale(0.3);
+          fill: green;
+        }
+        50% {
+          -webkit-transform: scale(1);
+          fill: green;
+        }
+        100% {
+          -webkit-transform: scale(1.2);
+        }
+      }
+      
+      @-webkit-keyframes breeze{
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(10deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+        }
+      }
+      .st109{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 2s ease-out infinite;
+      }
+      .tree{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: breeze 3s ease-out infinite;
+      }
+    </style>
+    <body>
+
+        <!-- build:include html-blocks/common/if-ie.html -->
+        This will be replaced by the content of html-blocks/common/if-ie.html
+        <!-- /build -->
+
+        <!-- build:include html-blocks/pages--external/header--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/header--external.html
+        <!-- /build -->
+
+        <main id='lsv-slides'>
+          <div class="section">
+            <!-- build:include html-blocks/pages--external/production-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/production-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-footer fp-auto-height">
+            <!-- build:include html-blocks/pages--external/footer.html -->
+            This will be replaced by the content of html-blocks/pages--external/footer.html
+            <!-- /build -->
+              
+          </div>
+        </main>
+
+        <!-- build:include html-blocks/pages--external/footer--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/footer--external.html
+        <!-- /build -->
+        <script type="text/javascript" src="js/snap.svg-min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+              var ferm = Snap("#ferm");
+              var bakery = Snap('#bakery'),
+              bakery_hover = Snap('#bakery_hover'),
+              cheese_house = Snap('#cheese_house_1_'),
+              cheese_house_hover = Snap('#cheese_house_hover'),
+              tomatos = ferm.selectAll('.st109');
+
+              bakery_hover.attr({
+                opacity: '0'
+              });
+              cheese_house_hover.attr({
+                opacity: '0'
+              });
+              // tomatos.forEach(function(elem,i){
+              //   // elem.attr({
+              //   //   opacity: '0.5'
+              //   // });
+              //   elem.animate({transform: "scale(0.1)"}, 2000, mina.elastic);
+              // });
+
+              var SetOpacity = function (el , op){
+                Snap(el).attr({
+                  opacity: op
+                });
+              }
+              // bakery.hover(SetOpacity('#bakery_hover','1'),SetOpacity('#bakery_hover','0'));
+              bakery.hover(
+                function(){
+                  Snap('#bakery_hover').attr({
+                    opacity: '1'
+                  });
+              },
+                function(){
+                  Snap('#bakery_hover').attr({
+                    opacity: '0'
+                  });
+              });
+              bakery_hover.hover(
+                function(){
+                  Snap('#bakery_hover').attr({
+                    opacity: '1'
+                  });
+              },
+                function(){
+                  Snap('#bakery_hover').attr({
+                    opacity: '1'
+                  });
+              });
+              cheese_house.hover(
+                function(){
+                  Snap('#cheese_house_hover').attr({
+                    opacity: '1'
+                  });
+              },
+                function(){
+                  Snap('#cheese_house_hover').attr({
+                    opacity: '0'
+                  });
+              });
+              cheese_house_hover.hover(
+                function(){
+                  Snap('#cheese_house_hover').attr({
+                    opacity: '1'
+                  });
+              },
+                function(){
+                  Snap('#cheese_house_hover').attr({
+                    opacity: '1'
+                  });
+              });
+            }); 
+        </script>
+
+    </body>
+
+</html>

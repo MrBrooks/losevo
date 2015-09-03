@@ -11306,6 +11306,21 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     list-style-type: inherit;
 }
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+label,
+input
+{
+    font-family: 'Roboto', sans-serif;
+}
 .resetter
 {
     position: relative;
@@ -11798,6 +11813,7 @@ main
 .product-card-mini h2
 {
     font-size: 18px;
+    font-weight: 900;
 
     text-decoration: underline;
     text-transform: uppercase;
@@ -11957,4 +11973,88 @@ main
     text-decoration: none;
 
     color: #79d35e;
+}
+.lsv-products
+{
+    margin: 0;
+    padding: 60px;
+}
+.lsv-category-milk
+{
+    color: #87d3e0;
+}
+.lsv-category-cheese
+{
+    color: #f9b316;
+}
+.lsv-category-beef
+{
+    color: #b92727;
+}
+.lsv-category-poultry
+{
+    color: #f19a67;
+}
+.lsv-category-honey
+{
+    color: #ffca59;
+}
+.lsv-category-cooking
+{
+    color: #ed145b;
+}
+.lsv-category-plant-food
+{
+    color: #eb2046;
+}
+.lsv-category-approved
+{
+    color: #61bb46;
+}
+.category-card__name
+{
+    font-size: 18px;
+    font-weight: 900;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+
+    text-transform: uppercase;
+}
+.lsv-product-logo
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    clear: both;
+
+    height: 150px;
+    margin: auto;
+}
+.lsv-products__category-cadr
+{
+    min-height: 200px;
+    margin: 50px 0;
+}
+.lsv-ferm
+{
+    width: 100%;
+    height: 100%;
+
+    background-color: #65a566;
+}
+.lsv-ferm-svg
+{
+    position: absolute;
+    top: 62px;
+    right: 0;
+    left: 0;
+
+    height: 90%;
+    margin: auto;
 }
