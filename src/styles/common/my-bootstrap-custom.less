@@ -1,5 +1,7 @@
 // Extra
-
+p,span,h1,h2,h3,h4,h5,h6,a,li,label,input{
+  font-family: 'Roboto', sans-serif;
+}
 .resetter{
   position: relative;
 }
@@ -20,6 +22,9 @@ main{
 }
 .padding-40{
   padding: 40px;
+}
+.padding-mh{
+  padding-top: @lsv_menu_height;
 }
 .padding-40-0{
   padding: 40px 0px;
@@ -312,7 +317,7 @@ main{
 }
 
 .lsv-social--footer{
-  padding: 70px 100px 0px 0px;
+  padding: 70px 30px 0px 0px;
 }
 
 .lsv-h1{
@@ -368,7 +373,7 @@ main{
   padding: 0 40px 40px 40px;
   
 }
-.lsv-news, .lsv-contacts{
+.lsv-news, .lsv-contacts, .lsv-press-releases{
   background-color: @lsv_slide_bg;
 }
 .product-card-mini{
@@ -385,6 +390,7 @@ main{
     text-transform: uppercase;
     text-decoration: underline;
     font-size: 18px;
+    font-weight: 900;
   }
   p{
     font-size: 15px;
@@ -418,6 +424,11 @@ main{
   color: @lsv_green;
   font-size: 18px;
 }
+.lsv-h2--grey-underline{
+  color: @lsv_grey_very_dark;
+  text-decoration: underline;
+  font-size: 18px;
+}
 .lsv-h3{
   color: @lsv_grey_very_dark;
   font-size: 15px;
@@ -432,6 +443,145 @@ main{
 .lsv-faq{
   background-color: @lsv_slide_bg;
 }
+
 .navbar-fixed-top{
   border: 0;
+}
+
+.lsv-article__img{
+  width: 100%;
+}
+.lsv-article__link-back{
+  margin-top: 21px;
+  margin-bottom: 24px;
+  a{
+    color: @lsv_grey_very_dark;
+    text-decoration: underline;
+  }
+}
+.lsv-article__text{
+  margin-bottom: 70px;
+}
+.lsv-release{
+  padding: 0 63px 0 0;
+  margin-bottom: 63px;
+  margin-top: 20px;
+}
+.lsv-press_about{
+  padding: 0 63px 0 0;
+  margin-bottom: 63px;
+  margin-top: 20px;
+  
+  h2{
+    margin: 15px 0;
+  }
+}
+
+.lsv-release__header{
+  display: block;
+  margin-bottom: 7px;
+  &:before{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+  }
+}
+.lsv-release__header--press{
+  color: @lsv_press_release_color;
+  border-color: @lsv_press_release_color;
+}
+.lsv-release__header--post{
+  color: @lsv_post_release_color;
+  border-color: @lsv_post_release_color;
+}
+.lsv-release__header--comment{
+  color: @lsv_comment_color;
+  border-color: @lsv_comment_color;
+}
+.lsv-release__header-icon{
+  position: relative;
+  margin-right: 5px;
+  top: -1px;
+  padding: 3px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 12px;
+}
+.lsv-release__source{
+  a{
+    color: @lsv_green;
+    text-decoration: underline;
+    &:hover{
+      color: @lsv_green_active;
+      text-decoration: none;
+    }
+  }
+}
+.lsv-products{
+  padding: 60px;
+  margin: 0;
+}
+.lsv-products__category-cadr{
+
+}
+.lsv-category-milk{
+  color: #87d3e0;
+}
+.lsv-category-cheese{
+  color: #f9b316;
+}
+.lsv-category-beef{
+  color: #b92727;
+}
+.lsv-category-poultry{
+  color: #F19A67;
+}
+.lsv-category-honey{
+  color: #FFCA59;
+}
+.lsv-category-cooking{
+  color: #ED145B;
+}
+.lsv-category-plant-food{
+  color: #EB2046;
+}
+.lsv-category-approved{
+  color: @lsv_green;
+}
+.category-card__name{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.lsv-product-logo{
+  height: 150px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  clear: both;
+}
+.lsv-products__category-cadr{
+  min-height: 200px;
+  margin: 50px 0;
+}
+
+.lsv-ferm{
+  background-color: #65A566;
+  width: 100%;
+  height: 100%;
+}
+.lsv-ferm-svg{
+  top: @lsv_menu_height;
+  height: 90%;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
 }

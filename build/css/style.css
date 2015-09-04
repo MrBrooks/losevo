@@ -11306,6 +11306,21 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     list-style-type: inherit;
 }
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+label,
+input
+{
+    font-family: 'Roboto', sans-serif;
+}
 .resetter
 {
     position: relative;
@@ -11333,6 +11348,10 @@ main
 .padding-40
 {
     padding: 40px;
+}
+.padding-mh
+{
+    padding-top: 62px;
 }
 .padding-40-0
 {
@@ -11709,7 +11728,7 @@ main
 }
 .lsv-social--footer
 {
-    padding: 70px 100px 0 0;
+    padding: 70px 30px 0 0;
 }
 .lsv-h1
 {
@@ -11770,7 +11789,8 @@ main
     padding: 0 40px 40px 40px;
 }
 .lsv-news,
-.lsv-contacts
+.lsv-contacts,
+.lsv-press-releases
 {
     background-color: #efefef;
 }
@@ -11793,6 +11813,7 @@ main
 .product-card-mini h2
 {
     font-size: 18px;
+    font-weight: 900;
 
     text-decoration: underline;
     text-transform: uppercase;
@@ -11833,6 +11854,14 @@ main
 
     color: #61bb46;
 }
+.lsv-h2--grey-underline
+{
+    font-size: 18px;
+
+    text-decoration: underline;
+
+    color: #515151;
+}
 .lsv-h3
 {
     font-size: 15px;
@@ -11855,4 +11884,177 @@ main
 .navbar-fixed-top
 {
     border: 0;
+}
+.lsv-article__img
+{
+    width: 100%;
+}
+.lsv-article__link-back
+{
+    margin-top: 21px;
+    margin-bottom: 24px;
+}
+.lsv-article__link-back a
+{
+    text-decoration: underline;
+
+    color: #515151;
+}
+.lsv-article__text
+{
+    margin-bottom: 70px;
+}
+.lsv-release
+{
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 0 63px 0 0;
+}
+.lsv-press_about
+{
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 0 63px 0 0;
+}
+.lsv-press_about h2
+{
+    margin: 15px 0;
+}
+.lsv-release__header
+{
+    display: block;
+
+    margin-bottom: 7px;
+}
+.lsv-release__header:before
+{
+    display: inline-block;
+
+    width: 20px;
+    height: 15px;
+}
+.lsv-release__header--press
+{
+    color: #ff6c00;
+    border-color: #ff6c00;
+}
+.lsv-release__header--post
+{
+    color: #01b1d1;
+    border-color: #01b1d1;
+}
+.lsv-release__header--comment
+{
+    color: #79d35e;
+    border-color: #79d35e;
+}
+.lsv-release__header-icon
+{
+    font-size: 12px;
+
+    position: relative;
+    top: -1px;
+
+    margin-right: 5px;
+    padding: 3px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+}
+.lsv-release__source a
+{
+    text-decoration: underline;
+
+    color: #61bb46;
+}
+.lsv-release__source a:hover
+{
+    text-decoration: none;
+
+    color: #79d35e;
+}
+.lsv-products
+{
+    margin: 0;
+    padding: 60px;
+}
+.lsv-category-milk
+{
+    color: #87d3e0;
+}
+.lsv-category-cheese
+{
+    color: #f9b316;
+}
+.lsv-category-beef
+{
+    color: #b92727;
+}
+.lsv-category-poultry
+{
+    color: #f19a67;
+}
+.lsv-category-honey
+{
+    color: #ffca59;
+}
+.lsv-category-cooking
+{
+    color: #ed145b;
+}
+.lsv-category-plant-food
+{
+    color: #eb2046;
+}
+.lsv-category-approved
+{
+    color: #61bb46;
+}
+.category-card__name
+{
+    font-size: 18px;
+    font-weight: 900;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+
+    text-transform: uppercase;
+}
+.lsv-product-logo
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    clear: both;
+
+    height: 150px;
+    margin: auto;
+}
+.lsv-products__category-cadr
+{
+    min-height: 200px;
+    margin: 50px 0;
+}
+.lsv-ferm
+{
+    width: 100%;
+    height: 100%;
+
+    background-color: #65a566;
+}
+.lsv-ferm-svg
+{
+    position: absolute;
+    top: 62px;
+    right: 0;
+    left: 0;
+
+    height: 90%;
+    margin: auto;
 }
