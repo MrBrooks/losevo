@@ -17,11 +17,11 @@ $(document).ready(function() {
 });
 
   $('#lsv-slides').fullpage({
-    css3: true,
-    easing: 'easeOutElastic',
-    fitToSection: false,
-    fixedElements: '.lsv-nav , .lsv-menu',
-    scrollOverflow: true
+    'css3': true,
+    'easing': 'easeOutElastic',
+    'fitToSection': false,
+    'fixedElements': '.lsv-nav , .lsv-menu',
+    'scrollOverflow': true
   });
 
 });

@@ -11229,20 +11229,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
 .retina-sprites(@retina-groups);
 */
-.svg-sprite--html5
-{
-    width: 47px;
-    height: 47px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 47px 47px;
-}
-.no-svg .svg-sprite--html5
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
 .png-sprite:before
 {
     display: inline-block;
@@ -11283,20 +11269,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     content: '';
 
     background-size: contain!important;
-}
-.svg-sprite--html5-icon:before
-{
-    width: 47px;
-    height: 47px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 47px 47px;
-}
-.no-svg .svg-sprite--html5-icon:before
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
 }
 .prettyprint
 {
@@ -11384,6 +11356,10 @@ main
 .head-displace
 {
     top: 62px;
+}
+.mb50
+{
+    margin-bottom: 50px;
 }
 /* 
 1024
@@ -12057,4 +12033,209 @@ main
 
     height: 90%;
     margin: auto;
+}
+.fullslide_img_text
+{
+    position: absolute;
+    top: 62px;
+
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: cover;
+}
+.fullslide_img_text h1
+{
+    font-size: 40px;
+    font-weight: 900;
+
+    position: relative;
+    top: 112px;
+    left: 100px;
+
+    color: white;
+}
+.lsv-grey-very-dark
+{
+    color: #515151;
+}
+.lsv-history__img
+{
+    position: absolute;
+    top: 62px;
+
+    width: 50%;
+    height: 100%;
+    padding: 50px 10px 105px 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: cover;
+}
+.lsv-history__img--big
+{
+    width: 100%;
+    padding-right: 100px;
+}
+#lsv-history__start
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2004
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2005
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2008
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2012
+{
+    background-image: url(http://placehold.it/1600x800);
+}
+#lsv-history__2013
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2014
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2015
+{
+    background-image: url(http://placehold.it/600x700);
+}
+.lsv-history__discription
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 30%;
+    margin-bottom: 35px;
+    margin-left: 30px;
+}
+.lsv-history__discription > .lsv-h1
+{
+    font-size: 30px;
+}
+.lsv-history__discription--top
+{
+    top: 0;
+
+    margin-top: 90px;
+}
+.lsv-history__discription--top-left
+{
+    top: 0;
+    left: 0;
+
+    margin-top: 120px;
+    margin-left: 120px;
+}
+.lsv-history__discription--middle
+{
+    top: 0;
+
+    margin-top: 150px;
+}
+.lsv-history__discription--middle > p:last-child
+{
+    position: absolute;
+    bottom: 0;
+
+    margin-bottom: 10px;
+}
+.lsv-history__discription--middle-2013-2
+{
+    position: absolute;
+    top: 45%;
+}
+.lsv-history__discription--middle-2013-2 > p:last-child
+{
+    margin-top: 50px;
+}
+.lsv-slides--bg-grey .section
+{
+    background-color: #efefef;
+}
+.lsv-white
+{
+    color: white;
+}
+.lsv-history__timeline
+{
+    position: fixed;
+    z-index: 1021;
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100%;
+
+    -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+
+    opacity: 0;
+}
+.timeline__line
+{
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    bottom: 0;
+    left: 70px;
+
+    width: 1px;
+    height: 70%;
+    margin: auto;
+
+    border-left: 1px solid #515151;
+}
+.timeline__years
+{
+    position: absolute;
+    left: -43px;
+
+    width: 100px;
+}
+.timeline__years span
+{
+    position: relative;
+    top: 2px;
+
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    -webkit-transition: all 1000ms ease;
+            transition: all 1000ms ease;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+
+    border: 1px solid #515151;
+    border-radius: 100%;
+    background-color: #efefef;
+}
+.timeline--active span
+{
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transform: scale(1.3, 1.3);
+        -ms-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+
+    background-color: #515151;
 }
