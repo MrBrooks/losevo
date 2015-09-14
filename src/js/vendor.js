@@ -9,4 +9,4 @@
 //= ../../bower_components/fullpage.js/jquery.fullPage.js
 //= ../../bower_components/fullpage.js/vendors/jquery.slimscroll.min.js
 //= ../../bower_components/fullpage.js/vendors/jquery.easings.min.js
-
+//= ../../bower_components/owl.carousel/owl-carousel/owl.carousel.min.js

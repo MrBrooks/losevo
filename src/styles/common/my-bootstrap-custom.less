@@ -53,6 +53,18 @@ main{
 .mb50{
   margin-bottom: 50px;
 }
+.fullscreen{
+  height: 100%;
+}
+.align_container{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+.underline{
+  text-decoration: underline;
+}
 /* 
 1024
  */
@@ -75,7 +87,7 @@ main{
   position: absolute;
   top: 0;
   bottom: 0;
-  left: @lsv_logo_displace;
+  left: 46%;
   width: 0;
   height: 67%;
   margin: auto;
@@ -86,7 +98,7 @@ main{
   top: 0;
   bottom: 0;
   left: 0;
-  width: @lsv_menu_height;
+  width: @lsv_menu_height*2;
   border: 0;
   padding: 0;
   background-color: @lsv_green;
@@ -152,14 +164,27 @@ main{
     position: relative;
     backface-visibility: hidden;
 }
+.lsv-menu-btn__text{
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  margin: 20px 16px;
+  margin-left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
 
+}
 .line {
     display: block;
     position: relative;
     top: 2px;
     height: 3px;
     width: 25px;
-    margin: 4px auto;
+    margin: 4px 20px;
     background-color: #fff;
     transition: all 300ms cubic-bezier(.215,.61,.355,1);
     // transform: translate3d(0,0,0);
@@ -183,7 +208,7 @@ main{
 
 .lsv-nav__links{
   float:right;
-  margin: 9px 40px;
+  margin: 9px 13px;
 }
 
 .lsv-btn{
@@ -303,24 +328,60 @@ main{
     text-align: center;
   }
 }
-.lsv-social{
-  display: block;
-  font-size: 16px;
-  .fa-stack-1x{
-    font-size: 16px;
-  }
-  a {
-    color: @lsv_grey;
+.menu-icon{
     transition: all 500ms cubic-bezier(.215,.61,.355,1);
-
+}
+.lsv-social{
+  padding:17px 8px;
+  margin: 0;
+  font-size: 18px;
+  border-left: 1px solid @lsv_grey_light;
+  border-right: 1px solid @lsv_grey_light;
+  a {
+    margin: 0 6px;
   }
-  a:hover .fa-stack-2x{
+  a:hover > svg > .menu-icon{
+    fill: @lsv_green;
+  }
+  .vk-svg-icon{
+    position: relative;
+    top: -3px;
+  }
+}
+.lsv-btn--shop{
+  background-color: transparent;
+  border: 0;
+  color: #9e9e9e;
+  margin-top: 3px;
+  transition: all 500ms cubic-bezier(.215,.61,.355,1);
+
+  &:hover{
+    background-color: transparent;
     color: @lsv_green;
+  }
+  &:hover > svg > .menu-icon{
+    fill: @lsv_green;
+  }
+  & > svg{
+    position: relative;
+    top: 3px;
+    left: -3px;
   }
 }
 
+
 .lsv-social--footer{
   padding: 70px 30px 0px 0px;
+  font-size: 14px;
+  .fa-circle{
+    color: @lsv_green;
+  }
+  .fa-stack-1x{
+    font-size: 15px;
+  }
+  a{
+    margin: 0 -3px;
+  }
 }
 
 .lsv-h1{
@@ -521,9 +582,13 @@ main{
     }
   }
 }
+.lsv-products-section{
+  background-color: @lsv_slide_bg;
+}
 .lsv-products{
   padding: 60px;
   margin: 0;
+  background-color: @lsv_slide_bg;
 }
 .lsv-products__category-cadr{
 
@@ -743,3 +808,126 @@ main{
     transition-duration: 500ms;
    }
 }
+.lsv-404__message{
+  width: 60%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  // position: absolute;
+  a{
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: auto;
+  }
+}
+.lsv-404__erorr-list{
+  padding-left: 15px;
+}
+.lsv-404{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: @lsv_slide_bg;
+}
+.lsv-slide-bgc{
+  background-color: @lsv_slide_bg;
+}
+.lsv-vacancies__header{
+  position: absolute;
+  top: @lsv_menu_height + 46px - 20px;
+  left: 38px;
+}
+.flex-container{
+  display:inline-flex;
+  justify-content: center;
+}
+.lsv-vacancies__menu{
+  width: 100%;
+  display:inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+// .lsv-vacancies__menu-item{
+//   display: block;
+//   img{
+//     height: 80px;
+//   }
+// }
+.lsv-vacancies__category-img{
+  height: 80px;
+  fill: @lsv_grey_very_dark;
+  transition: all 700ms ease;
+  &:hover{
+    fill: @lsv_green;
+  }
+}
+.lsv-vacancies__career-btn{
+  position: absolute;
+  top: 80%;
+  margin-top: -100px;
+  width: 100%;
+  display:inline-flex;
+  justify-content: center;
+  span{
+    font-size: 18px;
+  }
+}
+.lsv-vacancies__response-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  span{
+    font-size: 18px;
+  }
+  button{
+    margin: 0 42px 27px 0;
+  }
+}
+.lsv-vacancies__office-header{
+  position: absolute;
+  left: 105px;
+  top: @lsv_menu_height + 46px - 20px;
+  button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.lsv-vacancies__vacancy-item{
+  div:first-child{
+    padding: 0 12%;
+  }
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+  }
+}
+
+#owl-vacancy-slider{
+  .owl-pagination{
+    margin-top: 40px;
+  }
+  .owl-buttons{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    div{
+      height: 100%;
+      background-color: transparent;
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+    .owl-prev{
+      float: left;
+      background-image: url('../img/svg/slider-arrow-left.svg');
+    }
+    .owl-next{
+      float: right;
+      background-image: url('../img/svg/slider-arrow-right.svg');
+    }
+  }
+}
+
