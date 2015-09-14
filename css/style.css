@@ -11169,6 +11169,184 @@ button.close
 {
     content: '\f23a';
 }
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+/* clearfix */
+.owl-carousel .owl-wrapper:after
+{
+    line-height: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
+/* display none until init */
+.owl-carousel
+{
+    position: relative;
+
+    display: none;
+
+    width: 100%;
+
+    -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper
+{
+    position: relative;
+
+    display: none;
+
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight
+{
+    -webkit-transition: height 500ms ease-in-out;
+            transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item
+{
+    float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div
+{
+    cursor: pointer;
+}
+.owl-controls
+{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+     -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* mouse grab icon */
+.grabbing
+{
+    cursor: url(grabbing.png) 8 8, move;
+}
+/* fix */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+}
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+.owl-theme .owl-controls
+{
+    margin-top: 10px;
+
+    text-align: center;
+}
+/* Styling Next and Prev buttons */
+.owl-theme .owl-controls .owl-buttons div
+{
+    font-size: 12px;
+
+    display: inline-block;
+    zoom: 1;
+    /*IE7 life-saver */
+
+    margin: 5px;
+    padding: 3px 10px;
+    /*IE7 fix*/
+
+    opacity: .5;
+    color: #fff;
+    border-radius: 30px;
+    background: #869791;
+
+    *display: inline;
+    filter: alpha(opacity=50);
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover
+{
+    text-decoration: none;
+    /*IE7 fix*/
+
+    opacity: 1;
+
+    filter: alpha(opacity=100);
+}
+/* Styling Pagination*/
+.owl-theme .owl-controls .owl-page
+{
+    display: inline-block;
+    zoom: 1;
+
+    *display: inline;
+    /*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span
+{
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    /*IE7 fix*/
+
+    opacity: .5;
+    border-radius: 20px;
+    background: #869791;
+
+    filter: alpha(opacity=50);
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span
+{
+    /*IE7 fix*/
+    opacity: 1;
+
+    filter: alpha(opacity=100);
+}
+/* If PaginationNumbers is true */
+.owl-theme .owl-controls .owl-page span.owl-numbers
+{
+    font-size: 12px;
+
+    width: auto;
+    height: auto;
+    padding: 2px 10px;
+
+    color: #fff;
+    border-radius: 30px;
+}
+/* preloading images */
+.owl-item.loading
+{
+    min-height: 150px;
+
+    background: url(AjaxLoader.gif) no-repeat center center;
+}
 /* Custom */
 /***************************************************/
 /* Set custom or change third-party Less variables */
@@ -11229,20 +11407,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
 .retina-sprites(@retina-groups);
 */
-.svg-sprite--html5
-{
-    width: 47px;
-    height: 47px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 47px 47px;
-}
-.no-svg .svg-sprite--html5
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
 .png-sprite:before
 {
     display: inline-block;
@@ -11283,20 +11447,6 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     content: '';
 
     background-size: contain!important;
-}
-.svg-sprite--html5-icon:before
-{
-    width: 47px;
-    height: 47px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 47px 47px;
-}
-.no-svg .svg-sprite--html5-icon:before
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
 }
 .prettyprint
 {
@@ -11385,6 +11535,26 @@ main
 {
     top: 62px;
 }
+.mb50
+{
+    margin-bottom: 50px;
+}
+.fullscreen
+{
+    height: 100%;
+}
+.align_container
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+}
+.underline
+{
+    text-decoration: underline;
+}
 /* 
 1024
  */
@@ -11410,7 +11580,7 @@ main
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 88px;
+    left: 46%;
 
     width: 0;
     height: 67%;
@@ -11423,7 +11593,7 @@ main
     bottom: 0;
     left: 0;
 
-    width: 62px;
+    width: 124px;
     padding: 0;
 
     border: 0;
@@ -11521,6 +11691,25 @@ main
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
+.lsv-menu-btn__text
+{
+    font-size: 14px;
+    font-weight: 400;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    margin: 20px 16px;
+    margin-left: 0;
+
+    text-transform: uppercase;
+
+    color: white;
+}
 .line
 {
     position: relative;
@@ -11530,7 +11719,7 @@ main
 
     width: 25px;
     height: 3px;
-    margin: 4px auto;
+    margin: 4px 20px;
 
     -webkit-transition: all 300ms cubic-bezier(.215, .61, .355, 1);
             transition: all 300ms cubic-bezier(.215, .61, .355, 1);
@@ -11563,7 +11752,7 @@ main
 {
     float: right;
 
-    margin: 9px 40px;
+    margin: 9px 13px;
 }
 .lsv-btn
 {
@@ -11705,30 +11894,77 @@ main
 
     text-align: center;
 }
-.lsv-social
-{
-    font-size: 16px;
-
-    display: block;
-}
-.lsv-social .fa-stack-1x
-{
-    font-size: 16px;
-}
-.lsv-social a
+.menu-icon
 {
     -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
             transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-
-    color: #c6c6c6;
 }
-.lsv-social a:hover .fa-stack-2x
+.lsv-social
+{
+    font-size: 18px;
+
+    margin: 0;
+    padding: 17px 8px;
+
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+}
+.lsv-social a
+{
+    margin: 0 6px;
+}
+.lsv-social a:hover > svg > .menu-icon
+{
+    fill: #61bb46;
+}
+.lsv-social .vk-svg-icon
+{
+    position: relative;
+    top: -3px;
+}
+.lsv-btn--shop
+{
+    margin-top: 3px;
+
+    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+
+    color: #9e9e9e;
+    border: 0;
+    background-color: transparent;
+}
+.lsv-btn--shop:hover
 {
     color: #61bb46;
+    background-color: transparent;
+}
+.lsv-btn--shop:hover > svg > .menu-icon
+{
+    fill: #61bb46;
+}
+.lsv-btn--shop > svg
+{
+    position: relative;
+    top: 3px;
+    left: -3px;
 }
 .lsv-social--footer
 {
+    font-size: 14px;
+
     padding: 70px 30px 0 0;
+}
+.lsv-social--footer .fa-circle
+{
+    color: #61bb46;
+}
+.lsv-social--footer .fa-stack-1x
+{
+    font-size: 15px;
+}
+.lsv-social--footer a
+{
+    margin: 0 -3px;
 }
 .lsv-h1
 {
@@ -11974,10 +12210,16 @@ main
 
     color: #79d35e;
 }
+.lsv-products-section
+{
+    background-color: #efefef;
+}
 .lsv-products
 {
     margin: 0;
     padding: 60px;
+
+    background-color: #efefef;
 }
 .lsv-category-milk
 {
@@ -12058,4 +12300,378 @@ main
     height: 90%;
     margin: auto;
 }
+.fullslide_img_text
+{
+    position: absolute;
+    top: 62px;
 
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: cover;
+}
+.fullslide_img_text h1
+{
+    font-size: 40px;
+    font-weight: 900;
+
+    position: relative;
+    top: 112px;
+    left: 100px;
+
+    color: white;
+}
+.lsv-grey-very-dark
+{
+    color: #515151;
+}
+.lsv-history__img
+{
+    position: absolute;
+    top: 62px;
+
+    width: 50%;
+    height: 100%;
+    padding: 50px 10px 105px 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: cover;
+}
+.lsv-history__img--big
+{
+    width: 100%;
+    padding-right: 100px;
+}
+#lsv-history__start
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2004
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2005
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2008
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2012
+{
+    background-image: url(http://placehold.it/1600x800);
+}
+#lsv-history__2013
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2014
+{
+    background-image: url(http://placehold.it/600x700);
+}
+#lsv-history__2015
+{
+    background-image: url(http://placehold.it/600x700);
+}
+.lsv-history__discription
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 30%;
+    margin-bottom: 35px;
+    margin-left: 30px;
+}
+.lsv-history__discription > .lsv-h1
+{
+    font-size: 30px;
+}
+.lsv-history__discription--top
+{
+    top: 0;
+
+    margin-top: 90px;
+}
+.lsv-history__discription--top-left
+{
+    top: 0;
+    left: 0;
+
+    margin-top: 120px;
+    margin-left: 120px;
+}
+.lsv-history__discription--middle
+{
+    top: 0;
+
+    margin-top: 150px;
+}
+.lsv-history__discription--middle > p:last-child
+{
+    position: absolute;
+    bottom: 0;
+
+    margin-bottom: 10px;
+}
+.lsv-history__discription--middle-2013-2
+{
+    position: absolute;
+    top: 45%;
+}
+.lsv-history__discription--middle-2013-2 > p:last-child
+{
+    margin-top: 50px;
+}
+.lsv-slides--bg-grey .section
+{
+    background-color: #efefef;
+}
+.lsv-white
+{
+    color: white;
+}
+.lsv-history__timeline
+{
+    position: fixed;
+    z-index: 1021;
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100%;
+
+    -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+
+    opacity: 0;
+}
+.timeline__line
+{
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    bottom: 0;
+    left: 70px;
+
+    width: 1px;
+    height: 70%;
+    margin: auto;
+
+    border-left: 1px solid #515151;
+}
+.timeline__years
+{
+    position: absolute;
+    left: -43px;
+
+    width: 100px;
+}
+.timeline__years span
+{
+    position: relative;
+    top: 2px;
+
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    -webkit-transition: all 1000ms ease;
+            transition: all 1000ms ease;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+
+    border: 1px solid #515151;
+    border-radius: 100%;
+    background-color: #efefef;
+}
+.timeline--active span
+{
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transform: scale(1.3, 1.3);
+        -ms-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+
+    background-color: #515151;
+}
+.lsv-404__message
+{
+    right: 0;
+    left: 0;
+
+    width: 60%;
+    margin: auto;
+}
+.lsv-404__message a
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+}
+.lsv-404__erorr-list
+{
+    padding-left: 15px;
+}
+.lsv-404
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #efefef;
+}
+.lsv-slide-bgc
+{
+    background-color: #efefef;
+}
+.lsv-vacancies__header
+{
+    position: absolute;
+    top: 88px;
+    left: 38px;
+}
+.flex-container
+{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.lsv-vacancies__menu
+{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    width: 100%;
+
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.lsv-vacancies__category-img
+{
+    height: 80px;
+
+    -webkit-transition: all 700ms ease;
+            transition: all 700ms ease;
+
+    fill: #515151;
+}
+.lsv-vacancies__category-img:hover
+{
+    fill: #61bb46;
+}
+.lsv-vacancies__career-btn
+{
+    position: absolute;
+    top: 80%;
+
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    width: 100%;
+    margin-top: -100px;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.lsv-vacancies__career-btn span
+{
+    font-size: 18px;
+}
+.lsv-vacancies__response-btn
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.lsv-vacancies__response-btn span
+{
+    font-size: 18px;
+}
+.lsv-vacancies__response-btn button
+{
+    margin: 0 42px 27px 0;
+}
+.lsv-vacancies__office-header
+{
+    position: absolute;
+    top: 88px;
+    left: 105px;
+}
+.lsv-vacancies__office-header button
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.lsv-vacancies__vacancy-item div:first-child
+{
+    padding: 0 12%;
+}
+.lsv-vacancies__vacancy-item ul
+{
+    padding-left: 0;
+
+    list-style-type: none;
+}
+#owl-vacancy-slider .owl-pagination
+{
+    margin-top: 40px;
+}
+#owl-vacancy-slider .owl-buttons
+{
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+#owl-vacancy-slider .owl-buttons div
+{
+    height: 100%;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#owl-vacancy-slider .owl-buttons .owl-prev
+{
+    float: left;
+
+    background-image: url('../img/svg/slider-arrow-left.svg');
+}
+#owl-vacancy-slider .owl-buttons .owl-next
+{
+    float: right;
+
+    background-image: url('../img/svg/slider-arrow-right.svg');
+}
