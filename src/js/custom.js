@@ -32,7 +32,7 @@ $(document).ready(function() {
     'fixedElements': '.lsv-nav , .lsv-menu',
     'scrollOverflow': true
   });
-  $("#owl-vacancy-slider").owlCarousel({
+  $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider").owlCarousel({
       navigation : true,
       slideSpeed : 300,
       paginationSpeed : 400,
