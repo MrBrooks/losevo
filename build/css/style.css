@@ -11558,6 +11558,14 @@ main
 /* 
 1024
  */
+a:hover
+{
+    color: inherit;
+}
+textarea
+{
+    resize: vertical;
+}
 .lsv-nav
 {
     height: 62px;
@@ -11793,12 +11801,20 @@ main
     top: -168px;
 
     width: 100%;
+    height: 215px;
 
     -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
             transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
     color: white;
     background-color: #61bb46;
+}
+.lsv-menu .container,
+.lsv-menu .row
+{
+    width: 100%;
+    margin: 0;
+    padding: 0 12px;
 }
 .lsv-menu--active
 {
@@ -11818,10 +11834,27 @@ main
 .lsv-menu__list-item
 {
     display: inline-block;
+
+    height: 215px;
+    padding-top: 22px;
+    padding-right: 0;
+
+    border-right: 1px solid #56ad3c;
 }
-.lsv-menu__list-item span
+.lsv-menu__list-item label
 {
-    text-decoration: underline;
+    font-size: 15px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+.lsv-menu__list-item a
+{
+    font-size: 16px;
+}
+.lsv-menu__list-item:last-child
+{
+    border: 0;
 }
 .lsv-menu__link
 {
@@ -12646,14 +12679,22 @@ main
 #owl-vacancy-office-slider .owl-pagination,
 #owl-vacancy-shops-slider .owl-pagination,
 #owl-vacancy-ferm-slider .owl-pagination,
-#owl-vacancy-production-slider .owl-pagination
+#owl-vacancy-production-slider .owl-pagination,
+#owl-team-office-slider .owl-pagination,
+#owl-team-ferm-slider .owl-pagination,
+#owl-team-shops-slider .owl-pagination,
+#owl-team-production-slider .owl-pagination
 {
     margin-top: 40px;
 }
 #owl-vacancy-office-slider .owl-buttons,
 #owl-vacancy-shops-slider .owl-buttons,
 #owl-vacancy-ferm-slider .owl-buttons,
-#owl-vacancy-production-slider .owl-buttons
+#owl-vacancy-production-slider .owl-buttons,
+#owl-team-office-slider .owl-buttons,
+#owl-team-ferm-slider .owl-buttons,
+#owl-team-shops-slider .owl-buttons,
+#owl-team-production-slider .owl-buttons
 {
     position: absolute;
     top: 0;
@@ -12664,18 +12705,40 @@ main
 #owl-vacancy-office-slider .owl-buttons div,
 #owl-vacancy-shops-slider .owl-buttons div,
 #owl-vacancy-ferm-slider .owl-buttons div,
-#owl-vacancy-production-slider .owl-buttons div
+#owl-vacancy-production-slider .owl-buttons div,
+#owl-team-office-slider .owl-buttons div,
+#owl-team-ferm-slider .owl-buttons div,
+#owl-team-shops-slider .owl-buttons div,
+#owl-team-production-slider .owl-buttons div
 {
     height: 100%;
+    margin: 0;
 
+    opacity: 1;
+    color: transparent;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
 }
+#owl-vacancy-office-slider .owl-buttons div:hover,
+#owl-vacancy-shops-slider .owl-buttons div:hover,
+#owl-vacancy-ferm-slider .owl-buttons div:hover,
+#owl-vacancy-production-slider .owl-buttons div:hover,
+#owl-team-office-slider .owl-buttons div:hover,
+#owl-team-ferm-slider .owl-buttons div:hover,
+#owl-team-shops-slider .owl-buttons div:hover,
+#owl-team-production-slider .owl-buttons div:hover
+{
+    opacity: .7;
+}
 #owl-vacancy-office-slider .owl-buttons .owl-prev,
 #owl-vacancy-shops-slider .owl-buttons .owl-prev,
 #owl-vacancy-ferm-slider .owl-buttons .owl-prev,
-#owl-vacancy-production-slider .owl-buttons .owl-prev
+#owl-vacancy-production-slider .owl-buttons .owl-prev,
+#owl-team-office-slider .owl-buttons .owl-prev,
+#owl-team-ferm-slider .owl-buttons .owl-prev,
+#owl-team-shops-slider .owl-buttons .owl-prev,
+#owl-team-production-slider .owl-buttons .owl-prev
 {
     float: left;
 
@@ -12684,9 +12747,313 @@ main
 #owl-vacancy-office-slider .owl-buttons .owl-next,
 #owl-vacancy-shops-slider .owl-buttons .owl-next,
 #owl-vacancy-ferm-slider .owl-buttons .owl-next,
-#owl-vacancy-production-slider .owl-buttons .owl-next
+#owl-vacancy-production-slider .owl-buttons .owl-next,
+#owl-team-office-slider .owl-buttons .owl-next,
+#owl-team-ferm-slider .owl-buttons .owl-next,
+#owl-team-shops-slider .owl-buttons .owl-next,
+#owl-team-production-slider .owl-buttons .owl-next
 {
     float: right;
 
     background-image: url('../img/svg/slider-arrow-right.svg');
+}
+.lsv-vacancies__form .form-group
+{
+    padding: 40px;
+}
+.lsv-vacancies__form .form-group:first-child
+{
+    padding-right: 10px;
+}
+.lsv-vacancies__form .form-group:last-child
+{
+    padding-left: 10px;
+}
+.lsv-vacancies__form .form-control
+{
+    height: 48px;
+    margin: 24px 0;
+
+    background-color: #fff;
+}
+.lsv-vacancies__form textarea.form-control
+{
+    height: 264px;
+}
+.lsv-vacancies__form .help-block
+{
+    float: left;
+
+    width: 40%;
+    margin-top: 0;
+}
+.lsv-btn__input-file
+{
+    height: 48px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    background-color: #515151;
+}
+.lsv-btn__input-file .buttonText
+{
+    font-size: 18px;
+
+    position: relative;
+    top: 12%;
+}
+label.lsv-btn__input-file
+{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.lsv-form__btn-submit--vacancy
+{
+    float: right;
+
+    width: 223px;
+    margin: 0;
+    padding: 11px 30px;
+}
+.lsv-form__btn-submit--vacancy span
+{
+    font-size: 18px;
+}
+#lsv-vacanceis__career-img1,
+#lsv-vacanceis__career-img2,
+#lsv-vacanceis__career-img3
+{
+    background-image: url(http://placehold.it/600x700);
+}
+.lsv-slider .owl-buttons
+{
+    position: absolute;
+    top: 50%;
+}
+.lsv-slider .owl-buttons div.owl-prev,
+.lsv-slider .owl-buttons div.owl-next
+{
+    float: left;
+    clear: both;
+
+    width: 35px;
+    height: 35px;
+
+    -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+
+    opacity: 1;
+    color: transparent;
+    background-color: transparent;
+    background-image: url(../img/svg/slider-arrow-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lsv-slider .owl-buttons div.owl-prev:hover,
+.lsv-slider .owl-buttons div.owl-next:hover
+{
+    opacity: .7;
+}
+.lsv-slider .owl-buttons div.owl-next
+{
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.full-slide
+{
+    height: 100%;
+
+    background-image: url(http://placehold.it/800x800);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.full-slide img
+{
+    height: 100%;
+
+    opacity: 0;
+}
+.lsv-vacansies__career-description
+{
+    padding-top: 162px;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+.lsv-vacansies__career-description span
+{
+    font-size: 15px;
+    font-weight: 400;
+
+    text-transform: none;
+}
+.lsv-vacansies__career-description h3.lsv-h3
+{
+    padding-bottom: 20px;
+}
+.lsv-return-btn
+{
+    position: fixed;
+    z-index: 1030;
+    top: 87px;
+    right: 20px;
+
+    width: 35px;
+    height: 35px;
+
+    -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+
+    background-image: url(../img/svg/slider-arrow-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lsv-return-btn:hover
+{
+    opacity: .7;
+}
+#lsv-team__img-start,
+#lsv-team__img-owner-1,
+#lsv-team__img-owner-2
+{
+    background-image: url(http://placehold.it/1000x1000);
+}
+.lsv-team__owner
+{
+    position: absolute;
+    top: 62px;
+
+    width: 100%;
+    height: 50%;
+}
+.lsv-team__owner:first-child
+{
+    height: 50%;
+}
+.lsv-team__owner:last-child
+{
+    top: 50%;
+}
+.lsv-team__text-start
+{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    padding: 40px;
+}
+.lsv-team__text-start p
+{
+    margin: 20px 0;
+}
+.lsv-team__text-owner
+{
+    position: absolute;
+    top: 0;
+    left: 34%;
+
+    padding: 40px 80px;
+}
+.lsv-team__text-owner .lsv-h2
+{
+    margin-bottom: 30px;
+
+    color: #515151;
+}
+.fullwidth-img
+{
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fullwidth-img--onethird
+{
+    width: 34%;
+    height: 100%;
+}
+.lsv-team__employee-img
+{
+    width: 140px;
+    height: 140px;
+    margin: auto;
+
+    border-radius: 50%;
+    background-image: url(http://placehold.it/140x140/005050/FFF);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lsv-team__employee-img img
+{
+    position: relative;
+    top: 81px;
+    left: -5px;
+}
+.lsv-team__employee-comment
+{
+    padding: 0 44px;
+}
+.lsv-team__office-header
+{
+    margin-bottom: 20px;
+}
+.lsv-about__start
+{
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 62px;
+
+    background-image: url(http://placehold.it/1920x1000);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.lsv-about__start .lsv-h1
+{
+    font-size: 30px;
+
+    position: relative;
+    top: 50%;
+
+    margin: auto;
+
+    color: white;
+}
+.lsv-about__about-block
+{
+    padding: 0 120px;
+}
+.lsv-about__about-block p,
+.lsv-about__about-block h2,
+.lsv-about__about-block li
+{
+    margin-bottom: 20px;
+
+    text-align: left;
+
+    color: #515151;
+}
+.lsv-about__about-block ul
+{
+    padding: 0;
+
+    list-style-type: none;
 }

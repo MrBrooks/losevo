@@ -1,6 +1,12 @@
 /**************************************/
 /* Custom JavaScript files supervisor */
 /**************************************/
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('#spinner');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
 
 $(document).ready(function() {
 
@@ -14,7 +20,6 @@ $(document).ready(function() {
     $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
   });
   $('main').click(function(){
-    console.log($('.lsv-menu--active'));
     if($('.lsv-menu--active').length){
       $( "#lsv-menu" ).toggleClass("lsv-menu--active");
       $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
@@ -37,6 +42,20 @@ $(document).ready(function() {
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true
+  });
+  $("#owl-vacancy-career-slider").owlCarousel({
+      navigation: true,
+      pagination: false,
+      slideSpeed: 300,
+      singleItem:true
+  });
+  $("#owl-team-office-slider, #owl-team-ferm-slider, #owl-team-shops-slider, #owl-team-production-slider").owlCarousel({
+      itemsDesktop: [1199,3],
+      items: 4,
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      autoPlay: 7000
   });
 
 });

@@ -41,32 +41,36 @@
             This will be replaced by the content of html-blocks/pages--external/vacancies-production-block.html
             <!-- /build -->
           </div>
+          <div class="section lsv-slide-bgc" data-anchor="form">
+            <!-- build:include html-blocks/pages--external/vacancies-form-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/vacancies-form-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-slide-bgc" data-anchor="career">
+            <!-- build:include html-blocks/pages--external/vacancies-career-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/vacancies-career-block.html
+            <!-- /build -->
+          </div>
           <div class="section lsv-footer fp-auto-height" data-anchor="footer">
             <!-- build:include html-blocks/pages--external/footer.html -->
             This will be replaced by the content of html-blocks/pages--external/footer.html
             <!-- /build -->
-              
           </div>
-
-                    
         </main>
+        <a href="#menu">
+          <div class="lsv-return-btn" ></div>
+        </a>
 
         <!-- build:include html-blocks/pages--external/footer--external.html -->
         This will be replaced by the content of html-blocks/pages--external/footer--external.html
         <!-- /build -->
-        <!--
         <script type="text/javascript">
-            $('#lsv-slides-vacancies').fullpage({
-              'css3': true,
-              'easing': 'easeOutElastic',
-              'fitToSection': false,
-              'fixedElements': '.lsv-nav , .lsv-menu'
-              // 'scrollOverflow': true,
-              // 'anchors':['menu','office', 'shops', 'ferm','production']
-               // 'menu': '#lsv-vacancies-menu'
+            $(document).ready(function() {
+              $(":file").filestyle({
+              });
             });
+            
         </script>
-        -->
 
     </body>
 
