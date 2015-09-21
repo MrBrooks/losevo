@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+    <!-- build:include html-blocks/common/head.html -->
+    This will be replaced by the content of html-blocks/common/head.html
+    <!-- /build -->
+
+    <body>
+
+        <!-- build:include html-blocks/common/if-ie.html -->
+        This will be replaced by the content of html-blocks/common/if-ie.html
+        <!-- /build -->
+
+        <!-- build:include html-blocks/pages--external/header--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/header--external.html
+        <!-- /build -->
+
+        <main id='lsv-slides'>
+          <div class="section lsv-slide-bgc">
+            <!-- build:include html-blocks/pages--external/shops-map-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/shops-map-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-slide-bgc">
+            <!-- build:include html-blocks/pages--external/main-anim-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/main-anim-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-footer fp-auto-height">
+            <!-- build:include html-blocks/pages--external/footer.html -->
+            This will be replaced by the content of html-blocks/pages--external/footer.html
+            <!-- /build -->
+              
+          </div>
+                    
+        </main>
+
+        <!-- build:include html-blocks/pages--external/footer--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/footer--external.html
+        <!-- /build -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap"
+  type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            var shops = $.getJSON( "js/shops.json", function(json){
+              console.log(json);
+              console.log(json[0]);
+              console.log(json[0].coord);
+              console.log(json[0].coord[0]);
+            });
+          });
+          
+
+
+          var map;
+          function initMap(){
+            var styles = [
+              {
+                "stylers": [
+                  { "saturation": -100 }
+                ]
+              },{
+              }
+            ];
+            var styledMap = new google.maps.StyledMapType(styles, {name: "Losevo Styled Map"});
+            var mapOptions = {
+              zoom: 11,
+              center: new google.maps.LatLng(59.931254, 30.357312),
+              disableDefaultUI: true,
+              mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+              }
+            };
+            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
+
+            map.mapTypes.set('map_style', styledMap);
+            map.setMapTypeId('map_style');
+          };
+        </script>
+
+    </body>
+
+</html>
+
+<!-- Google map API key AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA 
+59.931254, 30.357312
+-->
