@@ -1,0 +1,242 @@
+<div class="row nomargin nopadding lsv-shops__header">
+  <h2 class="lsv-h2 nomargin text-left ">Магазины</h2>
+  <div id="lsv-shops__filter-btn" class="lsv-shops__filter-btn">
+
+    <svg id="lsv-shops-filter-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="40" height="40" viewBox="0 0 40 40">
+      <defs>
+        <style>
+          .cls-1, .cls-3 {
+            fill: #515151;
+          }
+          .cls-2 {
+            fill: #eaeaea;
+          }
+          .cls-3 {
+            stroke: #fff;
+            stroke-width: 1px;
+          }
+          circle{
+            transition: all 500ms ease;
+          }
+        </style>
+      </defs>
+      <g id="lsv-filter-btn" class"">
+        <circle cx="20" cy="20" r="20" class="cls-1"/>
+        <rect x="12" y="9" width="1" height="22" class="cls-2"/>
+        <rect x="20" y="9" width="1" height="22" class="cls-2"/>
+        <rect x="28" y="9" width="1" height="22" class="cls-2"/>
+        <circle cx="12.5" cy="28.5" r="2.5" class="cls-3"/>
+        <circle cx="20.5" cy="19.5" r="2.5" class="cls-3"/>
+        <circle cx="28.5" cy="11.5" r="2.5" class="cls-3"/>
+      </g>
+    </svg>
+    <label>Фильтр магазинов</label>
+  </div>
+</div>
+<div id="lsv-shops__map" class="col-md-6"></div>
+<div class="lsv-shops__map-info">
+  <div>
+  <div class="col-md-8">
+    <h3 id="lsv-map__name" class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p id="lsv-map__adress" class="lsv-shops__item-address">Измайловский пр., 20</p>
+  </div>
+  <div class="col-md-4">
+    <p id="lsv-map__work_hours" class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p id="lsv-map__tel" class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  </div>
+</div>
+<div id="lsv-shops__filter-menu" class="lsv-shops__filter lsv-shops__filter--active">
+  <div class="lsv-shops__filter-menu">
+    <form class="lsv-shops__filter-form">
+      <div class="form-group nomargin nopadding">
+        <label for="lsv-shops__select-district">Район города</label>
+        <select class="form-control" id="lsv-shops__select-district">
+          <option value="all_city">Весь город</option>
+          <option value="district_1">Адмиралтейский</option>
+          <option value="district_2">Василеостровский</option>
+          <option value="district_3">Выборгский</option>
+          <option value="district_4">Калининский</option>
+          <option value="district_5">Кировский</option>
+          <option value="district_6">Колпинский</option>
+          <option value="district_7">Красногвардейский</option>
+          <option value="district_8">Красносельский</option>
+          <option value="district_9">Кронштадтcкий</option>
+          <option value="district_10">Курортный</option>
+          <option value="district_11">Московский</option>
+          <option value="district_12">Невский</option>
+          <option value="district_13">Петроградский</option>
+          <option value="district_14">Петродворцовый</option>
+          <option value="district_15">Приморский</option>
+          <option value="district_16">Пушкинский</option>
+          <option value="district_17">Фрунзенский</option>
+          <option value="district_18">Центральный</option>
+        </select>
+
+        <label for="lsv-shops__select-metro">Станция метро</label>
+        <select class="form-control" id="lsv-shops__select-metro">
+          <option value="all_metro" >Любая станция</option>
+          <option value="metro_1">Автово</option>
+          <option value="metro_2">Адмиралтейская</option>
+          <option value="metro_3">Академическая</option>
+          <option value="metro_4">Балтийская</option>
+          <option value="metro_5">Бухарестская</option>
+          <option value="metro_6">Василеостровская</option>
+          <option value="metro_7">Владимирская</option>
+          <option value="metro_8">Волковская</option>
+          <option value="metro_9">Выборгская</option>
+          <option value="metro_10">Горьковская</option>
+          <option value="metro_11">Гостиный двор</option>
+          <option value="metro_12">Гражданский проспект</option>
+          <option value="metro_13">Девяткино</option>
+          <option value="metro_14">Достоевская</option>
+          <option value="metro_15">Елизаровская</option>
+          <option value="metro_16">Звёздная</option>
+          <option value="metro_17">Звенигородская</option>
+          <option value="metro_18">Кировский завод</option>
+          <option value="metro_19">Комендантский проспект</option>
+          <option value="metro_20">Крестовский остров</option>
+          <option value="metro_21">Купчино</option>
+          <option value="metro_22">Ладожская</option>
+          <option value="metro_23">Ленинский проспект</option>
+          <option value="metro_24">Лесная</option>
+          <option value="metro_25">Лиговский проспект</option>
+          <option value="metro_26">Ломоносовская</option>
+          <option value="metro_27">Маяковская</option>
+          <option value="metro_28">Международная</option>
+          <option value="metro_29">Московская</option>
+          <option value="metro_30">Московские ворота</option>
+          <option value="metro_31">Нарвская</option>
+          <option value="metro_32">Невский проспект</option>
+          <option value="metro_33">Новочеркасская</option>
+          <option value="metro_34">Обводный канал</option>
+          <option value="metro_35">Обухово</option>
+          <option value="metro_36">Озерки</option>
+          <option value="metro_37">Парк Победы</option>
+          <option value="metro_38">Парнас</option>
+          <option value="metro_39">Петроградская</option>
+          <option value="metro_40">Пионерская</option>
+          <option value="metro_41">Пл. Александра Невского</option>
+          <option value="metro_42">Площадь Восстания</option>
+          <option value="metro_43">Площадь Ленина</option>
+          <option value="metro_44">Площадь Мужества</option>
+          <option value="metro_45">Политехническая</option>
+          <option value="metro_46">Приморская</option>
+          <option value="metro_47">Пролетарская</option>
+          <option value="metro_48">Проспект Большевиков</option>
+          <option value="metro_49">Проспект Ветеранов</option>
+          <option value="metro_50">Проспект Просвещения</option>
+          <option value="metro_51">Пушкинская</option>
+          <option value="metro_52">Рыбацкое</option>
+          <option value="metro_53">Садовая</option>
+          <option value="metro_54">Сенная площадь</option>
+          <option value="metro_55">Спасская</option>
+          <option value="metro_56">Спортивная</option>
+          <option value="metro_57">Старая Деревня</option>
+          <option value="metro_58">Технологический институт</option>
+          <option value="metro_59">Улица Дыбенко</option>
+          <option value="metro_60">Фрунзенская</option>
+          <option value="metro_61">Чёрная речка</option>
+          <option value="metro_62">Чернышевская</option>
+          <option value="metro_63">Чкаловская</option>
+          <option value="metro_64">Электросила</option>
+        </select>
+      </div>
+      <div class="form-group nomargin nopadding">
+        <input type="checkbox" class="lsv-radio" value="SPB" id="lsv-shops__check-spb">
+        <label for="lsv-shops__check-spb">Санкт-Петербург</label>
+        <input type="checkbox" class="lsv-radio" value="LO" id="lsv-shops__check-lo">
+        <label for="lsv-shops__check-lo">Лен. область</label>
+        <input type="checkbox" class="lsv-radio" value="FIRM" id="lsv-shops__check-firm">
+        <label for="lsv-shops__check-firm">Фирменные магазины</label>
+      </div>
+    </form>
+  </div>
+  <div class="lsv-shops__create-own-shop">
+    <form class="lsv-shops__filter-form">
+      <div class="form-group nomargin nopadding">
+        <label>СОЗДАТЬ СВОЙ МАГАЗИН</label>
+        <input type="name" class="form-control" id="" placeholder="Фамилия Имя Отчество">
+        <input type="text" class="form-control" id="" placeholder="Номер телефона">
+        <input type="email" class="form-control" id="" placeholder="E-mail">
+
+        <button type="submit" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy">
+          <span>Отправить заявку</span>
+        </button>
+      </div>
+      <div class="form-group nomargin nopadding">
+        <textarea id="" placeholder="Опишите, где вы хотите чтобы мы открыли фирменный магазин, либо предложите свое помещение."></textarea>
+      </div>
+    </form>
+  </div>
+  
+</div>
+<div id="lsv-shops__list" class="lsv-shops__list col-md-6 col-md-offset-6">
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+  <div class="lsv-shops__list-item">
+    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+  </div>
+</div>
+<!-- О магазинах лосево -->

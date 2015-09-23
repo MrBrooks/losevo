@@ -14559,6 +14559,13 @@ $(document).ready(function() {
       $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
     }
   });
+  $("#lsv-shops__filter-btn").on('click',function(){
+    $( "#lsv-shops__filter-menu" ).toggleClass("lsv-shops__filter--active");
+    $(this).toggleClass("active");
+  });
+  // $("#lsv-shops__filter-btn").on('hover',function(){
+  //   $( "#lsv-shops__filter-menu" ).toggleClass("lsv-shops__filter--active");
+  // });
   // $( ".lsv-menu--active" ).blur(function() {
   //   $( "#lsv-menu" ).toggleClass("lsv-menu--active");
   //   $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
