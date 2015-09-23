@@ -339,9 +339,9 @@
           <div class="section lsv-slide-bgc">
             <div class="row nomargin nopadding lsv-shops__header">
   <h2 class="lsv-h2 nomargin text-left ">Магазины</h2>
-  <div class="lsv-shops__filter-btn">
+  <div id="lsv-shops__filter-btn" class="lsv-shops__filter-btn">
 
-    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="40" height="40" viewBox="0 0 40 40">
+    <svg id="lsv-shops-filter-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="40" height="40" viewBox="0 0 40 40">
       <defs>
         <style>
           .cls-1, .cls-3 {
@@ -354,9 +354,12 @@
             stroke: #fff;
             stroke-width: 1px;
           }
+          circle{
+            transition: all 500ms ease;
+          }
         </style>
       </defs>
-      <g id="lsv-filter-btn">
+      <g id="lsv-filter-btn" class"">
         <circle cx="20" cy="20" r="20" class="cls-1"/>
         <rect x="12" y="9" width="1" height="22" class="cls-2"/>
         <rect x="20" y="9" width="1" height="22" class="cls-2"/>
@@ -373,103 +376,110 @@
 <div class="lsv-shops__map-info">
   <div>
   <div class="col-md-8">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
+    <h3 id="lsv-map__name" class="lsv-h3">фирменный магазин «Лосево»</h3>
+    <p id="lsv-map__adress" class="lsv-shops__item-address">Измайловский пр., 20</p>
   </div>
   <div class="col-md-4">
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
+    <p id="lsv-map__work_hours" class="lsv-shops__item-work_hours">10:00 - 20:00</p>
+    <p id="lsv-map__tel" class="lsv-shops__item-tel">8 (821) 678-54-54</p>
   </div>
   </div>
 </div>
-<div class="lsv-shops__filter">
+<div id="lsv-shops__filter-menu" class="lsv-shops__filter lsv-shops__filter--active">
   <div class="lsv-shops__filter-menu">
     <form class="lsv-shops__filter-form">
       <div class="form-group nomargin nopadding">
-        <label for="lsv-shops__select-district">Станция метро</label>
+        <label for="lsv-shops__select-district">Район города</label>
         <select class="form-control" id="lsv-shops__select-district">
-          <option value="all_city"> Весь город</option>
-          <option value="district_1">Район №1</option>
-          <option value="district_2">Район №2</option>
-          <option value="district_3">Район №3</option>
-          <option value="district_4">Район №4</option>
-          <option value="district_5">Район №5</option>
-          <option value="district_6">Район №6</option>
-          <option value="district_7">Район №7</option>
-          <option value="district_8">Район №8</option>
-          <option value="district_9">Район №9</option>
-          <option value="district_10">Район №10</option>
-          <option value="district_11">Район №11</option>
-          <option value="district_12">Район №12</option>
-          <option value="district_13">Район №13</option>
+          <option value="all_city">Весь город</option>
+          <option value="district_1">Адмиралтейский</option>
+          <option value="district_2">Василеостровский</option>
+          <option value="district_3">Выборгский</option>
+          <option value="district_4">Калининский</option>
+          <option value="district_5">Кировский</option>
+          <option value="district_6">Колпинский</option>
+          <option value="district_7">Красногвардейский</option>
+          <option value="district_8">Красносельский</option>
+          <option value="district_9">Кронштадтcкий</option>
+          <option value="district_10">Курортный</option>
+          <option value="district_11">Московский</option>
+          <option value="district_12">Невский</option>
+          <option value="district_13">Петроградский</option>
+          <option value="district_14">Петродворцовый</option>
+          <option value="district_15">Приморский</option>
+          <option value="district_16">Пушкинский</option>
+          <option value="district_17">Фрунзенский</option>
+          <option value="district_18">Центральный</option>
         </select>
 
         <label for="lsv-shops__select-metro">Станция метро</label>
         <select class="form-control" id="lsv-shops__select-metro">
-          <option value="all_metro" > Любая старция</option>
-          <option value="metro_1">Метро №1</option>
-          <option value="metro_2">Метро №2</option>
-          <option value="metro_3">Метро №3</option>
-          <option value="metro_4">Метро №4</option>
-          <option value="metro_5">Метро №5</option>
-          <option value="metro_6">Метро №6</option>
-          <option value="metro_7">Метро №7</option>
-          <option value="metro_8">Метро №8</option>
-          <option value="metro_9">Метро №9</option>
-          <option value="metro_10">Метро №10</option>
-          <option value="metro_11">Метро №11</option>
-          <option value="metro_12">Метро №12</option>
-          <option value="metro_13">Метро №13</option>
-          <option value="metro_14">Метро №14</option>
-          <option value="metro_15">Метро №15</option>
-          <option value="metro_16">Метро №16</option>
-          <option value="metro_17">Метро №17</option>
-          <option value="metro_18">Метро №18</option>
-          <option value="metro_19">Метро №19</option>
-          <option value="metro_20">Метро №20</option>
-          <option value="metro_21">Метро №21</option>
-          <option value="metro_22">Метро №22</option>
-          <option value="metro_23">Метро №23</option>
-          <option value="metro_24">Метро №24</option>
-          <option value="metro_25">Метро №25</option>
-          <option value="metro_26">Метро №26</option>
-          <option value="metro_27">Метро №27</option>
-          <option value="metro_28">Метро №28</option>
-          <option value="metro_29">Метро №29</option>
-          <option value="metro_30">Метро №30</option>
-          <option value="metro_31">Метро №31</option>
-          <option value="metro_32">Метро №32</option>
-          <option value="metro_33">Метро №33</option>
-          <option value="metro_34">Метро №34</option>
-          <option value="metro_35">Метро №35</option>
-          <option value="metro_36">Метро №36</option>
-          <option value="metro_37">Метро №37</option>
-          <option value="metro_38">Метро №38</option>
-          <option value="metro_39">Метро №39</option>
-          <option value="metro_40">Метро №40</option>
-          <option value="metro_41">Метро №41</option>
-          <option value="metro_42">Метро №42</option>
-          <option value="metro_43">Метро №43</option>
-          <option value="metro_44">Метро №44</option>
-          <option value="metro_45">Метро №45</option>
-          <option value="metro_46">Метро №46</option>
-          <option value="metro_47">Метро №47</option>
-          <option value="metro_48">Метро №48</option>
-          <option value="metro_49">Метро №49</option>
-          <option value="metro_50">Метро №50</option>
-          <option value="metro_51">Метро №51</option>
-          <option value="metro_52">Метро №52</option>
-          <option value="metro_53">Метро №53</option>
-          <option value="metro_54">Метро №54</option>
-          <option value="metro_55">Метро №55</option>
-          <option value="metro_56">Метро №56</option>
-          <option value="metro_57">Метро №57</option>
-          <option value="metro_58">Метро №58</option>
-          <option value="metro_59">Метро №59</option>
+          <option value="all_metro" >Любая станция</option>
+          <option value="metro_1">Автово</option>
+          <option value="metro_2">Адмиралтейская</option>
+          <option value="metro_3">Академическая</option>
+          <option value="metro_4">Балтийская</option>
+          <option value="metro_5">Бухарестская</option>
+          <option value="metro_6">Василеостровская</option>
+          <option value="metro_7">Владимирская</option>
+          <option value="metro_8">Волковская</option>
+          <option value="metro_9">Выборгская</option>
+          <option value="metro_10">Горьковская</option>
+          <option value="metro_11">Гостиный двор</option>
+          <option value="metro_12">Гражданский проспект</option>
+          <option value="metro_13">Девяткино</option>
+          <option value="metro_14">Достоевская</option>
+          <option value="metro_15">Елизаровская</option>
+          <option value="metro_16">Звёздная</option>
+          <option value="metro_17">Звенигородская</option>
+          <option value="metro_18">Кировский завод</option>
+          <option value="metro_19">Комендантский проспект</option>
+          <option value="metro_20">Крестовский остров</option>
+          <option value="metro_21">Купчино</option>
+          <option value="metro_22">Ладожская</option>
+          <option value="metro_23">Ленинский проспект</option>
+          <option value="metro_24">Лесная</option>
+          <option value="metro_25">Лиговский проспект</option>
+          <option value="metro_26">Ломоносовская</option>
+          <option value="metro_27">Маяковская</option>
+          <option value="metro_28">Международная</option>
+          <option value="metro_29">Московская</option>
+          <option value="metro_30">Московские ворота</option>
+          <option value="metro_31">Нарвская</option>
+          <option value="metro_32">Невский проспект</option>
+          <option value="metro_33">Новочеркасская</option>
+          <option value="metro_34">Обводный канал</option>
+          <option value="metro_35">Обухово</option>
+          <option value="metro_36">Озерки</option>
+          <option value="metro_37">Парк Победы</option>
+          <option value="metro_38">Парнас</option>
+          <option value="metro_39">Петроградская</option>
+          <option value="metro_40">Пионерская</option>
+          <option value="metro_41">Пл. Александра Невского</option>
+          <option value="metro_42">Площадь Восстания</option>
+          <option value="metro_43">Площадь Ленина</option>
+          <option value="metro_44">Площадь Мужества</option>
+          <option value="metro_45">Политехническая</option>
+          <option value="metro_46">Приморская</option>
+          <option value="metro_47">Пролетарская</option>
+          <option value="metro_48">Проспект Большевиков</option>
+          <option value="metro_49">Проспект Ветеранов</option>
+          <option value="metro_50">Проспект Просвещения</option>
+          <option value="metro_51">Пушкинская</option>
+          <option value="metro_52">Рыбацкое</option>
+          <option value="metro_53">Садовая</option>
+          <option value="metro_54">Сенная площадь</option>
+          <option value="metro_55">Спасская</option>
+          <option value="metro_56">Спортивная</option>
+          <option value="metro_57">Старая Деревня</option>
+          <option value="metro_58">Технологический институт</option>
+          <option value="metro_59">Улица Дыбенко</option>
+          <option value="metro_60">Фрунзенская</option>
+          <option value="metro_61">Чёрная речка</option>
+          <option value="metro_62">Чернышевская</option>
+          <option value="metro_63">Чкаловская</option>
+          <option value="metro_64">Электросила</option>
         </select>
-        <button type="submit" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy">
-          <span>Применить</span>
-        </button>
       </div>
       <div class="form-group nomargin nopadding">
         <input type="checkbox" class="lsv-radio" value="SPB" id="lsv-shops__check-spb">
@@ -482,11 +492,25 @@
     </form>
   </div>
   <div class="lsv-shops__create-own-shop">
-    
+    <form class="lsv-shops__filter-form">
+      <div class="form-group nomargin nopadding">
+        <label>СОЗДАТЬ СВОЙ МАГАЗИН</label>
+        <input type="name" class="form-control" id="" placeholder="Фамилия Имя Отчество">
+        <input type="text" class="form-control" id="" placeholder="Номер телефона">
+        <input type="email" class="form-control" id="" placeholder="E-mail">
+
+        <button type="submit" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy">
+          <span>Отправить заявку</span>
+        </button>
+      </div>
+      <div class="form-group nomargin nopadding">
+        <textarea id="" placeholder="Опишите, где вы хотите чтобы мы открыли фирменный магазин, либо предложите свое помещение."></textarea>
+      </div>
+    </form>
   </div>
   
 </div>
-<div class="lsv-shops__list col-md-6 col-md-offset-6">
+<div id="lsv-shops__list" class="lsv-shops__list col-md-6 col-md-offset-6">
   <div class="lsv-shops__list-item">
     <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
     <p class="lsv-shops__item-address">Измайловский пр., 20</p>
@@ -659,18 +683,10 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap"
   type="text/javascript"></script>
         <script type="text/javascript">
-          $(document).ready(function() {
-            var shops = $.getJSON( "js/shops.json", function(json){
-              console.log(json);
-              console.log(json[0]);
-              console.log(json[0].coord);
-              console.log(json[0].coord[0]);
-            });
-          });
-          
-
 
           var map;
+          var active_marker, temp_icon;
+          var markers = [];
           function initMap(){
             var styles = [
               {
@@ -682,18 +698,187 @@
             ];
             var styledMap = new google.maps.StyledMapType(styles, {name: "Losevo Styled Map"});
             var mapOptions = {
-              zoom: 11,
+              zoom: 10,
               center: new google.maps.LatLng(59.931254, 30.357312),
               disableDefaultUI: true,
               mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
               }
+            }
+            var losevo_shop_icon = {
+              url: 'img/svg/losevo-shop.svg',
+              size: new google.maps.Size(31, 46),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(15, 46)
             };
-            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
+            var losevo_shop_icon_green = {
+              url: 'img/svg/losevo-shop--green.svg',
+              size: new google.maps.Size(31, 46),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(15, 46)
+            };
+            var shop_icon = {
+                url: 'img/svg/shop.svg',
+                size: new google.maps.Size(10, 10),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(5, 5)
+            };
+            var shop_icon_green = {
+                url: 'img/svg/shop--green.svg',
+                size: new google.maps.Size(10, 10),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(5, 5)
+            };
+;            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
 
             map.mapTypes.set('map_style', styledMap);
             map.setMapTypeId('map_style');
+
+
+            var shops = $.getJSON( "js/shops.json", function(json){
+              function addShopWithTimeout(shop, timeout, index) {
+                var icon;
+                if (shop.firm){icon = losevo_shop_icon;}
+                else {icon = shop_icon;}
+
+                window.setTimeout(function() {
+                  markers.push(new google.maps.Marker({
+                    position: new google.maps.LatLng(shop.coord[0], shop.coord[1]),
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    title: shop.name,
+                    icon: icon
+                  }));
+                  markers[index].lsv_district = shop.district;
+                  markers[index].lsv_metro = shop.metro;
+                  markers[index].lsv_firm = shop.firm;
+                  markers[index].lsv_lo = shop.lo;
+
+                  markers[index].addListener('click',function(){
+                    if (active_marker != undefined){
+                      if(json[active_marker].firm){
+                        markers[active_marker].setIcon(losevo_shop_icon);
+                      } else{
+                        markers[active_marker].setIcon(shop_icon);
+                      };
+                    };
+                    active_marker = index;
+                    $("#lsv-map__name").text(shop.name);
+                    $("#lsv-map__adress").text(shop.adress);
+                    $("#lsv-map__work_hours").text(shop.work_hours);
+                    $("#lsv-map__tel").text(shop.tel);
+                    if(shop.firm){
+                      markers[index].setIcon(losevo_shop_icon_green);
+                    } else{
+                      markers[index].setIcon(shop_icon_green);
+                    };
+                  })
+                }, timeout);
+              };
+
+              function filterCheck(marker, filter){
+                var district = false || (marker.lsv_district == filter.district),
+                  metro = false, firm = true, lo = true, position = true;
+                for ( var i = 0; i < marker.lsv_metro.length; i++){
+                  metro = metro ||  (marker.lsv_metro[i] == filter.metro);
+                }
+
+                if (filter.district == "Весь город"){
+                  district = true;
+                }
+                if (filter.metro == "Любая станция"){
+                  metro = true;
+                }
+                if (filter.firm){
+                  firm = marker.lsv_firm;
+                }
+                if(filter.lo){
+                  position = marker.lsv_lo;
+                }
+                if(filter.spb){
+                  position = !marker.lsv_lo;
+                }
+                return district && metro && firm && position;
+              }
+
+              function filterMarkers(filter) {
+                for (var i = 0; i < markers.length; i++){
+                  if (filterCheck(markers[i], filter)){
+                    markers[i].setMap(map);
+                  }
+                  else {
+                    markers[i].setMap(null);
+                  }
+                }
+              }
+
+              function clearMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                  markers[i].setMap(null);
+                }
+                markers = [];
+              };
+
+              var div = document.createElement("div"), 
+              h3 = document.createElement("div"), 
+              p1 = document.createElement("div"),
+              p2 = document.createElement("div"),
+              p3 = document.createElement("div");
+              div.className = "lsv-shops__list-item";
+              h3.className = "lsv-h3";
+              p1.className = "lsv-shops__item-address";
+              p2.className = "lsv-shops__item-work_hours";
+              p3.className = "lsv-shops__item-tel";
+
+              for (var i = 0; i < json.length; i++){
+                $("#lsv-shops__list");
+              }
+
+              for (var i = 0; i < json.length; i++){
+                  addShopWithTimeout(json[i], i * 300, i);
+              };
+              var filter_options = {
+                "district": "Весь город",
+                "metro": "Любая станция",
+                "firm": false,
+                "lo": false,
+                "spb": false
+              };
+              
+
+              $("#lsv-shops__select-district").change(function(){
+                filter_options.district = $("#lsv-shops__select-district option:selected").text();
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__select-metro").change(function(){
+                filter_options.metro = $("#lsv-shops__select-metro option:selected").text();
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-spb").change(function(){
+                filter_options.spb = $("#lsv-shops__check-spb").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-firm").change(function(){
+                filter_options.firm = $("#lsv-shops__check-firm").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-lo").change(function(){
+                filter_options.lo = $("#lsv-shops__check-lo").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+            });
           };
+          $(document).ready(function() {
+            $(".lsv-radio").click(function(){
+              $(this).toggleClass('checked');
+              // console.log("change class");
+            });
+          });
         </script>
 
     </body>
@@ -702,4 +887,6 @@
 
 <!-- Google map API key AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA 
 59.931254, 30.357312
+
+https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap
 -->

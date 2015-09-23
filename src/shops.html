@@ -41,18 +41,10 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap"
   type="text/javascript"></script>
         <script type="text/javascript">
-          $(document).ready(function() {
-            var shops = $.getJSON( "js/shops.json", function(json){
-              console.log(json);
-              console.log(json[0]);
-              console.log(json[0].coord);
-              console.log(json[0].coord[0]);
-            });
-          });
-          
-
 
           var map;
+          var active_marker, temp_icon;
+          var markers = [];
           function initMap(){
             var styles = [
               {
@@ -64,18 +56,187 @@
             ];
             var styledMap = new google.maps.StyledMapType(styles, {name: "Losevo Styled Map"});
             var mapOptions = {
-              zoom: 11,
+              zoom: 10,
               center: new google.maps.LatLng(59.931254, 30.357312),
               disableDefaultUI: true,
               mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
               }
+            }
+            var losevo_shop_icon = {
+              url: 'img/svg/losevo-shop.svg',
+              size: new google.maps.Size(31, 46),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(15, 46)
             };
-            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
+            var losevo_shop_icon_green = {
+              url: 'img/svg/losevo-shop--green.svg',
+              size: new google.maps.Size(31, 46),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(15, 46)
+            };
+            var shop_icon = {
+                url: 'img/svg/shop.svg',
+                size: new google.maps.Size(10, 10),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(5, 5)
+            };
+            var shop_icon_green = {
+                url: 'img/svg/shop--green.svg',
+                size: new google.maps.Size(10, 10),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(5, 5)
+            };
+;            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
 
             map.mapTypes.set('map_style', styledMap);
             map.setMapTypeId('map_style');
+
+
+            var shops = $.getJSON( "js/shops.json", function(json){
+              function addShopWithTimeout(shop, timeout, index) {
+                var icon;
+                if (shop.firm){icon = losevo_shop_icon;}
+                else {icon = shop_icon;}
+
+                window.setTimeout(function() {
+                  markers.push(new google.maps.Marker({
+                    position: new google.maps.LatLng(shop.coord[0], shop.coord[1]),
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    title: shop.name,
+                    icon: icon
+                  }));
+                  markers[index].lsv_district = shop.district;
+                  markers[index].lsv_metro = shop.metro;
+                  markers[index].lsv_firm = shop.firm;
+                  markers[index].lsv_lo = shop.lo;
+
+                  markers[index].addListener('click',function(){
+                    if (active_marker != undefined){
+                      if(json[active_marker].firm){
+                        markers[active_marker].setIcon(losevo_shop_icon);
+                      } else{
+                        markers[active_marker].setIcon(shop_icon);
+                      };
+                    };
+                    active_marker = index;
+                    $("#lsv-map__name").text(shop.name);
+                    $("#lsv-map__adress").text(shop.adress);
+                    $("#lsv-map__work_hours").text(shop.work_hours);
+                    $("#lsv-map__tel").text(shop.tel);
+                    if(shop.firm){
+                      markers[index].setIcon(losevo_shop_icon_green);
+                    } else{
+                      markers[index].setIcon(shop_icon_green);
+                    };
+                  })
+                }, timeout);
+              };
+
+              function filterCheck(marker, filter){
+                var district = false || (marker.lsv_district == filter.district),
+                  metro = false, firm = true, lo = true, position = true;
+                for ( var i = 0; i < marker.lsv_metro.length; i++){
+                  metro = metro ||  (marker.lsv_metro[i] == filter.metro);
+                }
+
+                if (filter.district == "Весь город"){
+                  district = true;
+                }
+                if (filter.metro == "Любая станция"){
+                  metro = true;
+                }
+                if (filter.firm){
+                  firm = marker.lsv_firm;
+                }
+                if(filter.lo){
+                  position = marker.lsv_lo;
+                }
+                if(filter.spb){
+                  position = !marker.lsv_lo;
+                }
+                return district && metro && firm && position;
+              }
+
+              function filterMarkers(filter) {
+                for (var i = 0; i < markers.length; i++){
+                  if (filterCheck(markers[i], filter)){
+                    markers[i].setMap(map);
+                  }
+                  else {
+                    markers[i].setMap(null);
+                  }
+                }
+              }
+
+              function clearMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                  markers[i].setMap(null);
+                }
+                markers = [];
+              };
+
+              var div = document.createElement("div"), 
+              h3 = document.createElement("div"), 
+              p1 = document.createElement("div"),
+              p2 = document.createElement("div"),
+              p3 = document.createElement("div");
+              div.className = "lsv-shops__list-item";
+              h3.className = "lsv-h3";
+              p1.className = "lsv-shops__item-address";
+              p2.className = "lsv-shops__item-work_hours";
+              p3.className = "lsv-shops__item-tel";
+
+              for (var i = 0; i < json.length; i++){
+                $("#lsv-shops__list");
+              }
+
+              for (var i = 0; i < json.length; i++){
+                  addShopWithTimeout(json[i], i * 300, i);
+              };
+              var filter_options = {
+                "district": "Весь город",
+                "metro": "Любая станция",
+                "firm": false,
+                "lo": false,
+                "spb": false
+              };
+              
+
+              $("#lsv-shops__select-district").change(function(){
+                filter_options.district = $("#lsv-shops__select-district option:selected").text();
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__select-metro").change(function(){
+                filter_options.metro = $("#lsv-shops__select-metro option:selected").text();
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-spb").change(function(){
+                filter_options.spb = $("#lsv-shops__check-spb").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-firm").change(function(){
+                filter_options.firm = $("#lsv-shops__check-firm").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+              $("#lsv-shops__check-lo").change(function(){
+                filter_options.lo = $("#lsv-shops__check-lo").hasClass('checked');
+                console.log(filter_options);
+                filterMarkers(filter_options);
+              });
+            });
           };
+          $(document).ready(function() {
+            $(".lsv-radio").click(function(){
+              $(this).toggleClass('checked');
+              // console.log("change class");
+            });
+          });
         </script>
 
     </body>
@@ -84,4 +245,6 @@
 
 <!-- Google map API key AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA 
 59.931254, 30.357312
+
+https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap
 -->
