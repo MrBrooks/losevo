@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <div class="animation-container">
+    <svg id="animation-canvas"></svg>
+
+    <button id = "next-anim"> click me</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script type="text/javascript">
+    var animation_data = {
+      "path" : "/img/svg/animations/",
+      "files": ["transportation.svg", "quality_control.svg", "milk_inspection.svg", "milk_aging.svg", "pasteurization.svg", "leavening.svg", "souring.svg", "cheese_mass.svg","forming.svg", "brining.svg", "cheese_aging.svg", "packing.svg", "logistics.svg"]
+    };
+    var current_anim = 0;
+
+    var canvas = Snap("#animation-canvas");
+    var paper = canvas.g();
+    canvas.append(paper);
+    function onLoadSVG(data){
+      paper.append(data);
+    }
+    function startNextAnim(){
+      paper.remove();
+      paper = canvas.g();
+      Snap.load(animation_data.path + animation_data.files[++current_anim % animation_data.files.length], onLoadSVG);
+    }
+    // for (var i = 0; i < animation_data.files.length; i++){
+    //   Snap.load(animation_data.path + animation_data.files[i], onLoadSVG);
+    // }
+    Snap.load(animation_data.path + animation_data.files[current_anim], onLoadSVG);
+    $("#next-anim").click(startNextAnim);
+
+  </script>
+</body>
+</html>
