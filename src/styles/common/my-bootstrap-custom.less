@@ -1225,13 +1225,19 @@ label.lsv-btn__input-file{
   padding-left: 33px;
 }
 .lsv-shops__list-item{
+  cursor: pointer;
   margin-bottom: 48px;
+  transition: all 500ms ease;
   .lsv-h3{
     color: @lsv_green;
     margin-bottom: 5px;
   }
   p{
     margin: 0;
+  }
+  &.active{
+    border-left: 3px solid @lsv_green;
+    padding-left: 20px;
   }
 }
 .lsv-shops__map-info{

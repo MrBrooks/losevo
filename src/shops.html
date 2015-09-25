@@ -122,7 +122,7 @@
                     };
                     active_marker = index;
                     $("#lsv-map__name").text(shop.name);
-                    $("#lsv-map__adress").text(shop.adress);
+                    $("#lsv-map__address").text(shop.address);
                     $("#lsv-map__work_hours").text(shop.work_hours);
                     $("#lsv-map__tel").text(shop.tel);
                     if(shop.firm){
@@ -156,6 +156,9 @@
                 if(filter.spb){
                   position = !marker.lsv_lo;
                 }
+                if(filter.spb && filter.lo){
+                  position = true;
+                }
                 return district && metro && firm && position;
               }
 
@@ -177,20 +180,42 @@
                 markers = [];
               };
 
-              var div = document.createElement("div"), 
-              h3 = document.createElement("div"), 
-              p1 = document.createElement("div"),
-              p2 = document.createElement("div"),
-              p3 = document.createElement("div");
-              div.className = "lsv-shops__list-item";
-              h3.className = "lsv-h3";
-              p1.className = "lsv-shops__item-address";
-              p2.className = "lsv-shops__item-work_hours";
-              p3.className = "lsv-shops__item-tel";
 
               for (var i = 0; i < json.length; i++){
-                $("#lsv-shops__list");
-              }
+                $("#lsv-shops__list").append(
+                  '<div data-marker-index='+ i + ' class="lsv-shops__list-item"><h3 class="lsv-h3">'+
+                  json[i].name +
+                  '</h3><p class="lsv-shops__item-address">' +
+                  json[i].address + 
+                  '</p><p class="lsv-shops__item-work_hours">' + 
+                  json[i].work_hours +
+                  '</p><p class="lsv-shops__item-tel">'+
+                  json[i].tel + '</p></div>'
+                );
+              };
+
+              $(".lsv-shops__list-item").click(function(){
+                var index = $(this).attr("data-marker-index");
+                $(this).addClass('active').siblings().removeClass('active');
+                if (active_marker != undefined){
+                      if(json[active_marker].firm){
+                        markers[active_marker].setIcon(losevo_shop_icon);
+                      } else{
+                        markers[active_marker].setIcon(shop_icon);
+                      };
+                    };
+                    active_marker = index;
+                    $("#lsv-map__name").text(json[index].name);
+                    $("#lsv-map__address").text(json[index].address);
+                    $("#lsv-map__work_hours").text(json[index].work_hours);
+                    $("#lsv-map__tel").text(json[index].tel);
+                    if(json[index].firm){
+                      markers[index].setIcon(losevo_shop_icon_green);
+                    } else{
+                      markers[index].setIcon(shop_icon_green);
+                    };
+              });
+
 
               for (var i = 0; i < json.length; i++){
                   addShopWithTimeout(json[i], i * 300, i);
