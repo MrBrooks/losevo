@@ -2,42 +2,180 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-
+  <style type="text/css">
+    .animation-container{
+      background-color: #61bb46;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+    }
+    .animation-container > svg{
+      flex-grow: 1;
+    }
+    .lsv-production__text-block>div{
+      width: 50%;
+      position: relative;
+      top:100px;
+      left: 50px;
+      transition: all 1500 ease 100;
+    }
+    .lsv-production__text-block{
+      flex-grow: 2;
+    }
+    button{
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 50px;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="animation-container">
+  <div class="animation-container" >
     <svg id="animation-canvas"></svg>
-
-    <button id = "next-anim"> click me</button>
+    <div class="lsv-production__text-block">
+      <div class="test">
+        <h2 id="lsv-production__description-header" class="lsv-h2">text</h2>
+        <p id="lsv-production__description">text</p>
+      </div>
+    </div>
   </div>
+  <button id = "next-anim"> click me</button>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
   <script type="text/javascript">
     var animation_data = {
       "path" : "/img/svg/animations/",
-      "files": ["transportation.svg", "quality_control.svg", "milk_inspection.svg", "milk_aging.svg", "pasteurization.svg", "leavening.svg", "souring.svg", "cheese_mass.svg","forming.svg", "brining.svg", "cheese_aging.svg", "packing.svg", "logistics.svg"]
+      "steps" : [{
+        "img": "transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "milk_aging.svg",
+        "header": "СОЗРЕВАНИЕ МОЛОКА",
+        "description": "Процесс созревания молока, необходимого для производства сыра."
+        },
+        {
+        "img": "pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "leavening.svg",
+        "header": "ЗАКВАШИВАНИЕ",
+        "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах, а также сычужного фермента."
+        },
+        {
+        "img": "souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Образование сырного колье (сгустка)."
+        },
+        {
+        "img": "cheese_mass.svg",
+        "header": "СЫРНАЯ МАССА",
+        "description": "Проверка свойств полученного сырного сгустка."
+        },
+        {
+        "img": "forming.svg",
+        "header": "ФОРМОВКА И ПРЕССОВАНИЕ СЫРНОЙ МАССЫ",
+        "description": "Распределение сырного колье по формам, прессование продукта и формирование сырных головок."
+        },
+        {
+        "img": "brining.svg",
+        "header": "ПРОСОЛКА СЫРНЫХ ГОЛОВОК",
+        "description": ""
+        },
+        {
+        "img": "cheese_aging.svg",
+        "header": "СЫРНАЯ КАМЕРА, СОЗРЕВАНИЕ",
+        "description": "Процесс созревание сырных голов."
+        },
+        {
+        "img": "packing.svg",
+        "header": "ФАСОВКА",
+        "description": "Фасовка и упаковка сыра в оригинальную упаковку «Лосево»."
+        },
+        {
+        "img": "logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
     };
     var current_anim = 0;
 
     var canvas = Snap("#animation-canvas");
-    var paper = canvas.g();
+    var paper = canvas.g(), box;
+    var temp;
+    var appearTime = 1500, disappearTime = 200;
+    var appearMatrix = new Snap.Matrix(),
+      zeroscaleMatrix = new Snap.Matrix();
     canvas.append(paper);
+
+    function stepAnimation(){
+      var element = paper.select("svg");
+      box = element.getBBox();
+      switch (current_anim % animation_data.steps.length){
+        case 0:
+          var car = element.select("#car");
+          var carMatrix = new Snap.Matrix();
+          carMatrix.translate(box.w+100,0);
+          car.animate({transform: carMatrix}, appearTime, mina.linear, function(){
+            car.transform(carMatrix.translate(-box.w-100,0));
+          });
+          break;
+        default: console.log("defualt case in step animation");
+      }
+    }
+
     function onLoadSVG(data){
+      paper.attr({
+        opacity: 0
+      });
       paper.append(data);
+      box = canvas.getBBox();
+      appearMatrix = new Snap.Matrix();
+ 
+      zeroscaleMatrix.scale(0,0,box.cx,box.cy);
+      appearMatrix.scale(0.6,0.6,box.cx,box.cy);
+      paper.transform(zeroscaleMatrix);
+      paper.attr({
+        opacity: 1
+      });
+      paper.animate({transform: appearMatrix}, appearTime, mina.elastic,stepAnimation);
     }
     function startNextAnim(){
-      paper.remove();
-      paper = canvas.g();
-      Snap.load(animation_data.path + animation_data.files[++current_anim % animation_data.files.length], onLoadSVG);
+      paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
+          paper.remove();
+          paper = canvas.g();
+          Snap.load(animation_data.path + animation_data.steps[++current_anim % animation_data.steps.length].img, onLoadSVG);
+          $("#lsv-production__description-header").text(animation_data.steps[current_anim % animation_data.steps.length].header);
+          $("#lsv-production__description").text(animation_data.steps[current_anim % animation_data.steps.length].description);
+      });
     }
-    // for (var i = 0; i < animation_data.files.length; i++){
-    //   Snap.load(animation_data.path + animation_data.files[i], onLoadSVG);
-    // }
-    Snap.load(animation_data.path + animation_data.files[current_anim], onLoadSVG);
+    Snap.load(animation_data.path + animation_data.steps[current_anim].img, onLoadSVG);
+    $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
+    $("#lsv-production__description").text(animation_data.steps[current_anim].description);
     $("#next-anim").click(startNextAnim);
-
   </script>
 </body>
 </html>
