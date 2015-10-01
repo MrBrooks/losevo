@@ -78,30 +78,42 @@
         50% { transform: scale(1.09); }
         100% { transform: scale(1); }
       }
+      @-webkit-keyframes scale-circle{
+        0% { transform: scale(1); }
+        50% { transform: scale(0.91); }
+        100% { transform: scale(1); }
+      }
+      @-webkit-keyframes scale-losevo{
+        0% { transform: scale(1); }
+        50% { transform: scale(1.09); }
+        100% { transform: scale(1); }
+      }
     </style>
 
-    <link rel="canonical" href="http://enkil.github.io/template-frontend/">
-    <link rel="image_src" href="http://enkil.github.io/template-frontend/img/images/html5-2x.png"/>
+    <link rel="image_src" href="/img/images/losevo-2x.png"/>
     <link type="text/plain" rel="author" href="humans.txt" />
-    <link rel="shortlink" href="http://enkil.github.io/template-frontend/">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/images/favicon//manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/img/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/img/images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/img/images/favicon/manifest.json">
+    <link rel="shortcut icon" href="/img/images/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Losevo">
+    <meta name="application-name" content="Losevo">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/images/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/img/images/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="/img/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Set URLs to some our services-->
@@ -113,6 +125,10 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.min.css" />
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+    <script type="text/javascript">
+        VK.init({apiId: 5089933, onlyWidgets: true});
+    </script>
 </head>
     <style type="text/css">
       @-webkit-keyframes grow{

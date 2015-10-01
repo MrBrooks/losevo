@@ -69,6 +69,9 @@ main{
 .underline{
   text-decoration: underline;
 }
+.lsv-green-bg{
+  background-color: @lsv_green;
+}
 /* 
 1024
  */
@@ -1404,4 +1407,144 @@ input[type='reset']:focus {
       fill: @lsv_green;
     }
   }
+}
+
+.lsv-diary-products__start{
+  position: absolute;
+  top: 0;
+  padding-top: @lsv_menu_height;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://placehold.it/1920x1000);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  p{
+    position: absolute;
+    top: 50%;
+    left: @lsv_menu_height*2;
+    width: 30%;
+  }
+}
+.lsv-dairy-products{
+  width: 100%;
+  height: 100%;
+  padding-top: @padding_top_const;
+}
+.lsv-dairy-products__menu-btn,.lsv-dairy-products__next-animation{
+  position: absolute;
+  top: @lsv_menu_height;
+  margin-left: 15px;
+  margin-top: 8px;
+  cursor: pointer;
+  label{
+    text-transform: none;
+    text-decoration: underline;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    top: 12px;
+    left: 5px;
+    cursor: pointer;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.lsv-dairy-products__menu{
+  position: absolute;
+  top: -1px;
+  background-color: #2c2d2d;
+  color: white;
+  z-index: 1040;
+  left: -280px;
+  transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
+  ul{
+    list-style: none;
+    padding: 0;
+    .not-visible:hover{
+      background-color: #2c2d2d;
+    }
+  }
+  li{
+    height: 48px;
+    padding: 15px 0 15px 30px;
+    cursor: pointer;
+    &:hover{
+      background-color: #3f3f3f;
+    }
+    &:first-child{
+      position: fixed;
+      z-index: 1041;
+      background-color: #2c2d2d;
+      text-align: right;
+      position: fixed;
+      z-index: 1041;
+      width: 280px;
+      background-color: #2c2d2d;
+      height: 48px;
+      transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
+    }
+  }
+  &.active{
+    left: 0;
+  }
+  #lsv-dairy-products__menu-close-btn{
+    left: -280px;
+    &.active{
+      left: 0;
+    }
+    img{
+      transition: all 700ms cubic-bezier(.41,2.15,.33,.72);
+      margin: -6px 10px 0 0;
+    }
+    &:hover>img{
+      transform:rotate(90deg);
+    }
+  }
+}
+.animation-container{
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  left: 25%;
+  top: 10%;
+}
+#animation-canvas{
+  height: 100%;
+  width: 100%;
+}
+.lsv-dairy-products__next-animation{
+  bottom: 0;
+  top: initial;
+  left: 30%;
+  img{
+    margin-left: 10px;
+  }
+}
+.lsv-production__text-block{
+  padding-right: 20px;
+  position: absolute;
+  width: 25%;
+  left: 75%;
+  top: 33%;
+  color: white;
+  .lsv-h2{
+    color: white;
+  }
+}
+.lsv-dairy-products__goodies-btns{
+  position: absolute;
+  top: @lsv_menu_height+24px;
+  right: 31px;
+  img{
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+#vk_like{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
