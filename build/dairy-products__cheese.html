@@ -367,58 +367,75 @@
     </div>
 </header>
 
-        <main id='lsv-slides'>
-          <div class="section lsv-products-section">
-            <div class="row lsv-products nomargin nopadding">
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/milk.svg" class="lsv-product-logo text-center">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-milk">Молочная продукция</p>
+        <main id='lsv-slides-scroll-overflow-off'>
+          <div class="section">
+            <div class="lsv-diary-products__start">
+  <p>Сырное производство «Лосево» основано на собственной молочной продукции и итальянских технологиях сыроделия. Объединяя традиционные рецептуры со свежим живым молоком, мы получаем ассортимент сыров «Лосево».</p>
+</div>
+          </div>
+          <div class="section lsv-green-bg">
+            <div class="lsv-dairy-products">
+  <div id="lsv-dairy-products__menu" class="lsv-dairy-products__menu">
+    <ul>
+      <li id="lsv-dairy-products__menu-close-btn">
+        <img src="/img/svg/dairy-products-menu-close-btn.svg">
+      </li>
+      <li class="not-visible">&nbsp;</li>
+      <li>Продукт 1</li>
+      <li>Продукт 2</li>
+      <li>Продукт 3</li>
+      <li>Продукт 4</li>
+      <li>Продукт 5</li>
+      <li>Продукт 6</li>
+      <li>Продукт 7</li>
+      <li>Продукт 8</li>
+      <li>Продукт 9</li>
+      <li>Продукт 10</li>
+      <li>Продукт 11</li>
+      <li>Продукт 12</li>
+      <li>Продукт 13</li>
+      <li>Продукт 14</li>
+      <li>Продукт 15</li>
+      <li>Продукт 16</li>
+      <li>Продукт 17</li>
+      <li>Продукт 18</li>
+      <li>Продукт 19</li>
+      <li>Продукт 20</li>
+    </ul>
   </div>
-  <a href="dairy-products__cheese.html">
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/cheese.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-cheese">СЫРЫ</p>
-  </div></a>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/meat.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-beef">ОХЛАЖДЁННАЯ ГОВЯДИНА</p>
+  <div id="lsv-dairy-products__menu-btn" class="lsv-dairy-products__menu-btn">
+    <img src="/img/svg/diary-products-choose.svg">
+    <label>Выберите <br> продукт</label>
   </div>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/chiken.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-poultry">МЯСО ПТИЦЫ</p>
+  <div id="lsv-dairy-products__product-title" class="lsv-dairy-products__product-title text-center">
+    <h2 class="lsv-h2">Test text</h2>
   </div>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/honey.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-honey">МЁД</p>
+  <div class="animation-container" >
+    <svg id="animation-canvas"></svg>
+    <div id="lsv-dairy-products__next-animation" class="lsv-dairy-products__next-animation">
+      <label>Посмотреть <br> производство</label>
+      <img src="/img/svg/dairy-products-show-production.svg">
+    </div>
   </div>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/cooking.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-cooking">КУЛИНАРИЯ</p>
+  <div class="lsv-production__text-block">
+    <div class="test">
+      <h2 id="lsv-production__description-header" class="lsv-h2"></h2>
+      <p id="lsv-production__description"></p>
+    </div>
   </div>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/fruits.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-plant-food">ЯГОДЫ, ФРУКТЫ, ОВОЩИ</p>
+  <div class="lsv-dairy-products__goodies-btns">
+    <img id="goodies-btns__info" src="/img/svg/info_icon.svg">
+    <img id="goodies-btns__good" src="/img/svg/good_icon.svg">
   </div>
-  <div class="col-md-3 lsv-products__category-cadr">
-    <object type="image/svg+xml" data="img/svg/accept.svg" class="lsv-product-logo">
-      Kiwi Logo <!-- запасное изображение в CSS -->
-    </object>
-    <p class="category-card__name text-center lsv-category-approved">ОДОБРЕНО ЛОСЕВО</p>
+  <div id="lsv-dairy-products__tooltip-good" class="lsv-dairy-products__tooltip">
+    <img src="/img/svg/bubble.svg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum et ducimus labore consectetur asperiores, quae consequatur similique maiores. Velit cupiditate unde nemo facere, in, sed excepturi et. Ipsum, repellat. Ullam nisi vitae nemo alias pariatur, voluptatibus ab commodi atque labore blanditiis error nulla deserunt repellat, sapiente dolor in cumque eius recusandae dicta reiciendis? Deleniti dolorum veniam, illum optio maxime recusandae nulla quos magni? Commodi vel eligendi esse quam earum odio veritatis sequi, hic modi.</p>
   </div>
+   <div id="lsv-dairy-products__tooltip-info" class="lsv-dairy-products__tooltip">
+    <img src="/img/svg/bubble.svg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptatum et ducimus labore consectetur asperiores, quae consequatur similique maiores. Velit cupiditate unde nemo facere, in, sed excepturi et. Ipsum, repellat. Ullam nisi vitae nemo alias pariatur, voluptatibus ab commodi atque labore blanditiis error nulla deserunt repellat, sapiente dolor in cumque eius recusandae dicta reiciendis? Deleniti dolorum veniam, illum optio maxime recusandae nulla quos magni? Commodi vel eligendi esse quam earum odio veritatis sequi, hic modi.</p>
+  </div>
+  <!-- <div id="vk_like"></div> -->
 </div>
           </div>
           <div class="section lsv-footer fp-auto-height">
@@ -487,6 +504,7 @@
 </div>
               
           </div>
+                    
         </main>
 
         
@@ -494,7 +512,18 @@
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
+        <script src="/js/production-animation.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#lsv-slides-scroll-overflow-off').fullpage({
+              'css3': true,
+              'easing': 'easeOutElastic',
+              'fitToSection': false,
+              'fixedElements': '.lsv-nav , .lsv-menu',
+              'scrollOverflow': false
+            });
+          });
+        </script>
     </body>
 
 </html>

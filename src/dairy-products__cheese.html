@@ -40,7 +40,15 @@
         <!-- /build -->
         <script src="/js/production-animation.js"></script>
         <script type="text/javascript">
-          VK.Widgets.Like("vk_like", {type: "full", height: 24});
+          $(document).ready(function(){
+            $('#lsv-slides-scroll-overflow-off').fullpage({
+              'css3': true,
+              'easing': 'easeOutElastic',
+              'fitToSection': false,
+              'fixedElements': '.lsv-nav , .lsv-menu',
+              'scrollOverflow': false
+            });
+          });
         </script>
     </body>
 

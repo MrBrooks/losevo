@@ -366,7 +366,7 @@ main{
 }
 .lsv-social{
   padding:17px 8px;
-  margin: 0;
+  margin: -1px;
   font-size: 18px;
   border-left: 1px solid @lsv_grey_light;
   border-right: 1px solid @lsv_grey_light;
@@ -1437,6 +1437,7 @@ input[type='reset']:focus {
   margin-left: 15px;
   margin-top: 8px;
   cursor: pointer;
+  z-index: 1000;
   label{
     text-transform: none;
     text-decoration: underline;
@@ -1457,7 +1458,7 @@ input[type='reset']:focus {
   top: -1px;
   background-color: #2c2d2d;
   color: white;
-  z-index: 1040;
+  z-index: 1030;
   left: -280px;
   transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
   ul{
@@ -1497,7 +1498,7 @@ input[type='reset']:focus {
     }
     img{
       transition: all 700ms cubic-bezier(.41,2.15,.33,.72);
-      margin: -6px 10px 0 0;
+      margin: -6px 25px 0 0;
     }
     &:hover>img{
       transform:rotate(90deg);
@@ -1518,7 +1519,7 @@ input[type='reset']:focus {
 .lsv-dairy-products__next-animation{
   bottom: 0;
   top: initial;
-  left: 30%;
+  left: 33%;
   img{
     margin-left: 10px;
   }
@@ -1534,6 +1535,7 @@ input[type='reset']:focus {
     color: white;
   }
 }
+
 .lsv-dairy-products__goodies-btns{
   position: absolute;
   top: @lsv_menu_height+24px;
@@ -1541,10 +1543,50 @@ input[type='reset']:focus {
   img{
     display: inline-block;
     margin-left: 10px;
+    cursor: pointer;
   }
 }
 #vk_like{
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.lsv-dairy-products__product-title{
+  position: absolute;
+  top: @lsv_menu_height;
+  left: 0;
+  right: 0;
+  margin: auto;
+  h2.lsv-h2{
+    color: white;
+    font-weight: 400;
+  }
+}
+.lsv-dairy-products__tooltip{
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  right: 0;
+  top: @lsv_menu_height + 90px;
+  margin-right: 30px;
+  background: white;
+  border-radius: 20px;
+  z-index: 1030;
+  padding: 30px 25px;
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
+  img{
+    position: absolute;
+    top: -15px;
+    right: 21px;
+    z-index: 1029;
+  }
+  &.active{
+    opacity: 1;
+  }
+}
+#lsv-dairy-products__tooltip-info{
+  img{
+    right: 82px;
+  }
 }

@@ -1,6 +1,8 @@
     var animation_data = {
       "title": "Качотта",
       "path" : "/img/svg/animations/caciotta/",
+      "goodies" : "По своей пищевой ценности оно почти не отличается от молока 2,5%. Белка и углеводов в обоих видах молока содержится одинаковое количество (белка – 2,8г, углеводов – 4,7 г). Но за счет снижения доли молочного жира до 1 г понижается и количество ккал с 53 до 39. <br> Такое молоко рекомендуется употреблять людям, следящим за своим весом или желающим понизить уровень холестерина.",
+      "info": "Массовая доля жира: 1% <br> Обьем:1л <br> Состав: молоко обезжиренное, молоко цельное <br> Пищевая ценность на 100 гр: <br>белки — 2,8 г, жиры — 1,0 г, углеводы — 4,7 г.<br> Энергетическая ценность на 100 гр: 39 ккал<br> Условия хранения: хранить при t от +2 до + 6°С. <br> Срок годности: 5 суток <br>ГОСТ",
       "steps" : [{
         "img": "packing.svg",
         "header": "",
@@ -116,6 +118,8 @@
       paper.animate({transform: appearMatrix}, appearTime, mina.elastic,stepAnimation);
     }
     function startNextAnim(){
+      $("#lsv-dairy-products__tooltip-info").removeClass("active");
+      $("#lsv-dairy-products__tooltip-good").removeClass("active");
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           paper.remove();
           paper = canvas.g();
@@ -125,6 +129,9 @@
       });
     }
     Snap.load(animation_data.path + animation_data.steps[current_anim].img, onLoadSVG);
+    $("#lsv-dairy-products__product-title>h2").text(animation_data.title);
+    $("#lsv-dairy-products__tooltip-good>p").html(animation_data.goodies);
+    $("#lsv-dairy-products__tooltip-info>p").html(animation_data.info);
     // $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
     // $("#lsv-production__description").text(animation_data.steps[current_anim].description);
     $("#lsv-dairy-products__next-animation").click(startNextAnim);
