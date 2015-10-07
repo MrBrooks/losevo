@@ -88,6 +88,26 @@
         50% { transform: scale(1.09); }
         100% { transform: scale(1); }
       }
+      @-m-keyframes scale-circle{
+        0% { transform: scale(1); }
+        50% { transform: scale(0.91); }
+        100% { transform: scale(1); }
+      }
+      @-m-keyframes scale-losevo{
+        0% { transform: scale(1); }
+        50% { transform: scale(1.09); }
+        100% { transform: scale(1); }
+      }
+      @-o-keyframes scale-circle{
+        0% { transform: scale(1); }
+        50% { transform: scale(0.91); }
+        100% { transform: scale(1); }
+      }
+      @-o-keyframes scale-losevo{
+        0% { transform: scale(1); }
+        50% { transform: scale(1.09); }
+        100% { transform: scale(1); }
+      }
     </style>
 
     <link rel="image_src" href="/img/images/losevo-2x.png"/>
@@ -125,10 +145,6 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.min.css" />
-    <script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
-    <script type="text/javascript">
-        VK.init({apiId: 5089933, onlyWidgets: true});
-    </script>
 </head>
 
     <body>
@@ -142,20 +158,20 @@
   <svg id="spinner" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
     <style type="text/css">
-      .st0{
+      .preloader-circle{
         fill:#62BC47;
       }
-      .st1{
+      .preloader-text{
         fill:#FFFFFF;
       }
     </style>
     <g id="lsv-preloader-circle">
-      <path id="XMLID_40_" class="st0" d="M97,49.2c0,25-20.3,45.3-45.3,45.3c-25,0-45.3-20.3-45.3-45.3C6.4,24.2,26.7,4,51.7,4
+      <path id="XMLID_40_" class="preloader-circle" d="M97,49.2c0,25-20.3,45.3-45.3,45.3c-25,0-45.3-20.3-45.3-45.3C6.4,24.2,26.7,4,51.7,4
         C76.7,4,97,24.2,97,49.2z"/>
     </g>
     <g id="lsv-preloader-text">
       <g id="XMLID_28_">
-        <path id="XMLID_37_" class="st1" d="M40.4,42.8c-3.7,0.4-4.8,4.9-4.9,8l0,0v0c0,0.5,0,0.9,0,1.3c0,1.5-0.1,2.6-0.2,4
+        <path id="XMLID_37_" class="preloader-text" d="M40.4,42.8c-3.7,0.4-4.8,4.9-4.9,8l0,0v0c0,0.5,0,0.9,0,1.3c0,1.5-0.1,2.6-0.2,4
           c-0.1,0.6-0.3,1.8-0.4,1.8C33.6,58,32.5,56,32.1,55c-0.9-2.3-1.6-4.7-2-7.2c-0.5-2.6-0.7-5.3-0.9-8c-0.1-1.1-0.1-2.2-0.1-3.3
           c0-0.4,0-0.9,0.1-1.3c0-0.3,0.1-0.7,0.1-0.8c0.3-2-2.5-0.1-3,0.8c-3,5.2-2.1,11.5-2,17.2c0,1.5-0.1,3.1-0.3,4.7
           c-0.2,1.1-0.4,3-1.2,3.8c-0.6,0.6-1.6,0.1-2-0.1c-0.7-0.4-1.2-1.2-1.3-2c-0.1-0.9-1.1-0.4-1.6,0.1c-0.7,0.6-1.3,1.8-1.2,2.7
@@ -163,10 +179,10 @@
           c1.4-0.3,2.4-1.8,3.1-3.5c0.7,1.5,1.7,2.6,3.4,2.5c1.9-0.1,3.5-2.2,4.1-3.7c0.8-1.8,1.1-3.8,1-5.7C45.1,48,44.4,42.4,40.4,42.8z
            M41.7,55.9c-0.1,0.4-0.2,0.8-0.3,1.1c-0.7-0.1-1.3-1.2-1.5-1.7c-0.6-1.2-0.8-2.6-1-4c-0.1-1.4-0.1-2.9,0.2-4.3
           c0.1-0.3,0.2-0.7,0.3-1.1c1.9,1.2,2.3,3.6,2.4,5.6C41.9,53,41.9,54.5,41.7,55.9z"/>
-        <path id="XMLID_34_" class="st1" d="M85.5,48.2c-4-1.5-6.3,4-7.1,7c-0.7,2.9-1.5,7.9,2,9.3c1.7,0.7,3.7-0.6,4.7-1.7
+        <path id="XMLID_34_" class="preloader-text" d="M85.5,48.2c-4-1.5-6.3,4-7.1,7c-0.7,2.9-1.5,7.9,2,9.3c1.7,0.7,3.7-0.6,4.7-1.7
           c1.2-1.4,2-3.2,2.5-5C88.4,54.8,89.2,49.5,85.5,48.2z M83,61.1c-0.2,0.3-0.4,0.6-0.6,0.9c-0.6-0.4-0.8-1.7-0.9-2.2
           c-0.2-1.4-0.1-2.9,0.2-4.2c0.3-1.4,0.7-2.8,1.3-4c0.2-0.3,0.4-0.6,0.6-0.9c1.5,1.8,1.1,4.3,0.7,6.4C84,58.5,83.7,59.9,83,61.1z"/>
-        <path id="XMLID_29_" class="st1" d="M74.5,48.9c0.8-1,1.5-2.1,2.2-3.1c1.5-2.3,3-4.9,2.8-7.7c-0.1-2.6-3.7-2.8-5.4-1.9
+        <path id="XMLID_29_" class="preloader-text" d="M74.5,48.9c0.8-1,1.5-2.1,2.2-3.1c1.5-2.3,3-4.9,2.8-7.7c-0.1-2.6-3.7-2.8-5.4-1.9
           c-2.6,1.3-4.1,4-4.8,6.7c-1,3.5-1.5,7-1.7,10.6c0,0,0,0,0,0.1c-1.3,1.5-3.9,4.7-6,3.3c-0.5-0.3-0.8-1-1-1.6
           c1.7-1.8,3.1-3.6,4.5-5.6c1.2-1.8,2-4.9-0.3-6.2c-1.9-1.1-4.5,0.1-5.8,1.8c-1.3,1.6-1.9,3.7-2.1,5.7c-0.1,1.1-0.2,3,0,4.7
           c-1.2,0.7-2.7,1.2-4,0.9c-1.6-0.3-2.1-2-2.4-3.2c-0.4-1.9-0.3-3.9,0-5.7c0.1-0.6,0.2-1.2,0.4-1.7c0.1-0.1,0.1-0.3,0.2-0.4
@@ -360,12 +376,13 @@
     </object>
     <p class="category-card__name text-center lsv-category-milk">Молочная продукция</p>
   </div>
+  <a href="dairy-products__cheese.html">
   <div class="col-md-3 lsv-products__category-cadr">
     <object type="image/svg+xml" data="img/svg/cheese.svg" class="lsv-product-logo">
       Kiwi Logo <!-- запасное изображение в CSS -->
     </object>
     <p class="category-card__name text-center lsv-category-cheese">СЫРЫ</p>
-  </div>
+  </div></a>
   <div class="col-md-3 lsv-products__category-cadr">
     <object type="image/svg+xml" data="img/svg/meat.svg" class="lsv-product-logo">
       Kiwi Logo <!-- запасное изображение в CSS -->
@@ -475,8 +492,19 @@
         
 
 <!-- JavaScript-->
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#lsv-slides').fullpage({
+            'css3': true,
+            'easing': 'easeOutElastic',
+            'fitToSection': false,
+            'fixedElements': '.lsv-nav , .lsv-menu',
+            'scrollOverflow': true
+          });
+        });
+        </script>
 
     </body>
 
