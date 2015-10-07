@@ -270,6 +270,9 @@ main{
     padding: 0 12px;
     width: 100%;
   }
+  @media (max-width: 1020px) {
+      display: none;
+  }
 }
 
 .lsv-menu--active{
@@ -628,9 +631,6 @@ main{
   padding: 60px;
   margin: 0;
   background-color: @lsv_slide_bg;
-}
-.lsv-products__category-cadr{
-
 }
 .lsv-category-milk{
   color: #87d3e0;
@@ -1617,5 +1617,43 @@ input[type='reset']:focus {
 #owl-vacancy-career-slider{
   .owl-pagination{
     margin-top: 30px;
+  }
+}
+.lsv-mobile-menu{
+  background-color: @lsv_green;
+  width: 320px;
+  position: fixed;
+  top: @lsv_menu_height - 471px;
+  color: white;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(.215,.61,.355,1);
+  &.active{
+    top: @lsv_menu_height;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  li{
+    padding: 8px 0 8px 16px;
+    border-bottom: 1px solid #56ad3c;
+    &:first-child{
+      padding-top: 16px;
+    }
+    &:last-child{
+      border: 0;
+      padding-bottom: 16px;
+    }
+    &:hover{
+      cursor: pointer;
+      background-color: @lsv_green_active;
+    }
+  }
+  @media (min-width: 1021px) {
+      display: none;
   }
 }

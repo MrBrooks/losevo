@@ -11835,6 +11835,13 @@ textarea
     margin: 0;
     padding: 0 12px;
 }
+@media (max-width: 1020px)
+{
+    .lsv-menu
+    {
+        display: none;
+    }
+}
 .lsv-menu--active
 {
     top: 62px;
@@ -13654,4 +13661,62 @@ input[type='reset']:focus
 #owl-vacancy-career-slider .owl-pagination
 {
     margin-top: 30px;
+}
+.lsv-mobile-menu
+{
+    position: fixed;
+    top: -409px;
+
+    width: 320px;
+
+    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    text-transform: uppercase;
+
+    color: white;
+    background-color: #61bb46;
+}
+.lsv-mobile-menu.active
+{
+    top: 62px;
+}
+.lsv-mobile-menu ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.lsv-mobile-menu a:hover
+{
+    text-decoration: none;
+}
+.lsv-mobile-menu li
+{
+    padding: 8px 0 8px 16px;
+
+    border-bottom: 1px solid #56ad3c;
+}
+.lsv-mobile-menu li:first-child
+{
+    padding-top: 16px;
+}
+.lsv-mobile-menu li:last-child
+{
+    padding-bottom: 16px;
+
+    border: 0;
+}
+.lsv-mobile-menu li:hover
+{
+    cursor: pointer;
+
+    background-color: #79d35e;
+}
+@media (min-width: 1021px)
+{
+    .lsv-mobile-menu
+    {
+        display: none;
+    }
 }
