@@ -23226,6 +23226,7 @@ $(document).ready(function() {
   
   $( "#lsv-menu-btn" ).on('click', function() {
     $( "#lsv-menu" ).toggleClass("lsv-menu--active");
+    $("#lsv-mobile-menu").toggleClass("active");
     $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
   });
 
