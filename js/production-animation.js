@@ -18,6 +18,7 @@
           initProduct();
         });
         animation_data = json[0];
+        initProduct();
     });
 
     function stepAnimation(){
@@ -71,5 +72,5 @@
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
       $("#lsv-dairy-products__tooltip-good").removeClass("active");
     }
-    initProduct();
+    
     $("#lsv-dairy-products__next-animation").click(startNextAnim);
