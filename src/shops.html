@@ -22,8 +22,8 @@
             <!-- /build -->
           </div>
           <div class="section lsv-slide-bgc">
-            <!-- build:include html-blocks/pages--external/main-anim-block.html -->
-            This will be replaced by the content of html-blocks/pages--external/main-anim-block.html
+            <!-- build:include html-blocks/pages--external/shops-pic-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/shops-pic-block.html
             <!-- /build -->
           </div>
           <div class="section lsv-footer fp-auto-height">
@@ -197,6 +197,10 @@
               $(".lsv-shops__list-item").click(function(){
                 var index = $(this).attr("data-marker-index");
                 $(this).addClass('active').siblings().removeClass('active');
+                map.panTo({
+                  lat: json[index].coord[0],
+                  lng: json[index].coord[1]
+                });
                 if (active_marker != undefined){
                       if(json[active_marker].firm){
                         markers[active_marker].setIcon(losevo_shop_icon);
@@ -262,6 +266,17 @@
               // console.log("change class");
             });
           });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#lsv-slides').fullpage({
+            'css3': true,
+            'easing': 'easeOutElastic',
+            'fitToSection': false,
+            'fixedElements': '.lsv-nav , .lsv-menu',
+            'scrollOverflow': true
+          });
+        });
         </script>
 
     </body>

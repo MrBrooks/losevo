@@ -14192,9 +14192,9 @@ if (typeof jQuery === 'undefined') {
         // sets border radius of the rail
         railBorderRadius : '7px',
 
-        barZIndex: '9999',
+        barZIndex: '9999'
 
-        barHeightCustome: '100px'
+        // barHeightCustome: '100px'
       };
 
       var o = $.extend(defaults, options);
@@ -14516,7 +14516,7 @@ if (typeof jQuery === 'undefined') {
         function getBarHeight()
         {
           // calculate scrollbar height and make sure it is not too small
-          if(o.barHeightCustome){
+          if(o.barHeightCustome && false){
             bar.css({ height: o.barHeightCustome});
           }
           else{
@@ -23193,6 +23193,11 @@ $(document).ready(function() {
   console.log($(window).height());
   var lsv_section_height = ($(window).height() - menu_height) + "px";
   console.log(lsv_section_height);
+
+  $(".full-slide").each(function(i,e){
+    $(this).css("height", ($(window).height() - menu_height) + "px");
+  });
+
   $("#lsv-dairy-products__menu").slimScroll({
     width: '280px',
     height: lsv_section_height,
@@ -23252,13 +23257,13 @@ $(document).ready(function() {
   // });
 
 
-  $('#lsv-slides').fullpage({
-    'css3': true,
-    'easing': 'easeOutElastic',
-    'fitToSection': false,
-    'fixedElements': '.lsv-nav , .lsv-menu',
-    'scrollOverflow': true
-  });
+  // $('#lsv-slides').fullpage({
+  //   'css3': true,
+  //   'easing': 'easeOutElastic',
+  //   'fitToSection': false,
+  //   'fixedElements': '.lsv-nav , .lsv-menu',
+  //   'scrollOverflow': true
+  // });
   
   $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider").owlCarousel({
       navigation : true,
@@ -23266,9 +23271,15 @@ $(document).ready(function() {
       paginationSpeed : 400,
       singleItem:true
   });
-  $("#owl-vacancy-career-slider").owlCarousel({
+  $("#owl-shops-slider").owlCarousel({
       navigation: true,
       pagination: false,
+      slideSpeed: 300,
+      singleItem:true
+  });
+  $("#owl-vacancy-career-slider").owlCarousel({
+      navigation: true,
+      pagination: true,
       slideSpeed: 300,
       singleItem:true
   });
@@ -23280,6 +23291,12 @@ $(document).ready(function() {
       paginationSpeed : 400,
       autoPlay: 7000
   });
+  $("#owl-shops-pic-slider").owlCarousel({
+      navigation: true,
+      pagination: false,
+      slideSpeed: 300,
+      singleItem:true
+  });
 
   $("#goodies-btns__info").click(function(){
     $("#lsv-dairy-products__tooltip-info").toggleClass("active");
@@ -23289,5 +23306,11 @@ $(document).ready(function() {
     $("#lsv-dairy-products__tooltip-good").toggleClass("active");
     $("#lsv-dairy-products__tooltip-info").removeClass("active");
   });
-  
+
+  window.setTimeout(function (){
+    $(".slimScrollBar").css({
+      "background-color" : "#61bb46",
+      "opacity" : "1"
+    });
+  },2000);
 });

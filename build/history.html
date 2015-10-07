@@ -369,39 +369,18 @@
 
         <div class="lsv-history__timeline">
           <div class="timeline__line">
-            <div class="timeline__list-years">
-              <div id = "timeline__2004" class="timeline__years">2004
-                <span></span>
-              </div>
-              <div id = "timeline__2005" class="timeline__years">2005
-                <span></span>
-              </div>
-              <div id = "timeline__2008" class="timeline__years">2008
-                <span></span>
-              </div>
-              <div id = "timeline__2012" class="timeline__years">2012
-                <span></span>
-              </div>
-              <div id = "timeline__2013" class="timeline__years">2013
-                <span></span>
-              </div>
-              <div id = "timeline__2014" class="timeline__years">2014
-                <span></span>
-              </div>
-              <div id = "timeline__2015" class="timeline__years">2015
-                <span></span>
-              </div>
+            <div id="timeline__list-years" class="timeline__list-years">
             </div>
           </div>
         </div>
 
-        <main id='lsv-slides' class="lsv-slides--bg-grey">
-          <div class="section" data-history-year = '0'>
+        <main id='lsv-slides-history' class="lsv-slides--bg-grey">
+          <div class="section" data-history-year = '0' data-anchor="intro">
             <div id="lsv-history__start" class="fullslide_img_text nomargin nopadding">
   <h1>НАША ИСТОРИЯ <br> БЕРЁТ НАЧАЛО <br> С 2004 ГОДА</h1>
 </div>
           </div>
-          <div class="section" data-history-year = '2004'>
+          <div class="section" data-history-year = '2004' data-anchor="year2004">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -411,7 +390,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2005'>
+          <div class="section" data-history-year = '2005' data-anchor="year2005">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -422,7 +401,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2008'>
+          <div class="section" data-history-year = '2008' data-anchor="year2008">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -432,7 +411,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2012'>
+          <div class="section" data-history-year = '2012' data-anchor="year2012">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2012" class="col-md-6 nomargin nopadding lsv-history__img lsv-history__img--big">
   </div>
@@ -442,7 +421,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2013'>
+          <div class="section" data-history-year = '2013' data-anchor="year2013">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -453,7 +432,7 @@
   </div>
 </div>
           </div>
-          <div class="section"data-history-year = '2013'>
+          <div class="section"data-history-year = '2013' data-anchor="year2013_2">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -464,7 +443,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2014'>
+          <div class="section" data-history-year = '2014' data-anchor="year2014">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2004" class="col-md-6 nomargin nopadding lsv-history__img">
   </div>
@@ -474,7 +453,7 @@
   </div>
 </div>
           </div>
-          <div class="section" data-history-year = '2015'>
+          <div class="section" data-history-year = '2015' data-anchor="year2015">
             <div class="row nomargin nopadding mb50">
   <div id="lsv-history__2012" class="col-md-6 nomargin nopadding lsv-history__img lsv-history__img--big">
   </div>
@@ -485,7 +464,7 @@
   </div>
 </div>
           </div>
-          <div class="section lsv-footer fp-auto-height" data-history-year = '0'>
+          <div class="section lsv-footer fp-auto-height" data-history-year = '0' data-anchor="footer">
             <div class="row nomargin">
   <ul class="col-md-3 lsv-menu__sublist lsv-menu__sublist--footer">
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
@@ -559,36 +538,7 @@
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-        <script type="text/javascript">
-        $(document).ready(function(){
-            var years = $('.timeline__years');
-            var timeline_displace = 1/(years.length - 1);
-            var arr_years = ['2004','2005','2008','2012','2013','2014','2015'];
-            var decimal_to_percentage = function (dec){
-                return (Math.round(dec*100 -2) + "%");
-            };
-            years.each(function(index, elem){
-                $(this).css('top', decimal_to_percentage(timeline_displace * index ));
-            });
-            var current_year; 
-            $(window).on('mousewheel',function(){
-                setTimeout(function(){
-                    current_year = $('.active').attr('data-history-year');
-                    console.log(current_year);
-                    if(current_year != 0){
-                        $('.lsv-history__timeline').css('opacity','1');
-                        $('#timeline__'+ current_year).addClass('timeline--active').siblings().removeClass('timeline--active');
-                        console.log('In IF');
-                    }
-                    else{
-                        $('.lsv-history__timeline').css('opacity','0');
-                    }
-                },300);
-            });
-            
-        });
-        </script>
-
+        <script src="js/history-timeline.js"></script>
     </body>
 
 </html>
