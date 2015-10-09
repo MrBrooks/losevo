@@ -11613,6 +11613,20 @@ textarea
     height: 67%;
     margin: auto;
 }
+@media screen and (max-width: 800px)
+{
+    .lsv-nav__logo
+    {
+        left: 154px;
+    }
+}
+@media screen and (max-width: 420px)
+{
+    .lsv-nav__logo
+    {
+        left: 82px;
+    }
+}
 .lsv-nav__menu-btn
 {
     position: absolute;
@@ -11625,6 +11639,13 @@ textarea
 
     border: 0;
     background-color: #61bb46;
+}
+@media screen and (max-width: 420px)
+{
+    .lsv-nav__menu-btn
+    {
+        width: 62px;
+    }
 }
 .lsv-nav__menu-btn:focus
 {
@@ -11737,6 +11758,13 @@ textarea
 
     color: white;
 }
+@media screen and (max-width: 420px)
+{
+    .lsv-menu-btn__text
+    {
+        display: none;
+    }
+}
 .line
 {
     position: relative;
@@ -11780,6 +11808,13 @@ textarea
     float: right;
 
     margin: 9px 13px;
+}
+@media screen and (max-width: 615px)
+{
+    .lsv-nav__links.lsv-ishop
+    {
+        display: none;
+    }
 }
 .lsv-btn
 {
@@ -11835,7 +11870,7 @@ textarea
     margin: 0;
     padding: 0 12px;
 }
-@media (max-width: 1020px)
+@media screen and (max-width: 1024px)
 {
     .lsv-menu
     {
@@ -11918,8 +11953,27 @@ textarea
 {
     line-height: 2em;
 
+    min-height: 218px;
     padding-right: 40px;
     padding-left: 40px;
+}
+@media screen and (max-width: 992px)
+{
+    .lsv-menu__sublist--footer
+    {
+        font-size: 14px;
+        font-weight: 300;
+
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 420px)
+{
+    .lsv-menu__sublist--footer
+    {
+        margin: 0;
+        padding: 10px;
+    }
 }
 .lsv-menu__sublist-item--footer a
 {
@@ -11928,6 +11982,23 @@ textarea
 .lsv-copyright
 {
     padding: 25px 20px;
+}
+@media screen and (max-width: 992px)
+{
+    .lsv-copyright
+    {
+        font-size: 14px;
+        font-weight: 300;
+
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 420px)
+{
+    .lsv-copyright
+    {
+        padding: 10px;
+    }
 }
 .lsv-footer
 {
@@ -11952,6 +12023,13 @@ textarea
     padding: 32px;
 
     text-align: center;
+}
+@media screen and (max-width: 420px)
+{
+    .mrbrooks-copyright p
+    {
+        padding: 10px;
+    }
 }
 .menu-icon
 {
@@ -11981,6 +12059,13 @@ textarea
     position: relative;
     top: -3px;
 }
+@media screen and (max-width: 420px)
+{
+    .lsv-social
+    {
+        border: 0;
+    }
+}
 .lsv-btn--shop
 {
     margin-top: 3px;
@@ -12009,9 +12094,9 @@ textarea
 }
 .lsv-social--footer
 {
-    font-size: 14px;
+    font-size: 20px;
 
-    padding: 70px 30px 0 0;
+    margin: 0;
 }
 .lsv-social--footer .fa-circle
 {
@@ -12019,11 +12104,29 @@ textarea
 }
 .lsv-social--footer .fa-stack-1x
 {
-    font-size: 15px;
+    font-size: 20px;
 }
 .lsv-social--footer a
 {
     margin: 0 -3px;
+}
+@media screen and (min-width: 992px)
+{
+    .lsv-social--footer
+    {
+        font-size: 14px;
+    }
+    .lsv-social--footer .fa-stack-1x
+    {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 420px)
+{
+    .lsv-social--footer
+    {
+        padding-top: 1px;
+    }
 }
 .lsv-h1
 {
@@ -13509,6 +13612,10 @@ input[type='reset']:focus
 
     background-color: #2c2d2d;
 }
+.lsv-dairy-products__menu li:first-child.active
+{
+    left: 0;
+}
 .lsv-dairy-products__menu.active
 {
     left: 0;
@@ -13665,7 +13772,8 @@ input[type='reset']:focus
 .lsv-mobile-menu
 {
     position: fixed;
-    top: -409px;
+    z-index: 1029;
+    top: -410px;
 
     width: 320px;
 
@@ -13691,21 +13799,20 @@ input[type='reset']:focus
 {
     text-decoration: none;
 }
+.lsv-mobile-menu a:first-child > li
+{
+    padding-top: 16px;
+}
+.lsv-mobile-menu a:last-child > li
+{
+    padding-bottom: 16px;
+}
 .lsv-mobile-menu li
 {
     padding: 8px 0 8px 16px;
 
+    border-right: 1px solid #56ad3c;
     border-bottom: 1px solid #56ad3c;
-}
-.lsv-mobile-menu li:first-child
-{
-    padding-top: 16px;
-}
-.lsv-mobile-menu li:last-child
-{
-    padding-bottom: 16px;
-
-    border: 0;
 }
 .lsv-mobile-menu li:hover
 {
@@ -13713,10 +13820,17 @@ input[type='reset']:focus
 
     background-color: #79d35e;
 }
-@media (min-width: 1021px)
+@media screen and (min-width: 1025px)
 {
     .lsv-mobile-menu
     {
         display: none;
+    }
+}
+@media screen and (max-width: 361px)
+{
+    .lsv-mobile-menu
+    {
+        width: 100%;
     }
 }
