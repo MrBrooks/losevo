@@ -53,12 +53,19 @@
     function startNextAnim(){
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
       $("#lsv-dairy-products__tooltip-good").removeClass("active");
+
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           paper.remove();
           paper = canvas.g();
           Snap.load(animation_data.path + animation_data.steps[++current_anim % animation_data.steps.length].img, onLoadSVG);
           $("#lsv-production__description-header").text(animation_data.steps[current_anim % animation_data.steps.length].header);
           $("#lsv-production__description").text(animation_data.steps[current_anim % animation_data.steps.length].description);
+          if( (current_anim % animation_data.steps.length != 0 ) && (current_anim % animation_data.steps.length != (animation_data.steps.length-1))){
+            $("#lsv-dairy-products__next-animation>label").html("Следующий <br> шаг");
+          }
+          else{
+            (current_anim % animation_data.steps.length == 0 )? $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство") : $("#lsv-dairy-products__next-animation>label").html("Вернулься <br> в начало");
+          }
       });
     }
     function initProduct(){

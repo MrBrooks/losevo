@@ -122,6 +122,7 @@
     <link rel="manifest" href="img/images/favicon/manifest.json">
     <link rel="shortcut icon" href="img/images/favicon/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Losevo">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Losevo">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/images/favicon/mstile-144x144.png">
@@ -203,7 +204,7 @@
           </button>
           <a class="lsv-nav__logo" href="index.html"><img src="img/svg/logo.svg"></a>
         </div>
-        <div class="lsv-nav__links">
+        <div  class="lsv-nav__links lsv-ishop">
           <a class="btn btn-default lsv-btn--shop" href="#" role="button">
             <!-- <i class="fa fa-cart-arrow-down"></i> -->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="19.031" height="19.031" viewBox="0 0 19.031 19.031">
@@ -358,18 +359,18 @@
     </div>
     <div id="lsv-mobile-menu" class="lsv-mobile-menu navbar-fixed-top">
       <ul>
-        <li><a href="history.html">История</a></li>
-        <li><a href="about.html">О нас</a></li>
-        <li><a href="team.html">Наши сотрудники</a></li>
-        <li><a href="vacancies.html">Наши вакансии</a></li>
-        <li><a href="faq.html">F.A.Q.</a></li>
-        <li><a href="production.html">Ферма и завод</a></li>
-        <li><a href="products.html">Продукция</a></li>
-        <li><a href="shops.html">Магазины</a></li>
-        <li><a href="#">Интернет-магазин</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="press_about_us.html">Пресс-центр</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <a href="history.html"><li>История</li></a>
+        <a href="about.html"><li>О нас</li></a>
+        <a href="team.html"><li>Наши сотрудники</li></a>
+        <a href="vacancies.html"><li>Наши вакансии</li></a>
+        <a href="faq.html"><li>F.A.Q.</li></a>
+        <a href="production.html"><li>Ферма и завод</li></a>
+        <a href="products.html"><li>Продукция</li></a>
+        <a href="shops.html"><li>Магазины</li></a>
+        <a href="#"><li>Интернет-магазин</li></a>
+        <a href="news.html"><li>Новости</li></a>
+        <a href="press_about_us.html"><li>Пресс-центр</li></a>
+        <a href="contacts.html"><li>Контакты</li></a>
       </ul>
     </div>
 
@@ -454,7 +455,7 @@
 
           <div class="section lsv-footer fp-auto-height">
             <div class="row nomargin">
-  <ul class="col-md-3 lsv-menu__sublist lsv-menu__sublist--footer">
+  <ul class="col-md-3 col-sm-6 col-xs-6  lsv-menu__sublist lsv-menu__sublist--footer">
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
       <a href="history.html" class="lsv-menu__sublink">История «Лосево»</a>
     </li>
@@ -473,7 +474,7 @@
       <a href="faq.html" class="lsv-menu__sublink">F.A.Q.</a>
     </li>
   </ul>
-  <ul class="col-md-3 lsv-menu__sublist lsv-menu__sublist--footer">
+  <ul class="col-md-3 col-sm-6 col-xs-6 lsv-menu__sublist lsv-menu__sublist--footer">
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer"><a href="" class="lsv-menu__sublink">Интернет-магазин</a></li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer"><a href="" class="lsv-menu__sublink">Магазины</a></li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer"><a href="news.html" class="lsv-menu__sublink">Новости</a></li>
@@ -481,16 +482,18 @@
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer"><a href="press_releases.html" class="lsv-menu__sublink">Пресс-центр</a></li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer"><a href="contacts.html" class="lsv-menu__sublink">Контакты</a></li>
   </ul>
-  <ul class="col-md-3 lsv-menu__sublist lsv-menu__sublist--footer">
+  <ul class="col-md-3 col-sm-6 col-xs-6  lsv-menu__sublist lsv-menu__sublist--footer">
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">Телефоны:</li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">+7 (821) 327-71-32</li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">+7 (821) 327-51-33</li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">+7 (821) 327-01-34</li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer lsv-email">shp_losevo@mail.ru</li>
   </ul>
-  <div class="col-md-3 lsv-copyright">
+  <div class="col-md-3 col-sm-6 col-xs-6  lsv-copyright">
     &copy; Группа компаний «Лосево» <br> 2008-2015 <br> Все права защищены.
-    <div class="text-right lsv-social lsv-social--footer">
+  </div>
+</div>
+<div class="text-center lsv-social lsv-social--footer">
       <a href='#' class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
@@ -507,8 +510,6 @@
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
       </a>
-    </div>
-  </div>
 </div>
 
 <div class="row nomargin mrbrooks-copyright">

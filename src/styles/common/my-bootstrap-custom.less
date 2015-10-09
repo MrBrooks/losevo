@@ -1,4 +1,5 @@
 // Extra
+
 p,span,h1,h2,h3,h4,h5,h6,a,li,label,input{
   font-family: 'Roboto', sans-serif;
 }
@@ -112,6 +113,13 @@ main{
   width: 0;
   height: 67%;
   margin: auto;
+
+  @media screen and (max-width: 800px){
+    left: @lsv_menu_height*2 + 30px;
+  }
+  @media screen and (max-width: 420px){
+    left: @lsv_menu_height + 20px;
+  }
 }
 
 .lsv-nav__menu-btn{
@@ -123,6 +131,9 @@ main{
   border: 0;
   padding: 0;
   background-color: @lsv_green;
+  @media screen and (max-width: 420px){
+    width: @lsv_menu_height;
+  }
   &:focus{
     outline: none;
   }
@@ -197,7 +208,9 @@ main{
   top: 0;
   bottom: 0;
   display: block;
-
+  @media screen and (max-width: 420px){
+    display: none;
+  }
 }
 .line {
     display: block;
@@ -230,6 +243,12 @@ main{
 .lsv-nav__links{
   float:right;
   margin: 9px 13px;
+
+  &.lsv-ishop{
+    @media screen and (max-width: 615px){
+      display: none;
+    }
+  }
 }
 
 .lsv-btn{
@@ -270,7 +289,7 @@ main{
     padding: 0 12px;
     width: 100%;
   }
-  @media (max-width: 1020px) {
+  @media screen and (max-width: 1024px) {
       display: none;
   }
 }
@@ -344,6 +363,16 @@ main{
   padding-left: 40px;
   padding-right: 40px;
   line-height: 2em;
+  min-height: 218px;
+  @media screen and (max-width: 992px){
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 420px){
+    padding: 10px;
+    margin: 0;
+  }
 }
 
 .lsv-menu__sublist-item--footer{
@@ -351,6 +380,14 @@ main{
 }
 .lsv-copyright{
   padding: 25px 20px;
+  @media screen and (max-width: 992px){
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 420px){
+    padding: 10px;
+  }
 }
 .lsv-footer{
   background-color: @lsv_grey_light
@@ -368,7 +405,11 @@ main{
     bottom: 0;
     margin: auto;
     text-align: center;
+    @media screen and (max-width: 420px){
+      padding: 10px;
+    }
   }
+
 }
 .menu-icon{
     transition: all 500ms cubic-bezier(.215,.61,.355,1);
@@ -388,6 +429,9 @@ main{
   .vk-svg-icon{
     position: relative;
     top: -3px;
+  }
+  @media screen and (max-width: 420px) {
+    border: 0;
   }
 }
 .lsv-btn--shop{
@@ -413,16 +457,25 @@ main{
 
 
 .lsv-social--footer{
-  padding: 70px 30px 0px 0px;
-  font-size: 14px;
+  font-size: 20px;
+  margin: 0;
   .fa-circle{
     color: @lsv_green;
   }
   .fa-stack-1x{
-    font-size: 15px;
+    font-size: 20px;
   }
   a{
     margin: 0 -3px;
+  }
+  @media screen and (min-width: 992px){
+    font-size: 14px;
+    .fa-stack-1x{
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    padding-top: 1px;
   }
 }
 
@@ -1498,6 +1551,9 @@ input[type='reset']:focus {
       background-color: #2c2d2d;
       height: 48px;
       transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
+      &.active{
+        left: 0;
+      }
     }
   }
   &.active{
@@ -1623,7 +1679,8 @@ input[type='reset']:focus {
   background-color: @lsv_green;
   width: 320px;
   position: fixed;
-  top: @lsv_menu_height - 471px;
+  z-index: 1029;
+  top: @lsv_menu_height - 471px-1px;
   color: white;
   text-transform: uppercase;
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
@@ -1638,22 +1695,26 @@ input[type='reset']:focus {
   a:hover{
     text-decoration: none;
   }
+  a:first-child>li{
+    padding-top: 16px;
+  }
+  a:last-child>li{
+    padding-bottom: 16px;
+  }
   li{
     padding: 8px 0 8px 16px;
     border-bottom: 1px solid #56ad3c;
-    &:first-child{
-      padding-top: 16px;
-    }
-    &:last-child{
-      border: 0;
-      padding-bottom: 16px;
-    }
+    border-right: 1px solid #56ad3c;
+    
     &:hover{
       cursor: pointer;
       background-color: @lsv_green_active;
     }
   }
-  @media (min-width: 1021px) {
+  @media screen and (min-width: 1025px) {
       display: none;
+  }
+  @media screen and (max-width: 361px) {
+      width: 100%;
   }
 }
