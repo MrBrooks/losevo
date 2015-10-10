@@ -11953,7 +11953,7 @@ textarea
 {
     line-height: 2em;
 
-    min-height: 218px;
+    min-height: 240px;
     padding-right: 40px;
     padding-left: 40px;
 }
@@ -11971,6 +11971,7 @@ textarea
 {
     .lsv-menu__sublist--footer
     {
+        min-height: 218px;
         margin: 0;
         padding: 10px;
     }
@@ -12151,7 +12152,7 @@ textarea
     padding: 5px;
 
     border: 0;
-    background: url(/img/svg/arrow.svg) right no-repeat;
+    background: url(../img/svg/arrow.svg) right no-repeat;
     background-color: #fff;
 
     -webkit-appearance: none;
@@ -12194,6 +12195,7 @@ textarea
 }
 .product-card-mini
 {
+    min-height: 540px;
     padding: 0 6px;
 }
 .product-card-mini img
@@ -12222,7 +12224,7 @@ textarea
 }
 .arrow
 {
-    background-image: url('img/svg/arrow.svg');
+    background-image: url('../img/svg/arrow.svg');
     background-repeat: none;
     background-position: right;
 }
@@ -13833,4 +13835,23 @@ input[type='reset']:focus
     {
         width: 100%;
     }
+}
+#lsv-video-main
+{
+    position: fixed;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+
+    background: url(/img/vids/poster.jpg) no-repeat;
+    background-size: cover;
 }

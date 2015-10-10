@@ -23315,4 +23315,21 @@ $(document).ready(function() {
       "opacity" : "1"
     });
   },2000);
+
+  var filter_value_month = "all",filter_value_year = "all";
+  
+  function lsvDataFilter(){
+    $(".filtered-item").each(function(index,val){
+      (($(this).attr("data-year") == filter_value_year || filter_value_year == "all") && 
+       ($(this).attr("data-month") == filter_value_month || filter_value_month == "all"))?$(this).show(300):$(this).hide(300);
+    });
+  }
+  $("#lsv-filter-select-year").on("change",function(){
+    filter_value_year = $(this).val();
+    lsvDataFilter(); 
+  });
+  $("#lsv-filter-select-month").on("change",function(){
+    filter_value_month = $(this).val();
+    lsvDataFilter();
+  });
 });
