@@ -13864,3 +13864,26 @@ button.btn:hover
 {
     color: white;
 }
+.products__approved-anim-block
+{
+    padding-top: 62px;
+}
+.products__approved-text-block
+{
+    padding-top: 100px;
+}
+.manufacturers,
+.customers
+{
+    padding: 30px 0;
+}
+.manufacturers .lsv-h3,
+.customers .lsv-h3
+{
+    font-size: 18px;
+}
+.manufacturers p,
+.customers p
+{
+    margin-bottom: 20px;
+}
