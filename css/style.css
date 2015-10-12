@@ -13855,3 +13855,12 @@ input[type='reset']:focus
     background: url(/img/vids/poster.jpg) no-repeat;
     background-size: cover;
 }
+button.btn:focus
+{
+    color: white;
+    background-color: #79d35e;
+}
+button.btn:hover
+{
+    color: white;
+}
