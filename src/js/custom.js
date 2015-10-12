@@ -164,5 +164,19 @@ $(document).ready(function() {
     filter_value_month = $(this).val();
     lsvDataFilter();
   });
+
+  $("button.submit[type='button']").on('click', function(){
+    var button = $(this);
+    button.text("Обработка...");
+    $.getJSON('js/form_submit_request.json',function(data){
+      console.log(data);
+      if(data.server_answer == "true"){ 
+        button.text("Успешно!");
+      } else{
+        button.text("Неудача!").css("background-color","#aa1100");
+      }
+    });
+
+  });
 });
 
