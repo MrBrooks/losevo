@@ -12449,8 +12449,9 @@ textarea
 }
 .lsv-ferm
 {
-    width: 100%;
+    min-width: 768px;
     height: 100%;
+    padding-top: 62px;
 
     background-color: #65a566;
 }

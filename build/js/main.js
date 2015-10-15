@@ -23337,7 +23337,6 @@ $(document).ready(function() {
     var button = $(this);
     button.text("Обработка...");
     $.getJSON('js/form_submit_request.json',function(data){
-      console.log(data);
       if(data.server_answer == "true"){ 
         button.text("Успешно!");
       } else{

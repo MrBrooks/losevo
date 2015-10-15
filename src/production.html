@@ -10,11 +10,16 @@
           -webkit-transform: scale(0.3);
           fill: green;
         }
-        50% {
+        30% {
           -webkit-transform: scale(1);
           fill: green;
         }
+        80% {
+          fill: #CE1700;
+          -webkit-transform: scale(1.2);
+        }
         100% {
+          fill: #CE1700;
           -webkit-transform: scale(1.2);
         }
       }
@@ -30,14 +35,124 @@
           -webkit-transform: rotate(0deg);
         }
       }
-      .st109{
+      @-webkit-keyframes peck-right{
+        0% {
+          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+        }
+        50% {
+          -webkit-transform: rotate(70deg) translateY(40px) translateX(-30px);
+        }
+        100% {
+          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+        }
+      }
+      @-webkit-keyframes blinks{
+        0% {
+          -webkit-transform: translateX(0px);
+        }
+        50% {
+          -webkit-transform: translateX(10px);
+        }
+        100% {
+          -webkit-transform: translateX(0px);
+        }
+      }
+
+
+      @-webkit-keyframes move-top10{
+        0% {
+          -webkit-transform: translateY(0px);
+        }
+        50% {
+          -webkit-transform: translateY(-20px);
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+        }
+      }
+      @-webkit-keyframes move-top20{
+        0% {
+          -webkit-transform: translateY(0px);
+        }
+        50% {
+          -webkit-transform: translateY(-20px);
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+        }
+      }
+      @-webkit-keyframes rotate10{
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        25% {
+          -webkit-transform: rotate(5deg);
+        }
+        /*50% {
+          -webkit-transform: rotate(0deg);
+        }*/
+        75% {
+          -webkit-transform: rotate(-5deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+        }
+      }
+      .st112{
         -webkit-transform-origin: 50% 50%;
-        -webkit-animation: grow 2s ease-out infinite;
+        -webkit-animation: grow 8s ease-out infinite;
       }
       .tree{
         -webkit-transform-origin: 50% 100%;
         -webkit-animation: breeze 3s ease-out infinite;
       }
+      #chiken_yellow{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: peck-right 2s ease-out infinite;
+      }
+
+      #berries_1>circle{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 8s ease-out infinite;
+        -webkit-animation-delay: 1000ms;
+      }
+      #plants_1_>g{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: grow 8s ease-out infinite;
+        -webkit-animation-delay: 3000ms;
+      }
+      #bull_1_tail,#bull_2_tail{
+        -webkit-transform-origin: 0% 0%;
+        -webkit-animation: rotate10 3s ease-out infinite;
+      }
+      #cow_1_head{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top10 3s ease-out infinite;
+      }
+      #cow_2_head{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top10 3s ease-out infinite;
+        -webkit-animation-delay: 1500ms;
+      }
+     #cow_1_tonque{
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: move-top20 3s ease-out infinite;
+      }
+      #soon_1,#soon_2,#soon_3{
+        -webkit-transform-origin: 50% 100%;
+        -webkit-animation: rotate10 5s ease-out infinite;
+        -webkit-animation-delay: 1500ms;
+      }
+      #river_lights>path:nth-child(odd){
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: blinks 3000ms ease-out infinite;
+      }
+      #river_lights>path:nth-child(even){
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation: blinks 3000ms ease-out infinite;
+        -webkit-animation-delay: 500ms;
+      }
+
     </style>
     <body>
 
@@ -49,7 +164,7 @@
         This will be replaced by the content of html-blocks/pages--external/header--external.html
         <!-- /build -->
 
-        <main id='lsv-slides'>
+        <main>
           <div class="section">
             <!-- build:include html-blocks/pages--external/production-block.html -->
             This will be replaced by the content of html-blocks/pages--external/production-block.html
@@ -66,7 +181,6 @@
         <!-- build:include html-blocks/pages--external/footer--external.html -->
         This will be replaced by the content of html-blocks/pages--external/footer--external.html
         <!-- /build -->
-        <script type="text/javascript" src="js/snap.svg-min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
               var ferm = Snap("#ferm");
@@ -74,71 +188,75 @@
               bakery_hover = Snap('#bakery_hover'),
               cheese_house = Snap('#cheese_house_1_'),
               cheese_house_hover = Snap('#cheese_house_hover'),
-              tomatos = ferm.selectAll('.st109');
+              car = Snap("#car"),
+              car_path = Snap("#way_car>path");
 
-              bakery_hover.attr({
-                opacity: '0'
-              });
-              cheese_house_hover.attr({
-                opacity: '0'
-              });
-              // tomatos.forEach(function(elem,i){
-              //   // elem.attr({
-              //   //   opacity: '0.5'
-              //   // });
-              //   elem.animate({transform: "scale(0.1)"}, 2000, mina.elastic);
-              // });
+              var bee_paths = [], bees = [], paths_length = 1127, car_path_length = Math.round(car_path.getTotalLength());
+              var cheese_box = cheese_house_hover.getBBox(),
+                  bakery_box = bakery_hover.getBBox();
 
-              var SetOpacity = function (el , op){
-                Snap(el).attr({
-                  opacity: op
-                });
-              }
-              // bakery.hover(SetOpacity('#bakery_hover','1'),SetOpacity('#bakery_hover','0'));
+              var cheeseHoverIn = new Snap.Matrix(),
+                  cheeseHoverOut = new Snap.Matrix(),
+                  bakeryHoverIn = new Snap.Matrix(),
+                  bakeryHoverOut = new Snap.Matrix();
+              cheeseHoverIn.scale(1,1,cheese_box.cx,cheese_box.cy);
+              cheeseHoverOut.scale(0,0,cheese_box.cx,cheese_box.cy);
+              bakeryHoverIn.scale(1,1,bakery_box.cx,bakery_box.cy);
+              bakeryHoverOut.scale(0,0,bakery_box.cx,bakery_box.cy);
+
+              bakery_hover.transform(bakeryHoverOut);
+              cheese_house_hover.transform(cheeseHoverOut);
+              
               bakery.hover(
                 function(){
-                  Snap('#bakery_hover').attr({
-                    opacity: '1'
-                  });
+                  bakery_hover.animate({ transform: bakeryHoverIn },1000, mina.elastic);
               },
                 function(){
-                  Snap('#bakery_hover').attr({
-                    opacity: '0'
-                  });
+                  bakery_hover.animate({ transform: bakeryHoverOut },1000, mina.elastic);
               });
-              bakery_hover.hover(
-                function(){
-                  Snap('#bakery_hover').attr({
-                    opacity: '1'
-                  });
-              },
-                function(){
-                  Snap('#bakery_hover').attr({
-                    opacity: '1'
-                  });
-              });
+
               cheese_house.hover(
                 function(){
-                  Snap('#cheese_house_hover').attr({
-                    opacity: '1'
-                  });
+                  cheese_house_hover.animate({ transform: cheeseHoverIn },1000, mina.elastic);
               },
                 function(){
-                  Snap('#cheese_house_hover').attr({
-                    opacity: '0'
-                  });
+                  cheese_house_hover.animate({ transform: cheeseHoverOut },1000, mina.elastic);
               });
-              cheese_house_hover.hover(
-                function(){
-                  Snap('#cheese_house_hover').attr({
-                    opacity: '1'
-                  });
-              },
-                function(){
-                  Snap('#cheese_house_hover').attr({
-                    opacity: '1'
-                  });
-              });
+
+              var beePoint;
+
+              function animateAlongPath(index){
+                  Snap.animate(0, paths_length, function(value){
+                    beePoint = bee_paths[index].getPointAtLength( value );
+                    bees[index].transform( 't' + parseInt(beePoint.x - 0) + ',' + parseInt( beePoint.y - 0) + 'r' + (beePoint.alpha - 90));
+                  }, 5000, mina.easeinout, console.log("Bee!"));
+              }
+
+              for( var i = 1; i < 5; i++){
+                bees.push(ferm.select("#bee_"+i));
+                bee_paths.push(ferm.select("#bee_path_"+i));
+                
+                bee_paths[i-1].attr({
+                  opacity: 0
+                });
+              }
+              // car_path.attr({
+              //   opacity: 0
+              // });
+              var carPoint = car_path.getPointAtLength(0);
+              console.log(carPoint);
+              console.log(car.getBBox());
+              car.transform('T' + parseInt(100 - 0) + ',' + parseInt( 100 - 0));
+              console.log(car.getBBox());
+              // setInterval(function(){
+              //   Snap.animate(0,car_path_length,function(value){
+              //     carPoint = car_path.getPointAtLength(value);
+              //     car.transform('T' + parseInt(carPoint.x - 0) + ',' + parseInt( carPoint.y - 0) + 'r' + (carPoint.alpha - 90));
+              //   },5000, mina.easeinout);
+              // },5000);
+              for( var i = 0; i < 4; i++){
+                setInterval(animateAlongPath(i),5000);
+              }
             }); 
         </script>
         <script type="text/javascript">

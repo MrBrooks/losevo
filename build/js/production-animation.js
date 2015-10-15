@@ -9,7 +9,7 @@
       zeroscaleMatrix = new Snap.Matrix();
     canvas.append(paper);
 
-    var dairy_products_data = $.getJSON("js/dairy-products-data__cheeses.json", function(json){
+    var dairy_products_data = $.getJSON($("div[data-json]").attr("data-json"), function(json){
         for( var i = 0; i < json.length;i++){
           $("#lsv-dairy-products__list").append("<li class='lsv-dairy-products__list-item' data-item-order="+i+">" + json[i].title + "</li>");
         }
@@ -57,7 +57,7 @@
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           paper.remove();
           paper = canvas.g();
-          Snap.load(animation_data.path + animation_data.steps[++current_anim % animation_data.steps.length].img, onLoadSVG);
+          Snap.load(animation_data.steps[++current_anim % animation_data.steps.length].img, onLoadSVG);
           $("#lsv-production__description-header").text(animation_data.steps[current_anim % animation_data.steps.length].header);
           $("#lsv-production__description").text(animation_data.steps[current_anim % animation_data.steps.length].description);
           if( (current_anim % animation_data.steps.length != 0 ) && (current_anim % animation_data.steps.length != (animation_data.steps.length-1))){
@@ -70,7 +70,7 @@
     }
     function initProduct(){
       current_anim = 0;
-      Snap.load(animation_data.path + animation_data.steps[current_anim].img, onLoadSVG);
+      Snap.load(animation_data.steps[current_anim].img, onLoadSVG);
       $("#lsv-dairy-products__product-title>h2").text(animation_data.title);
       $("#lsv-dairy-products__tooltip-good>p").html(animation_data.goodies);
       $("#lsv-dairy-products__tooltip-info>p").html(animation_data.info);
