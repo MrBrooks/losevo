@@ -417,17 +417,17 @@
 <div id="lsv-shops__map" class="col-md-6"></div>
 <div class="lsv-shops__map-info">
   <div>
-  <div class="col-md-8">
+  <div class="col-md-8 col-sm-6">
     <h3 id="lsv-map__name" class="lsv-h3">фирменный магазин «Лосево»</h3>
     <p id="lsv-map__address" class="lsv-shops__item-address">Измайловский пр., 20</p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <p id="lsv-map__work_hours" class="lsv-shops__item-work_hours">10:00 - 20:00</p>
     <p id="lsv-map__tel" class="lsv-shops__item-tel">8 (821) 678-54-54</p>
   </div>
   </div>
 </div>
-<div id="lsv-shops__filter-menu" class="lsv-shops__filter lsv-shops__filter--active">
+<div id="lsv-shops__filter-menu" class="lsv-shops__filter">
   <div class="lsv-shops__filter-menu">
     <form class="lsv-shops__filter-form">
       <div class="form-group nomargin nopadding">
@@ -532,6 +532,9 @@
         <label for="lsv-shops__check-firm">Фирменные магазины</label>
       </div>
     </form>
+    <button id="lsv-shop__filter-apply-btn" type="button" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy">
+          <span>Применить фильтр</span>
+    </button>
   </div>
   <div class="lsv-shops__create-own-shop">
     <form class="lsv-shops__filter-form">
@@ -552,73 +555,8 @@
   </div>
   
 </div>
-<div id="lsv-shops__list" class="lsv-shops__list col-md-6 col-md-offset-6">
-  <!-- <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div>
-  <div class="lsv-shops__list-item">
-    <h3 class="lsv-h3">фирменный магазин «Лосево»</h3>
-    <p class="lsv-shops__item-address">Измайловский пр., 20</p>
-    <p class="lsv-shops__item-work_hours">10:00 - 20:00</p>
-    <p class="lsv-shops__item-tel">8 (821) 678-54-54</p>
-  </div> -->
+<div id="lsv-shops__list" class="lsv-shops__list col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 col-xs-6 col-xs-offset-6">
+  
 </div>
 <!-- О магазинах лосево -->
           </div>

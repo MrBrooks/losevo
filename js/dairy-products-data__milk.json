@@ -1,0 +1,1296 @@
+[
+    {
+    "title": "Ацидофилин",
+      "path" : "img/svg/animations/acid/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/acid/acidofilin_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/acid/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/acid/quality_control.svg",
+        "header": "КОНТРОЛЬ КАЧЕСТВА",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории"
+        },
+        {
+        "img": "img/svg/animations/acid/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/acid/separation.svg",
+        "header": "СЕПАРИЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/acid/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/acid/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путём смешивания"
+        },
+        {
+        "img": "img/svg/animations/acid/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/acid/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/acid/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/acid/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/acid/acidofilin_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Разлив продукта в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/acid/acidofilin_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/acid/logistics.svg",
+        "header": "ДОСТАВКА",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Бифилайф",
+      "path" : "img/svg/animations/bifilife/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/bifilife/bifilaif_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/bifilife/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод"
+        },
+        {
+        "img": "img/svg/animations/bifilife/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/bifilife/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/bifilife/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/bifilife/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путём смешивания"
+        },
+        {
+        "img": "img/svg/animations/bifilife/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/bifilife/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/bifilife/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/bifilife/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/bifilife/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение темпратуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/bifilife/bifilaif_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Разлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/bifilife/bifilaif_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/caciotta/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Бифилайф с добавками",
+      "path" : "img/svg/animations/bifilife_dobavki/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/ingredients.svg",
+        "header": "ДОБАВКИ",
+        "description": "Внесение в продукцию дополнительных ингредиентов (фруктозы, злаков (пшеницы, ячменя, гречи, геркулеса)."
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Йогурт",
+      "path" : "img/svg/animations/yougurt/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/yougurt/jogurt.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/yougurt/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/yougurt/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/yougurt/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/yougurt/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/yougurt/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/yougurt/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/yougurt/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/yougurt/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/yougurt/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/yougurt/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/yougurt/jogurt.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/yougurt/jogurt_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/yougurt/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Йогурт с добавками",
+      "path" : "img/svg/animations/yougurt_dobavki/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/dobavki.svg",
+        "header": "ДОБАВКИ",
+        "description": "Внесение в продукцию дополнительных ингредиентов (ягоды, сироп шиповника на фруктозе, ванилин)"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/yougurt_dobavki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Кефир",
+      "path" : "img/svg/animations/kefir/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/kefir/kefir_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/kefir/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/kefir/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/kefir/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/kefir/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/kefir/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/kefir/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/kefir/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/kefir/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/kefir/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/kefir/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/kefir/kefir_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/kefir/kefir_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/kefir/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Масло",
+      "path" : "img/svg/animations/maslo/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/maslo/maslo_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/maslo/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/maslo/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/maslo/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/maslo/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/maslo/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/maslo/slivki_aging.svg",
+        "header": "ДОЗРЕВАНИЕ",
+        "description": "Созревание выкожирных сливок в специальной таре в течении суток"
+        },
+        {
+        "img": "img/svg/animations/maslo/masloboika.svg",
+        "header": "МАСЛОБОЙКА",
+        "description": "Процесс сбивания сливок в масло в специальном преобразователе"
+        },
+        {
+        "img": "img/svg/animations/maslo/maslo_ablution.svg",
+        "header": "ПРОМЫВКА",
+        "description": "Промывка масла очищенной водой"
+        },
+        {
+        "img": "img/svg/animations/maslo/maslo_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Процесс упаковки масла в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/maslo/maslo_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ МАСЛА",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/maslo/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Молоко",
+      "path" : "img/svg/animations/milk/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/milk/milk_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/milk/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/milk/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/milk/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/milk/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/milk/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/milk/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/milk/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/milk/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры молока"
+        },
+        {
+        "img": "img/svg/animations/milk/milk_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/bifilife_dobavki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Ряженка",
+      "path" : "img/svg/animations/ryzhenka/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/ryzhenka/ryazhenka_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/languor.svg",
+        "header": "ТОМЛЕНИЕ",
+        "description": "Процесс нагревания и длительного томления молока до образования карамельного цвета"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/leaveing.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/ryazhenka_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив продукции в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/ryazhenka_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ И СОЗРЕВАНИЕ",
+        "description": "Созревание продукта в специальном охлажденном помещении"
+        },
+        {
+        "img": "img/svg/animations/ryzhenka/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Сливки",
+      "path" : "img/svg/animations/slivki/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/slivki/slivki_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/slivki/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/slivki/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/slivki/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/slivki/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/slivki/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение сливок до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/slivki/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/slivki/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/slivki/slivki_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Разлив сливок в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/slivki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой молочной продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Сметана",
+      "path" : "img/svg/animations/smetana/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/smetana/smetana_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/smetana/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/smetana/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/smetana/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/smetana/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/smetana/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ СЛИВОК",
+        "description": "Доведение сливок до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/smetana/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/smetana/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания сливок до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/smetana/leavening.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ",
+        "description": "Внесение в сливки заквасочных культур"
+        },
+        {
+        "img": "img/svg/animations/smetana/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование сгустка продукта"
+        },
+        {
+        "img": "img/svg/animations/smetana/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры продукта с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/smetana/smetana_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Процесс фасовки продукции в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/smetana/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Сыворотка",
+      "path" : "img/svg/animations/sivorotka/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/sivorotka/sivorotka_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/sivorotka/tvorod.svg",
+        "header": "ПРЕССОВАНИЕ И ОХЛАЖДЕНИЕ ТВОРОГА",
+        "description": "Прессование творожного сгустка с целью отделения сыворотки"
+        },
+        {
+        "img": "img/svg/animations/sivorotka/sivorotka.svg",
+        "header": "СЛИВ И ФИЛЬТРЦИЯ СЫВОРОТКИ",
+        "description": "Отделение сыворотки от творожного сгустка и очищение сыворотки от частиц творога"
+        },
+        {
+        "img": "img/svg/animations/sivorotka/warming.svg",
+        "header": "ТЕПЛОВАЯ ОБРАБОТКА",
+        "description": "Увеличение температуры сыворотки с целью лучшего сохранения свойств и качества"
+        },
+        {
+        "img": "img/svg/animations/sivorotka/sivorotka_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры сыворотки"
+        },
+        {
+        "img": "img/svg/animations/sivorotka/sivorotka_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив сыворотки в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/sivorotka/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Сыворотка с соком",
+      "path" : "img/svg/animations/sivorotka_sok/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/sivorotka_sok/sivorotka_s_sokom_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/tvorod.svg",
+        "header": "ПРЕССОВАНИЕ И ОХЛАЖДЕНИЕ ТВОРОГА",
+        "description": "Прессование творожного сгустка с целью отделения сыворотки"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/sivorotka.svg",
+        "header": "СЛИВ И ФИЛЬТРЦИЯ СЫВОРОТКИ",
+        "description": "Отделение сыворотки от творожного сгустка и очищение сыворотки от частиц творога"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/warming.svg",
+        "header": "ТЕПЛОВАЯ ОБРАБОТКА",
+        "description": "Увеличение температуры сыворотки с целью лучшего сохранения свойств и качества"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/sivorotka_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры сыворотки"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/sok.svg",
+        "header": "ДОБАВЛЕНИЕ СОКА",
+        "description": "Добавление натурального ягодного сока"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/sivorotka_s_sokom_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив сыворотки в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/sivorotka_sok/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Творог",
+      "path" : "img/svg/animations/tvorog/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/tvorog/tvorog_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/tvorog/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/tvorog/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/tvorog/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/tvorog/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/tvorog/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/tvorog/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/tvorog/sychuzhnyi_ferment.svg",
+        "header": "ВНЕСЕНИЕ ЗАКВАСКИ И СЫЧУЖНОГО ФЕРМЕНТА",
+        "description": "Внесение в молоко закваски и бифидобактерии «Бифилайф» при требуемых температурах"
+        },
+        {
+        "img": "img/svg/animations/tvorog/souring.svg",
+        "header": "СКВАШИВАНИЕ",
+        "description": "Размножение микрофлоры закваски и образование творожного колье (сгустка)."
+        },
+        {
+        "img": "img/svg/animations/tvorog/tvorog_cooling.svg",
+        "header": "ПРЕССОВАНИЕ И ОХЛАЖДЕНИЕ",
+        "description": "Прессование творожного сгустка с целью отделения сыворотки от творога"
+        },
+        {
+        "img": "img/svg/animations/tvorog/tvorog_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Фасовка и упаковка творога в оригинальную тару «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/tvorog/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Твороженная запеканка",
+      "path" : "img/svg/animations/tvorog_zapekanka/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/tvorog_zapekanka/tvorozhnaya_zapekanka_s_dobavkami_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka/ingredients.svg",
+        "header": "КОНТРОЛЬ КАЧЕСТВА СЫРЬЯ И ПРОИЗВОДСТВА ТЕСТА",
+        "description": "Творог, куриное яйцо, молоко, манная крупа, фруктоза, ванилин, сливочное масло"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka/logistics.svg",
+        "header": "ДОСТАВКА ТЕСТА В МАГАЗИНЫ",
+        "description": "Доставка теста в торговые точки «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka/cooking.svg",
+        "header": "ВЫПЕКАНИЕ",
+        "description": "Выпекание запеканки в духовом шкафу."
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka/cooling.svg",
+        "header": "Остывание",
+        "description": "Естественное остывание запеканки на противне"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka/tvorozhnaya_zapekanka_s_dobavkami_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Фасовка готовой запеканки в упаковку."
+        }
+      ]
+    },
+    {
+      "title": "Твороженная запеканка с добавками",
+      "path" : "img/svg/animations/tvorog_zapekanka_dobavki/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/tvorozhnaya_zapekanka pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/ingredients.svg",
+        "header": "КОНТРОЛЬ КАЧЕСТВА СЫРЬЯ И ПРОИЗВОДСТВА ТЕСТА",
+        "description": "Творог, куриное яйцо, молоко, манная крупа, фруктоза, ванилин, сливочное масло"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/dobavki.svg",
+        "header": "ДОБАВЛЕНИЕ НАТУРАЛЬНЫХ ИНГРЕДИЕНТОВ",
+        "description": "Добавление кураги, изюма, мёда, кедровых или грецких орехов в зависимости от рецептуры."
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/logistics.svg",
+        "header": "ДОСТАВКА ТЕСТА В МАГАЗИНЫ",
+        "description": "Доставка теста в торговые точки «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/cooking.svg",
+        "header": "ВЫПЕКАНИЕ",
+        "description": "Выпекание запеканки в духовом шкафу."
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/cooling.svg",
+        "header": "Остывание",
+        "description": "Естественное остывание запеканки на противне"
+        },
+        {
+        "img": "img/svg/animations/tvorog_zapekanka_dobavki/tvorozhnaya_zapekanka pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Фасовка готовой запеканки в упаковку."
+        }
+      ]
+    },
+    {
+      "title": "Твороженная масса",
+      "path" : "img/svg/animations/tvorog_massa/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/tvorog_massa/tvorozhnaya_massa_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/tvorog_massa/tvorog.svg",
+        "header": "ТВОРОГ",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/tvorog_massa/dobavki.svg",
+        "header": "ДОБАВЛЕНИЕ НАТУРАЛЬНЫХ ИНГРЕДИЕНТОВ",
+        "description": "Добавление кураги, изюма, мёда, кедровых или грецких орехов в зависимости от рецептуры."
+        },{
+        "img": "img/svg/animations/tvorog_massa/tvorozhnaya_massa_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Фасовка готовой твороженной массы в оригинальную тару «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/tvorog_massa/logistics.svg",
+        "header": "ДОСТАВКА ТЕСТА НА ПРИЛАВОК",
+        "description": "Доставка готовой продукции в торговые точки «Лосево»"
+        }
+      ]
+    },
+    {
+      "title": "Топлёное масло",
+      "path" : "img/svg/animations/topl_maslo/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/topl_maslo/toplenoe maslo_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/slivki_aging.svg",
+        "header": "ДОЗРЕВАНИЕ",
+        "description": "Созревание выкожирных сливок в специальной таре в течении суток"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/masloboika.svg",
+        "header": "МАСЛОБОЙКА",
+        "description": "Процесс сбивания сливок в масло в специальном преобразователе"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/maslo_ablution.svg",
+        "header": "ПРОМЫВКА",
+        "description": "Промывка масла очищенной водой"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/languor.svg",
+        "header": "ТОМЛЕНИЕ",
+        "description": "Нагревание масла до температуры томления с целью удаления остатков белка и лишней влаги"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/toplenoe maslo_pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Процесс упаковки масла в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/toplenoe maslo_cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры масла"
+        },
+        {
+        "img": "img/svg/animations/topl_maslo/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+    {
+      "title": "Топлёное молоко",
+      "path" : "img/svg/animations/topl_milk/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/topl_milk/toplenoe moloko.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/topl_milk/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/topl_milk/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/topl_milk/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/topl_milk/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/normalization.svg",
+        "header": "НОРМАЛИЗАЦИЯ",
+        "description": "Доведение молока до опрделенной жирности путем смешивания"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/homogenization.svg",
+        "header": "ГОМОГЕНИЗАЦИЯ",
+        "description": "Механическая обработка с целью измельчения и равномерного распределения в молоке жировых шариков"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/topl_milk/languor.svg",
+        "header": "ТОМЛЕНИЕ",
+        "description": "Процесс нагревания и длительного томления молока до образования карамельного цвета"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Снижение температуры молока с целью сохранения свойств и качеств"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/toplenoe moloko.svg",
+        "header": "ФАСОВКА",
+        "description": "Розлив молока в тару собственного производства «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/topl_milk/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    },
+     {
+      "title": "Шоколадное масло",
+      "path" : "img/svg/animations/choco_maslo/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/choco_maslo/shokoladnoe maslo pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/transportation.svg",
+        "header": "Транспортировка",
+        "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/quality_control.svg",
+        "header": "Контроль качества",
+        "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/milk_inspection.svg",
+        "header": "ПРИЁМКА МОЛОКА",
+        "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/separation.svg",
+        "header": "СЕПАРАЦИЯ",
+        "description": "Механическое отделение сливок от молока"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/pasteurization.svg",
+        "header": "ПАСТЕРИЗАЦИЯ",
+        "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/slivki_aging.svg",
+        "header": "СОЗРЕВАНИЕ",
+        "description": "Созревание выкожирных сливок в специальной таре в течении суток"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/masloboika.svg",
+        "header": "МАСЛОБОЙКА",
+        "description": "Процесс сбивания сливок в масло в специальном преобразователе"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/maslo_ablution.svg",
+        "header": "ПРОМЫВКА",
+        "description": "Промывка масла очищенной водой"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/ingredients.svg",
+        "header": "ВНЕСЕНИЕ ИНГРЕДИЕНТОВ",
+        "description": "Добавление какао, сахара, ванилин в соответствии с рецептурой"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/kneading.svg",
+        "header": "Вымешивание",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/shokoladnoe maslo pack.svg",
+        "header": "ФАСОВКА",
+        "description": "Процесс упаковки шоколадного масла в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/shokoladnoe maslo cooling.svg",
+        "header": "ОХЛАЖДЕНИЕ",
+        "description": "Процесс охлаждения упакованного масла"
+        },
+        {
+        "img": "img/svg/animations/choco_maslo/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево»."
+        }
+      ]
+    }
+]

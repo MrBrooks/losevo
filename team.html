@@ -725,12 +725,31 @@
             'easing': 'easeOutElastic',
             'fitToSection': false,
             'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': true
+            'scrollOverflow': false
           });
           $(document).ready(function() {
             $(":file").filestyle({
             });
           });
+          if(window.innerWidth <= 480){
+            $.fn.fullpage.destroy();
+            $("#lsv-team__img-start,.fullwidth-img--onethird").height(window.innerHeight/2 - 63);
+
+            var startBlockHeight = $(".lsv-team__text-start>div").height()+ window.innerHeight/2 + 63;
+            $(".section:first-child").css({
+              height : startBlockHeight+"px"
+            });
+            $(".section:nth-child(2)").css({
+              height : (window.innerHeight*2+200)+"px"
+            });
+            $(".lsv-team__text-owner").css({
+              top : (window.innerHeight/2 - 62) + "px"
+            });
+            $(".lsv-team__text-start").css({
+              top : (window.innerHeight/2) + "px"
+            });
+
+          }
         });
         </script>
 

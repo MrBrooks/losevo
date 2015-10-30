@@ -58,18 +58,5 @@ $(document).ready(function(){
 
     }
   });
-  // $(window).on('mousewheel',function(){
-  //   setTimeout(function(){
-  //     current_year = $('.active').attr('data-history-year');
-  //     console.log(current_year);
-  //     if(current_year != 0){
-  //       $('.lsv-history__timeline').css('opacity','1');
-  //       $('#timeline__'+ current_year).addClass('timeline--active').siblings().removeClass('timeline--active');
-  //       console.log('In IF');
-  //     }
-  //     else{
-  //       $('.lsv-history__timeline').css('opacity','0');
-  //     }
-  //   },300);
-  // });
+  $.fn.fullpage.reBuild();
 });

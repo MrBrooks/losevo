@@ -1,0 +1,86 @@
+[
+    {
+      "title": "Колбаски",
+      "path" : "img/svg/animations/kolbaski/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/kolbaski/sausages_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/kolbaski/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Контроль качества сырья."
+        },
+        {
+        "img": "img/svg/animations/kolbaski/farsh.svg",
+        "header": "ИЗГОТОВЛЕНИЕ ФАРША",
+        "description": "Измельчение мяса и смешивание фарша с добавлением ингредиентов согласно рецептуре."
+        },
+        {
+        "img": "img/svg/animations/kolbaski/modeling.svg",
+        "header": "ФОРМОВКА",
+        "description": "Наполнение оболочек готовым фаршем и формирование колбасок"
+        },
+        {
+        "img": "img/svg/animations/kolbaski/sausages_pack.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки колбасок в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/kolbaski/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
+    },
+    {
+      "title": "Чебуреки, пельмени, манты",
+      "path" : "img/svg/animations/pelmeshlki/",
+      "goodies" : "",
+      "info": "",
+      "steps" : [{
+        "img": "img/svg/animations/pelmeshlki/manty_pack.svg",
+        "header": "",
+        "description": ""
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Экспертиза сырья в лаборатории."
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/dough.svg",
+        "header": "ПОДГОТОВКА ТЕСТА",
+        "description": "Смешивание ингредиентов теста согласно рецептуре"
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/farsh.svg",
+        "header": "ПОДГОТОВКА НАЧИНКИ",
+        "description": "Смешивание ингредиентов начинки согласно рецептуре."
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/hand modeling.svg",
+        "header": "РУЧНАЯ ЛЕПКА",
+        "description": "Ручная лепка изделий"
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/mabty_cooling.svg",
+        "header": "ШОКОВАЯ ЗАМОРОЗКА",
+        "description": "Заморозка продукта способоом,при котором его химический состав и структура не меняются"
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/manty_pack.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки продукции в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/pelmeshlki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
+    }
+]

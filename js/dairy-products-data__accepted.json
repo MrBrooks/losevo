@@ -1,0 +1,31 @@
+[
+    {
+      "title": " ",
+      "path" : "",
+      "goodies" : "",
+      "info": "",
+      "steps" : [
+        {
+        "img": "img/svg/animations/accepted/degustation.svg",
+        "header": "ДЕГУСТАЦИЯ",
+        "description": "Проверка различных свойств и качеств продукта в лаборатории «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/accepted/research.svg",
+        "header": "ИЗУЧЕНИЕ ПРОИЗВОДСТВА",
+        "description": "Оценка условий производства продукта специалистами «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/accepted/independend_research.svg",
+        "header": "Независимое исследования",
+        "description": "Проведение независимых экспертиз, отвечающих стандартам производственной политики РФ и ГК «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/accepted/realisation.svg",
+        "header": "Реализация продукта в фирменной сети «Лосево»",
+        "description": ""
+        }
+      ]
+    }
+    
+]
