@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <div class="animation-container">
+    <svg id="animation-canvas"></svg>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script type="text/javascript">
+    var canvas = Snap("#animation-canvas");
+    Snap.load("forming.svg", onLoadSVG);
+    function onLoadSVG(data){
+      canvas.group(data);
+    }
+
+  </script>
+</body>
+</html>

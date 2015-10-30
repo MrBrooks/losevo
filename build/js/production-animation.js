@@ -27,37 +27,70 @@
       switch (current_anim % animation_data.steps.length){
         case 1:
           var car = element.select("#car");
-          var carMatrix = new Snap.Matrix();
-          carMatrix.translate(box.w+100,0);
-          car.animate({transform: carMatrix}, appearTime, mina.linear, function(){
-            car.transform(carMatrix.translate(-box.w-100,0));
-          });
+          if (car){
+            var carMatrix = new Snap.Matrix();
+            carMatrix.translate(10,0);
+            car.animate({transform: carMatrix}, appearTime*1, mina.linear, function(){
+              setTimeout(function(){
+                car.animate({transform: carMatrix.translate(box.w+100,0)}, appearTime*3, mina.linear);
+                // car.transform(carMatrix.translate(-box.w-100,0));
+              },2000);
+            });
+          }
           break;
         default: console.log("defualt case in step animation");
       }
     }
+    function beforeAnimation(data){
+      paper.remove();
+      paper = canvas.g();
+      paper.append(data);
+      var element = paper.select("svg");
+      box = canvas.getBBox();
+      // console.log("box");
+      appearMatrix = new Snap.Matrix();
+      zeroscaleMatrix.scale(0,0,box.cx,box.cy);
+      appearMatrix.scale(0.8,0.8,box.cx,box.cy);
+      paper.transform(zeroscaleMatrix);
+      //do some manipulation before playing step animation
+      switch (current_anim % animation_data.steps.length){
+        case 1:
+          var car = element.select("#car");
+          if(car){
+            var carMatrix = new Snap.Matrix();
+            carMatrix.translate(-box.w,0);
+            car.transform(carMatrix);
+          }
+          break;
+        case 2:
+          break;
+        default: console.log("defualt case before playing animation "+ (current_anim % animation_data.steps.length));
+      }
+      onLoadSVG();
+    }
 
     function onLoadSVG(data){
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
-          paper.remove();
-          paper = canvas.g();
-          paper.append(data);
-          box = canvas.getBBox();
-          appearMatrix = new Snap.Matrix();
-          zeroscaleMatrix.scale(0,0,box.cx,box.cy);
-          appearMatrix.scale(0.8,0.8,box.cx,box.cy);
-          paper.transform(zeroscaleMatrix);
+          // paper.remove();
+          // paper = canvas.g();
+          // paper.append(data);
+          // box = canvas.getBBox();
+          // appearMatrix = new Snap.Matrix();
+          // zeroscaleMatrix.scale(0,0,box.cx,box.cy);
+          // appearMatrix.scale(0.8,0.8,box.cx,box.cy);
+          // paper.transform(zeroscaleMatrix);
           paper.animate({transform: appearMatrix}, appearTime, mina.elastic,stepAnimation);
       });
     }
     function startNextAnim(){
+       paper.stop();
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
       $("#lsv-dairy-products__tooltip-good").removeClass("active");
 
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
-          paper.remove();
-          paper = canvas.g();
-          Snap.load(animation_data.steps[++current_anim % animation_data.steps.length].img, onLoadSVG);
+          // paper.remove();
+          // paper = canvas.g();
+          Snap.load(animation_data.steps[++current_anim % animation_data.steps.length].img, beforeAnimation);
           $("#lsv-production__description-header").text(animation_data.steps[current_anim % animation_data.steps.length].header);
           $("#lsv-production__description").text(animation_data.steps[current_anim % animation_data.steps.length].description);
           if( (current_anim % animation_data.steps.length != 0 ) && (current_anim % animation_data.steps.length != (animation_data.steps.length-1))){
@@ -70,7 +103,7 @@
     }
     function initProduct(){
       current_anim = 0;
-      Snap.load(animation_data.steps[current_anim].img, onLoadSVG);
+      Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
       $("#lsv-dairy-products__product-title>h2").text(animation_data.title);
       $("#lsv-dairy-products__tooltip-good>p").html(animation_data.goodies);
       $("#lsv-dairy-products__tooltip-info>p").html(animation_data.info);

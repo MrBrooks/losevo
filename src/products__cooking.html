@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="ru" class="no-js" prefix="og: http://ogp.me/ns#">
+
+    <!-- build:include html-blocks/common/head.html -->
+    This will be replaced by the content of html-blocks/common/head.html
+    <!-- /build -->
+
+    <body>
+
+        <!-- build:include html-blocks/common/if-ie.html -->
+        This will be replaced by the content of html-blocks/common/if-ie.html
+        <!-- /build -->
+
+        <!-- build:include html-blocks/pages--external/header--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/header--external.html
+        <!-- /build -->
+
+        <main id='lsv-slides-scroll-overflow-off'>
+          <div class="section">
+            <!-- build:include html-blocks/pages--external/products-cooking-start-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/products-cooking-start-block.html
+            <!-- /build -->
+          </div>
+          <div class="section lsv-green-bg">
+            <!-- build:include html-blocks/pages--external/products-cooking-animation-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/products-cooking-animation-block.html
+            <!-- /build -->
+            
+            <!-- build:include html-blocks/pages--external/production-product-icons-slider.html -->
+            This will be replaced by the content of html-blocks/pages--external/production-product-icons-slider.html
+            <!-- /build -->
+
+          </div>
+          <div class="section lsv-footer fp-auto-height">
+            <!-- build:include html-blocks/pages--external/footer.html -->
+            This will be replaced by the content of html-blocks/pages--external/footer.html
+            <!-- /build -->
+          </div>
+        </main>
+        <!-- build:include html-blocks/pages--external/footer--external.html -->
+        This will be replaced by the content of html-blocks/pages--external/footer--external.html
+        <!-- /build -->
+        <script src="js/production-animation.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#lsv-slides-scroll-overflow-off').fullpage({
+              'css3': true,
+              'easing': 'easeOutElastic',
+              'fitToSection': false,
+              'fixedElements': '.lsv-nav , .lsv-menu',
+              'scrollOverflow': false,
+
+              afterRender: function(){
+                $("#lsv-production-product-icon-slider").owlCarousel({
+                  items: 3,
+                  itemsCustom : [
+                    [0, 2],
+                    [450, 3]
+                  ],
+                  navigation : true,
+                  pagination : false,
+                  navigationText: false,
+                  rewindNav: false,
+                  mouseDrag: false,
+                  touchDrag: false
+                });
+
+                var lengthElementSlideBar = $("#lsv-production-product-icon-slider .owl-item").length - 1;
+
+                var countBut = 2;
+
+                $("#lsv-production-product-icon-slider .owl-item:nth-child(2)").addClass("scaleCircle");
+
+                $("#lsv-production-product-icon-slider .owl-next").click(function () {
+                  if (countBut == lengthElementSlideBar) {
+                    countBut = lengthElementSlideBar;
+                  } else {
+                    countBut++;
+                    //console.log(countBut);
+                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut - 1)+")").removeClass("scaleCircle");
+                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
+                  }
+                })
+                 $("#lsv-production-product-icon-slider .owl-prev").click(function () {
+                  if (countBut == 2) {
+                    countBut = 2;
+                  } else {
+                    countBut--;
+                    //console.log(countBut);
+                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut + 1)+")").removeClass("scaleCircle");
+                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
+                  }
+                })
+              }
+            });
+          });
+        </script>
+    </body>
+
+</html>

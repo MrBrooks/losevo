@@ -188,75 +188,191 @@
               bakery_hover = Snap('#bakery_hover'),
               cheese_house = Snap('#cheese_house_1_'),
               cheese_house_hover = Snap('#cheese_house_hover'),
-              car = Snap("#car"),
-              car_path = Snap("#way_car>path");
+              car_path = Snap("#way_car>path"), 
+              bull = Snap('#bull_2'),
+              bull_popup = Snap('#bulls_hover'),
+              milk = Snap('#cow_1'),
+              milk_popup = Snap('#milk_hover'),
+              cheese = Snap('#cheese_house_1_'),
+              cheese_popup = Snap('#cheese_hover'),
+              bakery_new = Snap('#bakery'),
+              bakery_popup = Snap('#cooking_hover'),
+              car = Snap('#car'),
+              car_popup = Snap('#accept_hover');
 
-              var bee_paths = [], bees = [], paths_length = 1127, car_path_length = Math.round(car_path.getTotalLength());
+              var bee_paths = [], bees = [], paths_length = 1127;
               var cheese_box = cheese_house_hover.getBBox(),
-                  bakery_box = bakery_hover.getBBox();
+                  bakery_box = bakery_hover.getBBox(),
+                  bull_box = bull_popup.getBBox(),
+                  milk_box = milk_popup.getBBox(),
+                  cheese_box = cheese_popup.getBBox(),
+                  bakery_box_new = bakery_popup.getBBox(), 
+                  car_box = car_popup.getBBox();
 
               var cheeseHoverIn = new Snap.Matrix(),
                   cheeseHoverOut = new Snap.Matrix(),
                   bakeryHoverIn = new Snap.Matrix(),
-                  bakeryHoverOut = new Snap.Matrix();
-              cheeseHoverIn.scale(1,1,cheese_box.cx,cheese_box.cy);
-              cheeseHoverOut.scale(0,0,cheese_box.cx,cheese_box.cy);
+                  bakeryHoverOut = new Snap.Matrix(),
+                  bullHoverIn = new Snap.Matrix(), 
+                  bullHoverOut = new Snap.Matrix(),
+                  milkHoverIn = new Snap.Matrix(), 
+                  milkHoverOut = new Snap.Matrix(),
+                  cheeseHoverIn = new Snap.Matrix(), 
+                  cheeseHoverOut = new Snap.Matrix(),
+                  bakery_newHoverIn = new Snap.Matrix(), 
+                  bakery_newHoverOut = new Snap.Matrix(), 
+                  carHoverIn = new Snap.Matrix(), 
+                  carHoverOut = new Snap.Matrix();
+              cheeseHoverIn.scale(1,1,2200,700);
+              cheeseHoverOut.scale(0,0,2200,700);
               bakeryHoverIn.scale(1,1,bakery_box.cx,bakery_box.cy);
               bakeryHoverOut.scale(0,0,bakery_box.cx,bakery_box.cy);
+              bullHoverIn.scale(1,1,900,1350);
+              bullHoverOut.scale(0,0,900,1350);
+              milkHoverIn.scale(1,1,1900,1100);
+              milkHoverOut.scale(0,0,1900,1100);
+              cheeseHoverIn.scale(1,1,1900,2000);
+              cheeseHoverOut.scale(0,0,1900,2000);
+              bakery_newHoverIn.scale(1,1,2750,1200);
+              bakery_newHoverOut.scale(0,0,2750,1200);
+              carHoverIn.scale(1,1,2177,2455);
+              carHoverOut.scale(0,0,2177,2455);
 
               bakery_hover.transform(bakeryHoverOut);
               cheese_house_hover.transform(cheeseHoverOut);
+              bull_popup.transform(bullHoverOut);
+              milk_popup.transform(milkHoverOut);
+              cheese_popup.transform(cheeseHoverOut);
+              bakery_popup.transform(bakeryHoverOut);
+              car_popup.transform(carHoverOut);
+
+              var hoverAppearTime = 100;
               
               bakery.hover(
                 function(){
-                  bakery_hover.animate({ transform: bakeryHoverIn },1000, mina.elastic);
+                  bakery_hover.animate({ transform: bakeryHoverIn },hoverAppearTime, mina.linear);
               },
                 function(){
-                  bakery_hover.animate({ transform: bakeryHoverOut },1000, mina.elastic);
+                  bakery_hover.animate({ transform: bakeryHoverOut },hoverAppearTime, mina.linear);
               });
 
               cheese_house.hover(
                 function(){
-                  cheese_house_hover.animate({ transform: cheeseHoverIn },1000, mina.elastic);
+                  cheese_house_hover.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
               },
                 function(){
-                  cheese_house_hover.animate({ transform: cheeseHoverOut },1000, mina.elastic);
+                  cheese_house_hover.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);
               });
 
-              var beePoint;
+              bull.hover(
+                function(){
+                  bull_popup.animate({ transform: bullHoverIn },hoverAppearTime, mina.linear);
+                },
+                function(){
+                   bull_popup.animate({ transform: bullHoverOut },hoverAppearTime, mina.linear); //backin
+              });
 
-              function animateAlongPath(index){
-                  Snap.animate(0, paths_length, function(value){
-                    beePoint = bee_paths[index].getPointAtLength( value );
-                    bees[index].transform( 't' + parseInt(beePoint.x - 0) + ',' + parseInt( beePoint.y - 0) + 'r' + (beePoint.alpha - 90));
-                  }, 5000, mina.easeinout, console.log("Bee!"));
-              }
+              milk.hover(
+                function(){
+                  milk_popup.animate({ transform: milkHoverIn },hoverAppearTime, mina.linear);
+              },
+                function(){
+                  milk_popup.animate({ transform: milkHoverOut },hoverAppearTime, mina.linear);
+              });
 
+              cheese.hover(
+                function(){
+                  cheese_popup.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
+              },
+                function(){
+                  cheese_popup.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);
+              });
+
+              bakery_new.hover(
+                function(){
+                  bakery_popup.animate({ transform: bakery_newHoverIn },hoverAppearTime, mina.linear);
+              },
+                function(){
+                  bakery_popup.animate({ transform: bakery_newHoverOut },hoverAppearTime, mina.linear);
+              });
+
+              car.hover(
+                function(){
+                  car_popup.animate({ transform: carHoverIn },hoverAppearTime, mina.linear);
+              },
+                function(){
+                  car_popup.animate({ transform: carHoverOut },hoverAppearTime, mina.linear);
+              });
+
+              $("#bulls_hover").hover(function(){
+                  bull_popup.animate({ transform: bullHoverIn},hoverAppearTime, mina.easein);
+              }, function(){
+                  bull_popup.animate({ transform: bullHoverOut },hoverAppearTime, mina.linear);   
+              });
+              $("#milk_hover").hover(function(){
+                  milk_popup.animate({ transform: milkHoverIn },hoverAppearTime, mina.linear);
+              }, function(){
+                  milk_popup.animate({ transform: milkHoverOut },hoverAppearTime, mina.linear);   
+              });
+              $("#cheese_hover").hover(function(){
+                  cheese_popup.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
+              }, function(){
+                  cheese_popup.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);   
+              });
+              $("#cooking_hover").hover(function(){
+                  bakery_popup.animate({ transform: bakery_newHoverIn },hoverAppearTime, mina.linear);
+              }, function(){
+                  bakery_popup.animate({ transform: bakery_newHoverOut },hoverAppearTime, mina.linear);   
+              });
+              $("#accept_hover").hover(function(){
+                  car_popup.animate({ transform: carHoverIn },hoverAppearTime, mina.linear);
+              }, function(){
+                  car_popup.animate({ transform: carHoverOut },hoverAppearTime, mina.linear);   
+              });
+
+              var beePoints = [0,0,0,0];
+
+              
               for( var i = 1; i < 5; i++){
                 bees.push(ferm.select("#bee_"+i));
                 bee_paths.push(ferm.select("#bee_path_"+i));
-                
                 bee_paths[i-1].attr({
                   opacity: 0
                 });
               }
-              // car_path.attr({
-              //   opacity: 0
-              // });
-              var carPoint = car_path.getPointAtLength(0);
-              console.log(carPoint);
-              console.log(car.getBBox());
-              car.transform('T' + parseInt(100 - 0) + ',' + parseInt( 100 - 0));
-              console.log(car.getBBox());
-              // setInterval(function(){
-              //   Snap.animate(0,car_path_length,function(value){
-              //     carPoint = car_path.getPointAtLength(value);
-              //     car.transform('T' + parseInt(carPoint.x - 0) + ',' + parseInt( carPoint.y - 0) + 'r' + (carPoint.alpha - 90));
-              //   },5000, mina.easeinout);
-              // },5000);
-              for( var i = 0; i < 4; i++){
-                setInterval(animateAlongPath(i),5000);
+               var widthSvg = window.innerWidth;
+               // var heightSvg = window.innerHeight;
+
+              //$("#ferm").css({"width": "1300px"}); //3594 / 2825
+              $("#ferm").css({"height": window.innerHeight+"px"});
+              // $(".lsv-ferm").css({"width": window.innerWidth+"px"});
+
+              //alert(screen.height);
+
+              function animateAlongPath(index, displace){
+                  Snap.animate(0, paths_length, function(value){
+                    beePoints[index] = bee_paths[index].getPointAtLength( value );
+                    bees[index].transform( 't' + parseInt(beePoints[index].x - 2280 + displace[0]) + ',' + parseInt(beePoints[index].y - 1875 + displace[1]) + 'r' + parseInt( beePoints[index].alpha+45+displace[2]));
+                  }, 4000);
               }
+
+              car_path
+              .attr({
+                opacity: 0
+              });
+              
+
+              animateAlongPath(0, [0,0,180]);
+              animateAlongPath(1, [-350,200,0]);
+              animateAlongPath(2, [-600,225,45-180]);
+              animateAlongPath(3, [-525,-75,180]);
+
+              setInterval(function(){
+                  animateAlongPath(0, [0,0,180]);
+                  animateAlongPath(1, [-350,200,0]);
+                  animateAlongPath(2, [-600,225,45+180]);
+                  animateAlongPath(3, [-525,-75,180]);
+                },4000);
             }); 
         </script>
         <script type="text/javascript">

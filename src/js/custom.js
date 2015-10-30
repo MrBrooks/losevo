@@ -1,4 +1,4 @@
-/**************************************/
+  /**************************************/
 /* Custom JavaScript files supervisor */
 /**************************************/
 $(window).on('load', function () {
@@ -71,9 +71,9 @@ $(document).ready(function() {
   });
 
 
-  $("#lsv-shops__filter-btn").on('click',function(){
+  $("#lsv-shops__filter-btn,#lsv-shop__filter-apply-btn").on('click',function(){
     $( "#lsv-shops__filter-menu" ).toggleClass("lsv-shops__filter--active");
-    $(this).toggleClass("active");
+    $("#lsv-shops__filter-btn").toggleClass("active");
   });
   $("#lsv-dairy-products__menu-btn").on('click',function(){
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").addClass("active");
@@ -99,24 +99,24 @@ $(document).ready(function() {
   //   'scrollOverflow': true
   // });
   
-  $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider").owlCarousel({
-      navigation : true,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
-  });
+  // $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider").owlCarousel({
+  //     navigation : true,
+  //     slideSpeed : 300,
+  //     paginationSpeed : 400,
+  //     singleItem:true
+  // });
   $("#owl-shops-slider").owlCarousel({
       navigation: true,
       pagination: false,
       slideSpeed: 300,
       singleItem:true
   });
-  $("#owl-vacancy-career-slider").owlCarousel({
-      navigation: true,
-      pagination: true,
-      slideSpeed: 300,
-      singleItem:true
-  });
+  // $("#owl-vacancy-career-slider").owlCarousel({
+  //     navigation: true,
+  //     pagination: true,
+  //     slideSpeed: 300,
+  //     singleItem:true
+  // });
   $("#owl-team-office-slider, #owl-team-ferm-slider, #owl-team-shops-slider, #owl-team-production-slider").owlCarousel({
       itemsDesktop: [1199,3],
       items: 4,
@@ -175,7 +175,6 @@ $(document).ready(function() {
         button.text("Неудача!").css("background-color","#aa1100");
       }
     });
-
   });
 });
 
