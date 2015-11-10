@@ -40,7 +40,7 @@
         <!-- build:include html-blocks/pages--external/footer--external.html -->
         This will be replaced by the content of html-blocks/pages--external/footer--external.html
         <!-- /build -->
-        <script src="js/production-animation.js"></script>
+        <script src="js/production-animation_test.js"></script>
         <script type="text/javascript">
           $(document).ready(function(){
             $('#lsv-slides-scroll-overflow-off').fullpage({
@@ -64,33 +64,6 @@
                   mouseDrag: false,
                   touchDrag: false
                 });
-
-                var lengthElementSlideBar = $("#lsv-production-product-icon-slider .owl-item").length - 1;
-
-                var countBut = 2;
-
-                $("#lsv-production-product-icon-slider .owl-item:nth-child(2)").addClass("scaleCircle");
-
-                $("#lsv-production-product-icon-slider .owl-next").click(function () {
-                  if (countBut == lengthElementSlideBar) {
-                    countBut = lengthElementSlideBar;
-                  } else {
-                    countBut++;
-                    //console.log(countBut);
-                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut - 1)+")").removeClass("scaleCircle");
-                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
-                  }
-                })
-                 $("#lsv-production-product-icon-slider .owl-prev").click(function () {
-                  if (countBut == 2) {
-                    countBut = 2;
-                  } else {
-                    countBut--;
-                    //console.log(countBut);
-                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut + 1)+")").removeClass("scaleCircle");
-                    $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
-                  }
-                })
               }
             });
           });

@@ -93,7 +93,7 @@
             map.setMapTypeId('map_style');
 
 
-            var shops = $.getJSON( "js/shops.json", function(json){
+            var shops = $.getJSON($("#lsv-shops__map").attr("data-map"), function(json){
               function addShopWithTimeout(shop, timeout, index) {
                 var icon;
                 if (shop.firm){icon = losevo_shop_icon;}

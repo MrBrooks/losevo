@@ -1,0 +1,360 @@
+[
+  {
+    "title": "Качотта 1",
+    "products" : [
+    {
+      "title": "Качотта 1.1",
+      "icon": "img/svg/products_icons/cheese_kachotta.svg",
+      "startImg":"img/svg/animations/caciotta/packing.svg",
+      "goodies" : "1",
+      "info": "2"
+    },
+    {
+      "title": "Качотта 1.2",
+      "icon": "img/svg/products_icons/cheese_losevo.svg",
+      "startImg":"img/svg/animations/caciotta/transportation.svg",
+      "goodies" : "3",
+      "info": "4"
+    },
+    {
+      "title": "Качотта 1.3",
+      "icon": "img/svg/products_icons/cheese_rikotta.svg",
+      "startImg":"img/svg/animations/caciotta/milk_inspection.svg",
+      "goodies" : "5",
+      "info": "6"
+    }
+    ],
+    "steps" : [
+      {
+      "img": "img/svg/animations/caciotta/transportation.svg",
+      "header": "Транспортировка",
+      "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+      },
+      {
+      "img": "img/svg/animations/caciotta/quality_control.svg",
+      "header": "Контроль качества",
+      "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_inspection.svg",
+      "header": "ПРИЁМКА МОЛОКА",
+      "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_aging.svg",
+      "header": "СОЗРЕВАНИЕ МОЛОКА",
+      "description": "Процесс созревания молока, необходимого для производства сыра."
+      },
+      {
+      "img": "img/svg/animations/caciotta/pasteurization.svg",
+      "header": "ПАСТЕРИЗАЦИЯ",
+      "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+      },
+      {
+      "img": "img/svg/animations/caciotta/leavening.svg",
+      "header": "ЗАКВАШИВАНИЕ",
+      "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах, а также сычужного фермента"
+      },
+      {
+      "img": "img/svg/animations/caciotta/souring.svg",
+      "header": "СКВАШИВАНИЕ",
+      "description": "Образование сырного колье (сгустка)."
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_mass.svg",
+      "header": "СЫРНАЯ МАССА",
+      "description": "Проверка свойств полученного сырного сгустка."
+      },
+      {
+      "img": "img/svg/animations/caciotta/forming.svg",
+      "header": "ФОРМОВКА И ПРЕССОВАНИЕ СЫРНОЙ МАССЫ",
+      "description": "Распределение сырного колье по формам, прессование продукта и формирование сырных головок."
+      },
+      {
+      "img": "img/svg/animations/caciotta/brining.svg",
+      "header": "ПРОСОЛКА СЫРНЫХ ГОЛОВОК",
+      "description": ""
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_aging.svg",
+      "header": "СЫРНАЯ КАМЕРА, СОЗРЕВАНИЕ",
+      "description": "Процесс созревание сырных голов."
+      },
+      {
+      "img": "img/svg/animations/caciotta/packing.svg",
+      "header": "ФАСОВКА",
+      "description": "Фасовка и упаковка сыра в оригинальную упаковку «Лосево»"
+      },
+      {
+      "img": "img/svg/animations/caciotta/logistics.svg",
+      "header": "ДОСТАВКА НА ПРИЛАВОК",
+      "description": "Логистика готовой продукции в торговые точки «Лосево»."
+      }
+    ]
+  },
+  {
+    "title": "Качотта 2",
+    "products" : [
+    {
+      "title": "Качотта 2.1",
+      "icon": "img/svg/products_icons/cheese_kachotta.svg",
+      "startImg":"img/svg/animations/caciotta/packing.svg",
+      "goodies" : "1",
+      "info": "2"
+    },
+    {
+      "title": "Качотта 2.2",
+      "icon": "img/svg/products_icons/cheese_losevo.svg",
+      "startImg":"img/svg/animations/caciotta/transportation.svg",
+      "goodies" : "3",
+      "info": "4"
+    }
+    ],
+    "steps" : [
+      {
+      "img": "img/svg/animations/caciotta/transportation.svg",
+      "header": "Транспортировка",
+      "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+      },
+      {
+      "img": "img/svg/animations/caciotta/quality_control.svg",
+      "header": "Контроль качества",
+      "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_inspection.svg",
+      "header": "ПРИЁМКА МОЛОКА",
+      "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_aging.svg",
+      "header": "СОЗРЕВАНИЕ МОЛОКА",
+      "description": "Процесс созревания молока, необходимого для производства сыра."
+      },
+      {
+      "img": "img/svg/animations/caciotta/pasteurization.svg",
+      "header": "ПАСТЕРИЗАЦИЯ",
+      "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+      },
+      {
+      "img": "img/svg/animations/caciotta/leavening.svg",
+      "header": "ЗАКВАШИВАНИЕ",
+      "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах, а также сычужного фермента"
+      },
+      {
+      "img": "img/svg/animations/caciotta/souring.svg",
+      "header": "СКВАШИВАНИЕ",
+      "description": "Образование сырного колье (сгустка)."
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_mass.svg",
+      "header": "СЫРНАЯ МАССА",
+      "description": "Проверка свойств полученного сырного сгустка."
+      },
+      {
+      "img": "img/svg/animations/caciotta/forming.svg",
+      "header": "ФОРМОВКА И ПРЕССОВАНИЕ СЫРНОЙ МАССЫ",
+      "description": "Распределение сырного колье по формам, прессование продукта и формирование сырных головок."
+      },
+      {
+      "img": "img/svg/animations/caciotta/brining.svg",
+      "header": "ПРОСОЛКА СЫРНЫХ ГОЛОВОК",
+      "description": ""
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_aging.svg",
+      "header": "СЫРНАЯ КАМЕРА, СОЗРЕВАНИЕ",
+      "description": "Процесс созревание сырных голов."
+      },
+      {
+      "img": "img/svg/animations/caciotta/packing.svg",
+      "header": "ФАСОВКА",
+      "description": "Фасовка и упаковка сыра в оригинальную упаковку «Лосево»"
+      },
+      {
+      "img": "img/svg/animations/caciotta/logistics.svg",
+      "header": "ДОСТАВКА НА ПРИЛАВОК",
+      "description": "Логистика готовой продукции в торговые точки «Лосево»."
+      }
+    ]
+  },
+  {
+    "title": "Качотта 3",
+    "products" : [
+    {
+      "title": "Качотта 3",
+      "icon": "img/svg/products_icons/cheese_kachotta.svg",
+      "startImg":"img/svg/animations/caciotta/packing.svg",
+      "goodies" : "1",
+      "info": "2"
+    }
+    ],
+    "steps" : [
+      {
+      "img": "img/svg/animations/caciotta/transportation.svg",
+      "header": "Транспортировка",
+      "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+      },
+      {
+      "img": "img/svg/animations/caciotta/quality_control.svg",
+      "header": "Контроль качества",
+      "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_inspection.svg",
+      "header": "ПРИЁМКА МОЛОКА",
+      "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_aging.svg",
+      "header": "СОЗРЕВАНИЕ МОЛОКА",
+      "description": "Процесс созревания молока, необходимого для производства сыра."
+      },
+      {
+      "img": "img/svg/animations/caciotta/pasteurization.svg",
+      "header": "ПАСТЕРИЗАЦИЯ",
+      "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+      },
+      {
+      "img": "img/svg/animations/caciotta/leavening.svg",
+      "header": "ЗАКВАШИВАНИЕ",
+      "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах, а также сычужного фермента"
+      },
+      {
+      "img": "img/svg/animations/caciotta/souring.svg",
+      "header": "СКВАШИВАНИЕ",
+      "description": "Образование сырного колье (сгустка)."
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_mass.svg",
+      "header": "СЫРНАЯ МАССА",
+      "description": "Проверка свойств полученного сырного сгустка."
+      },
+      {
+      "img": "img/svg/animations/caciotta/forming.svg",
+      "header": "ФОРМОВКА И ПРЕССОВАНИЕ СЫРНОЙ МАССЫ",
+      "description": "Распределение сырного колье по формам, прессование продукта и формирование сырных головок."
+      },
+      {
+      "img": "img/svg/animations/caciotta/brining.svg",
+      "header": "ПРОСОЛКА СЫРНЫХ ГОЛОВОК",
+      "description": ""
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_aging.svg",
+      "header": "СЫРНАЯ КАМЕРА, СОЗРЕВАНИЕ",
+      "description": "Процесс созревание сырных голов."
+      },
+      {
+      "img": "img/svg/animations/caciotta/packing.svg",
+      "header": "ФАСОВКА",
+      "description": "Фасовка и упаковка сыра в оригинальную упаковку «Лосево»"
+      },
+      {
+      "img": "img/svg/animations/caciotta/logistics.svg",
+      "header": "ДОСТАВКА НА ПРИЛАВОК",
+      "description": "Логистика готовой продукции в торговые точки «Лосево»."
+      }
+    ]
+  },
+  {
+    "title": "Качотта 4",
+    "products" : [
+    { 
+      "title": "Качотта 4.1",
+      "icon": "img/svg/products_icons/cheese_kachotta.svg",
+      "startImg":"img/svg/animations/caciotta/packing.svg",
+      "goodies" : "1",
+      "info": "2"
+    },
+    {
+      "title": "Качотта 4.2",
+      "icon": "img/svg/products_icons/cheese_losevo.svg",
+      "startImg":"img/svg/animations/caciotta/transportation.svg",
+      "goodies" : "3",
+      "info": "4"
+    },
+    {
+      "title": "Качотта 4.3",
+      "icon": "img/svg/products_icons/cheese_rikotta.svg",
+      "startImg":"img/svg/animations/caciotta/milk_inspection.svg",
+      "goodies" : "5",
+      "info": "6"
+    },
+    {
+      "title": "Качотта 4.4",
+      "icon": "img/svg/products_icons/cheese_rikotta.svg",
+      "startImg":"img/svg/animations/caciotta/transportation.svg",
+      "goodies" : "7",
+      "info": "8"
+    }
+    ],
+    "steps" : [
+      {
+      "img": "img/svg/animations/caciotta/transportation.svg",
+      "header": "Транспортировка",
+      "description": "Доставка молока специализированной автомолцистерной с фермы на завод."
+      },
+      {
+      "img": "img/svg/animations/caciotta/quality_control.svg",
+      "header": "Контроль качества",
+      "description": "Экспертиза молока в собственной высокотехнологичной лаборатории."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_inspection.svg",
+      "header": "ПРИЁМКА МОЛОКА",
+      "description": "Количественный учет и проверка соответствия молока требованиям, установленным стандартами качества «Лосево»."
+      },
+      {
+      "img": "img/svg/animations/caciotta/milk_aging.svg",
+      "header": "СОЗРЕВАНИЕ МОЛОКА",
+      "description": "Процесс созревания молока, необходимого для производства сыра."
+      },
+      {
+      "img": "img/svg/animations/caciotta/pasteurization.svg",
+      "header": "ПАСТЕРИЗАЦИЯ",
+      "description": "Процесс одноразового мгновенного нагревания молока до 95° С с целью обеззараживания."
+      },
+      {
+      "img": "img/svg/animations/caciotta/leavening.svg",
+      "header": "ЗАКВАШИВАНИЕ",
+      "description": "Внесение в молоко закваски, состоящей из определенных видов микроорганизмов, при требуемых температурах, а также сычужного фермента"
+      },
+      {
+      "img": "img/svg/animations/caciotta/souring.svg",
+      "header": "СКВАШИВАНИЕ",
+      "description": "Образование сырного колье (сгустка)."
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_mass.svg",
+      "header": "СЫРНАЯ МАССА",
+      "description": "Проверка свойств полученного сырного сгустка."
+      },
+      {
+      "img": "img/svg/animations/caciotta/forming.svg",
+      "header": "ФОРМОВКА И ПРЕССОВАНИЕ СЫРНОЙ МАССЫ",
+      "description": "Распределение сырного колье по формам, прессование продукта и формирование сырных головок."
+      },
+      {
+      "img": "img/svg/animations/caciotta/brining.svg",
+      "header": "ПРОСОЛКА СЫРНЫХ ГОЛОВОК",
+      "description": ""
+      },
+      {
+      "img": "img/svg/animations/caciotta/cheese_aging.svg",
+      "header": "СЫРНАЯ КАМЕРА, СОЗРЕВАНИЕ",
+      "description": "Процесс созревание сырных голов."
+      },
+      {
+      "img": "img/svg/animations/caciotta/packing.svg",
+      "header": "ФАСОВКА",
+      "description": "Фасовка и упаковка сыра в оригинальную упаковку «Лосево»"
+      },
+      {
+      "img": "img/svg/animations/caciotta/logistics.svg",
+      "header": "ДОСТАВКА НА ПРИЛАВОК",
+      "description": "Логистика готовой продукции в торговые точки «Лосево»."
+      }
+    ]
+  }
+]

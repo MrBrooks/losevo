@@ -370,7 +370,8 @@
         <a href="shops.html"><li>Магазины</li></a>
         <a href="#"><li>Интернет-магазин</li></a>
         <a href="news.html"><li>Новости</li></a>
-        <a href="press_about_us.html"><li>Пресс-центр</li></a>
+        <a href="press_about_us.html"><li>СМИ о нас</li></a>
+        <a href="press_releases.html"><li>Пресс-центр</li></a>
         <a href="contacts.html"><li>Контакты</li></a>
       </ul>
     </div>
@@ -1031,25 +1032,25 @@
 </div>
 
 <div class="row nomargin nopadding">
-  <form class="lsv-vacancies__form">
+  <form  id="data" method="post" enctype="multipart/form-data" class="lsv-vacancies__form">
     <div class="col-md-6 form-group nomargin nopadding">
-      <input type="text" class='form-control' placeholder='Фамилия Имя Отчество'>
-      <select class='form-control'>
+      <input name="full_name" type="text" class='form-control' placeholder='Фамилия Имя Отчество'>
+      <select name="vacancy" class='form-control'>
         <option value='select_vacancy'> Выберете вакансию</option>
         <option value='vacancy_1'> Вакансия №1</option>
         <option value='vacancy_2'> Вакансия №2</option>
         <option value='vacancy_3'> Вакансия №3</option>
         <option value='vacancy_4'> Вакансия №4</option>
       </select>
-      <input type="email" class='form-control' placeholder='Email для обратной связи'>
-      <input type="text" class='form-control' placeholder='Номер телефона'>
+      <input name="email" type="email" class='form-control' placeholder='Email для обратной связи'>
+      <input name="phone" type="text" class='form-control' placeholder='Номер телефона'>
     </div>
     <div class="col-md-6 form-group nomargin nopadding">
-      <textarea class='form-control' rows='10' placeholder='Расскажите нам о себе, задайте интересующие вопросы и загрузите резюме.'></textarea>
+      <textarea name="about" class='form-control' rows='10' placeholder='Расскажите нам о себе, задайте интересующие вопросы и загрузите резюме.'></textarea>
       <!-- <label for="CV-File">Файл не выбран</label> -->
-      <input type="file" class="filestyle" id="CV-File" data-icon="false" data-placeholder="Файл не выбран" data-buttonName="btn-default lsv-btn lsv-btn--green lsv-btn__input-file" data-buttonText="Выбрать файл">
+      <input name="cvfile" type="file" class="filestyle" id="CV-File" data-icon="false" data-placeholder="Файл не выбран" data-buttonName="btn-default lsv-btn lsv-btn--green lsv-btn__input-file" data-buttonText="Выбрать файл">
       <p class="help-block">Файл резюме должен быть в формате PDF, Word и не более 2 МБ.</p>
-      <button type="button" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy submit">
+      <button type="submit" class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit lsv-form__btn-submit--vacancy submit">
         <span>Отправить</span>
       </button>
     </div>
@@ -1094,7 +1095,7 @@
 </div>
           </div>
           <div class="section lsv-footer fp-auto-height" data-anchor="footer">
-            <div class="row nomargin">
+            <div class="row nomargin lsv-only-desktop">
   <ul class="col-md-3 col-sm-6 col-xs-6  lsv-menu__sublist lsv-menu__sublist--footer">
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
       <a href="history.html" class="lsv-menu__sublink">История «Лосево»</a>

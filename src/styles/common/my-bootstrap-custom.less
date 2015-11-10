@@ -1,6 +1,6 @@
 // Extra
 
-p,span,h1,h2,h3,h4,h5,h6,a,li,label,input{
+p,span,h1,h2,h3,h4,h5,h6,a,li,label,input,form,textarea,select,option,div,button{
   font-family: 'Roboto', sans-serif;
 }
 body{
@@ -89,6 +89,11 @@ main{
 }
 .lsv-desktop-hide{
   @media screen and (min-width: 481px){
+    display: none;
+  }
+}
+.lsv-only-desktop{
+  @media screen and (max-width: 992px){
     display: none;
   }
 }
@@ -268,12 +273,17 @@ main{
   color: white;
   border-radius: 40px;
   background-color: @lsv_grey;
-  &:hover{
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  border: 0;
+  &:hover, &:active, &:focus, &:active.focus, &.active.focus,&:focus.active{
     background-color: @lsv_green;
+    border: 0;
+    outline-width: 0;
   }
   span,i{
     color: white;
-    font-size: 14px;
+    font-size: 18px!important;
   }
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
 }
@@ -2012,7 +2022,7 @@ input[type='reset']:focus {
   width: 320px;
   position: fixed;
   z-index: 1029;
-  top: @lsv_menu_height - 471px-1px;
+  top: @lsv_menu_height - 510px-20px;
   color: white;
   text-transform: uppercase;
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
@@ -2188,6 +2198,7 @@ button.btn{
 // PRODUCTION PRODUCTS ICON SLIDER
 
 #rotate-block{
+  display: none;
   position: absolute;
   top: 0;
   transform: rotate(90deg);
@@ -2521,5 +2532,72 @@ button.btn{
   }
 }
 
+//Main page game block
 
+#header-season {
+  margin-top: -50px;
+  color: #61bb46;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 17%;
+}
 
+#svg-text-right-block-svg {
+  width: 100%;
+  height: 99%;
+}
+
+ #block-button-anim {
+  width: 100%;
+  height: 64px;
+  background: #79d35e;
+  position: absolute;
+  bottom: 0px;
+}
+
+#block-button-anim a {
+  text-decoration: none;
+}
+
+#block-button-anim div {
+  cursor: pointer;
+  padding-top: 18px;
+  text-align: center;
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#block-button-anim div:hover {
+  background: #61bb46;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+    #block-button-anim {
+      height: 150px;
+      position: absolute;
+    }
+
+    #block-button-anim div {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 10px;
+      padding-bottom: 38px;
+      display: block;
+      width: 100%;
+      height: 22%;
+    }
+
+    #left-block-option {
+      padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #block-button-anim {
+      position: static;
+    }
+}
