@@ -23214,15 +23214,15 @@ $(document).ready(function() {
     barZIndex: '2000'
     // disableFadeOut: false
   });
-  $("#lsv-dairy-products__menu").hover(
-    function(){
-      console.log("Hey in");
-      $.fn.fullpage.setMouseWheelScrolling(false);
-    },
-    function(){
-      console.log("Hey out");
-      $.fn.fullpage.setMouseWheelScrolling(true);
-  });
+  // $("#lsv-dairy-products__menu").hover(
+  //   function(){
+  //     console.log("Hey in");
+  //     $.fn.fullpage.setMouseWheelScrolling(false);
+  //   },
+  //   function(){
+  //     console.log("Hey out");
+  //     $.fn.fullpage.setMouseWheelScrolling(true);
+  // });
   
   $( "#lsv-menu-btn" ).on('click', function() {
     $( "#lsv-menu" ).toggleClass("lsv-menu--active");
@@ -23245,9 +23245,11 @@ $(document).ready(function() {
   });
   $("#lsv-dairy-products__menu-btn").on('click',function(){
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").addClass("active");
+    $.fn.fullpage.setMouseWheelScrolling(false);
   });
   $("#lsv-dairy-products__menu-close-btn").on('click',function(){
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
+    $.fn.fullpage.setMouseWheelScrolling(true);
   });
   // 
   // $("#lsv-shops__filter-btn").on('hover',function(){
@@ -23333,15 +23335,32 @@ $(document).ready(function() {
     lsvDataFilter();
   });
 
-  $("button.submit[type='button']").on('click', function(){
-    var button = $(this);
-    button.text("Обработка...");
-    $.getJSON('js/form_submit_request.json',function(data){
-      if(data.server_answer == "true"){ 
-        button.text("Успешно!");
-      } else{
-        button.text("Неудача!").css("background-color","#aa1100");
-      }
+  // $("button.submit[type='button']").on('click', function(){
+  //   var button = $(this);
+  //   button.text("Обработка...");
+  //   $.getJSON('js/form_submit_request.json',function(data){
+  //     if(data.server_answer == "true"){ 
+  //       button.text("Успешно!");
+  //     } else{
+  //       button.text("Неудача!").css("background-color","#aa1100");
+  //     }
+  //   });
+
+  $("form#data").submit(function(){
+    var formData = new FormData($(this)[0]);
+    $.ajax({
+        url: 'toserver.php',
+        type: 'POST',
+        data: formData,
+        async: true,
+        success: function (data) {
+            console.log(data);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
     });
+    return false;
   });
+  // });
 });

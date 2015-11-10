@@ -1,14 +1,27 @@
 [
     {
       "title": "Качотта",
-      "path" : "img/svg/animations/caciotta/",
-      "goodies" : "По своей пищевой ценности оно почти не отличается от молока 2,5%. Белка и углеводов в обоих видах молока содержится одинаковое количество (белка – 2,8г, углеводов – 4,7 г). Но за счет снижения доли молочного жира до 1 г понижается и количество ккал с 53 до 39. <br> Такое молоко рекомендуется употреблять людям, следящим за своим весом или желающим понизить уровень холестерина.",
-      "info": "Массовая доля жира: 1% <br> Обьем:1л <br> Состав: молоко обезжиренное, молоко цельное <br> Пищевая ценность на 100 гр: <br>белки — 2,8 г, жиры — 1,0 г, углеводы — 4,7 г.<br> Энергетическая ценность на 100 гр: 39 ккал<br> Условия хранения: хранить при t от +2 до + 6°С. <br> Срок годности: 5 суток <br>ГОСТ",
-      "steps" : [{
-        "img": "img/svg/animations/caciotta/packing.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/caciotta/packing.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "icon": "img/svg/products_icons/cheese_losevo.svg",
+        "startImg":"img/svg/animations/caciotta/transportation.svg",
+        "goodies" : "3",
+        "info": "4"
+      },
+      {
+        "icon": "img/svg/products_icons/cheese_rikotta.svg",
+        "startImg":"img/svg/animations/caciotta/milk_inspection.svg",
+        "goodies" : "5",
+        "info": "6"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/caciotta/transportation.svg",
         "header": "Транспортировка",
