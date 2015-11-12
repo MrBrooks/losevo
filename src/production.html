@@ -14,7 +14,7 @@
           -webkit-transform: scale(1);
           fill: green;
         }
-        80% {
+        60% {
           fill: #CE1700;
           -webkit-transform: scale(1.2);
         }
@@ -100,7 +100,7 @@
       }
       .st112{
         -webkit-transform-origin: 50% 50%;
-        -webkit-animation: grow 8s ease-out infinite;
+        -webkit-animation: grow 10s ease-out infinite;
       }
       .tree{
         -webkit-transform-origin: 50% 100%;
@@ -246,88 +246,113 @@
               bakery_popup.transform(bakeryHoverOut);
               car_popup.transform(carHoverOut);
 
-              var hoverAppearTime = 100;
+              var timeOutBull;
+              var timeOutMilk;
+              var timeOutBakery;
+              var timeOutCheese;
+              var timeOutCar;
               
               bakery.hover(
                 function(){
-                  bakery_hover.animate({ transform: bakeryHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBakery);
+                  bakery_hover.animate({ transform: bakeryHoverIn },500, mina.elastic);
               },
                 function(){
-                  bakery_hover.animate({ transform: bakeryHoverOut },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBakery);
+                  bakery_hover.animate({ transform: bakeryHoverOut },500, mina.backin);
               });
 
               cheese_house.hover(
                 function(){
-                  cheese_house_hover.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCheese);
+                  cheese_house_hover.animate({ transform: cheeseHoverIn },500, mina.elastic);
               },
                 function(){
-                  cheese_house_hover.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);
+                 clearTimeout(timeOutCheese);
+                 timeOutCheese = setTimeout(function() {cheese_house_hover.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
               });
 
               bull.hover(
                 function(){
-                  bull_popup.animate({ transform: bullHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBull);
+                  bull_popup.animate({ transform: bullHoverIn },500, mina.elastic);
                 },
                 function(){
-                   bull_popup.animate({ transform: bullHoverOut },hoverAppearTime, mina.linear); //backin
+                  clearTimeout(timeOutBull);
+                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000);
               });
 
               milk.hover(
                 function(){
-                  milk_popup.animate({ transform: milkHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutMilk);
+                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
               },
                 function(){
-                  milk_popup.animate({ transform: milkHoverOut },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutMilk);
+                  timeOutMilk = setTimeout(function() {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);
               });
 
               cheese.hover(
                 function(){
-                  cheese_popup.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCheese);
+                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
               },
                 function(){
-                  cheese_popup.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCheese);
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
               });
 
               bakery_new.hover(
                 function(){
-                  bakery_popup.animate({ transform: bakery_newHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBakery);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
               },
                 function(){
-                  bakery_popup.animate({ transform: bakery_newHoverOut },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBakery);
+                  timeOutBakery = setTimeout(function () {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
               });
 
               car.hover(
                 function(){
-                  car_popup.animate({ transform: carHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCar);
+                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
               },
                 function(){
-                  car_popup.animate({ transform: carHoverOut },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCar);
+                  timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
               });
 
+              
+
               $("#bulls_hover").hover(function(){
-                  bull_popup.animate({ transform: bullHoverIn},hoverAppearTime, mina.easein);
+                  clearTimeout(timeOutBull);
+                  bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
               }, function(){
-                  bull_popup.animate({ transform: bullHoverOut },hoverAppearTime, mina.linear);   
+                 timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000); 
               });
               $("#milk_hover").hover(function(){
-                  milk_popup.animate({ transform: milkHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutMilk);
+                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
               }, function(){
-                  milk_popup.animate({ transform: milkHoverOut },hoverAppearTime, mina.linear);   
+                  timeOutMilk = setTimeout(function () {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);  
               });
               $("#cheese_hover").hover(function(){
-                  cheese_popup.animate({ transform: cheeseHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCheese);
+                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
               }, function(){
-                  cheese_popup.animate({ transform: cheeseHoverOut },hoverAppearTime, mina.linear);   
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);  
               });
               $("#cooking_hover").hover(function(){
-                  bakery_popup.animate({ transform: bakery_newHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutBakery);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
               }, function(){
-                  bakery_popup.animate({ transform: bakery_newHoverOut },hoverAppearTime, mina.linear);   
+                  timeOutBakery = setTimeout(function() {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
               });
               $("#accept_hover").hover(function(){
-                  car_popup.animate({ transform: carHoverIn },hoverAppearTime, mina.linear);
+                  clearTimeout(timeOutCar);
+                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
               }, function(){
-                  car_popup.animate({ transform: carHoverOut },hoverAppearTime, mina.linear);   
+                  timeOutCar = setTimeout(function() {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);  
               });
 
               var beePoints = [0,0,0,0];
@@ -340,12 +365,12 @@
                   opacity: 0
                 });
               }
-               var widthSvg = window.innerWidth;
-               // var heightSvg = window.innerHeight;
+               var widthSvg = $("html").width();
+               var heightSvg = screen.height;
 
               //$("#ferm").css({"width": "1300px"}); //3594 / 2825
-              $("#ferm").css({"height": window.innerHeight+"px"});
-              // $(".lsv-ferm").css({"width": window.innerWidth+"px"});
+              $("#ferm").css({"height": ""+heightSvg+"px"});
+              //$(".lsv-ferm").css({"width": ""+widthSvg+"px"});
 
               //alert(screen.height);
 
@@ -353,7 +378,7 @@
                   Snap.animate(0, paths_length, function(value){
                     beePoints[index] = bee_paths[index].getPointAtLength( value );
                     bees[index].transform( 't' + parseInt(beePoints[index].x - 2280 + displace[0]) + ',' + parseInt(beePoints[index].y - 1875 + displace[1]) + 'r' + parseInt( beePoints[index].alpha+45+displace[2]));
-                  }, 4000);
+                  }, 5000);
               }
 
               car_path
@@ -372,7 +397,7 @@
                   animateAlongPath(1, [-350,200,0]);
                   animateAlongPath(2, [-600,225,45+180]);
                   animateAlongPath(3, [-525,-75,180]);
-                },4000);
+                },5000);
             }); 
         </script>
         <script type="text/javascript">

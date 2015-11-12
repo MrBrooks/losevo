@@ -7,18 +7,6 @@
         "startImg":"img/svg/animations/caciotta/packing.svg",
         "goodies" : "1",
         "info": "2"
-      },
-      {
-        "icon": "img/svg/products_icons/cheese_losevo.svg",
-        "startImg":"img/svg/animations/caciotta/transportation.svg",
-        "goodies" : "3",
-        "info": "4"
-      },
-      {
-        "icon": "img/svg/products_icons/cheese_rikotta.svg",
-        "startImg":"img/svg/animations/caciotta/milk_inspection.svg",
-        "goodies" : "5",
-        "info": "6"
       }
       ],
       "steps" : [
@@ -91,14 +79,15 @@
     },
     {
       "title": "Маскарпоне",
-      "path" : "img/svg/animations/maskarpone/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/maskarpone/maskarpone cheese pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_maskarpone.svg",
+        "startImg":"img/svg/animations/maskarpone/maskarpone cheese pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/maskarpone/transportation.svg",
         "header": "Транспортировка",
@@ -153,14 +142,15 @@
     },
     {
       "title": "Моцарелла",
-      "path" : "img/svg/animations/mozarella/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/mozarella/mocarella cheese pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_mocarella.svg",
+        "startImg":"img/svg/animations/mozarella/mocarella cheese pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/mozarella/transportation.svg",
         "header": "Транспортировка",
@@ -220,14 +210,15 @@
     },
     {
       "title": "Риккота",
-      "path" : "img/svg/animations/rikota/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/rikota/rikotta pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_rikotta.svg",
+        "startImg":"img/svg/animations/rikota/rikotta pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/rikota/serum.svg",
         "header": "СЫВОРОТКА",
@@ -277,14 +268,15 @@
     },
     {
       "title": "Стракино",
-      "path" : "img/svg/animations/strakino/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/strakino/strakkino cheese pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_strakino.svg",
+        "startImg":"img/svg/animations/strakino/strakkino cheese pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/strakino/transportation.svg",
         "header": "Транспортировка",
@@ -344,14 +336,15 @@
     },
     {
       "title": "Сыр Лосево",
-      "path" : "img/svg/animations/ch_losevo/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/ch_losevo/losevo cheese pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "icon": "img/svg/products_icons/cheese_losevo.svg",
+        "startImg":"img/svg/animations/ch_losevo/losevo cheese pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/ch_losevo/transportation.svg",
         "header": "Транспортировка",

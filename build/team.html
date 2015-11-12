@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="robots" content="index, follow">
     <meta name="description" content="Веб сайт компании Лосево">
     <meta name="author" content="Kulikov Denis">
@@ -188,6 +188,12 @@
       </g>
     </g>
   </svg>
+</div>
+<div class="dont-rotate">
+  <div>
+    <img src="img/svg/dont_rotate.svg">
+    <p>Переверните устройство</p>
+  </div>
 </div>
 
     <nav class="navbar navbar-default navbar-fixed-top lsv-nav">
@@ -400,6 +406,7 @@
           <div class="section lsv-slide-bgc">
             <div class="lsv-team__owner">
   <div id="lsv-team__img-owner-1" class="fullwidth-img fullwidth-img--onethird">
+    <img src="http://placehold.it/64x64/ccaa00">
   </div>
   <div class="lsv-team__text-owner">
     <div>
@@ -410,6 +417,7 @@
 </div>
 <div class="lsv-team__owner">
   <div id="lsv-team__img-owner-1" class="fullwidth-img fullwidth-img--onethird">
+    <img src="http://placehold.it/64x64/ccaa00">
   </div>
   <div class="lsv-team__text-owner">
     <div>
@@ -732,16 +740,20 @@
             $(":file").filestyle({
             });
           });
-          if(window.innerWidth <= 480){
+          if(window.innerWidth <= 768){
             $.fn.fullpage.destroy();
             $("#lsv-team__img-start,.fullwidth-img--onethird").height(window.innerHeight/2 - 63);
+            var owner_text_height = [];
+            $(".lsv-team__text-owner").each(function(index){
+              owner_text_height.push($(this).height());
+            });
 
             var startBlockHeight = $(".lsv-team__text-start>div").height()+ window.innerHeight/2 + 63;
             $(".section:first-child").css({
               height : startBlockHeight+"px"
             });
             $(".section:nth-child(2)").css({
-              height : (window.innerHeight*2+200)+"px"
+              height : (window.innerHeight+owner_text_height[0] + owner_text_height[1] + 100 +"px")
             });
             $(".lsv-team__text-owner").css({
               top : (window.innerHeight/2 - 62) + "px"
@@ -749,7 +761,6 @@
             $(".lsv-team__text-start").css({
               top : (window.innerHeight/2) + "px"
             });
-
           }
         });
         </script>

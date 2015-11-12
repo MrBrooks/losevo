@@ -1,5 +1,7 @@
+$(document).ready(function(){
+
     var animation_data; 
-    var current_anim = 0;
+    var current_anim = 0, current_prod = 0;
 
     var canvas = Snap("#animation-canvas");
     var paper = canvas.g(), box;
@@ -15,6 +17,12 @@
         }
         $(".lsv-dairy-products__list-item").click(function(){
           animation_data = json[$(this).attr("data-item-order")];
+          $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
+          $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
+          $("#lsv-dairy-products__next-animation").removeClass("active");
+          $(".slimScrollBar").css("opacity", "0");
+          hideAll();
+          $.fn.fullpage.setMouseWheelScrolling(true);
           initProduct();
         });
         animation_data = json[0];
@@ -90,27 +98,141 @@
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           // paper.remove();
           // paper = canvas.g();
-          Snap.load(animation_data.steps[++current_anim % animation_data.steps.length].img, beforeAnimation);
-          $("#lsv-production__description-header").text(animation_data.steps[current_anim % animation_data.steps.length].header);
-          $("#lsv-production__description").text(animation_data.steps[current_anim % animation_data.steps.length].description);
-          if( (current_anim % animation_data.steps.length != 0 ) && (current_anim % animation_data.steps.length != (animation_data.steps.length-1))){
-            $("#lsv-dairy-products__next-animation>label").html("Следующий <br> шаг");
+          if (current_anim < animation_data.steps.length){
+            Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
+            $("#lsv-dairy-products__next-animation").addClass("active");
+            $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
+            $("#lsv-production__description").text(animation_data.steps[current_anim].description);
+            if( current_anim == (animation_data.steps.length-1)){
+              $("#lsv-dairy-products__next-animation>label").html("В начало");
+            }
+            else{
+              $("#lsv-dairy-products__next-animation>label").html("Дальше");
+            }
+            current_anim++;
           }
           else{
-            (current_anim % animation_data.steps.length == 0 )? $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство") : $("#lsv-dairy-products__next-animation>label").html("Вернулься <br> в начало");
+            Snap.load(animation_data.products[current_prod].startImg, beforeAnimation);
+            $("#lsv-production__description-header").text("");
+            $("#lsv-production__description").text("");
+            $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
+            $("#lsv-dairy-products__next-animation").removeClass("active");
+
+            current_anim = 0;
           }
       });
     }
+
+    var emptySvgElement = '<div class="item"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 86 86" style="enable-background:new 0 0 86 86;" xml:space="preserve"></svg></div> ';
+    // $("#lsv-production-product-icon-slider").owlCarousel({
+    //   items: 3,
+    //   itemsCustom : [
+    //     [0, 2],
+    //     [450, 3]
+    //   ],
+    //   navigation : true,
+    //   pagination : false,
+    //   navigationText: false,
+    //   rewindNav: false,
+    //   mouseDrag: false,
+    //   touchDrag: false
+    // });
+    var owl = $(".owl-carousel").data('owlCarousel');
+    var slidesNumber = 0;
     function initProduct(){
       current_anim = 0;
-      Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
-      $("#lsv-dairy-products__product-title>h2").text(animation_data.title);
-      $("#lsv-dairy-products__tooltip-good>p").html(animation_data.goodies);
-      $("#lsv-dairy-products__tooltip-info>p").html(animation_data.info);
-      $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
-      $("#lsv-production__description").text(animation_data.steps[current_anim].description);
+      current_prod = 0;
+      if(owl){
+        for (var i = 0 ; i < slidesNumber; i++){
+          owl.removeItem(1);
+        }
+      }
+      else{
+        owl = $(".owl-carousel").data('owlCarousel');
+      }
+      slidesNumber = animation_data.products.length;
+      if(slidesNumber > 1){
+        $("#rotate-block").show();
+        for (var i = 0; i < slidesNumber; i++){
+          owl.addItem('<div class="item"><img src="'+ animation_data.products[i].icon +'"></div>', i+1);
+        }
+        var lengthElementSlideBar = $("#lsv-production-product-icon-slider .owl-item").length - 1;
+
+        var countBut = 2;
+
+        $("#lsv-production-product-icon-slider .owl-item:nth-child(2)").addClass("scaleCircle");
+
+        $("#lsv-production-product-icon-slider .owl-next").click(function () {
+          current_prod++;
+          $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
+          $("#lsv-dairy-products__next-animation").removeClass("active");
+          hideAll();
+          if (countBut == lengthElementSlideBar) {
+            countBut = lengthElementSlideBar;
+          } else {
+            countBut++;
+            //console.log(countBut);
+            $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut - 1)+")").removeClass("scaleCircle");
+            $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
+            Snap.load(animation_data.products[countBut-2].startImg, beforeAnimation);
+            $("#lsv-dairy-products__tooltip-good>p").html(animation_data.products[countBut-2].goodies);
+            $("#lsv-dairy-products__tooltip-info>p").html(animation_data.products[countBut-2].info);
+            $("#lsv-dairy-products__product-title>h2").text(animation_data.products[countBut-2].title);
+            current_anim = 0;
+          }
+        });
+        $("#lsv-production-product-icon-slider .owl-prev").click(function () {
+          current_prod--;
+          $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
+          $("#lsv-dairy-products__next-animation").removeClass("active");
+          hideAll();
+          if (countBut == 2) {
+            countBut = 2;
+          } else {
+            countBut--;
+            //console.log(countBut);
+            $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut + 1)+")").removeClass("scaleCircle");
+            $("#lsv-production-product-icon-slider .owl-item:nth-child("+countBut+")").addClass("scaleCircle");
+            Snap.load(animation_data.products[countBut-2].startImg, beforeAnimation);
+            $("#lsv-dairy-products__tooltip-good>p").html(animation_data.products[countBut-2].goodies);
+            $("#lsv-dairy-products__tooltip-info>p").html(animation_data.products[countBut-2].info);
+            $("#lsv-dairy-products__product-title>h2").text(animation_data.products[countBut-2].title);
+            current_anim = 0;
+          }
+        });
+      }
+      else{
+        $("#rotate-block").hide();
+        slidesNumber = 0;
+      }
+      Snap.load(animation_data.products[0].startImg, beforeAnimation);
+      if (animation_data.products.length > 1){
+        $("#lsv-dairy-products__product-title>h2").text(animation_data.products[0].title);
+      }
+      else{
+        $("#lsv-dairy-products__product-title>h2").text(animation_data.title);
+      }
+      $("#lsv-dairy-products__tooltip-good>p").html(animation_data.products[0].goodies);
+      $("#lsv-dairy-products__tooltip-info>p").html(animation_data.products[0].info);
+      // $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
+      // $("#lsv-production__description").text(animation_data.steps[current_anim].description);
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
       $("#lsv-dairy-products__tooltip-good").removeClass("active");
     }
+
+    function hideAll(){
+      $("#lsv-dairy-products__tooltip-info").removeClass("active");
+      $("#lsv-dairy-products__tooltip-good").removeClass("active");
+      $("#lsv-production__description-header").text("");
+      $("#lsv-production__description").text("");
+    }
     
     $("#lsv-dairy-products__next-animation").click(startNextAnim);
+
+    if(window.innerWidth <= 480){
+      // $.fn.fullpage.destroy();
+      $("#lsv-dairy-products__next-animation").hide();
+      $(".section:first-child").hide();
+
+    }
+});

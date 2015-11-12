@@ -20,8 +20,8 @@
             <!-- build:include html-blocks/pages--external/main-video-block.html -->
             This will be replaced by the content of html-blocks/pages--external/main-video-block.html
             <!-- /build -->
-          </div>
-          <div class="section">
+          </div>  
+          <div class="section lsv-slide-bgc">
             <!-- build:include html-blocks/pages--external/main-anim-block.html -->
             This will be replaced by the content of html-blocks/pages--external/main-anim-block.html
             <!-- /build -->
@@ -45,9 +45,18 @@
               'easing': 'easeOutElastic',
               'fitToSection': false,
               'fixedElements': '.lsv-nav , .lsv-menu',
-              'scrollOverflow': false
+              'scrollOverflow': false,
+              afterRender: function(){
+                $("#lsv-main_video-text").owlCarousel({
+                  navigation: false,
+                  pagination: false,
+                  slideSpeed: 300,
+                  singleItem:true,
+                  autoPlay: 3000
+                });
+              }
             });
-            if(window.innerWidth <= 480){
+            if(window.innerWidth <= 992){
               $.fn.fullpage.destroy();
             }
 

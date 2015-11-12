@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="robots" content="index, follow">
     <meta name="description" content="Веб сайт компании Лосево">
     <meta name="author" content="Kulikov Denis">
@@ -189,6 +189,12 @@
       </g>
     </g>
   </svg>
+</div>
+<div class="dont-rotate">
+  <div>
+    <img src="img/svg/dont_rotate.svg">
+    <p>Переверните устройство</p>
+  </div>
 </div>
 
     <nav class="navbar navbar-default navbar-fixed-top lsv-nav">
@@ -1178,24 +1184,42 @@
             'fixedElements': '.lsv-nav , .lsv-menu',
             'scrollOverflow': false,
             afterRender: function(){
-              $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider,#owl-vacancy-career-slider").owlCarousel({
+              $("#owl-vacancy-career-slider").owlCarousel({
+                  navigation: true,
+                  pagination: false,
+                  slideSpeed: 300,
+                  singleItem:true,
+                  rewindNav: false
+              });
+              $("#owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider").owlCarousel({
                   navigation: true,
                   pagination: true,
                   slideSpeed: 300,
                   singleItem:true
               });
+            },
+            onLeave: function(index, nextIndex, direction){
+              if (nextIndex == 1){
+                $(".lsv-return-btn").removeClass("active");
+              }else{
+                $(".lsv-return-btn").addClass("active");
+              }
             }
           });
+          if(window.innerWidth <= 480){
+            $.fn.fullpage.destroy();
+          }
           $(":file").filestyle({});
           if(window.innerWidth <= 480 && window.innerWidth > 320){
             $.fn.fullpage.destroy();
-            $(".section:first-child").remove();
+            $(".section:first-child").hide();
             $(".section").height(600);
-            $(".lsv-vacancies__response-btn").remove();
-            $(".section[data-anchor='form']").remove();
+            $(".lsv-vacancies__response-btn").hide();
+            $(".section[data-anchor='form']").hide();
             $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
-              "padding-top", (window.innerHeight/2+100)+"px");
+              "padding-top", (window.innerHeight/2+150)+"px");
           }
+
           if(window.innerWidth <= 320){
             $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
               "padding-top", (window.innerHeight/2+200)+"px");

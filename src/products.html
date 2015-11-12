@@ -39,8 +39,12 @@
             'easing': 'easeOutElastic',
             'fitToSection': false,
             'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': true
+            'scrollOverflow': false
           });
+          if(window.innerWidth <= 992){
+            $.fn.fullpage.destroy();
+          }
+
         });
         </script>
 

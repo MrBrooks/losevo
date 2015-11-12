@@ -263,7 +263,6 @@
           $(document).ready(function() {
             $(".lsv-radio").click(function(){
               $(this).toggleClass('checked');
-              // console.log("change class");
             });
           });
         </script>
@@ -276,6 +275,12 @@
             'fixedElements': '.lsv-nav , .lsv-menu',
             'scrollOverflow': true
           });
+          $("#lsv-shop__skip-map-btn").click(function() {
+            $.fn.fullpage.moveSectionDown();
+          });
+          // if(window.innerWidth <= 480){
+          //   $.fn.fullpage.destroy();
+          // }
         });
         </script>
 

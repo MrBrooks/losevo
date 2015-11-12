@@ -59,4 +59,8 @@ $(document).ready(function(){
     }
   });
   $.fn.fullpage.reBuild();
+  if(window.innerWidth <= 480){
+    $.fn.fullpage.destroy();
+    $('.lsv-history__timeline').css('display','none');
+  }
 });

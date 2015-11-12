@@ -9,9 +9,18 @@ body{
 }
 a{
   color: inherit;
-  &:active,&:focus{
+  text-decoration: none;
+  &:active, &:focus, &:hover,&:hover.active{
     color: inherit;
+    text-decoration: none;
   }
+}
+textarea:focus,textarea:active{
+  outline-width: 0px;
+  border: 1px solid @lsv_green;
+}
+.mobile_scroll_wrap.active{
+  overflow: hidden;
 }
 .resetter{
   position: relative;
@@ -97,6 +106,31 @@ main{
     display: none;
   }
 }
+.dont-rotate{
+  display: none;
+
+  /* Landscape */
+  // @media only screen 
+  // and (min-device-width: 320px) 
+  // and (max-device-width: 568px)
+  // and (-webkit-min-device-pixel-ratio: 2)
+  // and (orientation: landscape) {
+  //   display: -webkit-flex;
+  //   display: -moz-flex;
+  //   display: -ms-flex;
+  //   display: -o-flex;
+  //   display: flex;
+  //   position: fixed;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: @lsv_green;
+  //   text-align: center;
+  //   z-index: 3000;
+  //   color: white;
+  //   justify-content: center;
+  //   flex-direction: column;
+  // }
+}
 /* 
 1024
  */
@@ -112,6 +146,8 @@ main{
   background-color: @lsv_menu_color;
   height: @lsv_menu_height;
 }
+
+
 
 .lsv-nav--valign{
   position: absolute;
@@ -410,6 +446,7 @@ main{
 }
 .lsv-copyright{
   padding: 25px 20px;
+  line-height: 2em;
   @media screen and (max-width: 992px){
     padding-bottom: 10px;
     font-size: 14px;
@@ -499,13 +536,14 @@ main{
     margin: 0 -3px;
   }
   @media screen and (min-width: 992px){
+    padding: 20px 0;
     font-size: 14px;
     .fa-stack-1x{
       font-size: 15px;
     }
   }
   @media screen and (max-width: 420px) {
-    padding-top: 1px;
+    padding: 20px 0;
   }
 }
 
@@ -524,6 +562,7 @@ main{
    font-size: 16px;
    line-height: 1;
    border: 0;
+   -webkit-border-radius: 0;
    height: 45px;
    background-color: #fff;
    // background-color: transparent;
@@ -539,12 +578,16 @@ main{
    //  margin: 0 0 0 30px;
    // }
    &:focus{
-      box-shadow: 0px 0px 15px @lsv_green;
-      border: 0;
+      box-shadow: none;
+      border: 1px solid @lsv_green;
+      outline-width: 0;
     }
   }
 .lsv-news__header{
-  padding: 20px + @lsv_menu_height 10px 20px;
+  padding: 20px + @lsv_menu_height 45px 20px;
+  label{
+    font-weight: 400;
+  }
   h1, form{
     display: inline-block;
   }
@@ -589,11 +632,39 @@ main{
 }
 .product-card-mini{
   padding: 0 6px;
-  min-height: 620px;
+  min-height: 660px;
+  transition: all 500ms linear;
   img{
     display: block;
     width: 100%;
+    opacity:0.65;
+    -moz-opacity:0.65;
+    filter: alpha(opacity=65) black;
+    -khtml-opacity: 0.65;
+    background-color:#000;
   }
+  &:after{
+      content: "Читать далее";
+      width: 100%;
+      display: none;
+      padding: 45% 25%;
+      position: absolute;
+      top: 0;
+      color: white;
+      background-image: url(../img/svg/dairy-products-show-production.svg);
+      background-repeat: no-repeat;
+      background-position: 60% center ;
+  }
+  &:hover:after{
+      
+      display: block;
+  }
+  // .lsv-new_hover-div{
+  //   width: 100%;
+  //   padding-top: 100%;
+  //   position: absolute;
+  //   background-color: black;
+  // }
   span{
     margin: 20px 0;
     display: block;
@@ -603,16 +674,22 @@ main{
     text-decoration: underline;
     font-size: 18px;
     font-weight: 900;
+    margin-bottom: 24px;
   }
   p{
     font-size: 15px;
   }
-  // &:first-child{
-  //   margin-left: -6px;
-  // }
-  // &:last-child{
-  //   margin-right: -12px;
-  // }
+  &:hover img{
+    opacity:1;
+    -moz-opacity:1;
+    filter: alpha(opacity=100) black;
+    -khtml-opacity: 1;
+    background-color:#000;
+  }
+  @media screen and (max-width: 768px){
+    min-height: initial;
+    margin-bottom: 60px;
+  }
 }
 .arrow{
   background-image: url('../img/svg/arrow.svg');
@@ -649,7 +726,9 @@ main{
   border: 0;
   border-radius: 0;
   &:focus{
-    box-shadow: 0px 0px 15px @lsv_green;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid @lsv_green;
   }
 }
 .lsv-faq{
@@ -740,12 +819,14 @@ main{
 }
 .lsv-category-milk{
   color: #87d3e0;
+  margin-bottom: -25px!important;
 }
 .lsv-category-cheese{
   color: #f9b316;
 }
 .lsv-category-beef{
   color: #b92727;
+  margin-bottom: -25px!important;
 }
 .lsv-category-poultry{
   color: #F19A67;
@@ -757,7 +838,8 @@ main{
   color: #ED145B;
 }
 .lsv-category-plant-food{
-  color: #EB2046;
+  color: #851e62;
+  margin-bottom: -25px!important;
 }
 .lsv-category-approved{
   color: @lsv_green;
@@ -781,7 +863,7 @@ main{
   clear: both;
 }
 .lsv-product-logo:hover {
-  animation: scale-circle-milk 3s ease infinite;
+  animation: scale-circle-milk 1300ms ease infinite;
   transform-origin: 50% 50%;      
 }
 @-webkit-keyframes scale-circle-milk{
@@ -864,7 +946,7 @@ main{
   width: 100%;
   @media screen and(max-width:420px){
     padding: 0;
-    height: 43%;
+    height: 38%;
     width: 100%;
   }
 }
@@ -872,11 +954,13 @@ main{
   background-image: url(http://placehold.it/600x700);
   &.fullslide_img_text>h1{
     @media screen and(max-width:420px){
-      left: 25px;
+      left: 0;
+      padding-left: 25px;
     }
     @media screen and(max-width:360px){
-      left: 15px;
+      left: 0;
       font-size: 36px;
+      padding-left: 15px;
     }
   }
 }
@@ -924,6 +1008,12 @@ main{
   &--middle{
     top: 0;
     margin-top: 150px;
+    h1{
+      @media screen and (max-width: 1024px) and (min-width: 420px){
+        top: 0;
+        margin-top: -45px;
+      }
+    }
 
     &>p:last-child{
       position: absolute;
@@ -932,6 +1022,13 @@ main{
       @media screen and (max-width:420px){
         display: none;
       }
+    }
+    &>p:nth-child(2){
+      @media screen and (max-width: 1024px) and (min-width: 420px){
+        position: absolute;
+        top: 0;
+      }
+      
     }
   }
   &--middle-2013-2{
@@ -945,20 +1042,23 @@ main{
     width: 100%;
     left: 0;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 15px;
     top: 55%;
   }
   @media screen and (max-width:360px){
     width: 100%;
     left: 0;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 15px;
     top: 50%;
   }
 }
 .lsv-slides--bg-grey{
   .section{
     background-color: @lsv_slide_bg;
+  }
+  .lsv-footer{
+    background-color: @lsv_footer_color;
   }
 }
 .lsv-white{
@@ -986,7 +1086,7 @@ main{
   border-left: 1px solid @lsv_grey_very_dark;
   position: absolute;
   margin: auto;
-  top: 0;
+  top: @lsv_menu_height;
   bottom: 0;
   left: 70px;
   z-index: 2000;
@@ -1151,10 +1251,13 @@ main{
   @media screen and (min-width:420px) and (max-width:768px){
     margin-top: 80px;
   }
+  .owl-pagination{
+    // margin-top: 70px!important;
+  }
 }
 #owl-vacancy-office-slider,#owl-vacancy-shops-slider, #owl-vacancy-ferm-slider,#owl-vacancy-production-slider, #owl-team-office-slider, #owl-team-ferm-slider, #owl-team-shops-slider, #owl-team-production-slider {
   .owl-pagination{
-    margin-top: 40px;
+    margin-top: 80px;
   }
   .owl-buttons{
     // position: absolute;
@@ -1310,6 +1413,9 @@ label.lsv-btn__input-file{
   #slide_2{background-image: url(http://placehold.it/800x600);}
   #slide_3{background-image: url(http://placehold.it/500x800);}
   #slide_4{background-image: url(http://placehold.it/500x500);}
+  .owl-buttons{
+    right: 0;
+  }
 }
 .lsv-vacansies__career-description{
   padding-top: @lsv_menu_height + 100px;
@@ -1325,6 +1431,7 @@ label.lsv-btn__input-file{
   }
 }
 .lsv-return-btn{
+  display: none;
   width: 35px;
   height: 35px;
   position: fixed;
@@ -1343,13 +1450,17 @@ label.lsv-btn__input-file{
   @media screen and (max-width:420px){
     display: none;
   }
+  &.active{
+    display: block;
+  }
 }
 
 #lsv-team__img-start, #lsv-team__img-owner-1, #lsv-team__img-owner-2 {
   background-image: url(http://placehold.it/1000x1000);
+
 }
 #lsv-team__img-start{
-  @media screen and (max-width: 420px){
+  @media screen and (max-width: 768px){
     width: 100%;
     height: 45%;
     margin-top: @lsv_menu_height;
@@ -1370,8 +1481,8 @@ label.lsv-btn__input-file{
 .lsv-team__text-start{
   position: absolute;
   left: 50%;
-  padding: 40px;
-  top: 30%;
+  padding: 20px 10px 0 40px;
+  top: @lsv_menu_height;
   p{
     margin: 20px 0;
   }
@@ -1381,6 +1492,12 @@ label.lsv-btn__input-file{
     top: 45%;
     left: 0;
     padding: 0 10px;
+  }
+  @media screen and (max-width: 768px){
+    top: @lsv_menu_height;
+    padding: 10px 40px;
+    width: 100%;
+    left: 0;
   }
 }
 .lsv-team__text-owner{
@@ -1393,10 +1510,14 @@ label.lsv-btn__input-file{
     margin-bottom: 30px;
   }
   @media screen and (max-width:420px){
-    padding: 20px 20px;
+    padding: 20px 10px;
     left: 0;
     width: 100%;
     top: 50%;
+  }
+  @media screen and (max-width:768px){
+    padding: 32px 40px;
+    left: 0;
   }
 
 }
@@ -1414,7 +1535,21 @@ label.lsv-btn__input-file{
   width: 34%;
   @media screen and (max-width: 420px){
     width: 100%;
-
+  }
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
+  img{
+    position: absolute;
+    right: -32px;
+    top: 45%;
+    @media screen and (max-width: 768px){
+      top: initial;
+      bottom: -32px;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
   }
 }
 .lsv-team__employee-img{
@@ -1433,6 +1568,9 @@ label.lsv-btn__input-file{
 }
 .lsv-team__employee-comment{
   padding: 0 44px;
+  @media screen and (max-width: 420px){
+    display: none;
+  }
 }
 .lsv-team__office-header{
   margin-bottom: 20px;
@@ -1480,6 +1618,7 @@ label.lsv-btn__input-file{
   top: @lsv_menu_height;
   background-color: @lsv_slide_bg;
   z-index: 2000;
+  text-align: center;
   @media screen and (max-width: 420px){
     padding: 20px 20px 10px;
   }
@@ -1833,9 +1972,9 @@ input[type='reset']:focus {
     left: 5px;
     cursor: pointer;
   }
-  &:hover{
-    opacity: 0.7;
-  }
+  // &:hover{
+  //   opacity: 0.7;
+  // }
 }
 
 .lsv-dairy-products__menu{
@@ -1979,7 +2118,7 @@ input[type='reset']:focus {
   }
 }
 .lsv-shops__text-block{
-  padding: @lsv_menu_height+40px 40px;
+  padding: @lsv_menu_height+80px 40px;
 }
 .full-img{
   width: 50%;
@@ -1992,7 +2131,7 @@ input[type='reset']:focus {
 }
 #owl-vacancy-career-slider{
   .owl-pagination{
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .full-img{
     @media screen and (max-width:768px){
@@ -2026,8 +2165,13 @@ input[type='reset']:focus {
   color: white;
   text-transform: uppercase;
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar { width: 0; }
   &.active{
     top: @lsv_menu_height;
+    height: 100%;
   }
   ul{
     list-style: none;
@@ -2071,7 +2215,7 @@ input[type='reset']:focus {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(/img/vids/poster.jpg) no-repeat;
+  background: url(../img/vids/poster.jpg) no-repeat;
   background-size: cover; 
 }
 button.btn{
@@ -2600,4 +2744,118 @@ button.btn{
     #block-button-anim {
       position: static;
     }
+}
+#lsv-main_video-text{
+  div{
+    height: 100%;
+    width: 100%;
+  }
+  h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    font-weight: 900;
+  }
+  .slogan_1>h1{
+    margin: 200px;
+  }
+  .slogan_2>h1{
+    
+  }
+  .slogan_3>h1{
+    
+  }
+}
+
+#lsv-shop__skip-map-btn{
+  margin: 0;
+  margin-top: -35px;
+  position: relative;
+  @media screen and (max-width: 768px){
+    left: 60px;
+  }
+  @media screen and (max-width: 480px){
+    display: none;
+  }
+}
+.lsv-main-email{
+  text-transform: lowercase;
+}
+.lsv-contacts{
+  .col-md-3{
+    padding-right: 20px;
+  }
+  .padding-0-40{
+    @media screen and (max-width: 420px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    p,h2{
+      @media screen and (max-width: 420px){
+        padding-right: 30px;
+      }
+    }
+  }
+  .margint-80{
+    @media screen and (max-width: 420px){
+      margin-top: 20px;
+    }
+  }
+  .padding-40pmh{
+    @media screen and (max-width: 420px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+.lsv-contacts__department{
+  &.active .lsv-contacts__toggle{
+    display: block;
+  }
+  &:after{
+    content: "";
+    display: none;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/svg/slider-arrow-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transition: all 300ms cubic-bezier(.215,.61,.355,1);
+    @media screen and (max-width: 420px){
+      display: block;
+    }
+  }
+  &.active:after{
+    transform: rotate(90deg)
+;  }
+  @media screen and (max-width: 420px){
+    cursor: pointer;
+  }
+}
+.lsv-contacts__toggle{
+  @media screen and (max-width: 420px){
+    display: none;
+  }
+}
+#lsv-dairy-products__next-animation {
+    top: initial;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 180px;
+    text-align: center;
+    &.active{
+      label{
+        top: 0;
+      }
+    }
+}
+.lsv-dairy-products__list-item:nth-child(18){
+  // color: red;
+  height: 70px;
 }

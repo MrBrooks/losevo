@@ -1,14 +1,16 @@
 [
     {
       "title": "Колбаски",
-      "path" : "img/svg/animations/kolbaski/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/kolbaski/sausages_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": "",
+        "icon": "img/svg/products_icons/",
+        "startImg":"img/svg/animations/kolbaski/sausages_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/kolbaski/checking.svg",
         "header": "КОНТРОЛЬ СЫРЬЯ",
@@ -38,14 +40,16 @@
     },
     {
       "title": "Чебуреки, пельмени, манты",
-      "path" : "img/svg/animations/pelmeshlki/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/pelmeshlki/manty_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": "",
+        "icon": "img/svg/products_icons/",
+        "startImg":"img/svg/animations/pelmeshlki/manty_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/pelmeshlki/checking.svg",
         "header": "КОНТРОЛЬ СЫРЬЯ",
