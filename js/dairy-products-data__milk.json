@@ -1,14 +1,16 @@
 [
     {
-    "title": "Ацидофилин",
-      "path" : "img/svg/animations/acid/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/acid/acidofilin_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "title": "Ацидофилин",
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/acid/acidofilin_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/acid/transportation.svg",
         "header": "Транспортировка",
@@ -78,14 +80,16 @@
     },
     {
       "title": "Бифилайф",
-      "path" : "img/svg/animations/bifilife/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/bifilife/bifilaif_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/bifilife/bifilaif_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/bifilife/transportation.svg",
         "header": "Транспортировка",
@@ -155,14 +159,16 @@
     },
     {
       "title": "Бифилайф с добавками",
-      "path" : "img/svg/animations/bifilife_dobavki/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/bifilife_dobavki/transportation.svg",
         "header": "Транспортировка",
@@ -237,14 +243,16 @@
     },
     {
       "title": "Йогурт",
-      "path" : "img/svg/animations/yougurt/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/yougurt/jogurt.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/yougurt/jogurt.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/yougurt/transportation.svg",
         "header": "Транспортировка",
@@ -314,14 +322,16 @@
     },
     {
       "title": "Йогурт с добавками",
-      "path" : "img/svg/animations/yougurt_dobavki/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/yougurt_dobavki/transportation.svg",
         "header": "Транспортировка",
@@ -396,14 +406,16 @@
     },
     {
       "title": "Кефир",
-      "path" : "img/svg/animations/kefir/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/kefir/kefir_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/kefir/kefir_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/kefir/transportation.svg",
         "header": "Транспортировка",
@@ -473,14 +485,16 @@
     },
     {
       "title": "Масло",
-      "path" : "img/svg/animations/maslo/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/maslo/maslo_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/maslo/maslo_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/maslo/transportation.svg",
         "header": "Транспортировка",
@@ -540,14 +554,30 @@
     },
     {
       "title": "Молоко",
-      "path" : "img/svg/animations/milk/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/milk/milk_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": "Молоко 1%",
+        "icon": "img/svg/products_icons/moloko_1.svg",
+        "startImg":"img/svg/animations/milk/milk_1.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Молоко 2.5%",
+        "icon": "img/svg/products_icons/moloko_25.svg",
+        "startImg":"img/svg/animations/milk/milk_25.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Молоко 3.5%",
+        "icon": "img/svg/products_icons/moloko_35.svg",
+        "startImg":"img/svg/animations/milk/milk_35.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/milk/transportation.svg",
         "header": "Транспортировка",
@@ -602,14 +632,16 @@
     },
     {
       "title": "Ряженка",
-      "path" : "img/svg/animations/ryzhenka/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/ryzhenka/ryazhenka_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/ryzhenka/ryazhenka_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/ryzhenka/transportation.svg",
         "header": "Транспортировка",
@@ -684,14 +716,16 @@
     },
     {
       "title": "Сливки",
-      "path" : "img/svg/animations/slivki/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/slivki/slivki_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/slivki/slivki_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/slivki/transportation.svg",
         "header": "Транспортировка",
@@ -741,14 +775,16 @@
     },
     {
       "title": "Сметана",
-      "path" : "img/svg/animations/smetana/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/smetana/smetana_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/smetana/smetana_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/smetana/transportation.svg",
         "header": "Транспортировка",
@@ -813,14 +849,16 @@
     },
     {
       "title": "Сыворотка",
-      "path" : "img/svg/animations/sivorotka/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/sivorotka/sivorotka_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/sivorotka/sivorotka_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/sivorotka/tvorod.svg",
         "header": "ПРЕССОВАНИЕ И ОХЛАЖДЕНИЕ ТВОРОГА",
@@ -855,14 +893,16 @@
     },
     {
       "title": "Сыворотка с соком",
-      "path" : "img/svg/animations/sivorotka_sok/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/sivorotka_sok/sivorotka_s_sokom_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/sivorotka_sok/sivorotka_s_sokom_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/sivorotka_sok/tvorod.svg",
         "header": "ПРЕССОВАНИЕ И ОХЛАЖДЕНИЕ ТВОРОГА",
@@ -902,14 +942,16 @@
     },
     {
       "title": "Творог",
-      "path" : "img/svg/animations/tvorog/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/tvorog/tvorog_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/tvorog/tvorog_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/tvorog/transportation.svg",
         "header": "Транспортировка",
@@ -968,15 +1010,17 @@
       ]
     },
     {
-      "title": "Твороженная запеканка",
-      "path" : "img/svg/animations/tvorog_zapekanka/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/tvorog_zapekanka/tvorozhnaya_zapekanka_s_dobavkami_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "title": "Творожная запеканка",
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka/tvorozhnaya_zapekanka_s_dobavkami_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/tvorog_zapekanka/ingredients.svg",
         "header": "КОНТРОЛЬ КАЧЕСТВА СЫРЬЯ И ПРОИЗВОДСТВА ТЕСТА",
@@ -1005,15 +1049,17 @@
       ]
     },
     {
-      "title": "Твороженная запеканка с добавками",
-      "path" : "img/svg/animations/tvorog_zapekanka_dobavki/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/tvorog_zapekanka_dobavki/tvorozhnaya_zapekanka pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "title": "Творожная запеканка с добавками",
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/tvorozhnaya_zapekanka pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/tvorog_zapekanka_dobavki/ingredients.svg",
         "header": "КОНТРОЛЬ КАЧЕСТВА СЫРЬЯ И ПРОИЗВОДСТВА ТЕСТА",
@@ -1047,15 +1093,17 @@
       ]
     },
     {
-      "title": "Твороженная масса",
-      "path" : "img/svg/animations/tvorog_massa/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/tvorog_massa/tvorozhnaya_massa_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "title": "Творожная масса",
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/tvorog_massa/tvorozhnaya_massa_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/tvorog_massa/tvorog.svg",
         "header": "ТВОРОГ",
@@ -1079,14 +1127,16 @@
     },
     {
       "title": "Топлёное масло",
-      "path" : "img/svg/animations/topl_maslo/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/topl_maslo/toplenoe maslo_pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/topl_maslo/toplenoe maslo_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/topl_maslo/transportation.svg",
         "header": "Транспортировка",
@@ -1151,14 +1201,16 @@
     },
     {
       "title": "Топлёное молоко",
-      "path" : "img/svg/animations/topl_milk/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/topl_milk/toplenoe moloko.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/topl_milk/toplenoe moloko.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/topl_milk/transportation.svg",
         "header": "Транспортировка",
@@ -1218,14 +1270,16 @@
     },
      {
       "title": "Шоколадное масло",
-      "path" : "img/svg/animations/choco_maslo/",
-      "goodies" : "",
-      "info": "",
-      "steps" : [{
-        "img": "img/svg/animations/choco_maslo/shokoladnoe maslo pack.svg",
-        "header": "",
-        "description": ""
-        },
+      "products" : [
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/cheese_kachotta.svg",
+        "startImg":"img/svg/animations/choco_maslo/shokoladnoe maslo pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
         {
         "img": "img/svg/animations/choco_maslo/transportation.svg",
         "header": "Транспортировка",
