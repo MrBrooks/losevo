@@ -15363,6 +15363,13 @@ button.btn:hover
 {
     margin: 200px;
 }
+@media screen and (max-width: 480px)
+{
+    #lsv-main_video-text
+    {
+        display: none!important;
+    }
+}
 #lsv-shop__skip-map-btn
 {
     position: relative;
