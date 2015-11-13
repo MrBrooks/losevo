@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Говядина",
+      "products" : [
+      {
+        "icon": "",
+        "startImg":"img/svg/animations/beef/cow.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : []
+    }
+]

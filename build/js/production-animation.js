@@ -6,7 +6,7 @@ $(document).ready(function(){
     var canvas = Snap("#animation-canvas");
     var paper = canvas.g(), box;
     var temp;
-    var appearTime = 1500, disappearTime = 200;
+    var appearTime = 200, disappearTime = 200;
     var appearMatrix = new Snap.Matrix(),
       zeroscaleMatrix = new Snap.Matrix();
     canvas.append(paper);
@@ -87,7 +87,7 @@ $(document).ready(function(){
           // zeroscaleMatrix.scale(0,0,box.cx,box.cy);
           // appearMatrix.scale(0.8,0.8,box.cx,box.cy);
           // paper.transform(zeroscaleMatrix);
-          paper.animate({transform: appearMatrix}, appearTime, mina.elastic,stepAnimation);
+          paper.animate({transform: appearMatrix}, appearTime, mina.backout,stepAnimation);
       });
     }
     function startNextAnim(){
@@ -149,6 +149,12 @@ $(document).ready(function(){
       }
       else{
         owl = $(".owl-carousel").data('owlCarousel');
+      }
+      if (animation_data.steps.length == 0){
+        $("#lsv-dairy-products__next-animation").hide();
+      }
+      else{
+        $("#lsv-dairy-products__next-animation").show();
       }
       slidesNumber = animation_data.products.length;
       if(slidesNumber > 1){
