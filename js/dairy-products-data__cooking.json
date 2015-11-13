@@ -86,5 +86,186 @@
         "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
         }
       ]
+    },
+    {
+      "title": "Котлеты",
+      "products" : [
+      {
+        "title": "",
+        "icon": "",
+        "startImg":"img/svg/animations/kotleti/kotlety_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+        {
+        "img": "img/svg/animations/kotleti/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Экспертиза ингредиентов в лаборатории."
+        },
+        {
+        "img": "img/svg/animations/kotleti/farsh_1.svg",
+        "header": "ИЗГОТОВЛЕНИЕ ФАРША",
+        "description": "Измельчение мяса"
+        },
+        {
+        "img": "img/svg/animations/kotleti/farsh.svg",
+        "header": "ДОБАВЛЕНИЕ СПЕЦИЙ И ЛУКА",
+        "description": "Добавление в фарш специй и лука в соответствии с рецептурой."
+        },
+        {
+        "img": "img/svg/animations/kotleti/forming.svg",
+        "header": "ФОРМОВКА",
+        "description": "Формовка изделий"
+        },
+        {
+        "img": "img/svg/animations/kotleti/cooling.svg",
+        "header": "ШОКОВАЯ ЗАМОРОЗКА",
+        "description": "Заморозка продукта способоом,при котором его химический состав и структура не меняются"
+        },
+        {
+        "img": "img/svg/animations/kotleti/kotlety_pack.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки продукции в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/kotleti/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
+    },
+    {
+      "title": "Котлеты овощные",
+      "products" : [
+      {
+        "title": "",
+        "icon": "",
+        "startImg":"img/svg/animations/kotleti_vegitable/kotlety vegetables_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+        {
+        "img": "img/svg/animations/kotleti_vegitable/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Экспертиза продуктов"
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/boiling.svg",
+        "header": "ВАРКА",
+        "description": "Варка овощей"
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/mass.svg",
+        "header": "ПРОТИРКА",
+        "description": "Процесс измельчение овощей до консистенции пюре."
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/kotlety vegetables.svg",
+        "header": "ФОРМОВКА",
+        "description": "Формовка овощных котлет"
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/cooling.svg",
+        "header": "ШОКОВАЯ ЗАМОРОЗКА",
+        "description": "Заморозка котлет, при котором их свойства и химическая структура не меняются"
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/kotlety vegetables_pack.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки котлеток в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/kotleti_vegitable/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
+    },
+    {
+      "title": "Вареники",
+      "products" : [
+      {
+        "title": "",
+        "icon": "",
+        "startImg":"img/svg/animations/varenyki/vareniki_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+        {
+        "img": "img/svg/animations/varenyki/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Контроль качества ингредиентов"
+        },
+        {
+        "img": "img/svg/animations/varenyki/dough.svg",
+        "header": "ПОДГОТОВКА ТЕСТА",
+        "description": "Смешивание ингредиентов теста согласно рецептуре"
+        },
+        {
+        "img": "img/svg/animations/varenyki/stuffing.svg",
+        "header": "ПОДГОТОВКА НАЧИНКИ",
+        "description": "Смешивание ингредиентов начинки согласно рецептуре"
+        },
+        {
+        "img": "img/svg/animations/varenyki/vareniki.svg",
+        "header": "РУЧНАЯ ЛЕПКА",
+        "description": "Ручная лепка изделий"
+        },
+        {
+        "img": "img/svg/animations/varenyki/cooling.svg",
+        "header": "ШОКОВАЯ ЗАМОРОЗКА",
+        "description": "Заморозка продукта способом, при котором его химический состав и структура не меняются"
+        },
+        {
+        "img": "img/svg/animations/varenyki/vareniki_pack.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки вареников в фирменную упаковку «Лосево»"
+        },
+        {
+        "img": "img/svg/animations/varenyki/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
+    },
+    {
+      "title": "Мясо в маринаде",
+      "products" : [
+      {
+        "title": "",
+        "icon": "",
+        "startImg":"img/svg/animations/meet_in_marinade/marinad_packing.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+        {
+        "img": "img/svg/animations/meet_in_marinade/checking.svg",
+        "header": "КОНТРОЛЬ СЫРЬЯ",
+        "description": "Экспертиза мяса и всех ингредиентов в лаборатории."
+        },
+        {
+        "img": "img/svg/animations/meet_in_marinade/marinad.svg",
+        "header": "МАРИНАД",
+        "description": "Процесс маринования мяса с ингредиентами, соответствующими рецептуре"
+        },
+        {
+        "img": "img/svg/animations/meet_in_marinade/marinad_packing.svg",
+        "header": "УПАКОВКА",
+        "description": "Процесс фасовки замаринованного мяса в фирменную упаковку «Лосево»."
+        },
+        {
+        "img": "img/svg/animations/meet_in_marinade/logistics.svg",
+        "header": "ДОСТАВКА НА ПРИЛАВОК",
+        "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
+        }
+      ]
     }
 ]
