@@ -13219,7 +13219,7 @@ textarea
 #owl-team-shops-slider .owl-pagination,
 #owl-team-production-slider .owl-pagination
 {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 #owl-vacancy-office-slider .owl-buttons,
 #owl-vacancy-shops-slider .owl-buttons,
@@ -13724,6 +13724,7 @@ label.lsv-btn__input-file
 }
 .lsv-team__office-header
 {
+    margin-top: 62px;
     margin-bottom: 20px;
 }
 .lsv-about__start
@@ -14318,10 +14319,46 @@ input[type='reset']:focus
 
     color: white;
 }
+.lsv-dairy-products__menu-btn span.bar
+{
+    display: block;
+
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+
+    background-color: #fff;
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__menu-btn
+    {
+        width: 62px;
+        height: 62px;
+        margin: 0;
+        padding: 21px 18px;
+
+        background-color: #2c2d2d;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__menu-btn img
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__menu-btn label
+    {
+        display: none;
+    }
+}
 .lsv-dairy-products__menu
 {
     position: absolute;
-    z-index: 1030;
+    z-index: 1031;
     top: -1px;
     left: -280px;
 
@@ -14352,23 +14389,9 @@ input[type='reset']:focus
 {
     background-color: #3f3f3f;
 }
-.lsv-dairy-products__menu li:first-child
+.lsv-dairy-products__menu li:nth-child(2)
 {
-    position: fixed;
-    z-index: 1041;
-
-    width: 280px;
-    height: 48px;
-
-    -webkit-transition: all 800ms cubic-bezier(.31, .79, 0, .99);
-            transition: all 800ms cubic-bezier(.31, .79, 0, .99);
-    text-align: right;
-
-    background-color: #2c2d2d;
-}
-.lsv-dairy-products__menu li:first-child.active
-{
-    left: 0;
+    display: none;
 }
 .lsv-dairy-products__menu.active
 {
@@ -14376,11 +14399,7 @@ input[type='reset']:focus
 }
 .lsv-dairy-products__menu #lsv-dairy-products__menu-close-btn
 {
-    left: -280px;
-}
-.lsv-dairy-products__menu #lsv-dairy-products__menu-close-btn.active
-{
-    left: 0;
+    text-align: right;
 }
 .lsv-dairy-products__menu #lsv-dairy-products__menu-close-btn img
 {
@@ -14395,6 +14414,13 @@ input[type='reset']:focus
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 }
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__menu
+    {
+        left: -100%;
+    }
+}
 .animation-container
 {
     position: absolute;
@@ -14403,6 +14429,17 @@ input[type='reset']:focus
 
     width: 50%;
     height: 80%;
+}
+@media screen and (max-width: 480px)
+{
+    .animation-container
+    {
+        top: 140px;
+        left: 0;
+
+        width: 100%;
+        height: 75%;
+    }
 }
 #animation-canvas
 {
@@ -14448,6 +14485,14 @@ input[type='reset']:focus
 
     cursor: pointer;
 }
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__goodies-btns
+    {
+        top: 74px;
+        right: 12px;
+    }
+}
 #vk_like
 {
     position: absolute;
@@ -14468,6 +14513,15 @@ input[type='reset']:focus
     font-weight: 400;
 
     color: white;
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__product-title
+    {
+        top: 124px;
+
+        padding: 0 20px;
+    }
 }
 .lsv-dairy-products__tooltip
 {
@@ -14498,6 +14552,17 @@ input[type='reset']:focus
 .lsv-dairy-products__tooltip.active
 {
     opacity: 1;
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-dairy-products__tooltip
+    {
+        top: 142px;
+
+        width: 90%;
+        height: 70%;
+        margin-right: 5%;
+    }
 }
 #lsv-dairy-products__tooltip-info img
 {
@@ -15381,7 +15446,7 @@ button.btn:hover
 {
     #lsv-shop__skip-map-btn
     {
-        left: 60px;
+        display: none;
     }
 }
 @media screen and (max-width: 480px)
@@ -15499,4 +15564,25 @@ button.btn:hover
 .lsv-dairy-products__list-item:nth-child(18)
 {
     height: 70px;
+}
+#lsv-shop__down-btn
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+
+    margin: 10px;
+
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+@media screen and (max-width: 768px)
+{
+    #lsv-shop__down-btn
+    {
+        display: block;
+    }
 }

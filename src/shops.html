@@ -273,9 +273,18 @@
             'easing': 'easeOutElastic',
             'fitToSection': false,
             'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': true
+            'scrollOverflow': true,
+            afterRender: function(){
+              $.fn.fullpage.setAllowScrolling(false);
+            },
+            onLeave: function (index, nextIndex, direction){
+              if (nextIndex == 1) {
+                $.fn.fullpage.setAllowScrolling(false);
+              }
+            }
           });
-          $("#lsv-shop__skip-map-btn").click(function() {
+          $("#lsv-shop__skip-map-btn,#lsv-shop__down-btn").click(function() {
+            $.fn.fullpage.setAllowScrolling(true);
             $.fn.fullpage.moveSectionDown();
           });
           // if(window.innerWidth <= 480){

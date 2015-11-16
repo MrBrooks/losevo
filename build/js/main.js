@@ -23208,23 +23208,42 @@ $(document).ready(function() {
   $(".full-slide").each(function(i,e){
     $(this).css("height", ($(window).height() - menu_height) + "px");
   });
-
-  $("#lsv-dairy-products__menu").slimScroll({
-    width: '280px',
-    height: lsv_section_height,
-    size: '10px',
-    opacity: 1,
-    position: 'right',
-    color: '#61bb46',
-    alwaysVisible: true,
-    distance: '7px',
-    railVisible: false,
-    wheelStep: 30,
-    allowPageScroll: false,
-    barHeightCustome: "100px",
-    barZIndex: '2000'
-    // disableFadeOut: false
-  });
+  if (window.innerWidth > 480){
+    $("#lsv-dairy-products__menu").slimScroll({
+      width: '280px',
+      height: lsv_section_height,
+      size: '10px',
+      opacity: 1,
+      position: 'right',
+      color: '#61bb46',
+      alwaysVisible: true,
+      distance: '7px',
+      railVisible: false,
+      wheelStep: 30,
+      allowPageScroll: false,
+      barHeightCustome: "100px",
+      barZIndex: '2000'
+      // disableFadeOut: false
+    });
+  }
+  else{
+    $("#lsv-dairy-products__menu").slimScroll({
+      width: '100%',
+      height: lsv_section_height,
+      size: '10px',
+      opacity: 1,
+      position: 'right',
+      color: '#61bb46',
+      alwaysVisible: true,
+      distance: '7px',
+      railVisible: false,
+      wheelStep: 30,
+      allowPageScroll: false,
+      barHeightCustome: "100px",
+      barZIndex: '2000'
+      // disableFadeOut: false
+    });
+  }
   // $("#lsv-dairy-products__menu").hover(
   //   function(){
   //     console.log("Hey in");
@@ -23368,6 +23387,10 @@ $(document).ready(function() {
   $("#lsv-filter-select-month").on("change",function(){
     filter_value_month = $(this).val();
     lsvDataFilter();
+  });
+
+  $("#lsv-shop__down-btn").click(function(){
+    $.fn.fullpage.moveSectionDown();
   });
   // if(window.innerWidth <= 1024){
   //   $.fn.fullpage.destroy();
