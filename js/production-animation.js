@@ -1,5 +1,29 @@
 $(document).ready(function(){
 
+    $('#lsv-slides-scroll-overflow-off').fullpage({
+      'css3': true,
+      'easing': 'easeOutElastic',
+      'fitToSection': false,
+      'fixedElements': '.lsv-nav , .lsv-menu',
+      'scrollOverflow': false,
+
+      afterRender: function(){
+        $("#lsv-production-product-icon-slider").owlCarousel({
+          items: 3,
+          itemsCustom : [
+            [0, 2],
+            [450, 3]
+          ],
+          navigation : true,
+          pagination : false,
+          navigationText: false,
+          rewindNav: false,
+          mouseDrag: false,
+          touchDrag: false
+        });
+      }
+    });
+
     var animation_data; 
     var current_anim = 0, current_prod = 0;
 
@@ -58,7 +82,7 @@ $(document).ready(function(){
       // console.log("box");
       appearMatrix = new Snap.Matrix();
       zeroscaleMatrix.scale(0,0,box.cx,box.cy);
-      appearMatrix.scale(0.8,0.8,box.cx,box.cy);
+      appearMatrix.scale(1,1,box.cx,box.cy);
       paper.transform(zeroscaleMatrix);
       //do some manipulation before playing step animation
       switch (current_anim % animation_data.steps.length){
@@ -150,14 +174,14 @@ $(document).ready(function(){
       else{
         owl = $(".owl-carousel").data('owlCarousel');
       }
-      if (animation_data.steps.length == 0){
+      if (animation_data.steps.length == 0 || window.innerWidth < 480){
         $("#lsv-dairy-products__next-animation").hide();
       }
       else{
         $("#lsv-dairy-products__next-animation").show();
       }
       slidesNumber = animation_data.products.length;
-      if(slidesNumber > 1){
+      if(slidesNumber > 1 && window.innerWidth > 480){
         $("#rotate-block").show();
         for (var i = 0; i < slidesNumber; i++){
           owl.addItem('<div class="item"><img src="'+ animation_data.products[i].icon +'"></div>', i+1);
@@ -236,9 +260,11 @@ $(document).ready(function(){
     $("#lsv-dairy-products__next-animation").click(startNextAnim);
 
     if(window.innerWidth <= 480){
-      // $.fn.fullpage.destroy();
+      $.fn.fullpage.destroy();
       $("#lsv-dairy-products__next-animation").hide();
       $(".section:first-child").hide();
 
+      $("#lsv-dairy-products__menu-btn").append("<span class='bar'></span><span class='bar'></span><span class='bar'></span>");
+      
     }
 });
