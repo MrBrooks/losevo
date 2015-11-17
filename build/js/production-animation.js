@@ -23,7 +23,6 @@ $(document).ready(function(){
         });
       }
     });
-
     var animation_data; 
     var current_anim = 0, current_prod = 0;
 
@@ -46,7 +45,7 @@ $(document).ready(function(){
           $("#lsv-dairy-products__next-animation").removeClass("active");
           $(".slimScrollBar").css("opacity", "0");
           hideAll();
-          $.fn.fullpage.setMouseWheelScrolling(true);
+          $.fn.fullpage.setAllowScrolling(true);
           initProduct();
         });
         animation_data = json[0];
@@ -62,9 +61,9 @@ $(document).ready(function(){
           if (car){
             var carMatrix = new Snap.Matrix();
             carMatrix.translate(10,0);
-            car.animate({transform: carMatrix}, appearTime*1, mina.linear, function(){
+            car.animate({transform: carMatrix}, 2000, mina.linear, function(){
               setTimeout(function(){
-                car.animate({transform: carMatrix.translate(box.w+100,0)}, appearTime*3, mina.linear);
+                car.animate({transform: carMatrix.translate(box.w+100,0)}, 1500, mina.linear);
                 // car.transform(carMatrix.translate(-box.w-100,0));
               },2000);
             });

@@ -23282,12 +23282,12 @@ $(document).ready(function() {
   $("#lsv-dairy-products__menu-btn").on('click',function(){
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").addClass("active");
     $(".slimScrollBar").css("opacity", "1");
-    $.fn.fullpage.setMouseWheelScrolling(false);
+    $.fn.fullpage.setAllowScrolling(false);
   });
   $("#lsv-dairy-products__menu-close-btn").on('click',function(){
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
     $(".slimScrollBar").css("opacity", "0");
-    $.fn.fullpage.setMouseWheelScrolling(true);
+    $.fn.fullpage.setAllowScrolling(true);
   });
   // 
   // $("#lsv-shops__filter-btn").on('hover',function(){

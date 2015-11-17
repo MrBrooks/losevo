@@ -14244,6 +14244,9 @@ input[type='reset']:focus
     padding: 3px 7px;
 
     resize: none;
+
+    border: 0;
+    border-radius: 0;
 }
 .lsv-shops__create-own-shop .form-group:last-child
 {
@@ -14381,7 +14384,7 @@ input[type='reset']:focus
 .lsv-dairy-products__menu li
 {
     height: 48px;
-    padding: 15px 0 15px 30px;
+    padding: 15px 10px 15px 30px;
 
     cursor: pointer;
 }
@@ -14553,6 +14556,17 @@ input[type='reset']:focus
 {
     opacity: 1;
 }
+@media screen and (max-width: 768px)
+{
+    .lsv-dairy-products__tooltip
+    {
+        top: 142px;
+
+        width: 50%;
+        height: 70%;
+        margin-right: 5%;
+    }
+}
 @media screen and (max-width: 480px)
 {
     .lsv-dairy-products__tooltip
@@ -14636,7 +14650,7 @@ input[type='reset']:focus
     text-transform: uppercase;
 
     color: white;
-    background-color: #61bb46;
+    background-color: #79d35e;
 
     -ms-overflow-style: none;
 }
@@ -15438,6 +15452,7 @@ button.btn:hover
 #lsv-shop__skip-map-btn
 {
     position: relative;
+    left: 105px;
 
     margin: 0;
     margin-top: -35px;
@@ -15446,10 +15461,10 @@ button.btn:hover
 {
     #lsv-shop__skip-map-btn
     {
-        display: none;
+        left: 50px;
     }
 }
-@media screen and (max-width: 480px)
+@media screen and (max-width: 666px)
 {
     #lsv-shop__skip-map-btn
     {

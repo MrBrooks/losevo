@@ -1914,6 +1914,8 @@ input[type='reset']:focus {
     height: 25px*3+20px*2+ 3;
     resize: none;
     padding: 3px 7px;
+    border: 0;
+    border-radius: 0;
 
   }
   .form-group:last-child{
@@ -2018,7 +2020,7 @@ input[type='reset']:focus {
   }
   li{
     height: 48px;
-    padding: 15px 0 15px 30px;
+    padding: 15px 10px 15px 30px;
     cursor: pointer;
     &:hover{
       background-color: #3f3f3f;
@@ -2173,12 +2175,19 @@ input[type='reset']:focus {
   &.active{
     opacity: 1;
   }
+  @media screen and (max-width: 768px){
+    width: 50%;
+    margin-right: 5%;
+    height: 70%;
+    top: @lsv_menu_height + 80px;
+  }
   @media screen and (max-width: 480px){
     width: 90%;
     margin-right: 5%;
     height: 70%;
     top: @lsv_menu_height + 80px;
   }
+
 }
 #lsv-dairy-products__tooltip-info{
   img{
@@ -2225,7 +2234,7 @@ input[type='reset']:focus {
   }
 }
 .lsv-mobile-menu{
-  background-color: @lsv_green;
+  background-color: @lsv_green_active;
   width: 320px;
   position: fixed;
   z-index: 1029;
@@ -2843,10 +2852,11 @@ button.btn{
   margin: 0;
   margin-top: -35px;
   position: relative;
+  left: 105px;
   @media screen and (max-width: 768px){
-    display: none;
+    left: 50px;
   }
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 666px){
     display: none;
   }
 }
