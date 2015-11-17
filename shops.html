@@ -669,10 +669,10 @@
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA&callback=initMap"
-  type="text/javascript"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA" type="text/javascript"></script>
+        
         <script type="text/javascript">
-
+        var lsvInitMapAndFilters = function(){
           var map;
           var active_marker, temp_icon;
           var markers = [];
@@ -693,7 +693,7 @@
               mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
               }
-            }
+            };
             var losevo_shop_icon = {
               url: 'img/svg/losevo-shop.svg',
               size: new google.maps.Size(31, 46),
@@ -718,7 +718,7 @@
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(5, 5)
             };
-;            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
+            map = new google.maps.Map(document.getElementById('lsv-shops__map'), mapOptions);
 
             map.mapTypes.set('map_style', styledMap);
             map.setMapTypeId('map_style');
@@ -891,15 +891,12 @@
               });
             });
           };
-          $(document).ready(function() {
-            $(".lsv-radio").click(function(){
-              $(this).toggleClass('checked');
-            });
+          initMap();
+          $(".lsv-radio").click(function(){
+            $(this).toggleClass('checked');
           });
-        </script>
-        <script type="text/javascript">
-        $(document).ready(function(){
-          $('#lsv-slides').fullpage({
+        };
+        $('#lsv-slides').fullpage({
             'css3': true,
             'easing': 'easeOutElastic',
             'fitToSection': false,
@@ -907,6 +904,7 @@
             'scrollOverflow': true,
             afterRender: function(){
               $.fn.fullpage.setAllowScrolling(false);
+              lsvInitMapAndFilters();
             },
             onLeave: function (index, nextIndex, direction){
               if (nextIndex == 1) {
@@ -917,16 +915,7 @@
               }
             }
           });
-          $("#lsv-shop__skip-map-btn,#lsv-shop__down-btn").click(function() {
-            $.fn.fullpage.setAllowScrolling(true);
-            $.fn.fullpage.moveSectionDown();
-          });
-          // if(window.innerWidth <= 480){
-          //   $.fn.fullpage.destroy();
-          // }
-        });
         </script>
-
     </body>
 
 </html>
