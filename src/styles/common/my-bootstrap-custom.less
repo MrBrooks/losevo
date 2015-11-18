@@ -143,6 +143,7 @@ main{
   resize: vertical;
  }
 .lsv-nav{
+  z-index: 2002;
   background-color: @lsv_menu_color;
   height: @lsv_menu_height;
 }
@@ -342,7 +343,7 @@ main{
   background-color: @lsv_green;
   color:white;
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
-  z-index: 1020;
+  z-index: 2001;
   .container, .row{
     margin: 0;
     padding: 0 12px;
@@ -2239,7 +2240,7 @@ input[type='reset']:focus {
   background-color: @lsv_green_active;
   width: 320px;
   position: fixed;
-  z-index: 1029;
+  z-index: 2002;
   top: @lsv_menu_height - 510px-20px;
   color: white;
   text-transform: uppercase;
@@ -2952,5 +2953,28 @@ button.btn{
 
   @media screen and (max-width: 768px){
     display: block;
+  }
+}
+.lsv-pluses__header{
+  margin-bottom: 100px;
+  @media screen and (max-width: 992px){
+    margin: 100px 0;
+  }
+}
+.lsv-pluses__container{
+  div{
+    min-height: 220px;
+    @media screen and (max-width: 768px){
+      margin-bottom: 50px;
+    }
+  }
+  div:first-child{
+    margin-top: -7px;
+  }
+  padding: 0 40px;
+  p{
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-top: 50px;
   }
 }

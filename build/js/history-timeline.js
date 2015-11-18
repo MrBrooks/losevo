@@ -45,7 +45,7 @@ $(document).ready(function(){
     'fixedElements': '.lsv-nav , .lsv-menu',
     'scrollOverflow': true,
     onLeave: function(index, nextIndex, direction){
-      if(nextIndex == 1 || nextIndex == arr_years.length+2){
+      if(nextIndex == 1 || nextIndex == arr_years.length+2 || nextIndex == arr_years.length+3){
         $('.lsv-history__timeline').css('opacity','0');
       }
       else {

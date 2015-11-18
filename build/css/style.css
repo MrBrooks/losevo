@@ -11639,6 +11639,8 @@ textarea
 }
 .lsv-nav
 {
+    z-index: 2002;
+
     height: 62px;
 
     background-color: #fff;
@@ -11914,7 +11916,7 @@ textarea
 }
 .lsv-menu
 {
-    z-index: 1020;
+    z-index: 2001;
     top: -168px;
 
     width: 100%;
@@ -14639,7 +14641,7 @@ input[type='reset']:focus
 .lsv-mobile-menu
 {
     position: fixed;
-    z-index: 1029;
+    z-index: 2002;
     top: -468px;
 
     overflow: -moz-scrollbars-none;
@@ -15602,4 +15604,42 @@ button.btn:hover
     {
         display: block;
     }
+}
+.lsv-pluses__header
+{
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 992px)
+{
+    .lsv-pluses__header
+    {
+        margin: 100px 0;
+    }
+}
+.lsv-pluses__container
+{
+    padding: 0 40px;
+}
+.lsv-pluses__container div
+{
+    min-height: 220px;
+}
+@media screen and (max-width: 768px)
+{
+    .lsv-pluses__container div
+    {
+        margin-bottom: 50px;
+    }
+}
+.lsv-pluses__container div:first-child
+{
+    margin-top: -7px;
+}
+.lsv-pluses__container p
+{
+    line-height: 20px;
+
+    margin-top: 50px;
+
+    text-transform: uppercase;
 }
