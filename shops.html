@@ -911,11 +911,12 @@
               // if (window.innerWidth <= 1024){
               //   $.fn.fullpage.destroy();
               // }
+              $(".slimScrollBar").css("margin-top","63px");
             },
             afterLoad: function (link, index){
               if (index == 1) {
                 $.fn.fullpage.setAllowScrolling(false);
-                // $("#lsv-shops__map, .lsv-shops__map-info").show();
+                $("#lsv-shops__map, .lsv-shops__map-info").show();
               }
               // else{
               //   $("#lsv-shops__map, .lsv-shops__map-info").hide();
@@ -923,7 +924,7 @@
             },
             onLeave: function (index,nextIndex,direction){
               if (nextIndex == 1){
-                $("#lsv-shops__map, .lsv-shops__map-info").show();
+                // $("#lsv-shops__map, .lsv-shops__map-info").show();
               };
               if (index == 1){
                 $("#lsv-shops__map, .lsv-shops__map-info").hide();
