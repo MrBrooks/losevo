@@ -1485,8 +1485,7 @@ img
     height: auto;
     padding: 4px;
 
-    -webkit-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -3409,8 +3408,7 @@ output
     height: 34px;
     padding: 6px 12px;
 
-    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
     color: #555;
     border: 1px solid #ccc;
@@ -4571,8 +4569,7 @@ input[type='button'].btn-block
 }
 .fade
 {
-    -webkit-transition: opacity .15s linear;
-            transition: opacity .15s linear;
+    transition: opacity .15s linear;
 
     opacity: 0;
 }
@@ -4604,12 +4601,9 @@ tbody.collapse.in
 
     height: 0;
 
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    -webkit-transition-duration: .35s;
-            transition-duration: .35s;
-    -webkit-transition-property: height, visibility;
-            transition-property: height, visibility;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height, visibility;
 }
 .caret
 {
@@ -6576,8 +6570,7 @@ a.badge:focus
     margin-bottom: 20px;
     padding: 4px;
 
-    -webkit-transition: border .2s ease-in-out;
-            transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
 
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -6741,8 +6734,7 @@ a.thumbnail.active
     width: 0;
     height: 100%;
 
-    -webkit-transition: width .6s ease;
-            transition: width .6s ease;
+    transition: width .6s ease;
     text-align: center;
 
     color: #fff;
@@ -6752,8 +6744,7 @@ a.thumbnail.active
 .progress-striped .progress-bar,
 .progress-bar-striped
 {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
     background-size: 40px 40px;
 }
 .progress.active .progress-bar,
@@ -6768,8 +6759,7 @@ a.thumbnail.active
 }
 .progress-striped .progress-bar-success
 {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info
 {
@@ -6777,8 +6767,7 @@ a.thumbnail.active
 }
 .progress-striped .progress-bar-info
 {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .progress-bar-warning
 {
@@ -6786,8 +6775,7 @@ a.thumbnail.active
 }
 .progress-striped .progress-bar-warning
 {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger
 {
@@ -6795,8 +6783,7 @@ a.thumbnail.active
 }
 .progress-striped .progress-bar-danger
 {
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
 .media
 {
@@ -7650,16 +7637,14 @@ button.close
 }
 .modal.fade .modal-dialog
 {
-    -webkit-transition: -webkit-transform .3s ease-out;
-            transition:         transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition:         transform .3s ease-out;
     -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
             transform: translate(0, -25%);
 }
 .modal.in .modal-dialog
 {
     -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
             transform: translate(0, 0);
 }
 .modal-open .modal
@@ -8138,8 +8123,7 @@ button.close
 
     display: none;
 
-    -webkit-transition: .6s ease-in-out left;
-            transition: .6s ease-in-out left;
+    transition: .6s ease-in-out left;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img
@@ -8150,8 +8134,8 @@ button.close
 {
     .carousel-inner > .item
     {
-        -webkit-transition: -webkit-transform .6s ease-in-out;
-                transition:         transform .6s ease-in-out;
+        transition: -webkit-transform .6s ease-in-out;
+        transition:         transform .6s ease-in-out;
 
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
@@ -8244,8 +8228,7 @@ button.close
 }
 .carousel-control.left
 {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-    background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
     background-repeat: repeat-x;
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -8255,8 +8238,7 @@ button.close
     right: 0;
     left: auto;
 
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-    background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
     background-repeat: repeat-x;
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -8812,7 +8794,6 @@ button.close
     display: inline-block;
 
     -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
             transform: translate(0, 0);
 
     text-rendering: auto;
@@ -8936,7 +8917,6 @@ button.close
 .fa-rotate-90
 {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
@@ -8944,7 +8924,6 @@ button.close
 .fa-rotate-180
 {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
             transform: rotate(180deg);
 
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
@@ -8952,7 +8931,6 @@ button.close
 .fa-rotate-270
 {
     -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
             transform: rotate(270deg);
 
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
@@ -8960,7 +8938,6 @@ button.close
 .fa-flip-horizontal
 {
     -webkit-transform: scale(-1, 1);
-        -ms-transform: scale(-1, 1);
             transform: scale(-1, 1);
 
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
@@ -8968,7 +8945,6 @@ button.close
 .fa-flip-vertical
 {
     -webkit-transform: scale(1, -1);
-        -ms-transform: scale(1, -1);
             transform: scale(1, -1);
 
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
@@ -11215,8 +11191,7 @@ button.close
 }
 .owl-carousel .owl-wrapper-outer.autoHeight
 {
-    -webkit-transition: height 500ms ease-in-out;
-            transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
 }
 .owl-carousel .owl-item
 {
@@ -11639,7 +11614,7 @@ textarea
 }
 .lsv-nav
 {
-    z-index: 2002;
+    z-index: 2003;
 
     height: 62px;
 
@@ -11715,25 +11690,21 @@ textarea
 }
 .lsv-nav__menu-btn:hover .line01
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
+    transition-delay: 0ms;
 
     opacity: 0;
 }
 .lsv-nav__menu-btn:hover .line02
 {
-    -webkit-transition-delay: 70ms;
-            transition-delay: 70ms;
+    transition-delay: 70ms;
 }
 .lsv-nav__menu-btn:hover .line03
 {
-    -webkit-transition-delay: 140ms;
-            transition-delay: 140ms;
+    transition-delay: 140ms;
 }
 .lsv-nav__menu-btn:hover .line04
 {
-    -webkit-transition-delay: 210ms;
-            transition-delay: 210ms;
+    transition-delay: 210ms;
 
     opacity: 1;
 }
@@ -11745,8 +11716,7 @@ textarea
 }
 .lsv-nav__menu-btn--active
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
+    transition-delay: 0ms;
 
     background-color: #79d35e;
 }
@@ -11767,7 +11737,6 @@ textarea
     -webkit-transform: translate3d(0, 7px, 0) rotate(-45deg);
             transform: translate3d(0, 7px, 0) rotate(-45deg);
     -webkit-transform-origin: center center 0;
-        -ms-transform-origin: center center 0;
             transform-origin: center center 0;
 
     opacity: 1;
@@ -11781,7 +11750,6 @@ textarea
     -webkit-transform: translate3d(0, -7px, 0) rotate(45deg);
             transform: translate3d(0, -7px, 0) rotate(45deg);
     -webkit-transform-origin: center center 0;
-        -ms-transform-origin: center center 0;
             transform-origin: center center 0;
 
     opacity: 1;
@@ -11830,30 +11798,25 @@ textarea
     height: 3px;
     margin: 4px 20px;
 
-    -webkit-transition: all 300ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 300ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 300ms cubic-bezier(.215, .61, .355, 1);
 
     background-color: #fff;
 }
 .line01
 {
-    -webkit-transition-delay: 210ms;
-            transition-delay: 210ms;
+    transition-delay: 210ms;
 }
 .line02
 {
-    -webkit-transition-delay: 140ms;
-            transition-delay: 140ms;
+    transition-delay: 140ms;
 }
 .line03
 {
-    -webkit-transition-delay: 70ms;
-            transition-delay: 70ms;
+    transition-delay: 70ms;
 }
 .line04
 {
-    -webkit-transition-delay: 0ms;
-            transition-delay: 0ms;
+    transition-delay: 0ms;
 
     opacity: 0;
 }
@@ -11875,8 +11838,7 @@ textarea
     padding-top: 10px!important;
     padding-bottom: 10px!important;
 
-    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
     color: white;
     border: 0;
@@ -11922,8 +11884,7 @@ textarea
     width: 100%;
     height: 215px;
 
-    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
     color: white;
     background-color: #61bb46;
@@ -12108,8 +12069,7 @@ textarea
 }
 .menu-icon
 {
-    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 }
 .lsv-social
 {
@@ -12145,8 +12105,7 @@ textarea
 {
     margin-top: 3px;
 
-    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
     color: #9e9e9e;
     border: 0;
@@ -12315,8 +12274,7 @@ textarea
     min-height: 660px;
     padding: 0 6px;
 
-    -webkit-transition: all 500ms linear;
-            transition: all 500ms linear;
+    transition: all 500ms linear;
 }
 .product-card-mini img
 {
@@ -12620,7 +12578,6 @@ textarea
 .lsv-product-logo:hover
 {
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
     -webkit-animation: scale-circle-milk 1300ms ease infinite;
             animation: scale-circle-milk 1300ms ease infinite;
@@ -12762,7 +12719,7 @@ textarea
 }
 #lsv-history__start
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2004.jpg);
 }
 @media screen and (max-width: 420px)
 {
@@ -12786,31 +12743,31 @@ textarea
 }
 #lsv-history__2004
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2005
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2008
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2008.jpg);
 }
 #lsv-history__2012
 {
-    background-image: url(http://placehold.it/1600x800);
+    background-image: url(../img/images/2012.jpg);
 }
 #lsv-history__2013
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2013.jpg);
 }
 #lsv-history__2014
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2014.jpg);
 }
 #lsv-history__2015
 {
-    background-image: url(http://placehold.it/600x700);
+    background-image: url(../img/images/2015.jpg);
 }
 .lsv-history__discription
 {
@@ -12939,8 +12896,7 @@ textarea
     width: 100px;
     height: 100%;
 
-    -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
+    transition: all 500ms ease;
 
     opacity: 0;
 }
@@ -12983,10 +12939,8 @@ textarea
     height: 15px;
     margin-left: 5px;
 
-    -webkit-transition: all 1000ms ease;
-            transition: all 1000ms ease;
+    transition: all 1000ms ease;
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 
     border: 1px solid #515151;
@@ -12995,10 +12949,8 @@ textarea
 }
 .timeline--active span
 {
-    -webkit-transition-duration: 500ms;
-            transition-duration: 500ms;
+    transition-duration: 500ms;
     -webkit-transform: scale(1.3, 1.3);
-        -ms-transform: scale(1.3, 1.3);
             transform: scale(1.3, 1.3);
 
     background-color: #515151;
@@ -13044,12 +12996,10 @@ textarea
 }
 .flex-container
 {
-    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display:         inline-flex;
 
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
@@ -13074,13 +13024,11 @@ textarea
         display:    -moz-flex;
         display:     -ms-flex;
         display:      -o-flex;
-        display: -webkit-box;
         display: -ms-flexbox;
         display:         flex;
 
         width: 100%;
 
-        -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
                 justify-content: center;
@@ -13105,7 +13053,6 @@ textarea
     position: absolute;
     top: 80%;
 
-    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display:         inline-flex;
@@ -13113,7 +13060,6 @@ textarea
     width: 100%;
     margin-top: -100px;
 
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
@@ -13433,8 +13379,7 @@ label.lsv-btn__input-file
     width: 35px;
     height: 35px;
 
-    -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
+    transition: all 500ms ease;
 
     opacity: 1;
     color: transparent;
@@ -13451,10 +13396,8 @@ label.lsv-btn__input-file
 .lsv-slider .owl-buttons div.owl-next
 {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
             transform: rotate(180deg);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 }
 .lsv-slider .owl-controls
@@ -13519,13 +13462,10 @@ label.lsv-btn__input-file
     width: 35px;
     height: 35px;
 
-    -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
+    transition: all 500ms ease;
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 
     background-image: url(../img/svg/slider-arrow-circle.svg);
@@ -13547,11 +13487,17 @@ label.lsv-btn__input-file
 {
     display: block;
 }
-#lsv-team__img-start,
-#lsv-team__img-owner-1,
+#lsv-team__img-start
+{
+    background-image: url(../img/images/team_start.jpg);
+}
+#lsv-team__img-owner-1
+{
+    background-image: url(../img/images/beglov.jpg);
+}
 #lsv-team__img-owner-2
 {
-    background-image: url(http://placehold.it/1000x1000);
+    background-image: url(../img/images/mauer.jpg);
 }
 @media screen and (max-width: 768px)
 {
@@ -13703,7 +13649,7 @@ label.lsv-btn__input-file
     margin: auto;
 
     border-radius: 50%;
-    background-image: url(http://placehold.it/140x140/005050/FFF);
+    background-image: url(../img/images/3.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -13738,7 +13684,7 @@ label.lsv-btn__input-file
     height: 100%;
     padding-top: 62px;
 
-    background-image: url(http://placehold.it/1920x1000);
+    background-image: url(../img/images/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13884,8 +13830,7 @@ label.lsv-btn__input-file
     margin-bottom: 48px;
 
     cursor: pointer;
-    -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 .lsv-shops__list-item .lsv-h3
 {
@@ -13909,7 +13854,6 @@ label.lsv-btn__input-file
     z-index: 2001;
     bottom: 0;
 
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
@@ -13922,12 +13866,9 @@ label.lsv-btn__input-file
     color: white;
     background-color: #61bb46;
 
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
 }
@@ -13984,8 +13925,7 @@ label.lsv-btn__input-file
     margin-top: -1px;
     padding: 30px;
 
-    -webkit-transition: all 800ms cubic-bezier(.31, .79, 0, .99);
-            transition: all 800ms cubic-bezier(.31, .79, 0, .99);
+    transition: all 800ms cubic-bezier(.31, .79, 0, .99);
 
     background-color: #efefef;
 }
@@ -14190,8 +14130,7 @@ label.lsv-btn__input-file
     height: 10px;
 
     content: '';
-    -webkit-transition: all .2s;
-            transition: all .2s;
+    transition: all .2s;
 
     opacity: 0;
     border-radius: 50%;
@@ -14280,7 +14219,7 @@ input[type='reset']:focus
     height: 100%;
     padding-top: 62px;
 
-    background-image: url(http://placehold.it/1920x1000);
+    background-image: url(../img/images/milk.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -14292,6 +14231,20 @@ input[type='reset']:focus
     left: 124px;
 
     width: 30%;
+
+    color: white;
+}
+.lsv-diary-products__start.cheese
+{
+    background-image: url(../img/images/cheese.jpg);
+}
+.lsv-diary-products__start.cooking
+{
+    background-image: url(../img/images/cooking.jpg);
+}
+.lsv-diary-products__start.cheese
+{
+    background-image: url(../img/images/cheese.jpg);
 }
 .lsv-dairy-products
 {
@@ -14369,8 +14322,7 @@ input[type='reset']:focus
     top: -1px;
     left: -280px;
 
-    -webkit-transition: all 800ms cubic-bezier(.31, .79, 0, .99);
-            transition: all 800ms cubic-bezier(.31, .79, 0, .99);
+    transition: all 800ms cubic-bezier(.31, .79, 0, .99);
 
     color: white;
     background-color: #2c2d2d;
@@ -14412,13 +14364,11 @@ input[type='reset']:focus
 {
     margin: -6px 25px 0 0;
 
-    -webkit-transition: all 700ms cubic-bezier(.41, 2.15, .33, .72);
-            transition: all 700ms cubic-bezier(.41, 2.15, .33, .72);
+    transition: all 700ms cubic-bezier(.41, 2.15, .33, .72);
 }
 .lsv-dairy-products__menu #lsv-dairy-products__menu-close-btn:hover > img
 {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 }
 @media screen and (max-width: 480px)
@@ -14431,11 +14381,11 @@ input[type='reset']:focus
 .animation-container
 {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 25%;
 
     width: 50%;
-    height: 80%;
+    height: 72%;
 }
 @media screen and (max-width: 480px)
 {
@@ -14542,8 +14492,7 @@ input[type='reset']:focus
     margin-right: 30px;
     padding: 30px 25px;
 
-    -webkit-transition: all 800ms cubic-bezier(.31, .79, 0, .99);
-            transition: all 800ms cubic-bezier(.31, .79, 0, .99);
+    transition: all 800ms cubic-bezier(.31, .79, 0, .99);
 
     opacity: 0;
     border-radius: 20px;
@@ -14649,8 +14598,7 @@ input[type='reset']:focus
 
     width: 320px;
 
-    -webkit-transition: all 500ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 500ms cubic-bezier(.215, .61, .355, 1);
     text-transform: uppercase;
 
     color: white;
@@ -14727,7 +14675,6 @@ input[type='reset']:focus
     min-height: 100%;
 
     -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
 
     background: url(../img/vids/poster.jpg) no-repeat;
@@ -14919,10 +14866,8 @@ button.btn:hover
     display: none;
 
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
     -webkit-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
             transform-origin: 0 100%;
 }
 #lsv-production-product-icon-slider
@@ -14938,7 +14883,6 @@ button.btn:hover
 #lsv-production-product-icon-slider .item
 {
     -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
     text-align: center;
 }
@@ -14948,7 +14892,6 @@ button.btn:hover
     height: 100px;
 
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 }
 #lsv-production-product-icon-slider .owl-buttons div
@@ -14962,8 +14905,6 @@ button.btn:hover
 
     -webkit-transform: rotate(270deg);
     -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(270deg);
-        -ms-transform: rotate(-90deg);
             transform: rotate(270deg);
             transform: rotate(-90deg);
 
@@ -14980,7 +14921,6 @@ button.btn:hover
     left: -50px;
 
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 }
 #lsv-production-product-icon-slider .owl-next
@@ -14992,24 +14932,19 @@ button.btn:hover
 #lsv-production-product-icon-slider .owl-carousel .owl-item
 {
     -webkit-transform: none;
-        -ms-transform: none;
             transform: none;
 }
 #lsv-production-product-icon-slider .owl-item
 {
     -webkit-transform: scale(.7);
-        -ms-transform: scale(.7);
             transform: scale(.7);
 }
 #lsv-production-product-icon-slider .scaleCircle
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
             transform: scale(1);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 }
 #left-block-option
@@ -15085,36 +15020,31 @@ button.btn:hover
     height: 50px;
 
     cursor: pointer;
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     border-radius: 50%;
 }
 .block-seasons-option:nth-child(3):hover .svg-option path
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
 .block-seasons-option:nth-child(4):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
 .block-seasons-option:nth-child(5):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
 .block-seasons-option:nth-child(6):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
@@ -15140,22 +15070,19 @@ button.btn:hover
 }
 .block-leaves-option:nth-child(3):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
 .block-leaves-option:nth-child(4):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
 .block-leaves-option:nth-child(5):hover .svg-option
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     fill: white;
 }
@@ -15170,6 +15097,83 @@ button.btn:hover
     stroke: white;
 }
 .block-leaves-option:nth-child(5):hover .circle-svg
+{
+    fill: #8de546;
+    stroke: white;
+}
+.block-seasons-option:nth-child(3).active .svg-option path
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-seasons-option:nth-child(4).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-seasons-option:nth-child(5).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-seasons-option:nth-child(6).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-seasons-option:nth-child(3).active .circle-svg
+{
+    fill: #46a4bb;
+    stroke: white;
+}
+.block-seasons-option:nth-child(4).active .circle-svg
+{
+    fill: #ec5439;
+    stroke: white;
+}
+.block-seasons-option:nth-child(5).active .circle-svg
+{
+    fill: #fdcc38;
+    stroke: white;
+}
+.block-seasons-option:nth-child(6).active .circle-svg
+{
+    fill: #33799e;
+    stroke: white;
+}
+.block-leaves-option:nth-child(3).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-leaves-option:nth-child(4).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-leaves-option:nth-child(5).active .svg-option
+{
+    transition: .3s;
+
+    fill: white;
+}
+.block-leaves-option:nth-child(3).active .circle-svg
+{
+    fill: #379d19;
+    stroke: white;
+}
+.block-leaves-option:nth-child(4).active .circle-svg
+{
+    fill: #6cc053;
+    stroke: white;
+}
+.block-leaves-option:nth-child(5).active .circle-svg
 {
     fill: #8de546;
     stroke: white;
@@ -15261,8 +15265,7 @@ button.btn:hover
 .block-seasons-option img
 {
     cursor: pointer;
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     border-radius: 50%;
 }
@@ -15272,50 +15275,43 @@ button.btn:hover
 }
 .winter-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #bbb2d7;
 }
 .summer-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #8879b4;
 }
 .spring-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #9b8ec2;
 }
 .autumn-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #4e3b86;
 }
 .maryannik-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #e9f9fe;
 }
 .molochai-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #fee9e9;
 }
 .reven-color
 {
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease;
+    transition: all .5s ease;
 
     fill: #fefbe9;
 }
@@ -15382,16 +15378,14 @@ button.btn:hover
     padding-top: 18px;
 
     cursor: pointer;
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
     text-align: center;
 
     color: white;
 }
 #block-button-anim div:hover
 {
-    -webkit-transition: .3s;
-            transition: .3s;
+    transition: .3s;
 
     background: #61bb46;
 }
@@ -15530,8 +15524,7 @@ button.btn:hover
     height: 45px;
 
     content: '';
-    -webkit-transition: all 300ms cubic-bezier(.215, .61, .355, 1);
-            transition: all 300ms cubic-bezier(.215, .61, .355, 1);
+    transition: all 300ms cubic-bezier(.215, .61, .355, 1);
 
     background-image: url(../img/svg/slider-arrow-circle.svg);
     background-repeat: no-repeat;
@@ -15547,7 +15540,6 @@ button.btn:hover
 .lsv-contacts__department.active:after
 {
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
             transform: rotate(90deg);
 }
 @media screen and (max-width: 420px)
@@ -15568,7 +15560,7 @@ button.btn:hover
 {
     top: initial;
     right: 0;
-    bottom: 0;
+    bottom: -30px;
     left: 0;
 
     width: 180px;
@@ -15579,6 +15571,13 @@ button.btn:hover
 #lsv-dairy-products__next-animation.active label
 {
     top: 0;
+}
+@media screen and (max-width: 768px)
+{
+    #lsv-dairy-products__next-animation
+    {
+        bottom: 0;
+    }
 }
 .lsv-dairy-products__list-item:nth-child(18)
 {
@@ -15595,7 +15594,6 @@ button.btn:hover
     margin: 10px;
 
     -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
 @media screen and (max-width: 768px)
@@ -15607,7 +15605,7 @@ button.btn:hover
 }
 .lsv-pluses__header
 {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 @media screen and (max-width: 992px)
 {
