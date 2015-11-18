@@ -672,6 +672,7 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8YjHkR4XsejcreSGUMuFICNRkq2eqJSA" type="text/javascript"></script>
         
         <script type="text/javascript">
+        $(document).ready(function() {
         var lsvInitMapAndFilters = function(){
           var map;
           var active_marker, temp_icon;
@@ -900,21 +901,41 @@
             'css3': true,
             'easing': 'easeOutElastic',
             'fitToSection': false,
-            'fixedElements': '.lsv-nav , .lsv-menu',
+            'fixedElements': '.lsv-nav , .lsv-menu, #lsv-shops__map, .lsv-shops__map-info',
             'scrollOverflow': true,
+            // 'normalScrollElements': "#lsv-shops__map",
+            // 'normalScrollElementTouchThreshold': 10,
             afterRender: function(){
-              $.fn.fullpage.setAllowScrolling(false);
               lsvInitMapAndFilters();
+              $.fn.fullpage.setAllowScrolling(false);
+              // if (window.innerWidth <= 1024){
+              //   $.fn.fullpage.destroy();
+              // }
             },
-            onLeave: function (index, nextIndex, direction){
-              if (nextIndex == 1) {
+            afterLoad: function (link, index){
+              if (index == 1) {
                 $.fn.fullpage.setAllowScrolling(false);
+                // $("#lsv-shops__map, .lsv-shops__map-info").show();
               }
-              else{
-                $.fn.fullpage.setAllowScrolling(true);
-              }
+              // else{
+              //   $("#lsv-shops__map, .lsv-shops__map-info").hide();
+              // }
+            },
+            onLeave: function (index,nextIndex,direction){
+              if (nextIndex == 1){
+                $("#lsv-shops__map, .lsv-shops__map-info").show();
+              };
+              if (index == 1){
+                $("#lsv-shops__map, .lsv-shops__map-info").hide();
+              };
             }
           });
+        $("#lsv-shop__down-btn,#lsv-shop__skip-map-btn").click(function(){
+          $.fn.fullpage.setAllowScrolling(true);
+          $.fn.fullpage.moveSectionDown();
+        });
+
+        });
         </script>
     </body>
 
