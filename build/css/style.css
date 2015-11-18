@@ -13849,6 +13849,7 @@ label.lsv-btn__input-file
 #lsv-shops__map
 {
     position: fixed!important;
+    z-index: 2000;
     top: 122px;
 
     width: 50%;
@@ -13903,6 +13904,7 @@ label.lsv-btn__input-file
 .lsv-shops__map-info
 {
     position: fixed;
+    z-index: 2001;
     bottom: 0;
 
     display: -webkit-box;

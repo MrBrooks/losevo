@@ -220,10 +220,6 @@ $(document).ready(function() {
     filter_value_month = $(this).val();
     lsvDataFilter();
   });
-
-  $("#lsv-shop__down-btn").click(function(){
-    $.fn.fullpage.moveSectionDown();
-  });
   // if(window.innerWidth <= 1024){
   //   $.fn.fullpage.destroy();
   // }
