@@ -1010,6 +1010,7 @@
             var textLeaves = ['Корм, которым питались коровы придаёт молоку еле-заметный оттенок'];
 
             $(".block-seasons-option:nth-child(3)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 berry.removeClass("st2");  
                 for (var i = 0; i <= arrYear.length; i++) {
                   berry.removeClass(""+arrYear[i]+"");  
@@ -1018,7 +1019,8 @@
                $("#season-text-option").text(textYear[0]);
             });
 
-            $(".block-seasons-option:nth-child(4)").click(function () {
+            $(".block-seasons-option:nth-child(5)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 berry.removeClass("st2");  
                 for (var i = 0; i <= arrYear.length; i++) {
                   berry.removeClass(""+arrYear[i]+"");  
@@ -1027,7 +1029,8 @@
                 $("#season-text-option").text(textYear[0]);    
             });
 
-            $(".block-seasons-option:nth-child(5)").click(function () {
+            $(".block-seasons-option:nth-child(4)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 berry.removeClass("st2");   
                 for (var i = 0; i <= arrYear.length; i++) {
                   berry.removeClass(""+arrYear[i]+"");  
@@ -1037,6 +1040,7 @@
             });
 
             $(".block-seasons-option:nth-child(6)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 berry.removeClass("st2");  
                 for (var i = 0; i <= arrYear.length; i++) {
                   berry.removeClass(""+arrYear[i]+"");  
@@ -1048,6 +1052,7 @@
             var s = Snap("#svg-text-right-block-svg");
 
             $(".block-leaves-option:nth-child(3)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 leaves.removeClass("st0");  
                 for (var i = 0; i <= arrLeaves.length; i++) {
                   leaves.removeClass(""+arrLeaves[i]+"");  
@@ -1057,6 +1062,7 @@
             });
 
             $(".block-leaves-option:nth-child(4)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 leaves.removeClass("st0");   
                 for (var i = 0; i <= arrLeaves.length; i++) {
                   leaves.removeClass(""+arrLeaves[i]+"");  
@@ -1066,6 +1072,7 @@
             });
 
             $(".block-leaves-option:nth-child(5)").click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
                 leaves.removeClass("st0");  
                 for (var i = 0; i <= arrLeaves.length; i++) {
                   leaves.removeClass(""+arrLeaves[i]+"");  

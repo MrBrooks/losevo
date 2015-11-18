@@ -143,7 +143,7 @@ main{
   resize: vertical;
  }
 .lsv-nav{
-  z-index: 2002;
+  z-index: 2003;
   background-color: @lsv_menu_color;
   height: @lsv_menu_height;
 }
@@ -952,7 +952,7 @@ main{
   }
 }
 #lsv-history__start{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2004.jpg);
   &.fullslide_img_text>h1{
     @media screen and(max-width:420px){
       left: 0;
@@ -966,25 +966,25 @@ main{
   }
 }
 #lsv-history__2004{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2005{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2008{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2008.jpg);
 }
 #lsv-history__2012{
-  background-image: url(http://placehold.it/1600x800);
+  background-image: url(../img/images/2012.jpg);
 }
 #lsv-history__2013{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2013.jpg);
 }
 #lsv-history__2014{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2014.jpg);
 }
 #lsv-history__2015{
-  background-image: url(http://placehold.it/600x700);
+  background-image: url(../img/images/2015.jpg);
 }
 .lsv-history__discription{
   position: absolute;
@@ -1456,10 +1456,16 @@ label.lsv-btn__input-file{
   }
 }
 
-#lsv-team__img-start, #lsv-team__img-owner-1, #lsv-team__img-owner-2 {
-  background-image: url(http://placehold.it/1000x1000);
-
+#lsv-team__img-start{
+  background-image: url(../img/images/team_start.jpg);
 }
+#lsv-team__img-owner-1{
+  background-image: url(../img/images/beglov.jpg);
+}
+#lsv-team__img-owner-2 {
+  background-image: url(../img/images/mauer.jpg);
+}
+
 #lsv-team__img-start{
   @media screen and (max-width: 768px){
     width: 100%;
@@ -1557,7 +1563,7 @@ label.lsv-btn__input-file{
   margin: auto;
   width: 140px;
   height: 140px;
-  background-image: url(http://placehold.it/140x140/005050/FFF);
+  background-image: url(../img/images/3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -1583,7 +1589,7 @@ label.lsv-btn__input-file{
   padding-top: @lsv_menu_height;
   width: 100%;
   height: 100%;
-  background-image: url(http://placehold.it/1920x1000);
+  background-image: url(../img/images/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1945,7 +1951,7 @@ input[type='reset']:focus {
   padding-top: @lsv_menu_height;
   width: 100%;
   height: 100%;
-  background-image: url(http://placehold.it/1920x1000);
+  background-image: url(../img/images/milk.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1954,6 +1960,16 @@ input[type='reset']:focus {
     top: 50%;
     left: @lsv_menu_height*2;
     width: 30%;
+    color: white;
+  }
+  &.cheese{
+    background-image: url(../img/images/cheese.jpg);
+  }
+  &.cooking{
+    background-image: url(../img/images/cooking.jpg);
+  }
+  &.cheese{
+    background-image: url(../img/images/cheese.jpg);
   }
 }
 .lsv-dairy-products{
@@ -2084,10 +2100,10 @@ input[type='reset']:focus {
 }
 .animation-container{
   width: 50%;
-  height: 80%;
+  height: 72%;
   position: absolute;
   left: 25%;
-  top: 10%;
+  top: 15%;
   @media screen and (max-width: 768px){
 
   }
@@ -2619,6 +2635,78 @@ button.btn{
    stroke: white;  
 }
 
+//active
+.block-seasons-option:nth-child(3).active .svg-option path{
+  transition: 0.3s;
+  fill: white;    
+}
+
+
+.block-seasons-option:nth-child(4).active .svg-option{
+  transition: 0.3s;
+  fill: white;    
+}
+
+.block-seasons-option:nth-child(5).active .svg-option{
+  transition: 0.3s;
+  fill: white;   
+}
+
+.block-seasons-option:nth-child(6).active .svg-option{
+  transition: 0.3s;
+  fill: white;
+}
+
+.block-seasons-option:nth-child(3).active .circle-svg{
+  fill: #46a4bb;
+  stroke: white;  
+}
+
+.block-seasons-option:nth-child(4).active .circle-svg{
+  fill: #ec5439;
+  stroke: white;  
+}
+
+.block-seasons-option:nth-child(5).active .circle-svg{
+  fill: #fdcc38;
+  stroke: white;  
+}
+
+.block-seasons-option:nth-child(6).active .circle-svg{
+  fill: #33799e;
+  stroke: white;  
+}
+
+.block-leaves-option:nth-child(3).active .svg-option{
+  transition: 0.3s;
+  fill: white;   
+}
+
+.block-leaves-option:nth-child(4).active .svg-option{
+  transition: 0.3s;
+  fill: white;    
+}
+
+.block-leaves-option:nth-child(5).active .svg-option{
+  transition: 0.3s;
+  fill: white;   
+}
+
+.block-leaves-option:nth-child(3).active .circle-svg{
+  fill: #379d19;
+   stroke: white;  
+}
+
+.block-leaves-option:nth-child(4).active .circle-svg{
+  fill: #6cc053;
+   stroke: white;  
+}
+
+.block-leaves-option:nth-child(5).active .circle-svg{
+  fill: #8de546;
+   stroke: white;  
+}
+
 .block-leaves-option {
   display: inline-block;
   padding: 10px;
@@ -2927,7 +3015,7 @@ button.btn{
 }
 #lsv-dairy-products__next-animation {
     top: initial;
-    bottom: 0;
+    bottom: -30px;
     left: 0;
     right: 0;
     margin: auto;
@@ -2937,6 +3025,9 @@ button.btn{
       label{
         top: 0;
       }
+    }
+    @media screen and (max-width: 768px){
+      bottom: 0;
     }
 }
 .lsv-dairy-products__list-item:nth-child(18){
@@ -2956,7 +3047,7 @@ button.btn{
   }
 }
 .lsv-pluses__header{
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   @media screen and (max-width: 992px){
     margin: 100px 0;
   }

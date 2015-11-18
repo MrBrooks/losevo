@@ -143,7 +143,10 @@ gulp.task('less', function() {
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
         .on('error', lessReporter)
-        .pipe(autoprefixer('> 2%'))
+        .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
+        }))
         .pipe(csscomb())
         .pipe(gulp.dest(projectPath.build.css))
         .pipe(rename({ suffix: '.min' }))
