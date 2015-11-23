@@ -15,7 +15,7 @@
         This will be replaced by the content of html-blocks/pages--external/header--external.html
         <!-- /build -->
 
-        <main id='lsv-slides'>
+        <main id='lsv-slides' class="lsv-vacancies">
           <div class="section lsv-slide-bgc" data-anchor="menu">
             <!-- build:include html-blocks/pages--external/vacancies-menu-block.html -->
             This will be replaced by the content of html-blocks/pages--external/vacancies-menu-block.html
@@ -98,24 +98,26 @@
           if(window.innerWidth <= 480){
             $.fn.fullpage.destroy();
           }
-          $(":file").filestyle({});
-          if(window.innerWidth <= 480 && window.innerWidth > 320){
-            $.fn.fullpage.destroy();
-            $(".section:first-child").hide();
-            $(".section").height(600);
-            $(".lsv-vacancies__response-btn").hide();
-            $(".section[data-anchor='form']").hide();
-            $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
-              "padding-top", (window.innerHeight/2+150)+"px");
+          else{
+            $(":file").filestyle({});
           }
+          // if(window.innerWidth <= 480 && window.innerWidth > 320){
+          //   $.fn.fullpage.destroy();
+          //   $(".section:first-child").hide();
+          //   $(".section").height(600);
+          //   $(".lsv-vacancies__response-btn").hide();
+          //   $(".section[data-anchor='form']").hide();
+          //   $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
+          //     "padding-top", (window.innerHeight/2+150)+"px");
+          // }
 
-          if(window.innerWidth <= 320){
-            $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
-              "padding-top", (window.innerHeight/2+200)+"px");
-          }
-          $(".lsv-vacancies__vacancy-item>.col-md-6").addClass("col-sm-6");
-          $(".lsv-vacancies__form .col-md-6").addClass("col-sm-6");
-          $(".col-md-6.col-md-offset-6.lsv-vacansies__career-description").addClass("col-sm-6 col-sm-offset-6");
+          // if(window.innerWidth <= 320){
+          //   $("#owl-vacancy-career-slider .lsv-vacansies__career-description").css(
+          //     "padding-top", (window.innerHeight/2+200)+"px");
+          // }
+          // $(".lsv-vacancies__vacancy-item>.col-md-6").addClass("col-sm-6");
+          // $(".lsv-vacancies__form .col-md-6").addClass("col-sm-6");
+          // $(".col-md-6.col-md-offset-6.lsv-vacansies__career-description").addClass("col-sm-6 col-sm-offset-6");
           // $(window).on("tap mousewheel", function(){
           //   alert("HoHOHo!!");
           // });

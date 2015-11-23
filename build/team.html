@@ -292,7 +292,7 @@
       <div id="lsv-menu-container" class="container">
         <ul class="lsv-menu__list row">
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>О компании</label>
+            <!-- <label>О компании</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="history.html">История</a>
@@ -312,15 +312,15 @@
             </ul>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>Производство</label>
+            <!-- <label>Производство</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="production.html">Ферма и завод</a>
+                <a class="lsv-menu__sublink" href="production.html">Производство</a>
               </li>
             </ul>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>Продукция</label>
+            <!-- <label>Продукция</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="products.html">Наши продукты</a>
@@ -328,7 +328,7 @@
             </ul>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>Где купить</label>
+            <!-- <label>Где купить</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="shops.html">Магазины</a>
@@ -339,7 +339,7 @@
             </ul>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>Новости</label>
+            <!-- <label>Новости</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="news.html">Новости</a>
@@ -353,7 +353,7 @@
             </ul>
           </li>
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
-            <label>Контакты</label>
+            <!-- <label>Контакты</label> -->
             <ul class="lsv-menu__sublist">
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="contacts.html">Связаться с нами</a>
@@ -370,7 +370,7 @@
         <a href="team.html"><li>Наши сотрудники</li></a>
         <a href="vacancies.html"><li>Наши вакансии</li></a>
         <a href="faq.html"><li>F.A.Q.</li></a>
-        <a href="production.html"><li>Ферма и завод</li></a>
+        <a href="production.html"><li>Производство</li></a>
         <a href="products.html"><li>Продукция</li></a>
         <a href="shops.html"><li>Магазины</li></a>
         <a href="#"><li>Интернет-магазин</li></a>
@@ -669,7 +669,7 @@
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
      <a href="vacancies.html" class="lsv-menu__sublink">Наши вакансии</a></li>
      <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
-     <a href="production.html" class="lsv-menu__sublink">Ферма</a></li>
+     <a href="production.html" class="lsv-menu__sublink">Производство></li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
       <a href="products.html"  class="lsv-menu__sublink">Наши продукты</a></li>
     <li class="lsv-menu__sublist-item lsv-menu__sublist-item--footer">
@@ -696,6 +696,7 @@
   </div>
 </div>
 <div class="text-center lsv-social lsv-social--footer">
+      <span>#вместеслосево</span>
       <a href='#' class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
@@ -720,6 +721,10 @@
   </p>
 </div>
           </div>
+          <div class="lsv-slides-controls">
+            <div id="lsv-slide-up"></div>
+            <div id="lsv-slide-down"></div>
+          </div>
         </main>
 
         
@@ -733,8 +738,16 @@
             'css3': true,
             'easing': 'easeOutElastic',
             'fitToSection': false,
-            'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': false
+            'fixedElements': '.lsv-nav , .lsv-menu, .lsv-slides-controls',
+            'scrollOverflow': false,
+            afterLoad: function(t,index){
+              if(index == 1 || index == $(".section").length){
+                $("#lsv-slide-up,#lsv-slide-down").removeClass("active");
+              }
+              else{
+                $("#lsv-slide-up,#lsv-slide-down").addClass("active");
+              }
+            }
           });
           $(document).ready(function() {
             $(":file").filestyle({
@@ -762,6 +775,12 @@
               top : (window.innerHeight/2) + "px"
             });
           }
+          $("#lsv-slide-up").click(function (){
+              $.fn.fullpage.moveSectionUp();
+          });
+          $("#lsv-slide-down").click(function (){
+              $.fn.fullpage.moveSectionDown();
+          });
         });
         </script>
 

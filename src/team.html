@@ -51,6 +51,10 @@
             This will be replaced by the content of html-blocks/pages--external/footer.html
             <!-- /build -->
           </div>
+          <div class="lsv-slides-controls">
+            <div id="lsv-slide-up"></div>
+            <div id="lsv-slide-down"></div>
+          </div>
         </main>
 
         <!-- build:include html-blocks/pages--external/footer--external.html -->
@@ -62,8 +66,16 @@
             'css3': true,
             'easing': 'easeOutElastic',
             'fitToSection': false,
-            'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': false
+            'fixedElements': '.lsv-nav , .lsv-menu, .lsv-slides-controls',
+            'scrollOverflow': false,
+            afterLoad: function(t,index){
+              if(index == 1 || index == $(".section").length){
+                $("#lsv-slide-up,#lsv-slide-down").removeClass("active");
+              }
+              else{
+                $("#lsv-slide-up,#lsv-slide-down").addClass("active");
+              }
+            }
           });
           $(document).ready(function() {
             $(":file").filestyle({
@@ -91,6 +103,12 @@
               top : (window.innerHeight/2) + "px"
             });
           }
+          $("#lsv-slide-up").click(function (){
+              $.fn.fullpage.moveSectionUp();
+          });
+          $("#lsv-slide-down").click(function (){
+              $.fn.fullpage.moveSectionDown();
+          });
         });
         </script>
 

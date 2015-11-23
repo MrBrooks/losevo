@@ -11479,6 +11479,11 @@ textarea:active
     border: 1px solid #61bb46;
     outline-width: 0;
 }
+hr
+{
+    color: #515151;
+    border-top: 1px solid #515151;
+}
 .mobile_scroll_wrap.active
 {
     overflow: hidden;
@@ -11882,7 +11887,7 @@ textarea
     top: -168px;
 
     width: 100%;
-    height: 215px;
+    height: 165px;
 
     transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
@@ -11922,8 +11927,8 @@ textarea
 {
     display: inline-block;
 
-    height: 215px;
-    padding-top: 22px;
+    height: 165px;
+    padding-top: 0;
     padding-right: 0;
 
     border-right: 1px solid #56ad3c;
@@ -11951,6 +11956,11 @@ textarea
 .lsv-menu__sublink
 {
     color: white;
+}
+.lsv-menu__link:hover,
+.lsv-menu__sublink:hover
+{
+    text-decoration: underline;
 }
 #lsv-main__video iframe
 {
@@ -12143,6 +12153,10 @@ textarea
 .lsv-social--footer a
 {
     margin: 0 -3px;
+}
+.lsv-social--footer span
+{
+    display: block;
 }
 @media screen and (min-width: 992px)
 {
@@ -12755,7 +12769,7 @@ textarea
 }
 #lsv-history__2012
 {
-    background-image: url(../img/images/2012.jpg);
+    background-image: url(../img/images/IMG_6678.JPG);
 }
 #lsv-history__2013
 {
@@ -13082,6 +13096,13 @@ textarea
 {
     margin: 0 42px 27px 0;
 }
+@media screen and (max-width: 480px)
+{
+    .lsv-vacancies__response-btn
+    {
+        display: none;
+    }
+}
 .lsv-vacancies__office-header
 {
     position: absolute;
@@ -13124,14 +13145,7 @@ textarea
         margin-bottom: 0;
     }
 }
-@media screen and (max-width: 420px)
-{
-    .lsv-vacancies__vacancy-item div.col-md-6
-    {
-        padding: 0 40px;
-    }
-}
-@media screen and (min-width: 420px) and (max-width: 768px)
+@media screen and (max-width: 992px)
 {
     .lsv-vacancies__vacancy-item div.col-md-6
     {
@@ -13140,22 +13154,9 @@ textarea
 }
 @media screen and (max-width: 420px)
 {
-    #owl-vacancy-office-slider,
-    #owl-vacancy-shops-slider,
-    #owl-vacancy-ferm-slider,
-    #owl-vacancy-production-slider
+    .lsv-vacancies__vacancy-item div.col-md-6
     {
-        margin-top: 160px;
-    }
-}
-@media screen and (min-width: 420px) and (max-width: 768px)
-{
-    #owl-vacancy-office-slider,
-    #owl-vacancy-shops-slider,
-    #owl-vacancy-ferm-slider,
-    #owl-vacancy-production-slider
-    {
-        margin-top: 80px;
+        padding: 0 40px;
     }
 }
 #owl-vacancy-office-slider .owl-pagination,
@@ -13252,6 +13253,33 @@ textarea
     right: 0;
 
     background-image: url('../img/svg/slider-arrow-right.svg');
+}
+@media screen and (min-width: 480px) and (max-width: 768px)
+{
+    #owl-vacancy-office-slider,
+    #owl-vacancy-shops-slider,
+    #owl-vacancy-ferm-slider,
+    #owl-vacancy-production-slider
+    {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    #owl-vacancy-office-slider,
+    #owl-vacancy-shops-slider,
+    #owl-vacancy-ferm-slider,
+    #owl-vacancy-production-slider
+    {
+        margin-top: 160px;
+    }
+    #owl-vacancy-office-slider .owl-pagination,
+    #owl-vacancy-shops-slider .owl-pagination,
+    #owl-vacancy-ferm-slider .owl-pagination,
+    #owl-vacancy-production-slider .owl-pagination
+    {
+        margin-top: 60px;
+    }
 }
 .lsv-vacancies__form .form-group
 {
@@ -13352,7 +13380,7 @@ label.lsv-btn__input-file
 {
     font-size: 18px;
 }
-@media screen and (min-width: 480px) and (max-width: 880px)
+@media screen and (max-width: 880px)
 {
     .lsv-form__btn-submit--vacancy
     {
@@ -13476,7 +13504,7 @@ label.lsv-btn__input-file
 {
     opacity: .7;
 }
-@media screen and (max-width: 420px)
+@media screen and (max-width: 480px)
 {
     .lsv-return-btn
     {
@@ -14475,7 +14503,7 @@ input[type='reset']:focus
 {
     .lsv-dairy-products__product-title
     {
-        top: 124px;
+        top: 109px;
 
         padding: 0 20px;
     }
@@ -14585,6 +14613,14 @@ input[type='reset']:focus
     {
         width: 100%;
         padding-top: 320px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    #owl-vacancy-career-slider .lsv-vacansies__career-description
+    {
+        width: 100%;
+        padding-top: 150%;
     }
 }
 .lsv-mobile-menu
@@ -14791,10 +14827,6 @@ button.btn:hover
 .products__approved-anim-block .lsv-h3
 {
     font-size: 24px;
-}
-.products__approved-text-block
-{
-    padding-top: 700px;
 }
 .manufacturers,
 .customers
@@ -15525,6 +15557,8 @@ button.btn:hover
 
     content: '';
     transition: all 300ms cubic-bezier(.215, .61, .355, 1);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
 
     background-image: url(../img/svg/slider-arrow-circle.svg);
     background-repeat: no-repeat;
@@ -15640,4 +15674,55 @@ button.btn:hover
     margin-top: 50px;
 
     text-transform: uppercase;
+}
+.lsv-slides-controls div
+{
+    position: fixed;
+    z-index: 2004;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+    transition: all 200ms linear;
+
+    opacity: 0;
+    background-image: url(../img/svg/slider-arrow-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lsv-slides-controls div.active
+{
+    opacity: 1;
+}
+#lsv-slide-up
+{
+    top: 82px;
+
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+#lsv-slide-down
+{
+    bottom: 20px;
+
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-vacancies .section:first-child
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .lsv-vacancies__form .lsv-btn__input-file,
+    .lsv-vacancies__form .help-block,
+    .lsv-vacancies__form .bootstrap-filestyle
+    {
+        display: none;
+    }
 }
