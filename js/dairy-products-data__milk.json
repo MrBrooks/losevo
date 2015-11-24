@@ -566,15 +566,15 @@
         "title": "Молоко 2.5%",
         "icon": "img/svg/products_icons/moloko_25.svg",
         "startImg":"img/svg/animations/milk/milk_25.svg",
-        "goodies" : "1",
-        "info": "2"
+        "goodies" : "3",
+        "info": "4"
       },
       {
         "title": "Молоко 3.5%",
         "icon": "img/svg/products_icons/moloko_35.svg",
         "startImg":"img/svg/animations/milk/milk_35.svg",
-        "goodies" : "1",
-        "info": "2"
+        "goodies" : "5",
+        "info": "6"
       }
       ],
       "steps" : [
