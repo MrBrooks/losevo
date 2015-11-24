@@ -305,7 +305,6 @@ mc.on("pinchin", function(ev) {
         $("#ferm").css({"transform": "scale("+ scaleStep+")"});
         $("#ferm").css({"left": "0px", "top": "0px"});
   }
-  
 });
 
 mc.on("panleft", function(ev) {
