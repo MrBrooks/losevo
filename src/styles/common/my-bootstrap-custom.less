@@ -2098,6 +2098,7 @@ input[type='reset']:focus {
   }
   &.active{
     left: 0;
+    z-index: 1035;
   }
   #lsv-dairy-products__menu-close-btn{
     // left: -280px;
@@ -2208,9 +2209,10 @@ input[type='reset']:focus {
   margin-right: 30px;
   background: white;
   border-radius: 20px;
-  z-index: 1030;
+  z-index: 1033;
   padding: 30px 25px;
   opacity: 0;
+  display: none;
   transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
   img{
     position: absolute;
@@ -2220,6 +2222,7 @@ input[type='reset']:focus {
   }
   &.active{
     opacity: 1;
+    display: block;
   }
   @media screen and (max-width: 768px){
     width: 50%;
@@ -3146,5 +3149,49 @@ button.btn{
     @media screen and (max-width: 480px){
       display: none;
     }
+  }
+}
+#lsv-production__product-case-slider{
+  position: absolute;
+  top: @lsv_menu_height*2+20px;
+  z-index: 1031;
+  img{
+    max-height: 400px;
+  }
+  .owl-buttons{
+    // position: absolute;
+    top: 0;
+    // height: 100%;
+    // width: 100%;
+    div{
+      margin: 0;
+      height: 100%;
+      color: transparent;
+      background-color: transparent;
+      background-position:center;
+      background-repeat: no-repeat;
+      opacity: 1;
+      background-image: url('../img/svg/slider-arrow-circle-inverse.svg');
+      position: absolute;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+    .owl-prev{
+      left: 0;
+      top: 0;
+    }
+    .owl-next{
+      top: 0;
+      right: 0;
+      transform-origin: 50% 50%;
+      transform: rotate(180deg);
+    }
+  }
+  .owl-controls .owl-page span{
+    background-color: white;
+  }
+  .owl-controls{
+    margin: 0;
   }
 }

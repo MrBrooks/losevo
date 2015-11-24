@@ -14382,6 +14382,7 @@ input[type='reset']:focus
 }
 .lsv-dairy-products__menu.active
 {
+    z-index: 1035;
     left: 0;
 }
 .lsv-dairy-products__menu #lsv-dairy-products__menu-close-btn
@@ -14511,9 +14512,11 @@ input[type='reset']:focus
 .lsv-dairy-products__tooltip
 {
     position: absolute;
-    z-index: 1030;
+    z-index: 1033;
     top: 152px;
     right: 0;
+
+    display: none;
 
     width: 30%;
     height: 60%;
@@ -14535,6 +14538,8 @@ input[type='reset']:focus
 }
 .lsv-dairy-products__tooltip.active
 {
+    display: block;
+
     opacity: 1;
 }
 @media screen and (max-width: 768px)
@@ -15725,4 +15730,59 @@ button.btn:hover
     {
         display: none;
     }
+}
+#lsv-production__product-case-slider
+{
+    position: absolute;
+    z-index: 1031;
+    top: 144px;
+}
+#lsv-production__product-case-slider img
+{
+    max-height: 400px;
+}
+#lsv-production__product-case-slider .owl-buttons
+{
+    top: 0;
+}
+#lsv-production__product-case-slider .owl-buttons div
+{
+    position: absolute;
+
+    height: 100%;
+    margin: 0;
+
+    opacity: 1;
+    color: transparent;
+    background-color: transparent;
+    background-image: url('../img/svg/slider-arrow-circle-inverse.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#lsv-production__product-case-slider .owl-buttons div:hover
+{
+    opacity: .7;
+}
+#lsv-production__product-case-slider .owl-buttons .owl-prev
+{
+    top: 0;
+    left: 0;
+}
+#lsv-production__product-case-slider .owl-buttons .owl-next
+{
+    top: 0;
+    right: 0;
+
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+#lsv-production__product-case-slider .owl-controls .owl-page span
+{
+    background-color: white;
+}
+#lsv-production__product-case-slider .owl-controls
+{
+    margin: 0;
 }
