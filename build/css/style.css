@@ -14757,6 +14757,15 @@ button.btn:hover
     width: 150px;
     margin: auto;
 }
+.products__approved-anim-block .lsv-dairy-products__prev-animation
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    width: 150px;
+    margin: auto;
+}
 .products__approved-anim-block .animation-container
 {
     position: absolute;
@@ -15785,4 +15794,48 @@ button.btn:hover
 #lsv-production__product-case-slider .owl-controls
 {
     margin: 0;
+}
+.lsv-dairy-products__prev-animation
+{
+    position: absolute;
+    z-index: 1000;
+    top: 62px;
+
+    margin-top: 8px;
+    margin-left: 15px;
+
+    cursor: pointer;
+}
+.lsv-dairy-products__prev-animation label
+{
+    font-weight: 400;
+
+    position: relative;
+    top: 12px;
+    left: 5px;
+
+    cursor: pointer;
+    text-decoration: underline;
+    text-transform: none;
+
+    color: white;
+}
+.lsv-dairy-products__prev-animation
+{
+    top: initial;
+    bottom: 0;
+    left: 33%;
+}
+.lsv-dairy-products__prev-animation img
+{
+    margin-left: -70px;
+
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.lsv-dairy-products_prev-animation__button-position
+{
+    left: 50%;
 }

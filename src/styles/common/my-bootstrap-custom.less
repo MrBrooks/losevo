@@ -2376,6 +2376,13 @@ button.btn{
     margin: auto;
     width: 150px;
   }
+  .lsv-dairy-products__prev-animation{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+  }
   .animation-container{
     position: absolute;
     right: 0;
@@ -3194,4 +3201,37 @@ button.btn{
   .owl-controls{
     margin: 0;
   }
+}
+
+.lsv-dairy-products__prev-animation{
+  position: absolute;
+  top: @lsv_menu_height;
+  margin-left: 15px;
+  margin-top: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  label{
+    text-transform: none;
+    text-decoration: underline;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    top: 12px;
+    left: 5px;
+    cursor: pointer;
+  }
+}
+.lsv-dairy-products__prev-animation{
+  bottom: 0;
+  top: initial;
+  left: 33%;
+  img{
+    transform-origin:50% 50%;
+    transform:rotate(180deg);
+    margin-left: -70px;
+  }
+}
+
+.lsv-dairy-products_prev-animation__button-position{
+  left:50%;
 }

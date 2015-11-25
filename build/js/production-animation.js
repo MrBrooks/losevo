@@ -23,6 +23,7 @@ $(document).ready(function(){
         });
       }
     });
+    var old_b;
     var animation_data; 
     var current_anim = 0, current_prod = 0;
 
@@ -41,6 +42,7 @@ $(document).ready(function(){
         $(".lsv-dairy-products__list-item").click(function(){
           animation_data = json[$(this).attr("data-item-order")];
           $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
+          $("#lsv-dairy-products__prev-animation").remove();
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
           $("#lsv-dairy-products__next-animation").removeClass("active");
           $(".slimScrollBar").css("opacity", "0");
@@ -124,26 +126,66 @@ $(document).ready(function(){
           if (current_anim < animation_data.steps.length){
             Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
             $("#lsv-dairy-products__next-animation").addClass("active");
+            $("#lsv-dairy-products__next-animation").addClass("lsv-dairy-products_prev-animation__button-position");
+            //console.log(current_anim);
             $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
             $("#lsv-production__description").text(animation_data.steps[current_anim].description);
             if( current_anim == (animation_data.steps.length-1)){
               $("#lsv-dairy-products__next-animation>label").html("В начало");
             }
             else{
-              $("#lsv-dairy-products__next-animation>label").html("Дальше");
+              $("#lsv-dairy-products__next-animation>label").html("");
             }
+            if(current_anim == 0){
+              $(".animation-container").append("<div id='lsv-dairy-products__prev-animation' class='lsv-dairy-products__prev-animation'><img src='img/svg/dairy-products-show-production.svg' /></div>");
+            }
+            $("#lsv-dairy-products__prev-animation").addClass("lsv-dairy-products_prev-animation__button-position");
+            $("#lsv-dairy-products__prev-animation").click(startPrevAnim);
+            old_b = current_anim;
+            console.log("b = " + old_b);
             current_anim++;
+            console.log("new " + current_anim);
           }
           else{
-            Snap.load(animation_data.products[current_prod].startImg, beforeAnimation);
+            BasicLoad();
+            console.log(current_anim);
+            current_anim = 0;
+          }
+          //$("#lsv-dairy-products__prev-animation").click(startPrevAnim);
+      });
+    }
+    function BasicLoad(){
+      Snap.load(animation_data.products[current_prod].startImg, beforeAnimation);
             $("#lsv-production__description-header").text("");
             $("#lsv-production__description").text("");
             $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
             $("#lsv-dairy-products__next-animation").removeClass("active");
+            $("#lsv-dairy-products__prev-animation").remove();
+            $("#lsv-dairy-products__prev-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
+            $("#lsv-dairy-products__next-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
+    }
+    function startPrevAnim(){
+      paper.stop();
+      $("#lsv-dairy-products__tooltip-info").removeClass("active");
+      $("#lsv-dairy-products__tooltip-good").removeClass("active");
 
+          // paper.remove();
+          // paper = canvas.g();
+        paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
+          if(old_b <= 0) {
+            BasicLoad();
+            console.log(current_anim);
             current_anim = 0;
           }
-      });
+          else{
+            old_b--;
+            current_anim--;
+            //console.log(current_anim + " prev_step_b = " + old_b);
+            Snap.load(animation_data.steps[old_b].img, beforeAnimation);
+            $("#lsv-production__description-header").text(animation_data.steps[old_b].header);
+            $("#lsv-production__description").text(animation_data.steps[old_b].description);
+          }
+        });
     }
 
     var emptySvgElement = '<div class="item"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 86 86" style="enable-background:new 0 0 86 86;" xml:space="preserve"></svg></div> ';
