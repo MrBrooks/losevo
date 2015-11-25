@@ -406,8 +406,13 @@ var carHammer = document.getElementById('car'),
 bullHammer = document.getElementById('bull_2'),
 milkHammer = document.getElementById('cow_1'),
 cheeseHammer = document.getElementById('cheese_house_1_'),
-bakeryHammer = document.getElementById('cooking_hover'),
-fermHammer = document.getElementById('ferm');
+bakeryHammer = document.getElementById('bakery'),
+fermHammer = document.getElementById('ferm'),
+milkLinkHammer = document.getElementById('milk_hover--link'),
+cheeseLinkHammer = document.getElementById('cheese_hover--link'),
+cookingLinkHammer = document.getElementById('cooking_hover--link'),
+carLinkHammer = document.getElementById('accept_hover--link'),
+bullLinkHammer = document.getElementById('bulls_hover--link');
 
     var hammerVarNameArr = [car_popup, bull_popup, milk_popup, cheese_popup, bakery_popup];
     var hammerVarNameOut = [carHoverOut, bullHoverOut, milkHoverOut, cheeseHoverOut, bakeryHoverOut];
@@ -439,8 +444,23 @@ fermHammer = document.getElementById('ferm');
         setTimeout( function () {bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic)}, 100);
     });
     Hammer(fermHammer).on("tap", function(event) {
-
         setTimeout( function () {clearPopUpHammer ()}, 50);
+    });
+
+    Hammer(milkLinkHammer).on("tap", function(event) {
+        location.href = 'products__dairy.html';
+    });
+    Hammer(cheeseLinkHammer).on("tap", function(event) {
+        location.href = 'products__cheese.html';
+    });
+    Hammer(cookingLinkHammer).on("tap", function(event) {
+        location.href = 'products__cooking.html';
+    });
+    Hammer(carLinkHammer).on("tap", function(event) {
+        location.href = 'products__approved.html';
+    });
+    Hammer(bullLinkHammer).on("tap", function(event) {
+        location.href = 'products__meat.html';
     });
 
 var scaleStep = 1;
