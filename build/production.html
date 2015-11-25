@@ -193,7 +193,6 @@
         }
       }
 
-
       @-webkit-keyframes move-top10{
         0% {
           -webkit-transform: translateY(0px);
@@ -535,7 +534,8 @@
 
         <main>
           <div class="section">
-            <div class="lsv-ferm nopadding nomargin text-center">
+             <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<div class="lsv-ferm nopadding nomargin text-center">
 <style type="text/css">
 
 </style>
@@ -4062,7 +4062,7 @@
 </svg>
 
  </div>
-   <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+ 
           </div>
           <div class="section lsv-footer fp-auto-height">
             <div class="row nomargin lsv-only-desktop">
@@ -4279,8 +4279,6 @@
                   timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
               });
 
-              
-
               $("#bulls_hover").hover(function(){
                   clearTimeout(timeOutBull);
                   bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
@@ -4322,14 +4320,10 @@
                   opacity: 0
                 });
               }
-               var widthSvg = $("html").width();
-               var heightSvg = screen.height;
 
-              //$("#ferm").css({"width": "1300px"}); //3594 / 2825
-              $("#ferm").css({"height": ""+heightSvg+"px"});
-              //$(".lsv-ferm").css({"width": ""+widthSvg+"px"});
+              var widthSvg = $("html").width();
 
-              //alert(screen.height);
+              $("#ferm").css({"height": window.innerHeight+"px"});
 
               function animateAlongPath(index, displace){
                   Snap.animate(0, paths_length, function(value){
@@ -4341,8 +4335,7 @@
               car_path
               .attr({
                 opacity: 0
-              });
-              
+              });           
 
               animateAlongPath(0, [0,0,180]);
               animateAlongPath(1, [-350,200,0]);
@@ -4355,7 +4348,144 @@
                   animateAlongPath(2, [-600,225,45+180]);
                   animateAlongPath(3, [-525,-75,180]);
                 },5000);
+  
+//осторожно! говнокод. 
+
+var myElement = document.getElementById('ferm');
+var mc = new Hammer.Manager(myElement);
+
+var pinch = new Hammer.Pinch();
+var pan = new Hammer.Pan();
+var tap = new Hammer.Tap();
+
+mc.add([pinch, pan, tap]);
+
+var carHammer = document.getElementById('car'),
+bullHammer = document.getElementById('bull_2'),
+milkHammer = document.getElementById('cow_1'),
+cheeseHammer = document.getElementById('cheese_house_1_'),
+bakeryHammer = document.getElementById('cooking_hover'),
+fermHammer = document.getElementById('ferm');
+
+    var hammerVarNameArr = [car_popup, bull_popup, milk_popup, cheese_popup, bakery_popup];
+    var hammerVarNameOut = [carHoverOut, bullHoverOut, milkHoverOut, cheeseHoverOut, bakeryHoverOut];
+
+    function clearPopUpHammer () {
+          for (var i = 0; i <= 4; i++) {
+            hammerVarNameArr[i].animate({ transform: hammerVarNameOut[i] },500, mina.backin);
+          };
+    }
+
+    Hammer(carHammer).on("tap", function(event) {
+        clearPopUpHammer ();
+        setTimeout( function () {car_popup.animate({ transform: carHoverIn }, 500, mina.elastic)}, 100);
+    });
+    Hammer(bullHammer).on("tap", function(event) {
+        clearPopUpHammer ();
+        setTimeout( function () {bull_popup.animate({ transform: bullHoverIn }, 500, mina.elastic)}, 100);
+    });
+    Hammer(milkHammer).on("tap", function(event) {
+        clearPopUpHammer ();
+        setTimeout( function () {milk_popup.animate({ transform: milkHoverIn }, 500, mina.elastic)}, 100);
+    });
+    Hammer(cheeseHammer).on("tap", function(event) {
+        clearPopUpHammer ();
+        setTimeout( function () {cheese_popup.animate({ transform: cheeseHoverIn }, 500, mina.elastic)}, 100);
+    });
+    Hammer(bakeryHammer).on("tap", function(event) {
+        clearPopUpHammer ();
+        setTimeout( function () {bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic)}, 100);
+    });
+    Hammer(fermHammer).on("tap", function(event) {
+
+        setTimeout( function () {clearPopUpHammer ()}, 50);
+    });
+
+var scaleStep = 1;
+var scrollLeft;
+var scrollTopFerm;
+var stepFerm = 30;
+
+var sizeWindowFerm = {
+  widthFerm: $(window).width(),
+  heightFerm: $(window).height()
+};
+
+var noMoveFerm = true;
+
+mc.on("pinchout", function(ev) {
+  noMoveFerm = false;
+  scrollLeft = ev.center.x / 2;
+  scrollTopFerm = ev.center.y;
+  if (scaleStep >= 1 && scaleStep <= 3) {
+    scaleStep+=0.05;
+    $("#ferm").css({"transform-origin": ""+ ev.center.x +" "+ ev.center.y +"","transform": "scale("+ scaleStep+")"});
+  } else {
+    scaleStep = 3;
+        $("#ferm").css({"transform-origin": ""+ ev.center.x +" "+ ev.center.y +"","transform": "scale("+ scaleStep+")"});
+  }
+});
+mc.on("pinchin", function(ev) {
+  $("#ferm").css({"left": "0px", "top": "0px"});
+  if (scaleStep <= 1) {
+    noMoveFerm = true;
+    scaleStep = 1;
+    $("#ferm").css({"transform": "scale("+ scaleStep+")"});
+    $("#ferm").css({"left": "0px", "top": "0px"});
+  } else {
+    scaleStep -= 0.1;
+        $("#ferm").css({"transform": "scale("+ scaleStep+")"});
+        $("#ferm").css({"left": "0px", "top": "0px"});
+  } 
+});
+
+mc.on("panleft", function(ev) {
+  if (!noMoveFerm) {
+    if (scrollLeft <= -sizeWindowFerm.widthFerm) {
+      scrollLeft = -sizeWindowFerm.widthFerm;
+      $("#ferm").css({"right": ""+scrollLeft+""});
+    } else {
+      scrollLeft -= stepFerm;
+      $("#ferm").css({"left": ""+scrollLeft+""});      
+    }
+  } else {};
+});
+mc.on("panright", function(ev) {
+  if (!noMoveFerm) {
+    if (scrollLeft >= sizeWindowFerm.widthFerm) {
+      scrollLeft = sizeWindowFerm.widthFerm;
+      $("#ferm").css({"left": ""+scrollLeft+""});
+    } else {
+      scrollLeft += stepFerm;
+      $("#ferm").css({"left": ""+scrollLeft+""});      
+    }
+  } else {};
+});
+mc.on("panup", function(ev) {
+if (!noMoveFerm) {
+  if (scrollTopFerm <= -sizeWindowFerm.heightFerm) {
+    scrollTopFerm = -sizeWindowFerm.heightFerm;
+    $("#ferm").css({"top": ""+scrollTopFerm+""});
+  } else {
+    scrollTopFerm -= stepFerm;
+    $("#ferm").css({"top": ""+scrollTopFerm+""});
+  }
+} else {};
+});
+mc.on("pandown", function(ev) {
+if (!noMoveFerm) {
+  if (scrollTopFerm >= sizeWindowFerm.heightFerm) {
+    scrollTopFerm = sizeWindowFerm.heightFerm;
+    $("#ferm").css({"top": ""+scrollTopFerm+""});
+  } else {
+    scrollTopFerm += stepFerm;
+    $("#ferm").css({"top": ""+scrollTopFerm+""});
+  }
+} else {};
+});
+
             }); 
+
         </script>
         <script type="text/javascript">
         $(document).ready(function(){

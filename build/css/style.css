@@ -15790,6 +15790,5 @@ button.btn:hover
 {
     position: relative;
 
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    height: 50%;
 }
