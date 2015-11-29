@@ -3889,15 +3889,15 @@
     c1,0,1.8-0.8,1.8-1.8C1521.3,185.4,1520.4,184.6,1519.4,184.6z"/>
 </g>
 <g id="cheese_hover" class="dispNone">
+<a id="cheese_hover--link" xlink:href="products__cheese.html">
   <g>
     <path class="st34" d="M2369.6,831.6c11.5-83.3-77.4-114.9-51.8-89c25.6,25.9-3.1,60.5-3.1,60.5
       C2271,873.1,2358.1,914.9,2369.6,831.6z"/>
     <path class="st34" d="M2173.7,1612.6V908c0-62.8,50.9-113.6,113.6-113.6h551.5c62.8,0,113.6,50.9,113.6,113.6v704.6
       c0,62.8-50.9,113.6-113.6,113.6h-551.5C2224.6,1726.2,2173.7,1675.3,2173.7,1612.6z"/>
   </g>  
-  <a id="cheese_hover--link" xlink:href="products__cheese.html">
   <g>
-    <path class="st156" d="M2552.9,1587.4c-27.9,0-50.5-22.7-50.5-50.5c0-27.9,22.7-50.5,50.5-50.5c27.9,0,50.5,22.7,50.5,50.5
+    <path id="cheese_hover--link" class="st156" d="M2552.9,1587.4c-27.9,0-50.5-22.7-50.5-50.5c0-27.9,22.7-50.5,50.5-50.5c27.9,0,50.5,22.7,50.5,50.5
       C2603.4,1564.8,2580.7,1587.4,2552.9,1587.4z M2552.9,1489.7c-26,0-47.2,21.2-47.2,47.2s21.2,47.2,47.2,47.2
       c26,0,47.2-21.2,47.2-47.2S2578.9,1489.7,2552.9,1489.7z"/>
     <path class="st156" d="M2545.1,1561.9l-2.8-2.8l22.1-22.2l-22.1-22.2l2.8-2.8l24.9,24.9L2545.1,1561.9z"/>
@@ -4375,51 +4375,61 @@ bullLinkHammer = document.getElementById('bulls_hover--link');
     var hammerVarNameArr = [car_popup, bull_popup, milk_popup, cheese_popup, bakery_popup];
     var hammerVarNameOut = [carHoverOut, bullHoverOut, milkHoverOut, cheeseHoverOut, bakeryHoverOut];
 
+    function dispNoneHover () {
+      $('#bulls_hover').css({"display": "none"});
+      $('#cheese_hover').css({"display": "none"});
+      $('#cooking_hover').css({"display": "none"});
+      $('#accept_hover').css({"display": "none"});
+      $('#milk_hover').css({"display": "none"});
+    };
+
     function clearPopUpHammer () {
           for (var i = 0; i <= 4; i++) {
             hammerVarNameArr[i].animate({ transform: hammerVarNameOut[i] },500, mina.backin);
           };
+          dispNoneHover ();
     }
 
     Hammer(carHammer).on("tap", function(event) {
         clearPopUpHammer ();
-        setTimeout( function () {car_popup.animate({ transform: carHoverIn }, 500, mina.elastic)}, 100);
+        setTimeout( function () {$('#accept_hover').css({"display": "block"}); car_popup.animate({ transform: carHoverIn }, 500, mina.elastic)}, 100);
     });
     Hammer(bullHammer).on("tap", function(event) {
         clearPopUpHammer ();
-        setTimeout( function () {bull_popup.animate({ transform: bullHoverIn }, 500, mina.elastic)}, 100);
+        setTimeout( function () {$('#bulls_hover').css({"display": "block"}); bull_popup.animate({ transform: bullHoverIn }, 500, mina.elastic)}, 100);
     });
     Hammer(milkHammer).on("tap", function(event) {
         clearPopUpHammer ();
-        setTimeout( function () {milk_popup.animate({ transform: milkHoverIn }, 500, mina.elastic)}, 100);
+        setTimeout( function () {$('#milk_hover').css({"display": "block"}); milk_popup.animate({ transform: milkHoverIn }, 500, mina.elastic)}, 100);
     });
     Hammer(cheeseHammer).on("tap", function(event) {
         clearPopUpHammer ();
-        setTimeout( function () {cheese_popup.animate({ transform: cheeseHoverIn }, 500, mina.elastic)}, 100);
+        setTimeout( function () {$('#cheese_hover').css({"display": "block"}); cheese_popup.animate({ transform: cheeseHoverIn }, 500, mina.elastic)}, 100);
     });
     Hammer(bakeryHammer).on("tap", function(event) {
         clearPopUpHammer ();
-        setTimeout( function () {bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic)}, 100);
+        setTimeout( function () {$('#cooking_hover').css({"display": "block"}); bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic)}, 100);
     });
     Hammer(fermHammer).on("tap", function(event) {
         setTimeout( function () {clearPopUpHammer ()}, 50);
     });
 
-    Hammer(milkLinkHammer).on("tap", function(event) {
-        location.href = 'products__dairy.html';
-    });
+
     Hammer(cheeseLinkHammer).on("tap", function(event) {
         location.href = 'products__cheese.html';
     });
-    Hammer(cookingLinkHammer).on("tap", function(event) {
-        location.href = 'products__cooking.html';
+    Hammer(milkLinkHammer).on("tap", function(event) {
+        location.href = 'products__dairy.html';
     });
-    Hammer(carLinkHammer).on("tap", function(event) {
-        location.href = 'products__approved.html';
-    });
-    Hammer(bullLinkHammer).on("tap", function(event) {
-        location.href = 'products__meat.html';
-    });
+    // Hammer(cookingLinkHammer).on("tap", function(event) {
+    //     location.href = 'products__cooking.html';
+    // });
+    // Hammer(carLinkHammer).on("tap", function(event) {
+    //     location.href = 'products__approved.html';
+    // });
+    // Hammer(bullLinkHammer).on("tap", function(event) {
+    //     location.href = 'products__meat.html';
+    // });
 
 var scaleStep = 1;
 var scrollLeft;
