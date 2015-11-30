@@ -23389,9 +23389,18 @@ $(document).ready(function() {
     lsvDataFilter();
   });
 
-  $(".lsv-nav__logo").on("contextmenu mousedown",function(){
+  $(".lsv-nav__logo").on("mousedown",function(){
     return false;
   });
+  $(".lsv-nav__logo").on("contextmenu",function(){
+    return false;
+  });
+
+  var vacancies_menu =  $("#lsv-vacancies-menu");
+  if(!(vacancies_menu.children().length > 0)){
+    vacancies_menu.html('<a href="#form"><h1 class="lsv-h1">На данный момент у нас нет открытых вакансий, но вы можете оставить своё резюме, и мы с Вами свяжемся!</h1></a>');
+  }
+
   // if(window.innerWidth <= 1024){
   //   $.fn.fullpage.destroy();
   // }
