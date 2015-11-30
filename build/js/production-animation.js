@@ -23,6 +23,7 @@ $(document).ready(function(){
         });
       }
     });
+    /*my attached*/
     var old_b;
     var animation_data; 
     var current_anim = 0, current_prod = 0;
@@ -135,12 +136,13 @@ $(document).ready(function(){
             }
             else{
               $("#lsv-dairy-products__next-animation>label").html("");
+              $("#lsv-dairy-products__next-animation>label").append((current_anim + 1) + " / " + animation_data.steps.length);
             }
             if(current_anim == 0){
               $(".animation-container").append("<div id='lsv-dairy-products__prev-animation' class='lsv-dairy-products__prev-animation'><img src='img/svg/dairy-products-show-production.svg' /></div>");
             }
             $("#lsv-dairy-products__prev-animation").addClass("lsv-dairy-products_prev-animation__button-position");
-            $("#lsv-dairy-products__prev-animation").click(startPrevAnim);
+            $("#lsv-dairy-products__prev-animation>img").click(startPrevAnim);
             old_b = current_anim;
             console.log("b = " + old_b);
             current_anim++;
@@ -164,6 +166,7 @@ $(document).ready(function(){
             $("#lsv-dairy-products__prev-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
             $("#lsv-dairy-products__next-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
     }
+    /*added*/
     function startPrevAnim(){
       paper.stop();
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
@@ -184,6 +187,9 @@ $(document).ready(function(){
             Snap.load(animation_data.steps[old_b].img, beforeAnimation);
             $("#lsv-production__description-header").text(animation_data.steps[old_b].header);
             $("#lsv-production__description").text(animation_data.steps[old_b].description);
+            $("#lsv-dairy-products__next-animation>label").html("");
+            $("#lsv-dairy-products__next-animation>label").append((current_anim) + " / " + animation_data.steps.length);
+
           }
         });
     }
@@ -264,7 +270,7 @@ $(document).ready(function(){
           hideAll();
           if (countBut == lengthElementSlideBar) {
             countBut = lengthElementSlideBar;
-          } else {
+          } else {	
             countBut++;
             //console.log(countBut);
             $("#lsv-production-product-icon-slider .owl-item:nth-child("+(countBut - 1)+")").removeClass("scaleCircle");
@@ -324,7 +330,7 @@ $(document).ready(function(){
       $("#lsv-production__description").text("");
     }
     
-    $("#lsv-dairy-products__next-animation").click(startNextAnim);
+    $("#lsv-dairy-products__next-animation>img").click(startNextAnim);
 
     if(window.innerWidth <= 480){
       $.fn.fullpage.destroy();

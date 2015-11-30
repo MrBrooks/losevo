@@ -2376,13 +2376,6 @@ button.btn{
     margin: auto;
     width: 150px;
   }
-  .lsv-dairy-products__prev-animation{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 150px;
-  }
   .animation-container{
     position: absolute;
     right: 0;
@@ -3068,6 +3061,7 @@ button.btn{
     right: 0;
     margin: auto;
     width: 180px;
+    display: inline-block;
     text-align: center;
     &.active{
       label{
@@ -3210,16 +3204,7 @@ button.btn{
   margin-top: 8px;
   cursor: pointer;
   z-index: 1000;
-  label{
-    text-transform: none;
-    text-decoration: underline;
-    color: white;
-    font-weight: 400;
-    position: relative;
-    top: 12px;
-    left: 5px;
-    cursor: pointer;
-  }
+  display: inline-block;
 }
 .lsv-dairy-products__prev-animation{
   bottom: 0;
@@ -3228,10 +3213,25 @@ button.btn{
   img{
     transform-origin:50% 50%;
     transform:rotate(180deg);
-    margin-left: -70px;
+    margin-left: -10px;
   }
 }
-/*fhdjfdjfh*/
+/*fhddd*/
+/*myadd*/
 .lsv-dairy-products_prev-animation__button-position{
   left:50%;
+}
+/*fsafskdsdnsnm*/
+#lsv-dairy-products__prev-animation {
+    top: initial;
+    bottom: -30px;
+    left: -155px;
+    right: 0;
+    margin: auto;
+    width: 0px;
+    display: inline-block;
+    text-align: center;
+}
+.animation-container{
+	white-space: nowrap;
 }
