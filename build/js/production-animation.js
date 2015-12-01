@@ -25,6 +25,7 @@ $(document).ready(function(){
     });
     /*my attached*/
     var old_b;
+    var base_width;
     var animation_data; 
     var current_anim = 0, current_prod = 0;
 
@@ -43,7 +44,7 @@ $(document).ready(function(){
         $(".lsv-dairy-products__list-item").click(function(){
           animation_data = json[$(this).attr("data-item-order")];
           $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
-          $("#lsv-dairy-products__prev-animation").remove();
+          $(".prev").remove();
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
           $("#lsv-dairy-products__next-animation").removeClass("active");
           $(".slimScrollBar").css("opacity", "0");
@@ -124,8 +125,12 @@ $(document).ready(function(){
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           // paper.remove();
           // paper = canvas.g();
+          var my_atr = document.getElementById('#lsv-dairy-products__prev-animation>img');
           if (current_anim < animation_data.steps.length){
             Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
+            base_width = $("#lsv-dairy-products__next-animation>label").width();
+            console.log("base_width" + base_width);
+            //$("#lsv-dairy-products__prev-animation").css('width',(base_width / 2));
             $("#lsv-dairy-products__next-animation").addClass("active");
             $("#lsv-dairy-products__next-animation").addClass("lsv-dairy-products_prev-animation__button-position");
             //console.log(current_anim);
@@ -137,23 +142,24 @@ $(document).ready(function(){
             else{
               $("#lsv-dairy-products__next-animation>label").html("");
               $("#lsv-dairy-products__next-animation>label").append((current_anim + 1) + " / " + animation_data.steps.length);
+              /*added*/
             }
             if(current_anim == 0){
-              $(".animation-container").append("<div id='lsv-dairy-products__prev-animation' class='lsv-dairy-products__prev-animation'><img src='img/svg/dairy-products-show-production.svg' /></div>");
+              $("#lsv-dairy-products__next-animation").prepend("<img class='prev' src='img/svg/dairy-products-show-production.svg' />");
             }
             $("#lsv-dairy-products__prev-animation").addClass("lsv-dairy-products_prev-animation__button-position");
-            $("#lsv-dairy-products__prev-animation>img").click(startPrevAnim);
+            $(".prev").click(startPrevAnim);
             old_b = current_anim;
             console.log("b = " + old_b);
             current_anim++;
             console.log("new " + current_anim);
           }
+
           else{
             BasicLoad();
             console.log(current_anim);
             current_anim = 0;
           }
-          //$("#lsv-dairy-products__prev-animation").click(startPrevAnim);
       });
     }
     function BasicLoad(){
@@ -162,9 +168,7 @@ $(document).ready(function(){
             $("#lsv-production__description").text("");
             $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
             $("#lsv-dairy-products__next-animation").removeClass("active");
-            $("#lsv-dairy-products__prev-animation").remove();
-            $("#lsv-dairy-products__prev-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
-            $("#lsv-dairy-products__next-animation").removeClass("lsv-dairy-products_prev-animation__button-position");
+            $(".prev").remove();
     }
     /*added*/
     function startPrevAnim(){
@@ -330,7 +334,7 @@ $(document).ready(function(){
       $("#lsv-production__description").text("");
     }
     
-    $("#lsv-dairy-products__next-animation>img").click(startNextAnim);
+    $(".next").click(startNextAnim);
 
     if(window.innerWidth <= 480){
       $.fn.fullpage.destroy();

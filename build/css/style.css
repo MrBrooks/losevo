@@ -15801,6 +15801,21 @@ button.btn:hover
 
     cursor: pointer;
 }
+.lsv-dairy-products__prev-animation label
+{
+    font-weight: 400;
+
+    position: relative;
+    top: 12px;
+    left: 5px;
+
+    cursor: pointer;
+    text-decoration: underline;
+    text-transform: none;
+
+    color: white;
+}
+/*new*/
 .lsv-dairy-products__prev-animation
 {
     top: initial;
@@ -15809,7 +15824,7 @@ button.btn:hover
 }
 .lsv-dairy-products__prev-animation img
 {
-    margin-left: -20px;
+    margin-left: -10px;
 
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -15818,10 +15833,9 @@ button.btn:hover
 }
 /*fhddd*/
 /*myadd*/
-.lsv-dairy-products_prev-animation__button-position
-{
-    left: 50%;
-}
+/*.lsv-dairy-products_prev-animation__button-position{
+  left:50%;
+}*/
 /*fsafskdsdnsnm*/
 #lsv-dairy-products__prev-animation
 {
@@ -15841,3 +15855,15 @@ button.btn:hover
 {
     white-space: nowrap;
 }
+.prev
+{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+/*.control-panel1{
+  white-space: nowrap;  
+	text-align: center;
+  width: 500px;
+}*/
