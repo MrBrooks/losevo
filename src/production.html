@@ -404,8 +404,8 @@ function fermTouch () {
     mc.add([pinch, pan, tap]);
 
     var carHammer = document.getElementById('car'),
-    bullHammer = document.getElementById('bull_2'),
-    milkHammer = document.getElementById('cow_1'),
+    bullHammer = document.getElementById('rect-bull'),
+    milkHammer = document.getElementById('rect-milk'),
     cheeseHammer = document.getElementById('cheese_house_1_'),
     bakeryHammer = document.getElementById('bakery'),
     fermHammer = document.getElementById('ferm'),
@@ -553,7 +553,9 @@ function fermTouch () {
 
 };
 
-fermTouch ();
+if(screen.width <= 1024) {
+        fermTouch ();
+};
 
 }); 
 
