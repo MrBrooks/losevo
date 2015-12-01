@@ -121,6 +121,29 @@ $(document).ready(function() {
     $(".slimScrollBar").css("opacity", "0");
     $.fn.fullpage.setAllowScrolling(true);
   });
+  function notDownloadNone () {
+    $("#notDownload").css({"display": "none"});
+  }
+
+  var discardDownloadTimer;
+  $(".lsv-nav__logo").contextmenu(function(){
+    return false;
+  });
+
+  $(".lsv-nav__logo").mousedown(function(event) {
+    if (event.which === 3) {
+      clearTimeout(discardDownloadTimer);
+      $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
+      $("#notDownload").html("Полную версию логотипа можно сохранить из «Связаться с нами» ");
+      discardDownloadTimer = setTimeout(function () {notDownloadNone()}, 2000);
+    }
+    // if (event.which === 1) {
+    //   $(document).mousedown(false);
+    //   $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
+    //   $("#notDownload").text("Не таскай меня!");
+    //   discardDownloadTimer = setTimeout(function () {notDownloadNone()}, 700); 
+    // }
+  });
   // 
   // $("#lsv-shops__filter-btn").on('hover',function(){
   //   $( "#lsv-shops__filter-menu" ).toggleClass("lsv-shops__filter--active");
