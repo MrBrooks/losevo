@@ -346,6 +346,16 @@
     </g>
   </svg>
 </div>
+<div id="lsv-main__opacity-block">
+  <div id="opacity-block--popup">
+    <h1>ПРИВЕТСВУЕМ!</h1> <br>
+    Мы ждём ваших отзывов по новому сайту! Заполните, пожалуйста, форму в контактах. <br><br>
+    <a href="contacts.html">
+      <button class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit submit lsv-btn__btn-popup"> Оставить отзыв </button>
+    </a><br>
+    <button class="btn btn-default lsv-btn lsv-btn--grey lsv-form__btn-submit submit lsv-btn__btn-popup" id="lsv-btn__btn-popup--close" style="background: #5c5c5c;"> Позже </button>
+  </div>
+</div>
 <div class="dont-rotate">
   <div>
     <img src="img/svg/dont_rotate.svg">
@@ -2445,8 +2455,6 @@
       c3.8,0,6.9,3.1,6.9,6.9V311.7z"/>
     <path class="st86" d="M1851.9,313.1c0,3.8-3.1,6.9-6.9,6.9h-40.1c-3.8,0-6.9-3.1-6.9-6.9v-12.4c0-3.8,3.1-6.9,6.9-6.9h40.1
       c3.8,0,6.9,3.1,6.9,6.9V313.1z"/>
-        <rect id="rect-milk" x="1700" y="920" width="700" height="450"
-  style="fill-opacity:0;stroke-opacity:0" />
     <rect x="1101.8" y="258.8" class="st88" width="803.6" height="28.4"/>
     <rect x="826.7" y="390.7" class="st88" width="299.5" height="28.4"/>
     <rect x="1235.9" y="173" class="st89" width="535.5" height="85.7"/>
@@ -4075,6 +4083,7 @@
     </g>
   </g>
 </g>
+<rect id="rect-milk" x="1700" y="920" width="700" height="450" style="fill-opacity:0;stroke-opacity:0" />
 </svg>
 
  </div>
@@ -4296,13 +4305,14 @@
                   timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
               });
 
-              $("#bulls_hover").hover(function(){
+
+              $("#rect-bull").hover(function(){
                   clearTimeout(timeOutBull);
                   bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
               }, function(){
                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000); 
               });
-              $("#milk_hover").hover(function(){
+              $("#rect-milk").hover(function(){
                   clearTimeout(timeOutMilk);
                   milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
               }, function(){
@@ -4364,8 +4374,8 @@
                   animateAlongPath(2, [-600,225,45+180]);
                   animateAlongPath(3, [-525,-75,180]);
                 },5000);
-  
-//осторожно! говнокод. 
+
+//GlF88 work
 
 function fermTouch () {
 

@@ -321,13 +321,14 @@
                   timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
               });
 
-              $("#bulls_hover").hover(function(){
+
+              $("#rect-bull").hover(function(){
                   clearTimeout(timeOutBull);
                   bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
               }, function(){
                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000); 
               });
-              $("#milk_hover").hover(function(){
+              $("#rect-milk").hover(function(){
                   clearTimeout(timeOutMilk);
                   milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
               }, function(){
@@ -389,8 +390,8 @@
                   animateAlongPath(2, [-600,225,45+180]);
                   animateAlongPath(3, [-525,-75,180]);
                 },5000);
-  
-//осторожно! говнокод. 
+
+//GlF88 work
 
 function fermTouch () {
 
