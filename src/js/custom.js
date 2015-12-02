@@ -9,8 +9,6 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function() {
-
-
     /* Custom */
   // $("#lsv-dairy-products__menu").hover(
   //   function(){
@@ -270,6 +268,28 @@ $(document).ready(function() {
   //       button.text("Неудача!").css("background-color","#aa1100");
   //     }
   //   });
+
+            
+
+            function popUpOut () {
+              $("#opacity-block--popup").removeClass("opacity-block--popup-scaleIn");
+              $("#opacity-block--popup").addClass("opacity-block--popup-scaleOut");
+              setTimeout(function () {$("#lsv-main__opacity-block").css({"display": "none"})}, 400);
+            };
+
+            $("html").css({overflowY: "hidden"});
+
+            function popUpIn () {
+              $("#opacity-block--popup").removeClass("opacity-block--popup-scaleOut");
+              $("#lsv-main__opacity-block").css({"display": "block"});
+              $("#opacity-block--popup").addClass("opacity-block--popup-scaleIn");
+            };
+
+            $("#lsv-btn__btn-popup--close").click(function () {
+              popUpOut ();
+              $("html").css({overflowY: "auto"});
+              $.fn.fullpage.setAllowScrolling(true);
+            }); 
 
   $("form#data").submit(function(){
     var formData = new FormData($(this)[0]);
