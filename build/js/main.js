@@ -23177,8 +23177,6 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function() {
-
-
     /* Custom */
   // $("#lsv-dairy-products__menu").hover(
   //   function(){
@@ -23260,7 +23258,7 @@ $(document).ready(function() {
     $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
     if(scroll_menu_flag){
       $('.mobile_scroll_wrap').toggleClass("active");
-    };
+    }
   });
 
   $('main').click(function(){
@@ -23270,7 +23268,7 @@ $(document).ready(function() {
       $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
       if(scroll_menu_flag){
         $('.mobile_scroll_wrap').toggleClass("active");
-      };
+      }
     }
   });
 
@@ -23303,7 +23301,9 @@ $(document).ready(function() {
       clearTimeout(discardDownloadTimer);
       $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
       $("#notDownload").html("Полную версию логотипа можно сохранить из «Связаться с нами» ");
-      discardDownloadTimer = setTimeout(function () {notDownloadNone()}, 2000);
+      discardDownloadTimer = setTimeout(function (){
+        notDownloadNone();
+      }, 2000);
     }
     // if (event.which === 1) {
     //   $(document).mousedown(false);
@@ -23438,6 +23438,35 @@ $(document).ready(function() {
   //       button.text("Неудача!").css("background-color","#aa1100");
   //     }
   //   });
+
+            
+
+  function popUpOut () {
+    $("#opacity-block--popup").removeClass("opacity-block--popup-scaleIn");
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleOut");
+    setTimeout(function () {
+      $("#lsv-main__opacity-block").css({"display": "none"});
+    }, 400);
+  }
+
+  function popUpIn () {
+    // $("html").css({overflowY: "hidden"});
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleOut");
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleIn");
+    $("#lsv-main__opacity-block").css({"display": "block"});
+    setTimeout(function(){
+      $("#opacity-block--popup").removeClass("opacity-block--popup-scaleOut");
+    },100);
+    
+  }
+  //запуск поп-апа по поводу оставить пожелание по сайту
+  // setTimeout(popUpIn, 8000);
+
+  $("#lsv-btn__btn-popup--close").click(function () {
+    popUpOut ();
+    // $("html").css({overflowY: "auto"});
+    // $.fn.fullpage.setAllowScrolling(true);
+  }); 
 
   $("form#data").submit(function(){
     var formData = new FormData($(this)[0]);
