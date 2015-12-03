@@ -1,5 +1,17 @@
-[
-    {
+[   {
+        "title": "Сырные продукты",
+        "products": [
+        {
+        "icon": "",
+        "startImg":"img/svg/cheese.svg",
+        "goodies" : "",
+        "info": ""
+        }
+        ],
+        "steps": []
+
+    },
+    {   
       "title": "Качотта",
       "products" : [
       {

@@ -6,7 +6,10 @@ $(document).ready(function(){
       'fitToSection': false,
       'fixedElements': '.lsv-nav , .lsv-menu',
       'scrollOverflow': false,
-
+      onLeave: function(){
+        $("#lsv-dairy-products__menu").addClass("active");
+        setTimeout(function(){$("#lsv-dairy-products__menu").removeClass("active")},2000);
+      },
       afterRender: function(){
         $("#lsv-production-product-icon-slider").owlCarousel({
           items: 3,
@@ -23,7 +26,8 @@ $(document).ready(function(){
         });
       }
     });
-    var animation_data; 
+    var animation_data;
+    var old_b;
     var current_anim = 0, current_prod = 0;
 
     var canvas = Snap("#animation-canvas");
@@ -35,7 +39,7 @@ $(document).ready(function(){
     canvas.append(paper);
 
     var dairy_products_data = $.getJSON($("div[data-json]").attr("data-json"), function(json){
-        for( var i = 0; i < json.length;i++){
+        for( var i = 1; i < json.length;i++){
           $("#lsv-dairy-products__list").append("<li class='lsv-dairy-products__list-item' data-item-order="+i+">" + json[i].title + "</li>");
         }
         $(".lsv-dairy-products__list-item").click(function(){
@@ -121,31 +125,78 @@ $(document).ready(function(){
       paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
           // paper.remove();
           // paper = canvas.g();
+          var my_atr = document.getElementById('#lsv-dairy-products__prev-animation>img');
           if (current_anim < animation_data.steps.length){
             Snap.load(animation_data.steps[current_anim].img, beforeAnimation);
+            base_width = $("#lsv-dairy-products__next-animation>label").width();
+            console.log("base_width" + base_width);
+            //$("#lsv-dairy-products__prev-animation").css('width',(base_width / 2));
             $("#lsv-dairy-products__next-animation").addClass("active");
+            $("#lsv-dairy-products__next-animation").addClass("lsv-dairy-products_prev-animation__button-position");
+            //console.log(current_anim);
             $("#lsv-production__description-header").text(animation_data.steps[current_anim].header);
             $("#lsv-production__description").text(animation_data.steps[current_anim].description);
             if( current_anim == (animation_data.steps.length-1)){
               $("#lsv-dairy-products__next-animation>label").html("В начало");
             }
             else{
-              $("#lsv-dairy-products__next-animation>label").html("Дальше");
+              $("#lsv-dairy-products__next-animation>label").html("");
+              $("#lsv-dairy-products__next-animation>label").append((current_anim + 1) + " / " + animation_data.steps.length);
+              /*added*/
             }
+            if(current_anim == 0){
+              $("#lsv-dairy-products__next-animation").prepend("<img class='prev' src='img/svg/dairy-products-show-production.svg' />");
+            }
+            $("#lsv-dairy-products__prev-animation").addClass("lsv-dairy-products_prev-animation__button-position");
+            $(".prev").click(startPrevAnim);
+            old_b = current_anim;
+            console.log("b = " + old_b);
             current_anim++;
+            console.log("new " + current_anim);
           }
-          else{
-            Snap.load(animation_data.products[current_prod].startImg, beforeAnimation);
-            $("#lsv-production__description-header").text("");
-            $("#lsv-production__description").text("");
-            $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
-            $("#lsv-dairy-products__next-animation").removeClass("active");
 
+          else{
+            BasicLoad();
+            console.log(current_anim);
             current_anim = 0;
           }
       });
     }
+    function BasicLoad(){
+      Snap.load(animation_data.products[current_prod].startImg, beforeAnimation);
+            $("#lsv-production__description-header").text("");
+            $("#lsv-production__description").text("");
+            $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
+            $("#lsv-dairy-products__next-animation").removeClass("active");
+            $(".prev").remove();
+    }
+    /*added*/
+    function startPrevAnim(){
+      paper.stop();
+      $("#lsv-dairy-products__tooltip-info").removeClass("active");
+      $("#lsv-dairy-products__tooltip-good").removeClass("active");
 
+          // paper.remove();
+          // paper = canvas.g();
+        paper.animate({transform: zeroscaleMatrix}, disappearTime, mina.easeout, function(){
+          if(old_b <= 0) {
+            BasicLoad();
+            console.log(current_anim);
+            current_anim = 0;
+          }
+          else{
+            old_b--;
+            current_anim--;
+            //console.log(current_anim + " prev_step_b = " + old_b);
+            Snap.load(animation_data.steps[old_b].img, beforeAnimation);
+            $("#lsv-production__description-header").text(animation_data.steps[old_b].header);
+            $("#lsv-production__description").text(animation_data.steps[old_b].description);
+            $("#lsv-dairy-products__next-animation>label").html("");
+            $("#lsv-dairy-products__next-animation>label").append((current_anim) + " / " + animation_data.steps.length);
+
+          }
+        });
+    }
     var emptySvgElement = '<div class="item"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 86 86" style="enable-background:new 0 0 86 86;" xml:space="preserve"></svg></div> ';
     
     var owl = $(".owl-carousel").data('owlCarousel');
@@ -282,7 +333,8 @@ $(document).ready(function(){
       $("#lsv-production__description").text("");
     }
     
-    $("#lsv-dairy-products__next-animation").click(startNextAnim);
+    $(".next").click(startNextAnim);
+    $("#lsv-dairy-products__next-animation>label").click(startNextAnim);
 
     if(window.innerWidth <= 480){
       $.fn.fullpage.destroy();

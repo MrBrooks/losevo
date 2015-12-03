@@ -1,4 +1,16 @@
-[
+[{
+        "title": "Мясная продукция",
+        "products": [
+        {
+        "icon": "",
+        "startImg":"img/svg/meat.svg",
+        "goodies" : "",
+        "info": ""
+        }
+        ],
+        "steps": []
+
+    },  
     {
       "title": "Говядина",
       "products" : [

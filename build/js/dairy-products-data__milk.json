@@ -1,4 +1,16 @@
-[
+[{
+        "title": "Молочные продукты",
+        "products": [
+        {
+        "icon": "",
+        "startImg":"img/svg/milk.svg",
+        "goodies" : "",
+        "info": ""
+        }
+        ],
+        "steps": []
+
+    },
     {
       "title": "Ацидофилин",
       "products" : [
