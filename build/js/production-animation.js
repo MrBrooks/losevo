@@ -6,9 +6,13 @@ $(document).ready(function(){
       'fitToSection': false,
       'fixedElements': '.lsv-nav , .lsv-menu',
       'scrollOverflow': false,
-      onLeave: function(){
-        $("#lsv-dairy-products__menu").addClass("active");
-        setTimeout(function(){$("#lsv-dairy-products__menu").removeClass("active")},2000);
+      onLeave: function(index, nextIndex, dir){
+        if(index === 1){
+          $("#lsv-dairy-products__menu").addClass("active");
+          setTimeout(function(){
+            $("#lsv-dairy-products__menu").removeClass("active")
+          },1000);
+        }
       },
       afterRender: function(){
         $("#lsv-production-product-icon-slider").owlCarousel({
