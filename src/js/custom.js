@@ -289,7 +289,7 @@ $(document).ready(function() {
     
   }
   //запуск поп-апа по поводу оставить пожелание по сайту
-  // setTimeout(popUpIn, 8000);
+  setTimeout(popUpIn, 8000);
 
   $("#lsv-btn__btn-popup--close").click(function () {
     popUpOut ();
