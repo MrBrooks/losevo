@@ -6,6 +6,11 @@
       "info": "",
       "steps" : [
         {
+        "img": "img/svg/animations/accepted/accept.svg",
+        "header": "Контроль качества",
+        "description": ""
+        },
+        {
         "img": "img/svg/animations/accepted/degustation.svg",
         "header": "ДЕГУСТАЦИЯ",
         "description": "Проверка различных свойств и качеств продукта в лаборатории «Лосево»."

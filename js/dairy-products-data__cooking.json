@@ -1,4 +1,16 @@
-[
+[{
+        "title": "Кулинария",
+        "products": [
+        {
+        "icon": "",
+        "startImg":"img/svg/cooking.svg",
+        "goodies" : "",
+        "info": ""
+        }
+        ],
+        "steps": []
+
+    },  
     {
       "title": "Колбаски",
       "products" : [
@@ -186,7 +198,7 @@
       ]
     },
     {
-      "title": "Вареники",
+      "title": "Вареники с картофелем",
       "products" : [
       {
         "title": "",
@@ -235,6 +247,19 @@
       ]
     },
     {
+      "title": "Вареники с творогом",
+      "products" : [
+      {
+        "title": "Вареники с творогом",
+        "icon": "",
+        "startImg":"img/svg/animations/varenyki_tvorog/vareniki_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : []
+    },
+    {
       "title": "Мясо в маринаде",
       "products" : [
       {
@@ -266,6 +291,90 @@
         "header": "ДОСТАВКА НА ПРИЛАВОК",
         "description": "Логистика готовой продукции в торговые точки «Лосево» и контрагентов"
         }
+      ]
+    },
+    {
+      "title": "Фрикадельки из говядины",
+      "products" : [
+      {
+        "title": "Фрикадельки из говядины",
+        "icon": "",
+        "startImg":"img/svg/animations/frikadelki/frikadelki.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+      ]
+    },
+    {
+      "title": "Сырники",
+      "products" : [
+      {
+        "title": "Сырники",
+        "icon": "",
+        "startImg":"img/svg/animations/syrniki/syrniki_pack.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+      ]
+    },
+    {
+      "title": "Индейка",
+      "products" : [
+      {
+        "title": "Индейка",
+        "icon": "",
+        "startImg":"img/svg/animations/turkey/turkey.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+      ]
+    },
+    {
+      "title": "Баранина",
+      "products" : [
+      {
+        "title": "Баранина",
+        "icon": "",
+        "startImg":"img/svg/animations/ram/ram.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+      ]
+    },
+    {
+      "title": "Курица",
+      "products" : [
+      {
+        "title": "Курица",
+        "icon": "",
+        "startImg":"img/svg/animations/chicken/chiken.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
+      ]
+    },
+    {
+      "title": "Цыпленок",
+      "products" : [
+      {
+        "title": "Цыпленок",
+        "icon": "",
+        "startImg":"img/svg/animations/chick/chick.svg",
+        "goodies" : "1",
+        "info": "2"
+      }
+      ],
+      "steps" : [
       ]
     }
 ]

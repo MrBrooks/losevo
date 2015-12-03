@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 306 202" style="enable-background:new 0 0 306 202;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-144 319.9 306 202" style="enable-background:new -144 319.9 306 202;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#DDD9A8;}
+	.st0{fill:#FFD6A8;}
 	.st1{fill:#EFEFEF;}
 	.st2{fill:#DDDDDD;}
 	.st3{fill:#FFFFFF;}
@@ -57,25 +57,23 @@
 </g>
 <g id="car">
 </g>
-<g id="lupa">
-	<ellipse class="st0" cx="157.9" cy="97.5" rx="79.2" ry="55"/>
-	<path class="st1" d="M58.4,97.5c14.4,41,53.5,70.5,99.5,70.5s85.1-29.4,99.5-70.5H58.4z"/>
-	<path class="st2" d="M258.5,97.5H57.3c-2.1,0-3.9-1.7-3.9-3.9v0c0-2.1,1.7-3.9,3.9-3.9h201.2c2.1,0,3.9,1.7,3.9,3.9v0
-		C262.4,95.7,260.7,97.5,258.5,97.5z"/>
-	<path class="st3" d="M94.3,132c-0.9,0-1.8-0.2-2.7-0.7c-12.1-7.1-17.8-20.2-18-20.7c-1.2-2.7,0.1-5.9,2.8-7c2.7-1.2,5.9,0.1,7,2.8
-		c0.1,0.1,4.6,10.4,13.6,15.7c2.6,1.5,3.4,4.8,1.9,7.3C97.9,131,96.1,132,94.3,132z"/>
-	<polygon class="st4" points="122.3,59 131,56.3 129.5,68 	"/>
-	<polygon class="st5" points="128.5,76 137.1,73.3 135.6,85 	"/>
-	<polygon class="st5" points="198.2,66.5 205,72.5 194.2,77.3 	"/>
-	<polygon class="st5" points="179.9,48.3 185.9,55.1 174.6,58.5 	"/>
-	<polygon class="st5" points="91.6,79.2 97.6,86 86.4,89.4 	"/>
-	<polygon class="st4" points="174.4,74.9 175.5,65.9 185.5,72 	"/>
-	<polygon class="st4" points="155.5,77.2 160.8,84.5 149.3,86.8 	"/>
-	<polygon class="st4" points="151.6,56.3 152.6,47.3 162.7,53.4 	"/>
-	<polygon class="st4" points="111.2,86.6 112.2,77.6 122.3,83.6 	"/>
-	<polygon class="st6" points="157,59.4 165,63.6 155.7,70.8 	"/>
-	<polygon class="st6" points="213.4,71.9 221.4,76.1 212.1,83.3 	"/>
-	<polygon class="st6" points="93.4,74.3 97.4,66.1 104.8,75.3 	"/>
-	<polygon class="st6" points="176.6,85.7 180.6,77.5 188,86.7 	"/>
-</g>
+<ellipse class="st0" cx="13.9" cy="417.4" rx="79.2" ry="55"/>
+<path class="st1" d="M-85.6,417.4c14.4,41,53.5,70.5,99.5,70.5s85.1-29.4,99.5-70.5H-85.6z"/>
+<path class="st2" d="M114.5,417.4H-86.7c-2.1,0-3.9-1.7-3.9-3.9l0,0c0-2.1,1.7-3.9,3.9-3.9h201.2c2.1,0,3.9,1.7,3.9,3.9l0,0
+	C118.4,415.6,116.7,417.4,114.5,417.4z"/>
+<path class="st3" d="M-49.7,451.9c-0.9,0-1.8-0.2-2.7-0.7c-12.1-7.1-17.8-20.2-18-20.7c-1.2-2.7,0.1-5.9,2.8-7
+	c2.7-1.2,5.9,0.1,7,2.8c0.1,0.1,4.6,10.4,13.6,15.7c2.6,1.5,3.4,4.8,1.9,7.3C-46.1,450.9-47.9,451.9-49.7,451.9z"/>
+<polygon class="st4" points="-21.7,378.9 -13,376.2 -14.5,387.9 "/>
+<polygon class="st5" points="-15.5,395.9 -6.9,393.2 -8.4,404.9 "/>
+<polygon class="st5" points="54.2,386.4 61,392.4 50.2,397.2 "/>
+<polygon class="st5" points="35.9,368.2 41.9,375 30.6,378.4 "/>
+<polygon class="st5" points="-52.4,399.1 -46.4,405.9 -57.6,409.3 "/>
+<polygon class="st4" points="30.4,394.8 31.5,385.8 41.5,391.9 "/>
+<polygon class="st4" points="11.5,397.1 16.8,404.4 5.3,406.7 "/>
+<polygon class="st4" points="7.6,376.2 8.6,367.2 18.7,373.3 "/>
+<polygon class="st4" points="-32.8,406.5 -31.8,397.5 -21.7,403.5 "/>
+<polygon class="st6" points="13,379.3 21,383.5 11.7,390.7 "/>
+<polygon class="st6" points="69.4,391.8 77.4,396 68.1,403.2 "/>
+<polygon class="st6" points="-50.6,394.2 -46.6,386 -39.2,395.2 "/>
+<polygon class="st6" points="32.6,405.6 36.6,397.4 44,406.6 "/>
 </svg>

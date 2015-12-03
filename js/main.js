@@ -23177,8 +23177,6 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function() {
-
-
     /* Custom */
   // $("#lsv-dairy-products__menu").hover(
   //   function(){
@@ -23260,7 +23258,7 @@ $(document).ready(function() {
     $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
     if(scroll_menu_flag){
       $('.mobile_scroll_wrap').toggleClass("active");
-    };
+    }
   });
 
   $('main').click(function(){
@@ -23270,7 +23268,7 @@ $(document).ready(function() {
       $( "#lsv-menu-btn" ).toggleClass("lsv-nav__menu-btn--active");
       if(scroll_menu_flag){
         $('.mobile_scroll_wrap').toggleClass("active");
-      };
+      }
     }
   });
 
@@ -23288,6 +23286,31 @@ $(document).ready(function() {
     $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
     $(".slimScrollBar").css("opacity", "0");
     $.fn.fullpage.setAllowScrolling(true);
+  });
+  function notDownloadNone () {
+    $("#notDownload").css({"display": "none"});
+  }
+
+  var discardDownloadTimer;
+  $(".lsv-nav__logo").contextmenu(function(){
+    return false;
+  });
+
+  $(".lsv-nav__logo").mousedown(function(event) {
+    if (event.which === 3) {
+      clearTimeout(discardDownloadTimer);
+      $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
+      $("#notDownload").html("Полную версию логотипа можно сохранить из «Связаться с нами» ");
+      discardDownloadTimer = setTimeout(function (){
+        notDownloadNone();
+      }, 2000);
+    }
+    // if (event.which === 1) {
+    //   $(document).mousedown(false);
+    //   $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
+    //   $("#notDownload").text("Не таскай меня!");
+    //   discardDownloadTimer = setTimeout(function () {notDownloadNone()}, 700); 
+    // }
   });
   // 
   // $("#lsv-shops__filter-btn").on('hover',function(){
@@ -23389,9 +23412,18 @@ $(document).ready(function() {
     lsvDataFilter();
   });
 
-  $(".lsv-nav__logo").on("contextmenu mousedown",function(){
+  $(".lsv-nav__logo").on("mousedown",function(){
     return false;
   });
+  $(".lsv-nav__logo").on("contextmenu",function(){
+    return false;
+  });
+
+  var vacancies_menu =  $("#lsv-vacancies-menu");
+  if(!(vacancies_menu.children().length > 0)){
+    vacancies_menu.html('<a href="#form"><h1 class="lsv-h1">На данный момент у нас нет открытых вакансий, но вы можете оставить своё резюме, и мы с Вами свяжемся!</h1></a>');
+  }
+
   // if(window.innerWidth <= 1024){
   //   $.fn.fullpage.destroy();
   // }
@@ -23406,6 +23438,32 @@ $(document).ready(function() {
   //       button.text("Неудача!").css("background-color","#aa1100");
   //     }
   //   });
+  function popUpOut () {
+    $("#opacity-block--popup").removeClass("opacity-block--popup-scaleIn");
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleOut");
+    setTimeout(function () {
+      $("#lsv-main__opacity-block").css({"display": "none"});
+    }, 400);
+  }
+
+  function popUpIn () {
+    // $("html").css({overflowY: "hidden"});
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleOut");
+    $("#opacity-block--popup").addClass("opacity-block--popup-scaleIn");
+    $("#lsv-main__opacity-block").css({"display": "block"});
+    setTimeout(function(){
+      $("#opacity-block--popup").removeClass("opacity-block--popup-scaleOut");
+    },100);
+    
+  }
+  //запуск поп-апа по поводу оставить пожелание по сайту
+  setTimeout(popUpIn, 8000);
+
+  $("#lsv-btn__btn-popup--close").click(function () {
+    popUpOut ();
+    // $("html").css({overflowY: "auto"});
+    // $.fn.fullpage.setAllowScrolling(true);
+  }); 
 
   $("form#data").submit(function(){
     var formData = new FormData($(this)[0]);

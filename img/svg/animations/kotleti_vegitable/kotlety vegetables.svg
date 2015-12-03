@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 299 188" style="enable-background:new 0 0 299 188;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-148 326.9 299 188" style="enable-background:new -148 326.9 299 188;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#519E38;}
-	.st1{fill:#D1C97D;}
-	.st2{fill:#DDD9A8;}
+	.st1{fill:#F9BD82;}
+	.st2{fill:#FFD6A8;}
 	.st3{fill:#F7F3A4;}
 	.st4{fill:#D98A5A;}
 	.st5{fill:#40AE77;}
@@ -58,60 +58,60 @@
 </g>
 <g id="lupa">
 	<g>
-		<path class="st0" d="M104.5,57.8c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L104.5,57.8L104.5,57.8z"/>
-		<path class="st0" d="M182.6,57.8c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L182.6,57.8L182.6,57.8z"/>
-		<path class="st0" d="M257.9,57.8c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L257.9,57.8L257.9,57.8z"/>
-		<path class="st0" d="M104.5,124c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L104.5,124L104.5,124z"/>
-		<path class="st0" d="M182.6,124c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L182.6,124L182.6,124z"/>
-		<path class="st0" d="M257.9,124c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7h0v10.1h0c0.6,9.1,13.7,16.3,29.7,16.3
-			c16,0,29.1-7.2,29.7-16.3h0L257.9,124L257.9,124z"/>
-		<ellipse class="st1" cx="69.5" cy="128.8" rx="29.7" ry="17"/>
-		<rect x="39.7" y="119.4" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="69.5" cy="119.7" rx="29.7" ry="17"/>
-		<ellipse class="st1" cx="148.5" cy="128.8" rx="29.7" ry="17"/>
-		<rect x="118.7" y="119.4" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="148.5" cy="119.7" rx="29.7" ry="17"/>
-		<ellipse class="st1" cx="222.6" cy="128.8" rx="29.7" ry="17"/>
-		<rect x="192.9" y="119.4" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="222.6" cy="119.7" rx="29.7" ry="17"/>
-		<ellipse class="st1" cx="69.5" cy="62.6" rx="29.7" ry="17"/>
-		<rect x="39.7" y="53.2" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="69.5" cy="53.5" rx="29.7" ry="17"/>
-		<ellipse class="st1" cx="148.5" cy="62.6" rx="29.7" ry="17"/>
-		<rect x="118.7" y="53.2" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="148.5" cy="53.5" rx="29.7" ry="17"/>
-		<ellipse class="st1" cx="222.6" cy="62.6" rx="29.7" ry="17"/>
-		<rect x="192.9" y="53.2" class="st1" width="59.5" height="10.1"/>
-		<ellipse class="st2" cx="222.6" cy="53.5" rx="29.7" ry="17"/>
-		<polygon class="st3" points="222.6,40.3 229.4,46.3 218.7,51.1 		"/>
-		<polygon class="st3" points="52.3,43.3 59.1,49.3 48.4,54.1 		"/>
-		<polygon class="st3" points="69.2,52.5 64.3,44.8 76,43.1 		"/>
-		<polygon class="st3" points="138.8,43.3 145.6,49.3 134.9,54.1 		"/>
-		<polygon class="st3" points="163.3,52.3 170.1,58.3 159.4,63.1 		"/>
-		<polygon class="st4" points="206.9,57.7 208,48.7 218,54.7 		"/>
-		<polygon class="st4" points="138.4,62.2 139.5,53.2 149.5,59.2 		"/>
-		<polygon class="st4" points="78.7,62.2 79.7,53.2 89.8,59.2 		"/>
-		<polygon class="st5" points="234.4,47.5 242.4,51.7 233.1,58.9 		"/>
-		<polygon class="st5" points="154.1,42.7 162.1,46.9 152.8,54.1 		"/>
-		<polygon class="st3" points="82.1,129.3 75.3,123.3 86,118.5 		"/>
-		<polygon class="st3" points="57.6,120.3 50.8,114.3 61.5,109.5 		"/>
-		<polygon class="st4" points="82.4,110.4 81.4,119.4 71.3,113.4 		"/>
-		<polygon class="st5" points="66.8,129.9 58.7,125.7 68.1,118.5 		"/>
-		<polygon class="st5" points="61.4,52.5 69.5,56.8 60.1,64 		"/>
-		<polygon class="st3" points="239.4,130.6 232.6,124.6 243.3,119.7 		"/>
-		<polygon class="st3" points="222.5,121.4 227.4,129 215.7,130.7 		"/>
-		<polygon class="st4" points="213,111.6 212,120.6 201.9,114.6 		"/>
-		<polygon class="st5" points="230.3,121.3 222.2,117.1 231.6,109.9 		"/>
-		<polygon class="st5" points="226.9,60.1 222.1,67.8 215.6,58 		"/>
-		<polygon class="st3" points="150.3,133.4 143.5,127.4 154.2,122.5 		"/>
-		<polygon class="st4" points="166,115.9 165,124.9 154.9,118.9 		"/>
-		<polygon class="st5" points="138.5,126.2 130.5,121.9 139.8,114.7 		"/>
-		<polygon class="st5" points="146,113.5 150.8,105.8 157.4,115.6 		"/>
+		<path class="st0" d="M-43.5,384.7C-43.8,375.5-57,368-73.2,368c-16.3,0-29.5,7.4-29.7,16.7l0,0v10.1l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3s29.1-7.2,29.7-16.3l0,0V384.7L-43.5,384.7z"/>
+		<path class="st0" d="M34.6,384.7C34.3,375.5,21.1,368,4.9,368c-16.3,0-29.5,7.4-29.7,16.7l0,0v10.1l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3s29.1-7.2,29.7-16.3l0,0V384.7L34.6,384.7z"/>
+		<path class="st0" d="M109.9,384.7c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7l0,0v10.1l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3s29.1-7.2,29.7-16.3l0,0V384.7L109.9,384.7z"/>
+		<path class="st0" d="M-43.5,450.9c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7l0,0V461l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3s29.1-7.2,29.7-16.3l0,0V450.9L-43.5,450.9z"/>
+		<path class="st0" d="M34.6,450.9c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7l0,0V461l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3S34,470.1,34.6,461l0,0V450.9L34.6,450.9z"/>
+		<path class="st0" d="M109.9,450.9c-0.3-9.2-13.5-16.7-29.7-16.7c-16.3,0-29.5,7.4-29.7,16.7l0,0V461l0,0
+			c0.6,9.1,13.7,16.3,29.7,16.3s29.1-7.2,29.7-16.3l0,0V450.9L109.9,450.9z"/>
+		<ellipse class="st1" cx="-78.5" cy="455.7" rx="29.7" ry="17"/>
+		<rect x="-108.3" y="446.3" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="-78.5" cy="446.6" rx="29.7" ry="17"/>
+		<ellipse class="st1" cx="0.5" cy="455.7" rx="29.7" ry="17"/>
+		<rect x="-29.3" y="446.3" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="0.5" cy="446.6" rx="29.7" ry="17"/>
+		<ellipse class="st1" cx="74.6" cy="455.7" rx="29.7" ry="17"/>
+		<rect x="44.9" y="446.3" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="74.6" cy="446.6" rx="29.7" ry="17"/>
+		<ellipse class="st1" cx="-78.5" cy="389.5" rx="29.7" ry="17"/>
+		<rect x="-108.3" y="380.1" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="-78.5" cy="380.4" rx="29.7" ry="17"/>
+		<ellipse class="st1" cx="0.5" cy="389.5" rx="29.7" ry="17"/>
+		<rect x="-29.3" y="380.1" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="0.5" cy="380.4" rx="29.7" ry="17"/>
+		<ellipse class="st1" cx="74.6" cy="389.5" rx="29.7" ry="17"/>
+		<rect x="44.9" y="380.1" class="st1" width="59.5" height="10.1"/>
+		<ellipse class="st2" cx="74.6" cy="380.4" rx="29.7" ry="17"/>
+		<polygon class="st3" points="74.6,367.2 81.4,373.2 70.7,378 		"/>
+		<polygon class="st3" points="-95.7,370.2 -88.9,376.2 -99.6,381 		"/>
+		<polygon class="st3" points="-78.8,379.4 -83.7,371.7 -72,370 		"/>
+		<polygon class="st3" points="-9.2,370.2 -2.4,376.2 -13.1,381 		"/>
+		<polygon class="st3" points="15.3,379.2 22.1,385.2 11.4,390 		"/>
+		<polygon class="st4" points="58.9,384.6 60,375.6 70,381.6 		"/>
+		<polygon class="st4" points="-9.6,389.1 -8.5,380.1 1.5,386.1 		"/>
+		<polygon class="st4" points="-69.3,389.1 -68.3,380.1 -58.2,386.1 		"/>
+		<polygon class="st5" points="86.4,374.4 94.4,378.6 85.1,385.8 		"/>
+		<polygon class="st5" points="6.1,369.6 14.1,373.8 4.8,381 		"/>
+		<polygon class="st3" points="-65.9,456.2 -72.7,450.2 -62,445.4 		"/>
+		<polygon class="st3" points="-90.4,447.2 -97.2,441.2 -86.5,436.4 		"/>
+		<polygon class="st4" points="-65.6,437.3 -66.6,446.3 -76.7,440.3 		"/>
+		<polygon class="st5" points="-81.2,456.8 -89.3,452.6 -79.9,445.4 		"/>
+		<polygon class="st5" points="-86.6,379.4 -78.5,383.7 -87.9,390.9 		"/>
+		<polygon class="st3" points="91.4,457.5 84.6,451.5 95.3,446.6 		"/>
+		<polygon class="st3" points="74.5,448.3 79.4,455.9 67.7,457.6 		"/>
+		<polygon class="st4" points="65,438.5 64,447.5 53.9,441.5 		"/>
+		<polygon class="st5" points="82.3,448.2 74.2,444 83.6,436.8 		"/>
+		<polygon class="st5" points="78.9,387 74.1,394.7 67.6,384.9 		"/>
+		<polygon class="st3" points="2.3,460.3 -4.5,454.3 6.2,449.4 		"/>
+		<polygon class="st4" points="18,442.8 17,451.8 6.9,445.8 		"/>
+		<polygon class="st5" points="-9.5,453.1 -17.5,448.8 -8.2,441.6 		"/>
+		<polygon class="st5" points="-2,440.4 2.8,432.7 9.4,442.5 		"/>
 	</g>
 </g>
 </svg>

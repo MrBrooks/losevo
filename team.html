@@ -146,6 +146,14 @@
 <![endif]-->
 
         <header>
+<!-- <div id="lsv-main__opacity-block">
+  <div id="opacity-block--popup">
+    <h1>ПРИВЕТСВУЕМ!</h1> <br>
+    Мы ждём ваших отзывов по новому сайту! Заполните, пожалуйста, форму в контактах. <br><br>
+    <button class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit submit lsv-btn__btn-popup"> Оставить отзыв </button><br>
+    <button class="btn btn-default lsv-btn lsv-btn--grey lsv-form__btn-submit submit lsv-btn__btn-popup" id="lsv-btn__btn-popup--close" style="background: #5c5c5c;"> Позже </button>
+  </div>
+</div> -->
 <div id="page-preloader">
   <svg id="spinner" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 102 102" style="enable-background:new 0 0 102 102;" xml:space="preserve">
@@ -188,6 +196,16 @@
       </g>
     </g>
   </svg>
+</div>
+<div id="lsv-main__opacity-block">
+  <div id="opacity-block--popup">
+    <h1>ПРИВЕТСВУЕМ!</h1> <br>
+    Мы ждём ваших отзывов по новому сайту! Заполните, пожалуйста, форму в контактах. <br><br>
+    <a href="contacts.html">
+      <button class="btn btn-default lsv-btn lsv-btn--green lsv-form__btn-submit submit lsv-btn__btn-popup"> Оставить отзыв </button>
+    </a><br>
+    <button class="btn btn-default lsv-btn lsv-btn--grey lsv-form__btn-submit submit lsv-btn__btn-popup" id="lsv-btn__btn-popup--close" style="background: #5c5c5c;"> Позже </button>
+  </div>
 </div>
 <div class="dont-rotate">
   <div>
@@ -301,12 +319,6 @@
                 <a class="lsv-menu__sublink" href="about.html">О нас</a>
               </li>
               <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="team.html">Наши сотрудники</a>
-              </li>
-              <li class="lsv-menu__sublist-item">
-                <a class="lsv-menu__sublink" href="vacancies.html">Наши вакансии</a>
-              </li>
-              <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="faq.html">F.A.Q.</a>
               </li>
             </ul>
@@ -355,6 +367,12 @@
           <li class="lsv-menu__list-item col-md-2 col-sm-3">
             <!-- <label>Контакты</label> -->
             <ul class="lsv-menu__sublist">
+              <li class="lsv-menu__sublist-item">
+                <a class="lsv-menu__sublink" href="team.html">Наши сотрудники</a>
+              </li>
+              <li class="lsv-menu__sublist-item">
+                <a class="lsv-menu__sublink" href="vacancies.html">Наши вакансии</a>
+              </li>
               <li class="lsv-menu__sublist-item">
                 <a class="lsv-menu__sublink" href="contacts.html">Связаться с нами</a>
               </li>
@@ -727,11 +745,12 @@
           </div>
         </main>
 
-        
+        <div id="notDownload"></div>
 
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
         <script type="text/javascript">
         $(document).ready(function(){
           $('#lsv-slides').fullpage({
