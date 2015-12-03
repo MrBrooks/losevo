@@ -14434,6 +14434,12 @@ input[type='reset']:focus
     width: 50%;
     height: 72%;
 }
+.animation-container.start
+{
+    top: 30%;
+
+    height: 40%;
+}
 @media screen and (max-width: 480px)
 {
     .animation-container
