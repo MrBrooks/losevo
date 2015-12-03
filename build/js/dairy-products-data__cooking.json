@@ -1,4 +1,16 @@
-[
+[{
+        "title": "Кулинария",
+        "products": [
+        {
+        "icon": "",
+        "startImg":"img/svg/cooking.svg",
+        "goodies" : "",
+        "info": ""
+        }
+        ],
+        "steps": []
+
+    },  
     {
       "title": "Колбаски",
       "products" : [
