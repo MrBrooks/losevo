@@ -26,6 +26,7 @@ $(document).ready(function(){
         });
       }
     });
+    ///added new func
     var animation_data;
     var old_b;
     var current_anim = 0, current_prod = 0;
