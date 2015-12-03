@@ -322,59 +322,458 @@
       ]
     },
     {
-      "title": "Индейка",
-      "products" : [
+    "title": "Котлеты из курицы",
+    "products": [
       {
-        "title": "Индейка",
+        "title": "Котлеты из курицы",
         "icon": "",
-        "startImg":"img/svg/animations/turkey/turkey.svg",
-        "goodies" : "1",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
         "info": "2"
       }
-      ],
-      "steps" : [
-      ]
-    },
-    {
-      "title": "Баранина",
-      "products" : [
+    ],
+    "steps": []
+  },
+  {
+    "title": "Котлеты из говядины",
+    "products": [
       {
-        "title": "Баранина",
+        "title": "Котлеты из говядины",
         "icon": "",
-        "startImg":"img/svg/animations/ram/ram.svg",
-        "goodies" : "1",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
         "info": "2"
       }
-      ],
-      "steps" : [
-      ]
-    },
-    {
-      "title": "Курица",
-      "products" : [
+    ],
+    "steps": []
+  },
+  {
+    "title": "Котлеты из индейки",
+    "products": [
       {
-        "title": "Курица",
+        "title": "Котлеты из индейки",
         "icon": "",
-        "startImg":"img/svg/animations/chicken/chiken.svg",
-        "goodies" : "1",
+        "startImg": "img/svg/animations/turkey/turkey.svg",
+        "goodies": "1",
         "info": "2"
       }
-      ],
-      "steps" : [
-      ]
-    },
-    {
-      "title": "Цыпленок",
-      "products" : [
+    ],
+    "steps": []
+  },
+  {
+    "title": "Фрикадельки из говядины",
+    "products": [
       {
-        "title": "Цыпленок",
+        "title": "Фрикадельки из говядины",
         "icon": "",
-        "startImg":"img/svg/animations/chick/chick.svg",
-        "goodies" : "1",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
         "info": "2"
       }
-      ],
-      "steps" : [
-      ]
-    }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Котлеты капустные с морковью",
+    "products": [
+      {
+        "title": "Котлеты капустные с морковью",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Котлеты картофельные",
+    "products": [
+      {
+        "title": "Котлеты картофельные",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Пельмени с говядиной",
+    "products": [
+      {
+        "title": "Пельмени с говядиной",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Пельмени с курицей",
+    "products": [
+      {
+        "title": "Пельмени с курицей",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Пельмени из индейки",
+    "products": [
+      {
+        "title": "Пельмени из индейки",
+        "icon": "",
+        "startImg": "img/svg/animations/turkey/turkey.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Манты с бараниной",
+    "products": [
+      {
+        "title": "Манты с бараниной",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Чебуреки мясные",
+    "products": [
+      {
+        "title": "Чебуреки мясные",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Суповой набор из курицы",
+    "products": [
+      {
+        "title": "Суповой набор из курицы",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Суповой набор из индейки",
+    "products": [
+      {
+        "title": "Суповой набор из индейки",
+        "icon": "",
+        "startImg": "img/svg/animations/turkey/turkey.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Крыло индейки",
+    "products": [
+      {
+        "title": "Крыло индейки",
+        "icon": "",
+        "startImg": "img/svg/animations/turkey/turkey.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Цыплёнок копчёный",
+    "products": [
+      {
+        "title": "Цыплёнок копчёный",
+        "icon": "",
+        "startImg": "img/svg/animations/chick/chick.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Шашлык из курицы",
+    "products": [
+      {
+        "title": "Шашлык из курицы",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Крылышки барбекю",
+    "products": [
+      {
+        "title": "Крылышки барбекю",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Шашлык из баранины",
+    "products": [
+      {
+        "title": "Шашлык из баранины",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Бедро куриное",
+    "products": [
+      {
+        "title": "Бедро куриное",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Голень куриная",
+    "products": [
+      {
+        "title": "Голень куриная",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Крыло куриное",
+    "products": [
+      {
+        "title": "Крыло куриное",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Филе куриной грудки ",
+    "products": [
+      {
+        "title": "Филе куриной грудки ",
+        "icon": "",
+        "startImg": "img/svg/animations/chicken/chiken.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Лопатка",
+    "products": [
+      {
+        "title": "Лопатка",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Грудинка",
+    "products": [
+      {
+        "title": "Грудинка",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Котлетки натуральные на кости",
+    "products": [
+      {
+        "title": "Котлетки натуральные на кости",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Курдюк",
+    "products": [
+      {
+        "title": "Курдюк",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Пашина",
+    "products": [
+      {
+        "title": "Пашина",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Седло",
+    "products": [
+      {
+        "title": "Седло",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Окорок на кости",
+    "products": [
+      {
+        "title": "Баранина Окорок на кости",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Суповой набор",
+    "products": [
+      {
+        "title": "Суповой набор",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Голяшка на кости",
+    "products": [
+      {
+        "title": "Голяшка на кости",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Кости",
+    "products": [
+      {
+        "title": "Кости",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Обрезь",
+    "products": [
+      {
+        "title": "Обрезь",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Шея",
+    "products": [
+      {
+        "title": "Шея",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  },
+  {
+    "title": "Рёбра",
+    "products": [
+      {
+        "title": "Рёбра",
+        "icon": "",
+        "startImg": "img/svg/animations/ram/ram.svg",
+        "goodies": "1",
+        "info": "2"
+      }
+    ],
+    "steps": []
+  }
 ]
