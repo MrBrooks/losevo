@@ -48,6 +48,7 @@ $(document).ready(function(){
           $("#lsv-dairy-products__list").append("<li class='lsv-dairy-products__list-item' data-item-order="+i+">" + json[i].title + "</li>");
         }
         $(".lsv-dairy-products__list-item").click(function(){
+          $(".animation-container").removeClass("start");
           animation_data = json[$(this).attr("data-item-order")];
           $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
@@ -59,6 +60,7 @@ $(document).ready(function(){
         });
         animation_data = json[0];
         initProduct();
+        $(".animation-container").addClass("start");
     });
 
     function stepAnimation(){
@@ -123,6 +125,7 @@ $(document).ready(function(){
       });
     }
     function startNextAnim(){
+      $(".animation-container").removeClass("start");
        paper.stop();
       $("#lsv-dairy-products__tooltip-info").removeClass("active");
       $("#lsv-dairy-products__tooltip-good").removeClass("active");
