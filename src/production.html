@@ -250,107 +250,108 @@
                timeOutBakery,
                timeOutCheese,
                timeOutCar;
+              var timeAppear = 700;
               
               bakery.hover(
                 function(){
                   clearTimeout(timeOutBakery);
-                  bakery_hover.animate({ transform: bakeryHoverIn },500, mina.elastic);
+                  bakery_hover.animate({ transform: bakeryHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                   clearTimeout(timeOutBakery);
-                  bakery_hover.animate({ transform: bakeryHoverOut },500, mina.backin);
+                  bakery_hover.animate({ transform: bakeryHoverOut },timeAppear, mina.backin);
               });
 
               cheese_house.hover(
                 function(){
                   clearTimeout(timeOutCheese);
-                  cheese_house_hover.animate({ transform: cheeseHoverIn },500, mina.elastic);
+                  cheese_house_hover.animate({ transform: cheeseHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                  clearTimeout(timeOutCheese);
-                 timeOutCheese = setTimeout(function() {cheese_house_hover.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
+                 timeOutCheese = setTimeout(function() {cheese_house_hover.animate({ transform: cheeseHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
               bull.hover(
                 function(){
                   clearTimeout(timeOutBull);
-                  bull_popup.animate({ transform: bullHoverIn },500, mina.elastic);
+                  bull_popup.animate({ transform: bullHoverIn },timeAppear, mina.elastic);
                 },
                 function(){
                   clearTimeout(timeOutBull);
-                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000);
+                  timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
               milk.hover(
                 function(){
                   clearTimeout(timeOutMilk);
-                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
+                  milk_popup.animate({ transform: milkHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                   clearTimeout(timeOutMilk);
-                  timeOutMilk = setTimeout(function() {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);
+                  timeOutMilk = setTimeout(function() {milk_popup.animate({ transform: milkHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
               cheese.hover(
                 function(){
                   clearTimeout(timeOutCheese);
-                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
+                  cheese_popup.animate({ transform: cheeseHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                   clearTimeout(timeOutCheese);
-                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
               bakery_new.hover(
                 function(){
                   clearTimeout(timeOutBakery);
-                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                   clearTimeout(timeOutBakery);
-                  timeOutBakery = setTimeout(function () {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
+                  timeOutBakery = setTimeout(function () {bakery_popup.animate({ transform: bakery_newHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
               car.hover(
                 function(){
                   clearTimeout(timeOutCar);
-                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
+                  car_popup.animate({ transform: carHoverIn },timeAppear, mina.elastic);
               },
                 function(){
                   clearTimeout(timeOutCar);
-                  timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);
+                  timeOutCar = setTimeout(function () {car_popup.animate({ transform: carHoverOut },timeAppear, mina.backin)}, 1000);
               });
 
 
               $("#rect-bull").hover(function(){
                   clearTimeout(timeOutBull);
-                  bull_popup.animate({ transform: bullHoverIn},500, mina.elastic);
+                  bull_popup.animate({ transform: bullHoverIn},timeAppear, mina.elastic);
               }, function(){
-                 timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },500, mina.backin)}, 1000); 
+                 timeOutBull = setTimeout(function () {bull_popup.animate({ transform: bullHoverOut },timeAppear, mina.backin)}, 1000); 
               });
               $("#rect-milk").hover(function(){
                   clearTimeout(timeOutMilk);
-                  milk_popup.animate({ transform: milkHoverIn },500, mina.elastic);
+                  milk_popup.animate({ transform: milkHoverIn },timeAppear, mina.elastic);
               }, function(){
-                  timeOutMilk = setTimeout(function () {milk_popup.animate({ transform: milkHoverOut },500, mina.backin)}, 1000);  
+                  timeOutMilk = setTimeout(function () {milk_popup.animate({ transform: milkHoverOut },timeAppear, mina.backin)}, 1000);  
               });
               $("#cheese_hover").hover(function(){
                   clearTimeout(timeOutCheese);
-                  cheese_popup.animate({ transform: cheeseHoverIn },500, mina.elastic);
+                  cheese_popup.animate({ transform: cheeseHoverIn },timeAppear, mina.elastic);
               }, function(){
-                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },500, mina.backin)}, 1000);  
+                  timeOutCheese = setTimeout(function () {cheese_popup.animate({ transform: cheeseHoverOut },timeAppear, mina.backin)}, 1000);  
               });
               $("#cooking_hover").hover(function(){
                   clearTimeout(timeOutBakery);
-                  bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic);
+                  bakery_popup.animate({ transform: bakery_newHoverIn },timeAppear, mina.elastic);
               }, function(){
-                  timeOutBakery = setTimeout(function() {bakery_popup.animate({ transform: bakery_newHoverOut },500, mina.backin)}, 1000);
+                  timeOutBakery = setTimeout(function() {bakery_popup.animate({ transform: bakery_newHoverOut },timeAppear, mina.backin)}, 1000);
               });
               $("#accept_hover").hover(function(){
                   clearTimeout(timeOutCar);
-                  car_popup.animate({ transform: carHoverIn },500, mina.elastic);
+                  car_popup.animate({ transform: carHoverIn },timeAppear, mina.elastic);
               }, function(){
-                  timeOutCar = setTimeout(function() {car_popup.animate({ transform: carHoverOut },500, mina.backin)}, 1000);  
+                  timeOutCar = setTimeout(function() {car_popup.animate({ transform: carHoverOut },timeAppear, mina.backin)}, 1000);  
               });
 
               var beePoints = [0,0,0,0];
@@ -425,30 +426,30 @@ function fermTouch () {
 
         function clearPopUpHammer () {
               for (var i = 0; i <= 4; i++) {
-                hammerVarNameArr[i].animate({ transform: hammerVarNameOut[i] },500, mina.backin);
+                hammerVarNameArr[i].animate({ transform: hammerVarNameOut[i] },timeAppear, mina.backin);
               };
               dispNoneHover ();
         };
 
         Hammer(carHammer).on("tap", function(event) {
             clearPopUpHammer ();
-            setTimeout( function () {$('#accept_hover').css({"display": "block"}); car_popup.animate({ transform: carHoverIn }, 500, mina.elastic)}, 100);
+            setTimeout( function () {$('#accept_hover').css({"display": "block"}); car_popup.animate({ transform: carHoverIn }, timeAppear, mina.elastic)}, 100);
         });
         Hammer(bullHammer).on("tap", function(event) {
             clearPopUpHammer ();
-            setTimeout( function () {$('#bulls_hover').css({"display": "block"}); bull_popup.animate({ transform: bullHoverIn }, 500, mina.elastic)}, 100);
+            setTimeout( function () {$('#bulls_hover').css({"display": "block"}); bull_popup.animate({ transform: bullHoverIn }, timeAppear, mina.elastic)}, 100);
         });
         Hammer(milkHammer).on("tap", function(event) {
             clearPopUpHammer ();
-            setTimeout( function () {$('#milk_hover').css({"display": "block"}); milk_popup.animate({ transform: milkHoverIn }, 500, mina.elastic)}, 100);
+            setTimeout( function () {$('#milk_hover').css({"display": "block"}); milk_popup.animate({ transform: milkHoverIn }, timeAppear, mina.elastic)}, 100);
         });
         Hammer(cheeseHammer).on("tap", function(event) {
             clearPopUpHammer ();
-            setTimeout( function () {$('#cheese_hover').css({"display": "block"}); cheese_popup.animate({ transform: cheeseHoverIn }, 500, mina.elastic)}, 100);
+            setTimeout( function () {$('#cheese_hover').css({"display": "block"}); cheese_popup.animate({ transform: cheeseHoverIn }, timeAppear, mina.elastic)}, 100);
         });
         Hammer(bakeryHammer).on("tap", function(event) {
             clearPopUpHammer ();
-            setTimeout( function () {$('#cooking_hover').css({"display": "block"}); bakery_popup.animate({ transform: bakery_newHoverIn },500, mina.elastic)}, 100);
+            setTimeout( function () {$('#cooking_hover').css({"display": "block"}); bakery_popup.animate({ transform: bakery_newHoverIn },timeAppear, mina.elastic)}, 100);
         });
         Hammer(fermHammer).on("tap", function(event) {
             setTimeout( function () {clearPopUpHammer ()}, 50);
