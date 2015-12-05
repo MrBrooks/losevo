@@ -11887,7 +11887,7 @@ textarea
     top: -168px;
 
     width: 100%;
-    height: 165px;
+    height: 120px;
 
     transition: all 500ms cubic-bezier(.215, .61, .355, 1);
 
@@ -11927,7 +11927,7 @@ textarea
 {
     display: inline-block;
 
-    height: 165px;
+    height: 120px;
     padding-top: 0;
     padding-right: 0;
 
@@ -13535,6 +13535,10 @@ label.lsv-btn__input-file
 }
 #lsv-team__img-start
 {
+    width: 100%;
+    height: calc(60% - 62px);
+    margin-top: 62px;
+
     background-image: url(../img/images/team_start.jpg);
 }
 #lsv-team__img-owner-1
@@ -13573,14 +13577,25 @@ label.lsv-btn__input-file
 .lsv-team__text-start
 {
     position: absolute;
-    top: 62px;
-    left: 50%;
+    top: 60%;
 
+    width: 100%;
     padding: 20px 10px 0 40px;
 }
 .lsv-team__text-start p
 {
     margin: 20px 0;
+}
+@media screen and (max-width: 768px)
+{
+    .lsv-team__text-start
+    {
+        top: 62px;
+        left: 0;
+
+        width: 100%;
+        padding: 10px 40px;
+    }
 }
 @media screen and (max-width: 420px)
 {
@@ -13592,17 +13607,6 @@ label.lsv-btn__input-file
         width: 100%;
         height: 100%;
         padding: 0 10px;
-    }
-}
-@media screen and (max-width: 768px)
-{
-    .lsv-team__text-start
-    {
-        top: 62px;
-        left: 0;
-
-        width: 100%;
-        padding: 10px 40px;
     }
 }
 .lsv-team__text-owner
@@ -14053,6 +14057,10 @@ label.lsv-btn__input-file
 
     width: 40%;
 }
+.lsv-shops__filter-form .form-control
+{
+    padding: 0 12px;
+}
 .lsv-shops__filter-form label
 {
     font-weight: 400;
@@ -14385,7 +14393,7 @@ input[type='reset']:focus
 }
 .lsv-dairy-products__menu li
 {
-    height: 48px;
+    min-height: 48px;
     padding: 15px 10px 15px 30px;
 
     cursor: pointer;
@@ -15650,29 +15658,17 @@ button.btn:hover
         bottom: 0;
     }
 }
-.lsv-dairy-products__list-item:nth-child(18)
-{
-    height: 70px;
-}
 #lsv-shop__down-btn
 {
     position: absolute;
     right: 0;
     bottom: 0;
 
-    display: none;
-
     margin: 10px;
 
+    cursor: pointer;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
-}
-@media screen and (max-width: 768px)
-{
-    #lsv-shop__down-btn
-    {
-        display: block;
-    }
 }
 .lsv-pluses__header
 {

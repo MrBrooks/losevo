@@ -1494,6 +1494,9 @@ label.lsv-btn__input-file{
 }
 
 #lsv-team__img-start{
+  width: 100%;
+  height: ~"calc(60% - 62px)";
+  margin-top: @lsv_menu_height;
   background-image: url(../img/images/team_start.jpg);
 }
 #lsv-team__img-owner-1{
@@ -1524,11 +1527,17 @@ label.lsv-btn__input-file{
 }
 .lsv-team__text-start{
   position: absolute;
-  left: 50%;
+  top: 60%;
+  width: 100%;
   padding: 20px 10px 0 40px;
-  top: @lsv_menu_height;
   p{
     margin: 20px 0;
+  }
+  @media screen and (max-width: 768px){
+    top: @lsv_menu_height;
+    padding: 10px 40px;
+    width: 100%;
+    left: 0;
   }
   @media screen and (max-width: 420px){
     width: 100%;
@@ -1536,12 +1545,6 @@ label.lsv-btn__input-file{
     top: 45%;
     left: 0;
     padding: 0 10px;
-  }
-  @media screen and (max-width: 768px){
-    top: @lsv_menu_height;
-    padding: 10px 40px;
-    width: 100%;
-    left: 0;
   }
 }
 .lsv-team__text-owner{
@@ -1828,7 +1831,9 @@ label.lsv-btn__input-file{
       position: relative;
     }
   }
-  
+  .form-control{
+    padding: 0px 12px;
+  }
   label{
     text-transform: uppercase;
     font-weight: 400;
@@ -2075,7 +2080,8 @@ input[type='reset']:focus {
     }
   }
   li{
-    height: 48px;
+    //height: 48px;
+    min-height: 48px;
     padding: 15px 10px 15px 30px;
     cursor: pointer;
     &:hover{
@@ -3097,7 +3103,7 @@ button.btn{
 }
 .lsv-dairy-products__list-item:nth-child(18){
   // color: red;
-  height: 70px;
+  // height: 70px;
 }
 #lsv-shop__down-btn{
   position: absolute;
@@ -3105,11 +3111,12 @@ button.btn{
   bottom: 0;
   margin: 10px;
   transform: rotate(-90deg);
-  display: none;
+  cursor:pointer;
+  // display: none;
 
-  @media screen and (max-width: 768px){
-    display: block;
-  }
+  // @media screen and (max-width: 768px){
+  //   display: block;
+  // }
 }
 .lsv-pluses__header{
   margin-bottom: 200px;

@@ -26,13 +26,8 @@
             <!-- /build -->
           </div>
           <div class="section lsv-slide-bgc">
-            <!-- build:include html-blocks/pages--external/team-office-block.html -->
-            This will be replaced by the content of html-blocks/pages--external/team-office-block.html
-            <!-- /build -->
-          </div>
-          <div class="section lsv-slide-bgc">
-            <!-- build:include html-blocks/pages--external/team-shops-block.html -->
-            This will be replaced by the content of html-blocks/pages--external/team-shops-block.html
+            <!-- build:include html-blocks/pages--external/team-production-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/team-production-block.html
             <!-- /build -->
           </div>
           <div class="section lsv-slide-bgc">
@@ -41,10 +36,17 @@
             <!-- /build -->
           </div>
           <div class="section lsv-slide-bgc">
-            <!-- build:include html-blocks/pages--external/team-production-block.html -->
-            This will be replaced by the content of html-blocks/pages--external/team-production-block.html
+            <!-- build:include html-blocks/pages--external/team-shops-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/team-shops-block.html
             <!-- /build -->
           </div>
+          <div class="section lsv-slide-bgc">
+            <!-- build:include html-blocks/pages--external/team-office-block.html -->
+            This will be replaced by the content of html-blocks/pages--external/team-office-block.html
+            <!-- /build -->
+          </div>
+          
+          
           
           <div class="section lsv-footer fp-auto-height">
             <!-- build:include html-blocks/pages--external/footer.html -->
@@ -81,6 +83,8 @@
             $(":file").filestyle({
             });
           });
+
+
           if(window.innerWidth <= 768){
             $.fn.fullpage.destroy();
             $("#lsv-team__img-start,.fullwidth-img--onethird").height(window.innerHeight/2 - 63);
@@ -102,7 +106,17 @@
             $(".lsv-team__text-start").css({
               top : (window.innerHeight/2) + "px"
             });
-          }
+          } 
+          // else{
+          //   $("#lsv-team__img-start").height(window.innerHeight/2 - 63);
+          //   var startBlockHeight = $(".lsv-team__text-start>div").height()+ window.innerHeight/2 + 63;
+          //   $(".section:first-child").css({
+          //     height : startBlockHeight+"px"
+          //   });
+          //   $(".lsv-team__text-start").css({
+          //     top : (window.innerHeight/2) + "px"
+          //   });
+          // }
           $("#lsv-slide-up").click(function (){
               $.fn.fullpage.moveSectionUp();
           });

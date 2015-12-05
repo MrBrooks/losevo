@@ -23420,7 +23420,7 @@ $(document).ready(function() {
   });
 
   var vacancies_menu =  $("#lsv-vacancies-menu");
-  if(!(vacancies_menu.children().length > 0)){
+  if((vacancies_menu.children().length > 0)){
     vacancies_menu.html('<a href="#form"><h1 class="lsv-h1">На данный момент у нас нет открытых вакансий, но вы можете оставить своё резюме, и мы с Вами свяжемся!</h1></a>');
   }
 
@@ -23457,7 +23457,7 @@ $(document).ready(function() {
     
   }
   //запуск поп-апа по поводу оставить пожелание по сайту
-  setTimeout(popUpIn, 8000);
+  //setTimeout(popUpIn, 8000);
 
   $("#lsv-btn__btn-popup--close").click(function () {
     popUpOut ();

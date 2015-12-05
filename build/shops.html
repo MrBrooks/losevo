@@ -695,7 +695,7 @@
         $(document).ready(function() {
         var lsvInitMapAndFilters = function(){
           var map;
-          var active_marker, temp_icon;
+          var active_marker, temp_icon, active_list;
           var markers = [];
           function initMap(){
             var styles = [
@@ -765,6 +765,7 @@
                   markers[index].lsv_lo = shop.lo;
 
                   markers[index].addListener('click',function(){
+                    var ind = index;
                     if (active_marker != undefined){
                       if(json[active_marker].firm){
                         markers[active_marker].setIcon(losevo_shop_icon);
@@ -773,6 +774,12 @@
                       };
                     };
                     active_marker = index;
+                    active_list = $("#lsv-shops__list div[data-marker-index='"+ind+"']");
+                    console.log(active_list.position());
+                    $(".fp-scrollable").slimScroll({
+                      scrollTo: active_list.position().top - 50 + "px"
+                    });
+                    active_list.addClass('active').siblings().removeClass('active');
                     $("#lsv-map__name").text(shop.name);
                     $("#lsv-map__address").text(shop.address);
                     $("#lsv-map__work_hours").text(shop.work_hours);
