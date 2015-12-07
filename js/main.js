@@ -23473,16 +23473,28 @@ $(document).ready(function() {
   }
   var storage = getLocalStorage();
 
-  if(storage.getItem("pageSeeing")){
-    var count = parseInt(storage.getItem("pageSeeing"));
-    count++;
-    if (count == 2){
-      setTimeout(popUpIn, 10000);
+  // if(storage.getItem("pageSeeing")){
+  //   var count = parseInt(storage.getItem("pageSeeing"));
+  //   count++;
+  //   if (count == 2){
+  //     setTimeout(popUpIn, 10000);
+  //   }
+  //   storage.setItem("pageSeeing", count);
+  // } else{
+  //   storage.setItem("pageSeeing","1");
+  // };
+  if( storage.getItem("timeFirstIn")){
+    var currentTime = new Date();
+    var timeFirstIn = new Date(storage.getItem("timeFirstIn"));
+    // console.log(currentTime - timeFirstIn);
+    if( (currentTime - timeFirstIn) > 90000 && storage.getItem("show") == "1"){
+      setTimeout(popUpIn, 5000);
+      storage.setItem("show",0);
     }
-    storage.setItem("pageSeeing", count);
   } else{
-    storage.setItem("pageSeeing","1");
-  };
+    storage.setItem("timeFirstIn", new Date());
+    storage.setItem("show","1");
+  }
 
   //setTimeout(popUpIn, 10000);
 
