@@ -23457,7 +23457,34 @@ $(document).ready(function() {
     
   }
   //запуск поп-апа по поводу оставить пожелание по сайту
-  //setTimeout(popUpIn, 8000);
+
+  function getLocalStorage(){
+    if ( typeof localStorage == "object"){
+      return localStorage;
+    }
+    else {
+      if ( typeof globalStorage == "object"){
+        return globalStorage[location.host];
+      }
+      else{
+        throw new Error("Local storage not available.");
+      }
+    }
+  }
+  var storage = getLocalStorage();
+
+  if(storage.getItem("pageSeeing")){
+    var count = parseInt(storage.getItem("pageSeeing"));
+    count++;
+    if (count == 2){
+      setTimeout(popUpIn, 10000);
+    }
+    storage.setItem("pageSeeing", count);
+  } else{
+    storage.setItem("pageSeeing","1");
+  };
+
+  //setTimeout(popUpIn, 10000);
 
   $("#lsv-btn__btn-popup--close").click(function () {
     popUpOut ();
