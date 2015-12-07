@@ -13580,7 +13580,7 @@ label.lsv-btn__input-file
     top: 60%;
 
     width: 100%;
-    padding: 20px 10px 0 40px;
+    padding: 20px 7% 0 7%;
 }
 .lsv-team__text-start p
 {
@@ -13606,7 +13606,7 @@ label.lsv-btn__input-file
 
         width: 100%;
         height: 100%;
-        padding: 0 10px;
+        padding: 0 20px;
     }
 }
 .lsv-team__text-owner
