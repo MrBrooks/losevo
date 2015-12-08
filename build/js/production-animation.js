@@ -278,6 +278,7 @@ $(document).ready(function(){
           current_prod++;
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
           $("#lsv-dairy-products__next-animation").removeClass("active");
+          $("#lsv-dairy-products__next-animation>.prev").remove();
           hideAll();
           if (countBut == lengthElementSlideBar) {
             countBut = lengthElementSlideBar;
@@ -298,6 +299,7 @@ $(document).ready(function(){
           current_prod--;
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
           $("#lsv-dairy-products__next-animation").removeClass("active");
+          $("#lsv-dairy-products__next-animation>.prev").remove();
           hideAll();
           if (countBut == 2) {
             countBut = 2;
