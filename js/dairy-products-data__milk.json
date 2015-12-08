@@ -173,11 +173,18 @@
       "title": "Бифилайф с добавками",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/bifilife_dobavki/bifilaif_s_dobavkami_pack.svg",
+        "title": "Бифилайф со злаками",
+        "icon": "img/svg/products_icons/bifilail_zlaki.svg",
+        "startImg":"img/svg/animations/bifilife_dobavki/bifilail_zlaki.svg",
         "goodies" : "1",
         "info": "2"
+      },
+      {
+        "title": "Бифилайф со злаками и фруктозой",
+        "icon": "img/svg/products_icons/bifilail_zlaki_fruktoza.svg",
+        "startImg":"img/svg/animations/bifilife_dobavki/bifilail_zlaki_fruktoza.svg",
+        "goodies" : "3",
+        "info": "4"
       }
       ],
       "steps" : [
@@ -336,11 +343,32 @@
       "title": "Йогурт с добавками",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_s_dobavkami_pack.svg",
+        "title": "Йогурт с брусникой",
+        "icon": "img/svg/products_icons/jogurt_brusnika.svg",
+        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_brusnika.svg",
         "goodies" : "1",
         "info": "2"
+      },
+      {
+        "title": "Йогурт с ванилью",
+        "icon": "img/svg/products_icons/jogurt_vanil.svg",
+        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_vanil.svg",
+        "goodies" : "3",
+        "info": "4"
+      },
+      {
+        "title": "Йогурт с черникой",
+        "icon": "img/svg/products_icons/jogurt_chernika.svg",
+        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_chernika.svg",
+        "goodies" : "5",
+        "info": "6"
+      },
+      {
+        "title": "Йогурт с шиповником",
+        "icon": "img/svg/products_icons/jogurt_shipovnik.svg",
+        "startImg":"img/svg/animations/yougurt_dobavki/jogurt_shipovnik.svg",
+        "goodies" : "7",
+        "info": "8"
       }
       ],
       "steps" : [
@@ -420,11 +448,18 @@
       "title": "Кефир",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/kefir/kefir_pack.svg",
+        "title": " Кефир 1% ",
+        "icon": "img/svg/products_icons/kefir_1.svg",
+        "startImg":"img/svg/animations/kefir/kefir_1.svg",
         "goodies" : "1",
         "info": "2"
+      },
+      {
+        "title": " Кефир 2.5%",
+        "icon": "img/svg/products_icons/kefir_25.svg",
+        "startImg":"img/svg/animations/kefir/kefir_25.svg",
+        "goodies" : "3",
+        "info": "4"
       }
       ],
       "steps" : [
@@ -789,9 +824,16 @@
       "title": "Сметана",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/smetana/smetana_pack.svg",
+        "title": "Сметана 15%",
+        "icon": "img/svg/products_icons/smetena_15.svg",
+        "startImg":"img/svg/animations/smetana/smetana_15.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Сметана 20%",
+        "icon": "img/svg/products_icons/smetena_20.svg",
+        "startImg":"img/svg/animations/smetana/smetana_20.svg",
         "goodies" : "1",
         "info": "2"
       }
@@ -907,9 +949,16 @@
       "title": "Сыворотка с соком",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/sivorotka_sok/sivorotka_s_sokom_pack.svg",
+        "title": "Сыворотка с брусничным соком",
+        "icon": "img/svg/products_icons/sivorotka_s_brusnichnym_sokom.svg",
+        "startImg":"img/svg/animations/sivorotka_sok/sivorotka_brusnika.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Сыворотка с черничным соком",
+        "icon": "img/svg/products_icons/sivorotka_s_chernichnym_sokom.svg",
+        "startImg":"img/svg/animations/sivorotka_sok/sivorotka_chernika.svg",
         "goodies" : "1",
         "info": "2"
       }
@@ -957,8 +1006,22 @@
       "products" : [
       {
         "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/tvorog/tvorog_pack.svg",
+        "icon": "img/svg/products_icons/tvorog_0.svg",
+        "startImg":"img/svg/animations/tvorog/tvorog_0.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/tvorog_5.svg",
+        "startImg":"img/svg/animations/tvorog/tvorog_5.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": " ",
+        "icon": "img/svg/products_icons/tvorog_9.svg",
+        "startImg":"img/svg/animations/tvorog/tvorog_9.svg",
         "goodies" : "1",
         "info": "2"
       }
@@ -1064,9 +1127,30 @@
       "title": "Творожная запеканка с добавками",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/tvorozhnaya_zapekanka pack.svg",
+        "title": "Творожная запеканка с медом и грецким орехом",
+        "icon": "img/svg/products_icons/tvorozhnaya_zapekanka_honey.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/zapekanka_honey.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Творожная запеканка с курогой",
+        "icon": "img/svg/products_icons/tvorog_zapekank-kuraga.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/zapekanka_peach.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Творожная запеканка с изюмом",
+        "icon": "img/svg/products_icons/tvorog_zapekank_izum.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/zapekanka_raisins.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Творожная запеканка с курогой и кедровым орехом",
+        "icon": "img/svg/products_icons/tvorozhnaya_zapekanka_kedrovye_orechi.svg",
+        "startImg":"img/svg/animations/tvorog_zapekanka_dobavki/zapekanka_walnut.svg",
         "goodies" : "1",
         "info": "2"
       }
@@ -1108,9 +1192,23 @@
       "title": "Творожная масса",
       "products" : [
       {
-        "title": " ",
-        "icon": "img/svg/products_icons/cheese_kachotta.svg",
-        "startImg":"img/svg/animations/tvorog_massa/tvorozhnaya_massa_pack.svg",
+        "title": "Творожная масса с курогой",
+        "icon": "img/svg/products_icons/tvorog_massa_kuraga.svg",
+        "startImg":"img/svg/animations/tvorog_massa/massa_kuraga.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Творожная масса с клюквой",
+        "icon": "img/svg/products_icons/tvorog_massa_klukva.svg",
+        "startImg":"img/svg/animations/tvorog_massa/massa_klukva.svg",
+        "goodies" : "1",
+        "info": "2"
+      },
+      {
+        "title": "Творожная масса с изюмом",
+        "icon": "img/svg/products_icons/tvorog_massa_izum.svg",
+        "startImg":"img/svg/animations/tvorog_massa/massa_izum.svg",
         "goodies" : "1",
         "info": "2"
       }
