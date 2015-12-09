@@ -23495,14 +23495,22 @@ $(document).ready(function() {
     storage.setItem("timeFirstIn", new Date());
     storage.setItem("show","1");
   }
-
-  //setTimeout(popUpIn, 10000);
-
   $("#lsv-btn__btn-popup--close").click(function () {
     popUpOut ();
     // $("html").css({overflowY: "auto"});
     // $.fn.fullpage.setAllowScrolling(true);
-  }); 
+  });
+  if (window.innerWidth > 480){
+    $(".lsv-helper__arrow-down").click(function(){
+      $.fn.fullpage.moveSectionDown();
+    });
+  }
+
+  // var lsvAboutUsBoxText = $(".lsv-about__about-block>.about-text-block");
+  
+  // if(lsvAboutUsBoxText.length > 0){
+  //   console.log(lsvAboutUsBoxText);
+  // }
 
   $("form#data").submit(function(){
     var formData = new FormData($(this)[0]);

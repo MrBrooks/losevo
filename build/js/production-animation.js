@@ -53,6 +53,7 @@ $(document).ready(function(){
           $("#lsv-dairy-products__menu, #lsv-dairy-products__menu-close-btn").removeClass("active");
           $("#lsv-dairy-products__next-animation>label").html("Посмотреть <br> производство");
           $("#lsv-dairy-products__next-animation").removeClass("active");
+          $("#lsv-dairy-products__next-animation>.prev").remove();
           $(".slimScrollBar").css("opacity", "0");
           hideAll();
           $.fn.fullpage.setAllowScrolling(true);
