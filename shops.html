@@ -711,6 +711,11 @@
               zoom: 10,
               center: new google.maps.LatLng(59.931254, 30.357312),
               disableDefaultUI: true,
+              // mapTypeControl: true,
+              zoomControl: true,
+              zoomControlOptions: {
+                  position: google.maps.ControlPosition.LEFT_CENTER
+              },
               mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
               }
