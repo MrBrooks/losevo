@@ -14735,7 +14735,8 @@ input[type='reset']:focus
         width: 100%;
     }
 }
-#lsv-video-main
+#lsv-video-main,
+#lsv-video-main-tablet
 {
     position: fixed;
     z-index: -100;
@@ -14749,9 +14750,20 @@ input[type='reset']:focus
 
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
-
-    background: url(../img/vids/poster.jpg) no-repeat;
-    background-size: cover;
+}
+@media screen and (max-width: 1100px)
+{
+    #lsv-video-main
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 1100px)
+{
+    #lsv-video-main-tablet
+    {
+        display: none;
+    }
 }
 button.btn:focus
 {

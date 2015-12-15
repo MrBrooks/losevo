@@ -132,7 +132,7 @@ $(document).ready(function() {
     if (event.which === 3) {
       clearTimeout(discardDownloadTimer);
       $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
-      $("#notDownload").html("Полную версию логотипа можно сохранить из «Связаться с нами» ");
+      $("#notDownload").html("Полную версию логотипа можно сохранить из «Контакты» ");
       discardDownloadTimer = setTimeout(function (){
         notDownloadNone();
       }, 2000);
