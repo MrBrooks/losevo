@@ -23292,11 +23292,11 @@ $(document).ready(function() {
   }
 
   var discardDownloadTimer;
-  $(".lsv-nav__logo").contextmenu(function(){
+  $(".lsv-nav__logo>img").contextmenu(function(){
     return false;
   });
 
-  $(".lsv-nav__logo").mousedown(function(event) {
+  $(".lsv-nav__logo>img").mousedown(function(event) {
     if (event.which === 3) {
       clearTimeout(discardDownloadTimer);
       $("#notDownload").css({"top": event.pageY, "left": event.pageX, "display": "block"});
