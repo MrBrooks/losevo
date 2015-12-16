@@ -43,7 +43,7 @@ $(document).ready(function(){
     'easing': 'easeOutElastic',
     'fitToSection': false,
     'fixedElements': '.lsv-nav , .lsv-menu',
-    'scrollOverflow': true,
+    'scrollOverflow': false,
     onLeave: function(index, nextIndex, direction){
       if(nextIndex == 1 || nextIndex == arr_years.length+2 || nextIndex == arr_years.length+3){
         $('.lsv-history__timeline').css('opacity','0');
