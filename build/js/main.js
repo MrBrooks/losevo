@@ -9214,6 +9214,7 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -23354,7 +23355,7 @@ $(document).ready(function() {
       navigation : true,
       slideSpeed : 300,
       paginationSpeed : 400,
-      autoPlay: 7000
+      autoPlay: 20000
   });
   $("#owl-shops-pic-slider").owlCarousel({
       navigation: true,
@@ -23420,7 +23421,7 @@ $(document).ready(function() {
   });
 
   var vacancies_menu =  $("#lsv-vacancies-menu");
-  if((vacancies_menu.children().length > 0)){
+  if(vacancies_menu.children().length == 0){
     vacancies_menu.html('<a href="#form"><h1 class="lsv-h1">На данный момент у нас нет открытых вакансий, но вы можете оставить своё резюме, и мы с Вами свяжемся!</h1></a>');
   }
 
@@ -23471,29 +23472,22 @@ $(document).ready(function() {
       }
     }
   }
-  var storage = getLocalStorage();
-
-  // if(storage.getItem("pageSeeing")){
-  //   var count = parseInt(storage.getItem("pageSeeing"));
-  //   count++;
-  //   if (count == 2){
-  //     setTimeout(popUpIn, 10000);
-  //   }
-  //   storage.setItem("pageSeeing", count);
-  // } else{
-  //   storage.setItem("pageSeeing","1");
-  // };
-  if( storage.getItem("timeFirstIn")){
-    var currentTime = new Date();
-    var timeFirstIn = new Date(storage.getItem("timeFirstIn"));
-    // console.log(currentTime - timeFirstIn);
-    if( (currentTime - timeFirstIn) > 90000 && storage.getItem("show") == "1"){
-      setTimeout(popUpIn, 5000);
-      storage.setItem("show",0);
+  try{
+    var storage = getLocalStorage();
+    if( storage.getItem("timeFirstIn")){
+      var currentTime = new Date();
+      var timeFirstIn = new Date(storage.getItem("timeFirstIn"));
+      if( (currentTime - timeFirstIn) > 90000 && storage.getItem("show") == "1"){
+        setTimeout(popUpIn, 5000);
+        storage.setItem("show",0);
+      }
+    } else{
+      storage.setItem("timeFirstIn", new Date());
+      storage.setItem("show","1");
     }
-  } else{
-    storage.setItem("timeFirstIn", new Date());
-    storage.setItem("show","1");
+  }
+  catch(error){
+    return false;
   }
   $("#lsv-btn__btn-popup--close").click(function () {
     popUpOut ();
@@ -23501,10 +23495,104 @@ $(document).ready(function() {
     // $.fn.fullpage.setAllowScrolling(true);
   });
   if (window.innerWidth > 480){
-    $(".lsv-helper__arrow-down").click(function(){
+    $(".lsv-helper__arrow-down").on("click tap",function(){
       $.fn.fullpage.moveSectionDown();
     });
   }
+  else{
+    $(".lsv-helper__arrow-down").hide();
+  }
+  
+  
+  function createSuitbleVideo(){
+    var mainVideo = document.getElementById('lsv-video-main');
+    // var source = document.getElementById("main-video-source");
+    function LoadTimeVideo(duration){
+      try{
+        console.log("Loading...");
+        if((mainVideo.buffered.end(0) - mainVideo.currentTime) > (duration/1000) && playFlag){
+          mainVideo.play();
+          playFlag= false;
+          setTimeout(function(){ playFlag = true },duration)
+        } else {
+          if( playFlag ) {mainVideo.pause();}
+        }
+      } catch(err){
+        console.log(err);
+      }
+    }
+    if(mainVideo){
+      var vid = $("#lsv-video-main");
+      var vids_arr = vid.attr("data-vids").split(" ");
+      if(window.innerWidth > 1280){
+        vid.html("<source id='main-video-source' src='"+vids_arr[0]+"' type='video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;'>");
+        // source.src = vids_arr[0];
+      }
+      else if(window.innerWidth >= 760 ){
+        vid.html("<source id='main-video-source' src='"+vids_arr[1]+"' type='video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;'>");
+        // source.src=vids_arr[1];
+      }
+      mainVideo.load();
+
+      var playFlag = true, loadTimer;
+
+      setInterval(function(){
+          mainVideo.play();
+      },5000);
+      
+      mainVideo.addEventListener("progress", function(){
+        clearTimeout(loadTimer);
+        loadTimer = setTimeout(function(){
+          LoadTimeVideo(5000);
+        },1000);
+        // LoadTimeVideo(5000);
+      });
+      mainVideo.addEventListener("ended", function(){
+        mainVideo.play();
+      });
+    }
+  }
+  createSuitbleVideo();
+  var lsvAboutBlocks = $(".lsv-about__about-block");
+  if( lsvAboutBlocks.length > 0){
+    $(".fp-tableCell").css("height","10px");
+    $(".fp-section:not(.fp-section:first-child)").css("height","10px");
+  }
+  
+  if($(".lsv-helper__arrow-down.right").length > 0){
+    //Hide arrow when scroll not at the top
+    var timer; 
+    $(".lsv-helper__arrow-down.right").unbind();
+    $(window).on("scroll",function(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        if($("body").scrollTop() > 5){
+          $(".lsv-helper__arrow-down.right").fadeOut(200);
+        } else {
+          $(".lsv-helper__arrow-down.right").fadeIn(200);
+        }
+      },100);
+    });
+    //Scroll to article content
+    $(".lsv-helper__arrow-down.right").on("click touchend",function(){
+      $('html, body').animate({
+        scrollTop: $(".lsv-anchor-content").offset().top - 100
+      }, 500);
+    });
+  }
+  //On orientation change
+  $( window ).on( "orientationchange", function( event ) {
+    if(event.orientation === "portrait"){
+      $("#dont-rotate").css("display","flex");
+    } else{
+      $("#dont-rotate").css("display","none");  
+    }
+  });
+
+
+
+
+
 
   // var lsvAboutUsBoxText = $(".lsv-about__about-block>.about-text-block");
   
@@ -23512,21 +23600,47 @@ $(document).ready(function() {
   //   console.log(lsvAboutUsBoxText);
   // }
 
-  $("form#data").submit(function(){
-    var formData = new FormData($(this)[0]);
-    $.ajax({
-        url: 'toserver.php',
-        type: 'POST',
-        data: formData,
-        async: true,
-        success: function (data) {
-            console.log(data);
-        },
-        cache: false,
-        contentType: false,
-        processData: false
-    });
-    return false;
+  // $("form#data").submit(function(){
+  //   var formData = new FormData($(this)[0]);
+
+  //   $.ajax({
+  //       url: 'toserver.php',
+  //       type: 'POST',
+  //       data: formData,
+  //       async: true,
+  //       success: function (data) {
+  //           console.log(data);
+  //           $(this).find("button").html("Отправлено");
+  //       },
+  //       error: function(){
+  //         $(this).find("button").html("Ошибка");
+  //       },
+  //       cache: false,
+  //       contentType: false,
+  //       processData: false
+  //   });
+  //   return false;
+  // });
+  $("form#data").submit(function(){ 
+    var formData = new FormData($(this)[0]); 
+    $.ajax({ 
+      url: '?sendform=1', 
+      type: 'POST', 
+      data: formData, 
+      async: true, 
+      cache: false, 
+      contentType: false, 
+      processData: false 
+      }).done(function( data ) { 
+      if(data.server_answer=='true'){ 
+      $('#sendBtnTxt').html("Оправлено");
+      $('#sendBtnTxt').parent().attr('disabled','disabled'); 
+      }else{ 
+      $('#sendBtnTxt').html("Ошибка"); 
+      $('#sendBtnTxt').parent().attr('disabled','disabled'); 
+    } 
+    }); 
+    return false; 
   });
   // });
 });

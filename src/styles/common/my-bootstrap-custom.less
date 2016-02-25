@@ -65,6 +65,9 @@ main{
 .margint-20{
   margin-top: 20px;
 }
+.margint-40{
+  margin-top: 40px;
+}
 .margint-80{
   margin-top: 80px;
 }
@@ -110,30 +113,22 @@ main{
     display: none;
   }
 }
-.dont-rotate{
+#dont-rotate{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: @lsv_green;
+  text-align: center;
+  z-index: 4000;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
   display: none;
-
-  /* Landscape */
-  // @media only screen 
-  // and (min-device-width: 320px) 
-  // and (max-device-width: 568px)
-  // and (-webkit-min-device-pixel-ratio: 2)
-  // and (orientation: landscape) {
-  //   display: -webkit-flex;
-  //   display: -moz-flex;
-  //   display: -ms-flex;
-  //   display: -o-flex;
-  //   display: flex;
-  //   position: fixed;
-  //   height: 100%;
-  //   width: 100%;
-  //   background-color: @lsv_green;
-  //   text-align: center;
-  //   z-index: 3000;
-  //   color: white;
-  //   justify-content: center;
-  //   flex-direction: column;
-  // }
 }
 /* 
 1024
@@ -147,7 +142,7 @@ main{
   resize: vertical;
  }
 .lsv-nav{
-  z-index: 2003;
+  z-index: 2004;
   background-color: @lsv_menu_color;
   height: @lsv_menu_height;
 }
@@ -327,6 +322,14 @@ main{
     font-size: 18px!important;
   }
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
+  &.btn[disabled="disabled"]{
+    background-color: @lsv_green;
+    color:white;
+    &:hover{
+      background-color: @lsv_green_active;
+      color:white;
+    }
+  }
 }
 .lsv-btn--green{
   background-color: @lsv_green;
@@ -347,7 +350,7 @@ main{
   background-color: @lsv_green;
   color:white;
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
-  z-index: 2001;
+  z-index: 2003;
   .container, .row{
     margin: 0;
     padding: 0 12px;
@@ -625,6 +628,9 @@ main{
       margin: 0;
     }
   }
+  @media screen and (max-width: 420px){
+    padding: 30px + @lsv_menu_height 17px 20px;
+  }
 }
 .lsv-news__content{
   padding: 0 40px 40px 40px;
@@ -648,11 +654,6 @@ main{
   img{
     display: block;
     width: 100%;
-    opacity:0.65;
-    -moz-opacity:0.65;
-    filter: alpha(opacity=65) black;
-    -khtml-opacity: 0.65;
-    background-color:#000;
   }
   &:after{
       content: "Читать далее";
@@ -664,7 +665,18 @@ main{
       color: white;
       background-image: url(../img/svg/dairy-products-show-production.svg);
       background-repeat: no-repeat;
-      background-position: 60% center ;
+      background-position: 60% center;
+      @media screen and (max-width: 1100px) and (min-width: 993px){
+        background-position: 65% center;
+      }
+      @media screen and (max-width: 1600px) and (min-width: 1280px){
+        background-position: 60% center;
+        padding: 49% 30%;
+      }
+      @media screen and (min-width: 1600px){
+        background-position: 55% center;
+        padding: 49% 32%;
+      }
   }
   &:hover:after{
       
@@ -691,14 +703,19 @@ main{
     font-size: 15px;
   }
   &:hover img{
-    opacity:1;
-    -moz-opacity:1;
-    filter: alpha(opacity=100) black;
-    -khtml-opacity: 1;
-    background-color:#000;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
   }
   @media screen and (max-width: 768px){
     min-height: initial;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1440px){
+    min-height: 700px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1900px){
+    min-height: 800px;
     margin-bottom: 60px;
   }
 }
@@ -749,6 +766,9 @@ main{
 .navbar-fixed-top{
   border: 0;
 }
+.lsv-article{
+  background-color: @lsv_slide_bg;
+}
 
 .lsv-article__img{
   width: 100%;
@@ -759,6 +779,9 @@ main{
   a{
     color: @lsv_grey_very_dark;
     text-decoration: underline;
+    &:hover{
+      color: @lsv_green;
+    }
   }
 }
 .lsv-article__text{
@@ -766,14 +789,15 @@ main{
 }
 .lsv-release{
   padding: 0 63px 0 0;
-  margin-bottom: 63px;
+  margin-bottom: 20px;
   margin-top: 20px;
+  min-height: 170px;
 }
 .lsv-press_about{
   padding: 0 63px 0 0;
-  margin-bottom: 63px;
+  margin-bottom: 20px;
   margin-top: 20px;
-  
+  min-height: 200px;
   h2{
     margin: 15px 0;
   }
@@ -829,7 +853,7 @@ main{
   background-color: @lsv_slide_bg;
 }
 .lsv-category-milk{
-  color: #87d3e0;
+  color: #119BD7;
   margin-bottom: -25px!important;
 }
 .lsv-category-cheese{
@@ -945,13 +969,15 @@ main{
   width: 50%;
   height: 100%;
   @media screen and(max-width:420px){
+    position: initial;
     padding: 0;
-    height: 43%;
+    height: 280px;
     width: 100%;
   }
   @media screen and(max-width:360px){
+    position: initial;
     padding: 0;
-    height: 35%;
+    height: 280px;
     width: 100%;
   }
 }
@@ -959,13 +985,14 @@ main{
   padding-right: 100px;
   width: 100%;
   @media screen and(max-width:420px){
+    position: initial;
     padding: 0;
-    height: 38%;
+    height: 280px;
     width: 100%;
   }
 }
 #lsv-history__start{
-  background-image: url(../img/images/2004.jpg);
+  // background-image: url(../img/images/2004.jpg);
   &.fullslide_img_text>h1{
     @media screen and(max-width:420px){
       left: 0;
@@ -979,25 +1006,25 @@ main{
   }
 }
 #lsv-history__2004{
-  background-image: url(../img/images/2004.jpg);
+  // background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2005{
-  background-image: url(../img/images/2004.jpg);
+  // background-image: url(../img/images/2004.jpg);
 }
 #lsv-history__2008{
-  background-image: url(../img/images/2008.jpg);
+  // background-image: url(../img/images/2008.jpg);
 }
 #lsv-history__2012{
-  background-image: url(../img/images/IMG_6611.jpg);
+  // background-image: url(../img/images/IMG_6611.jpg);
 }
 #lsv-history__2013{
-  background-image: url(../img/images/2013.jpg);
+  // background-image: url(../img/images/2013.jpg);
 }
 #lsv-history__2014{
-  background-image: url(../img/images/2014.jpg);
+  // background-image: url(../img/images/2014.jpg);
 }
 #lsv-history__2015{
-  background-image: url(../img/images/2015.jpg);
+  // background-image: url(../img/images/2015.jpg);
 }
 .lsv-history__discription{
   position: absolute;
@@ -1053,6 +1080,7 @@ main{
     }
   }
   @media screen and (max-width:420px){
+    position: initial;
     width: 100%;
     left: 0;
     margin: 0;
@@ -1060,6 +1088,7 @@ main{
     top: 55%;
   }
   @media screen and (max-width:360px){
+    position: initial;
     width: 100%;
     left: 0;
     margin: 0;
@@ -1196,6 +1225,18 @@ main{
     &:hover{
       color: @lsv_green;
     }
+    @media screen and (max-width: 992px){
+      padding: 0 40px;
+    }
+    @media screen and (max-width: 480px){
+      padding: 0 20px;
+      font-size: 20px;
+    }
+  }
+}
+#lsv-vacancies-menu-btn{
+  @media screen and (max-width: 480px){
+    display: none;
   }
 }
 .lsv-vacancies__category-img{
@@ -1301,8 +1342,8 @@ main{
       &:hover{
         opacity: 0.7;
       }
-      @media screen and (max-width:420px){
-        background-position: 35% 3%;
+      @media screen and (max-width:480px){
+        background-position: 35% 50px;
       }
     }
     .owl-prev{
@@ -1334,6 +1375,9 @@ main{
   }
 }
 .lsv-vacancies__form{
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
   .form-group{
     padding: 40px;
     &:first-child{
@@ -1371,6 +1415,9 @@ main{
       padding: 0 30px;
     }
   }
+  input.filestyle{
+    width: 1px;
+  }
 }
 @media screen and (max-width: 768px){
   .lsv-vacancies__form div.col-md-6:first-child,.lsv-vacancies__form div.col-md-6:last-child{
@@ -1406,7 +1453,7 @@ label.lsv-btn__input-file{
 }
 
 #lsv-vacanceis__career-img1,#lsv-vacanceis__career-img2,#lsv-vacanceis__career-img3{
-  background-image: url(http://placehold.it/600x700);
+  // background-image: url(http://placehold.it/600x700);
 }
 
 .lsv-slider{
@@ -1447,12 +1494,12 @@ label.lsv-btn__input-file{
   background-size: cover;
 }
 #owl-shops-slider{
-  #slide_1{background-image: url(http://placehold.it/800x800);}
-  #slide_2{background-image: url(http://placehold.it/800x600);}
-  #slide_3{background-image: url(http://placehold.it/500x800);}
-  #slide_4{background-image: url(http://placehold.it/500x500);}
+  // #slide_1{background-image: url(http://placehold.it/800x800);}
+  // #slide_2{background-image: url(http://placehold.it/800x600);}
+  // #slide_3{background-image: url(http://placehold.it/500x800);}
+  // #slide_4{background-image: url(http://placehold.it/500x500);}
   .owl-buttons{
-    right: 0;
+    right: 15px;
   }
 }
 .lsv-vacansies__career-description{
@@ -1497,14 +1544,14 @@ label.lsv-btn__input-file{
   width: 100%;
   height: ~"calc(60% - 62px)";
   margin-top: @lsv_menu_height;
-  background-image: url(../img/images/team_start.jpg);
+  // background-image: url(../img/images/team_start.jpg);
   
 }
 #lsv-team__img-owner-1{
-  background-image: url(../img/images/beglov.jpg);
+  // background-image: url(../img/images/beglov.jpg);
 }
 #lsv-team__img-owner-2 {
-  background-image: url(../img/images/mauer.jpg);
+  // background-image: url(../img/images/mauer.jpg);
 }
 
 #lsv-team__img-start{
@@ -1604,7 +1651,7 @@ label.lsv-btn__input-file{
   margin: auto;
   width: 140px;
   height: 140px;
-  background-image: url(../img/images/team_products_1.jpg);
+  // background-image: url(../img/images/team_products_1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1617,20 +1664,25 @@ label.lsv-btn__input-file{
     height: 64px;
   }
 }
+.lsv-team__employee-post{
+  max-width: 200px;
+  margin: auto;
+  min-height: 55px;
+}
 #team-production-1{
-  background-image: url(../img/images/team_products_1.jpg);
+  // background-image: url(../img/images/team_products_1.jpg);
 }
 #team-production-2{
-  background-image: url(../img/images/team_products_2.jpg);
+  // background-image: url(../img/images/team_products_2.jpg);
 }
 #team-production-3{
-  background-image: url(../img/images/team_products_3.jpg);
+  // background-image: url(../img/images/team_products_3.jpg);
 }
 #team-production-4{
-  background-image: url(../img/images/team_products_4.jpg);
+  // background-image: url(../img/images/team_products_4.jpg);
 }
 #team-production-5{
-  background-image: url(../img/images/team_products_5.jpg);
+  // background-image: url(../img/images/team_products_5.jpg);
 }
 
 .lsv-team__employee-comment{
@@ -1649,7 +1701,7 @@ label.lsv-btn__input-file{
   padding-top: @lsv_menu_height;
   width: 100%;
   height: 100%;
-  background-image: url(../img/images/banner.jpg);
+  // background-image: url(../img/images/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1663,6 +1715,7 @@ label.lsv-btn__input-file{
 }
 .lsv-about__about-block{
   padding: 0 120px;
+  padding-top: 75px;
   p,h2,li{
     text-align: left;
     color: @lsv_grey_very_dark;
@@ -1692,7 +1745,7 @@ label.lsv-btn__input-file{
   }
 }
 .lsv-shops__filter-btn{
-
+  
   display: inline;
   float: right;
   margin-top: -20px;
@@ -1799,7 +1852,7 @@ label.lsv-btn__input-file{
   left: 100%;
   height: 90%;
   width: 50%;
-  z-index: 2000;
+  z-index: 2002;
   transition: all 800ms cubic-bezier(0.31, 0.79, 0, 0.99);
   padding: 30px;
   & > div{
@@ -2013,7 +2066,7 @@ input[type='reset']:focus {
   padding-top: @lsv_menu_height;
   width: 100%;
   height: 100%;
-  background-image: url(../img/images/milk.jpg);
+  // background-image: url(../img/images/milk.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2025,13 +2078,13 @@ input[type='reset']:focus {
     color: white;
   }
   &.cheese{
-    background-image: url(../img/images/cheese.jpg);
+    // background-image: url(../img/images/cheese.jpg);
   }
   &.cooking{
-    background-image: url(../img/images/cooking.jpg);
+    // background-image: url(../img/images/cooking.jpg);
   }
   &.cheese{
-    background-image: url(../img/images/cheese.jpg);
+    // background-image: url(../img/images/cheese.jpg);
   }
 }
 .lsv-dairy-products{
@@ -2171,6 +2224,9 @@ input[type='reset']:focus {
   &.start{
     height: 40%;
     top: 30%;
+    @media screen and (max-width: 360px){
+      top: 35%;
+    }
   }
   @media screen and (max-width: 768px){
 
@@ -2207,6 +2263,7 @@ input[type='reset']:focus {
 }
 
 .lsv-dairy-products__goodies-btns{
+  display: none;
   position: absolute;
   top: @lsv_menu_height+24px;
   right: 31px;
@@ -2239,6 +2296,10 @@ input[type='reset']:focus {
     top: @lsv_menu_height*2-15px;
     padding: 0 20px;
   }
+  @media screen and (max-width: 360px){
+    top: 121px;
+    padding: 0 20px;
+  }
 }
 .lsv-dairy-products__tooltip{
   position: absolute;
@@ -2248,6 +2309,7 @@ input[type='reset']:focus {
   top: @lsv_menu_height + 90px;
   margin-right: 30px;
   background: white;
+  overflow-y: scroll;
   border-radius: 20px;
   z-index: 1033;
   padding: 30px 25px;
@@ -2285,12 +2347,15 @@ input[type='reset']:focus {
 }
 .lsv-shops__text-block{
   padding: @lsv_menu_height+80px 40px;
+  @media screen and (max-width: 480px){
+    padding: @lsv_menu_height+5px 40px 0;
+  }
 }
 .full-img{
   width: 50%;
   height: 100%;
   position: absolute;
-  background-image: url(http://placehold.it/1920x1000);
+  // background-image: url(http://placehold.it/1920x1000);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2323,6 +2388,10 @@ input[type='reset']:focus {
     @media screen and (max-width:480px){
       width: 100%;
       padding-top:150%;
+    }
+    @media screen and (max-width:360px){
+      width: 100%;
+      padding-top:160%;
     }
   }
 }
@@ -2387,17 +2456,20 @@ input[type='reset']:focus {
   transform: translateX(-50%) translateY(-50%);
   // background: url(../img/vids/poster.jpg) no-repeat;
   // background-size: cover; 
-}
-#lsv-video-main{
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 760px){
     display: none;
   }
 }
-#lsv-video-main-tablet{
-  @media screen and (min-width: 1100px){
-    display: none;
-  }
-}
+// #lsv-video-main{
+//   @media screen and (max-width: 1100px){
+//     display: none;
+//   }
+// }
+// #lsv-video-main-tablet{
+//   @media screen and (min-width: 1100px){
+//     display: none;
+//   }
+// }
 button.btn{
   &:focus{
     background-color: @lsv_green_active;
@@ -2426,6 +2498,9 @@ button.btn{
     margin: auto;
     width: 150px;
   }
+  #lsv-dairy-products__next-animation{
+    bottom: -20px;
+  }
   .animation-container{
     position: absolute;
     right: 0;
@@ -2447,6 +2522,7 @@ button.btn{
     @media screen and (max-width: 580px){
       right: 0;
       left: 0;
+      top: 190px;
       margin: auto;
       width: 100%;
       height: 70%;
@@ -2471,7 +2547,9 @@ button.btn{
   .lsv-h3{
     font-size: 24px;
   }
-
+  @media screen and (max-width: 480px){
+    height: 400px;
+  }
 }
 .products__approved-text-block{
   // .col-md-8{
@@ -2502,7 +2580,7 @@ button.btn{
   margin-top: @lsv_menu_height;
 }
 .lsv-main__mobile-start{
-  background-image: url(http://placehold.it/480x640);
+  // background-image: url(http://placehold.it/480x640);
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -2650,6 +2728,23 @@ button.btn{
   }
   @media screen and (max-width: 768px){
     margin-top: @lsv_menu_height + 20px;
+  }
+}
+@media screen and (max-height: 768px){
+  #option-group{
+    hr{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .block-seasons-option{
+      margin: 5px 10px 0;
+    }
+    .lsv-form__btn-submit{
+      margin-top: 5px;
+    }
+    br{
+      display: none;
+    }
   }
 }
 
@@ -3149,9 +3244,9 @@ button.btn{
   // }
 }
 .lsv-pluses__header{
-  margin-bottom: 200px;
-  @media screen and (max-width: 992px){
-    margin: 100px 0;
+  margin-bottom: 150px;
+  @media screen and (max-width: 1280px){
+    margin: 50px 0;
   }
 }
 .lsv-pluses__container{
@@ -3189,6 +3284,9 @@ button.btn{
       opacity: 1;
     }
   }
+  @media screen and (max-width: 768px){
+    display: none;
+  }
 }
 #lsv-slide-up{
   top: @lsv_menu_height+20px;
@@ -3214,10 +3312,11 @@ button.btn{
 }
 #lsv-production__product-case-slider{
   position: absolute;
-  top: @lsv_menu_height*2+20px;
+  top: @lsv_menu_height*2+50px;
   z-index: 1031;
   img{
     max-height: 400px;
+    min-height: 300px;
   }
   .owl-buttons{
     // position: absolute;
@@ -3281,6 +3380,9 @@ button.btn{
   img{
     height: 169px;
   }
+  @media screen and (max-width: 992px){
+    margin-top: 25px;
+  }
 }
 
 // @-webkit-keyframes slide-arrow-down {
@@ -3309,6 +3411,12 @@ button.btn{
   img{
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
+  }
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+  &.right{
+    position: fixed;
   }
 }
 .lsv-article__date{
@@ -3370,10 +3478,244 @@ button.btn{
   transform-origin:50% 50%;
   transform:rotate(180deg);
 }
+.lsv-question{
+  min-height: 300px;
+  @media screen and (max-width: 992px){
+    min-height: initial;
+    margin-bottom: 15px;
+  }
+}
 .lsv-about__about-block>.about-text-block{
   // max-height: 100px;
   // overflow-y: scroll;
   // &.show{
     
   // }
+}
+.lsv-contacts__form{
+  @media screen and (max-width: 992px){
+    margin-top: 75px;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: 40px;
+  }
+}
+.lsv-animation-section{
+  @media screen and (max-width: 768px){
+    min-height: 600px;
+  }
+}
+#vk_likes{
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  @media screen and (max-width: 480px){
+    right: 13px;
+    top: 180px;
+  }
+}
+.vk-like{
+  display: none;
+}
+
+//ANIMATIONS
+@-webkit-keyframes grow{
+  0% {
+    -webkit-transform: scale(0.3);
+    fill: green;
+  }
+  30% {
+    -webkit-transform: scale(1);
+    fill: green;
+  }
+  60% {
+    fill: #CE1700;
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    fill: #CE1700;
+    -webkit-transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes breeze{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes peck-right{
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+  }
+  50% {
+    -webkit-transform: rotate(70deg) translateY(40px) translateX(-30px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
+  }
+}
+@-webkit-keyframes blinks{
+  0% {
+    -webkit-transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes move-top10{
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}
+@-webkit-keyframes move-top20{
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}
+@-webkit-keyframes rotate10{
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(5deg);
+  }
+  /*50% {
+    -webkit-transform: rotate(0deg);
+  }*/
+  75% {
+    -webkit-transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes rotate10{
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  /*50% {
+    -webkit-transform: rotate(0deg);
+  }*/
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (min-width: 768px){
+  .st112{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: grow 10s ease-out infinite;
+    transform-origin: 50% 50%;
+    animation: grow 10s ease-out infinite;
+  }
+  .tree{
+    -webkit-transform-origin: 50% 100%;
+    -webkit-animation: breeze 3s ease-out infinite;
+    transform-origin: 50% 100%;
+    animation: breeze 3s ease-out infinite;
+  }
+  #chiken_yellow{
+    -webkit-transform-origin: 50% 100%;
+    -webkit-animation: peck-right 2s ease-out infinite;
+    transform-origin: 50% 100%;
+    animation: peck-right 2s ease-out infinite;
+  }
+
+  #berries_1>circle{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: grow 8s ease-out infinite;
+    -webkit-animation-delay: 1000ms;
+    transform-origin: 50% 50%;
+    animation: grow 8s ease-out infinite;
+    animation-delay: 1000ms;
+  }
+  #plants_1_>g{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: grow 8s ease-out infinite;
+    -webkit-animation-delay: 3000ms;
+    transform-origin: 50% 50%;
+    animation: grow 8s ease-out infinite;
+    animation-delay: 3000ms;
+  }
+  #bull_1_tail{
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: rotate10 3s ease-out infinite;
+    animation: rotate10 3s ease-out infinite;
+  }
+  #bull_2_tail{
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: rotate10 3s ease-out infinite;
+    animation: rotate10 3s ease-out infinite;
+  }
+  #cow_1_head{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: move-top10 3s ease-out infinite;
+    transform-origin: 50% 50%;
+    animation: move-top10 3s ease-out infinite;
+  }
+  #cow_2_head{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: move-top10 3s ease-out infinite;
+    -webkit-animation-delay: 1500ms;
+    transform-origin: 50% 50%;
+    animation: move-top10 3s ease-out infinite;
+    animation-delay: 1500ms;
+  }
+  #cow_1_tonque{
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: move-top20 3s ease-out infinite;
+    transform-origin: 50% 50%;
+    animation: move-top20 3s ease-out infinite;
+  }
+  #soon_1,#soon_2,#soon_3{
+    -webkit-transform-origin: 50% 100%;
+    -webkit-animation: rotate10 5s ease-out infinite;
+    -webkit-animation-delay: 1500ms;
+    transform-origin: 50% 100%;
+    animation: rotate10 5s ease-out infinite;
+    animation-delay: 1500ms;
+  }
+  #river_lights>path:nth-child(odd){
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: blinks 3000ms ease-out infinite;
+    transform-origin: 50% 50%;
+    animation: blinks 3000ms ease-out infinite;
+  }
+  #river_lights>path:nth-child(even){
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: blinks 3000ms ease-out infinite;
+    -webkit-animation-delay: 500ms;
+    transform-origin: 50% 50%;
+    animation: blinks 3000ms ease-out infinite;
+    animation-delay: 500ms;
+  }
 }

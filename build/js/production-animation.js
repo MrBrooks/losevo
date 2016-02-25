@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $('#lsv-slides-scroll-overflow-off').fullpage({
       'css3': true,
       'easing': 'easeOutElastic',
@@ -43,9 +42,41 @@ $(document).ready(function(){
       zeroscaleMatrix = new Snap.Matrix();
     canvas.append(paper);
 
+    function getProductType(){
+      var type = $(location).attr('pathname').split('/')[2];
+      switch(type){
+        case 'milk':
+          return 0;
+        case 'cheese':
+          return 100;
+        case 'beef':
+          return 200;
+        case 'cooking':
+          return 300;
+        case 'poultry':
+          return 400;
+        case 'honey':
+          return 500;
+        case 'plant-food':
+          return 600;
+        default:
+          console.log("Unexpected case url to check product type! If you add new product category or changed existing category - please edit this function to correct working!");
+          return 700;
+      }
+    }
+
     var dairy_products_data = $.getJSON($("div[data-json]").attr("data-json"), function(json){
+        var type = getProductType();
         for( var i = 1; i < json.length;i++){
           $("#lsv-dairy-products__list").append("<li class='lsv-dairy-products__list-item' data-item-order="+i+">" + json[i].title + "</li>");
+          $("#vk_likes").append("<div id='vk_like_"+i+"' class='vk-like'></div>");
+          VK.Widgets.Like("vk_like_"+i, {
+            type: "button",
+            height: 24,
+            pageTitle: json[i].title,
+            pageDescription: "Продукты «Лосево»",
+            pageImage: "http://new.shp-losevo.ru/site/templates/img/svg/losevo_full_logo.svg"
+          }, i + type);
         }
         $(".lsv-dairy-products__list-item").click(function(){
           $(".animation-container").removeClass("start");
@@ -55,9 +86,11 @@ $(document).ready(function(){
           $("#lsv-dairy-products__next-animation").removeClass("active");
           $("#lsv-dairy-products__next-animation>.prev").remove();
           $(".slimScrollBar").css("opacity", "0");
+          $(".lsv-dairy-products__goodies-btns").css("display","block");
           hideAll();
           $.fn.fullpage.setAllowScrolling(true);
           initProduct();
+          vkLikesShow($(this).attr("data-item-order"));
         });
         animation_data = json[0];
         initProduct();
@@ -210,7 +243,9 @@ $(document).ready(function(){
     
     var owl = $(".owl-carousel").data('owlCarousel');
     var slidesNumber = 0;
+    var productCaseNumber = 0;
     var productCaseSlider;
+    var owlCaseSliderData;
     var updateProductCase = function(index){
       $("#lsv-dairy-products__tooltip-good>p").html(animation_data.products[index].goodies);
       $("#lsv-dairy-products__tooltip-info>p").html(animation_data.products[index].info);
@@ -224,34 +259,41 @@ $(document).ready(function(){
           owl.removeItem(1);
         }
       }
-
       else{
         owl = $(".owl-carousel").data('owlCarousel');
       }
       if (animation_data.steps.length == 0 || window.innerWidth < 480){
         $("#lsv-dairy-products__next-animation").hide();
-
         if(animation_data.products.length > 1){
           $(".animation-container").hide();
           if (productCaseSlider){
             productCaseSlider.show();
+            for (var i = 0 ; i < productCaseNumber; i++){
+              owlCaseSliderData.removeItem(0);
+            }
+            for (var i = 0; i < animation_data.products.length; i++){
+              owlCaseSliderData.addItem("<div><img src='"+animation_data.products[i].startImg+"'></div>", i);
+            }
           }
           else{
             productCaseSlider = $("#lsv-production__product-case-slider");
-          }
-          
-          for (var i = 0; i < animation_data.products.length; i++){
-            productCaseSlider.append("<div><img src='"+animation_data.products[i].startImg+"'></div>");
-          }
-          productCaseSlider.owlCarousel({
-            navigation : true,
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            afterAction: function(){
-              updateProductCase(this.owl.currentItem);
+            for (var i = 0; i < animation_data.products.length; i++){
+              productCaseSlider.append("<div><img src='"+animation_data.products[i].startImg+"'></div>");
             }
-          });
+            productCaseSlider.owlCarousel({
+              navigation : true,
+              slideSpeed : 300,
+              paginationSpeed : 400,
+              singleItem:true,
+              afterAction: function(){
+                updateProductCase(this.owl.currentItem);
+              }
+            });
+          }
+          productCaseNumber = i;
+          if (!owlCaseSliderData){
+            owlCaseSliderData = $("#lsv-production__product-case-slider").data("owlCarousel");
+          }
         }
         else{
           if(productCaseSlider){
@@ -355,4 +397,36 @@ $(document).ready(function(){
       $("#lsv-dairy-products__menu-btn").append("<span class='bar'></span><span class='bar'></span><span class='bar'></span>");
       
     }
+
+    function vkLikesShow(index){
+      $("#vk_like_"+index).show().siblings().hide();
+    }
+    if (window.innerWidth <= 480){
+      var lsv_dairy_menu_timeout;
+      $(window).resize(function(){
+        clearTimeout(lsv_dairy_menu_timeout);
+        lsv_dairy_menu_timeout = setTimeout(function(){
+          console.log("GoGoGo power rangers!");
+          $("#lsv-dairy-products__menu").slimScroll({
+            destroy: true
+          });
+          $("#lsv-dairy-products__menu").slimScroll({
+            width: '100%',
+            height: ($(window).height()-62)+"px",
+            size: '10px',
+            opacity: 1,
+            position: 'right',
+            color: '#61bb46',
+            alwaysVisible: true,
+            distance: '7px',
+            railVisible: false,
+            wheelStep: 30,
+            allowPageScroll: false,
+            barHeightCustome: "100px",
+            barZIndex: '2000'
+          });
+        },1000);
+      });
+    }
 });
+

@@ -4,155 +4,6 @@
     <!-- build:include html-blocks/common/head.html -->
     This will be replaced by the content of html-blocks/common/head.html
     <!-- /build -->
-    <style type="text/css">
-      @-webkit-keyframes grow{
-        0% {
-          -webkit-transform: scale(0.3);
-          fill: green;
-        }
-        30% {
-          -webkit-transform: scale(1);
-          fill: green;
-        }
-        60% {
-          fill: #CE1700;
-          -webkit-transform: scale(1.2);
-        }
-        100% {
-          fill: #CE1700;
-          -webkit-transform: scale(1.2);
-        }
-      }
-      
-      @-webkit-keyframes breeze{
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        50% {
-          -webkit-transform: rotate(10deg);
-        }
-        100% {
-          -webkit-transform: rotate(0deg);
-        }
-      }
-      @-webkit-keyframes peck-right{
-        0% {
-          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
-        }
-        50% {
-          -webkit-transform: rotate(70deg) translateY(40px) translateX(-30px);
-        }
-        100% {
-          -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
-        }
-      }
-      @-webkit-keyframes blinks{
-        0% {
-          -webkit-transform: translateX(0px);
-        }
-        50% {
-          -webkit-transform: translateX(10px);
-        }
-        100% {
-          -webkit-transform: translateX(0px);
-        }
-      }
-
-      @-webkit-keyframes move-top10{
-        0% {
-          -webkit-transform: translateY(0px);
-        }
-        50% {
-          -webkit-transform: translateY(-20px);
-        }
-        100% {
-          -webkit-transform: translateY(0px);
-        }
-      }
-      @-webkit-keyframes move-top20{
-        0% {
-          -webkit-transform: translateY(0px);
-        }
-        50% {
-          -webkit-transform: translateY(-20px);
-        }
-        100% {
-          -webkit-transform: translateY(0px);
-        }
-      }
-      @-webkit-keyframes rotate10{
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        25% {
-          -webkit-transform: rotate(5deg);
-        }
-        /*50% {
-          -webkit-transform: rotate(0deg);
-        }*/
-        75% {
-          -webkit-transform: rotate(-5deg);
-        }
-        100% {
-          -webkit-transform: rotate(0deg);
-        }
-      }
-      .st112{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: grow 10s ease-out infinite;
-      }
-      .tree{
-        -webkit-transform-origin: 50% 100%;
-        -webkit-animation: breeze 3s ease-out infinite;
-      }
-      #chiken_yellow{
-        -webkit-transform-origin: 50% 100%;
-        -webkit-animation: peck-right 2s ease-out infinite;
-      }
-
-      #berries_1>circle{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: grow 8s ease-out infinite;
-        -webkit-animation-delay: 1000ms;
-      }
-      #plants_1_>g{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: grow 8s ease-out infinite;
-        -webkit-animation-delay: 3000ms;
-      }
-      #bull_1_tail,#bull_2_tail{
-        -webkit-transform-origin: 0% 0%;
-        -webkit-animation: rotate10 3s ease-out infinite;
-      }
-      #cow_1_head{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: move-top10 3s ease-out infinite;
-      }
-      #cow_2_head{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: move-top10 3s ease-out infinite;
-        -webkit-animation-delay: 1500ms;
-      }
-     #cow_1_tonque{
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: move-top20 3s ease-out infinite;
-      }
-      #soon_1,#soon_2,#soon_3{
-        -webkit-transform-origin: 50% 100%;
-        -webkit-animation: rotate10 5s ease-out infinite;
-        -webkit-animation-delay: 1500ms;
-      }
-      #river_lights>path:nth-child(odd){
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: blinks 3000ms ease-out infinite;
-      }
-      #river_lights>path:nth-child(even){
-        -webkit-transform-origin: 50% 50%;
-        -webkit-animation: blinks 3000ms ease-out infinite;
-        -webkit-animation-delay: 500ms;
-      }
-
-    </style>
     <body>
 
         <!-- build:include html-blocks/common/if-ie.html -->
@@ -182,6 +33,7 @@
         <!-- /build -->
         <script type="text/javascript">
             $(document).ready(function () {
+
               var ferm = Snap("#ferm");
               var bakery = Snap('#bakery'),
               bakery_hover = Snap('#bakery_hover'),
@@ -251,6 +103,7 @@
                timeOutCheese,
                timeOutCar;
               var timeAppear = 700;
+              if(window.innerWidth > 768){
               
               bakery.hover(
                 function(){
@@ -353,6 +206,7 @@
               }, function(){
                   timeOutCar = setTimeout(function() {car_popup.animate({ transform: carHoverOut },timeAppear, mina.backin)}, 1000);  
               });
+            }
 
               var beePoints = [0,0,0,0];
               
@@ -555,10 +409,9 @@ function fermTouch () {
 
 };
 
-if(screen.width <= 1024) {
-        fermTouch ();
-};
-
+// if(window.innerWidth < 1024) {
+//   fermTouch ();
+// };
 }); 
 
         </script>
@@ -569,7 +422,12 @@ if(screen.width <= 1024) {
             'easing': 'easeOutElastic',
             'fitToSection': false,
             'fixedElements': '.lsv-nav , .lsv-menu',
-            'scrollOverflow': true
+            'scrollOverflow': true,
+            afterRender: function(){
+              if(window.innerWidth < 1024) {
+                fermTouch ();
+              };
+            }
           });
         });
         </script>

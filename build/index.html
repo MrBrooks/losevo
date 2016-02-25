@@ -138,6 +138,10 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.min.css" />
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+    <script type="text/javascript">
+      VK.init({apiId: 5089933, onlyWidgets: true});
+    </script>
 </head>
 
     <body>
@@ -208,7 +212,7 @@
     <button class="btn btn-default lsv-btn lsv-btn--grey lsv-form__btn-submit submit lsv-btn__btn-popup" id="lsv-btn__btn-popup--close" style="background: #5c5c5c;"> Мне все нравится </button>
   </div>
 </div>
-<div class="dont-rotate">
+<div id="dont-rotate">
   <div>
     <img src="img/svg/dont_rotate.svg">
     <p>Переверните устройство</p>
@@ -405,16 +409,18 @@
         <main id='lsv-slides'>
 
           <div class="section">
-            <video id="lsv-video-main" autoplay loop tabindex="0" >
+            <video id="lsv-video-main" tabindex="0" poster="http://placehold.it/1920x1080" data-vids="img/vids/losevo.mp4 img/vids/losevo_tablet.mp4">
   <!-- <source src="img/vids/losevo.webm" type='video/webm; codecs="vp8, vorbis"' /> -->
-  <source src="img/vids/losevo.ogv" type='video/ogg; codecs="theora, vorbis"' />
-  <source src="img/vids/losevo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  <!-- <source  src="img/vids/losevo.ogv" type='video/ogg; codecs="theora, vorbis"' /> -->
+  <!-- <source id="main-video-source" src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
 </video>
-<video id="lsv-video-main-tablet"  autoplay loop tabindex="0" >
-  <!-- <source src="img/vids/losevo.webm" type='video/webm; codecs="vp8, vorbis"' /> -->
-  <source src="img/vids/losevo_tablet.ogv" type='video/ogg; codecs="theora, vorbis"' />
+<!-- 
+<video id="lsv-video-main-tablet" loop tabindex="0" >
+   <source src="img/vids/losevo.webm" type='video/webm; codecs="vp8, vorbis"' /> 
+  <source src="img/vids/losevo_tablet.ogv" type='video/ogg; codecs="theora, vorbis"' /> 
   <source src="img/vids/losevo_tablet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
+ -->
 
 <!-- <div id="lsv-main_video-text">
   <div class="slogan_1">
